@@ -614,19 +614,19 @@
     },
     {
       "id": 1737893703,
-      "slug": "bottle-35",
-      "name": "Şişe #35",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "linie-aquavit",
+      "name": "Linie Aquavit",
+      "country": "Norway",
+      "category": "Aquavit",
+      "abv": "41.5%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/17882577225211740.jpg",
       "images": [
         "/images/uploads/17882577225211740.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Norveç'in efsanevi akavit markası Linie, geleneksel tahıl ve caraway tohumlarından üretilir. Ekvator çizgisini iki kez geçen deniz yolculuğu sırasında fıçılarda olgunlaşan bu ruh, benzersiz bir yumuşaklık ve derinlik kazanır. Baharatlandırılmış profili ve ince karakteri ile Skandinav mutfağının vazgeçilmez bir parçasıdır.",
+      "desc_en": "Norway's legendary Linie Aquavit is crafted from traditional grain and caraway seeds, presenting a distinctly Scandinavian spirit. Aged in oak casks during a sea voyage that crosses the equator twice, it develops an exceptional smoothness and complexity. Its spiced profile and refined character make it an essential companion to Nordic cuisine and celebrations.",
       "status": "draft",
       "active": false
     },
