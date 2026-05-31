@@ -1409,10 +1409,10 @@
     },
     {
       "id": 1721415679,
-      "slug": "bottle-79",
-      "name": "Şişe #79",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "the-famous-grouse",
+      "name": "The Famous Grouse",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1420,8 +1420,8 @@
       "images": [
         "/images/uploads/18032543524927095.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İskoçya'nın en ikonik blend whiskylerinden biri olan The Famous Grouse, yumuşak ve dengeli bir profil sunmaktadır. Bal, vanilya ve hafif tütün notaları ile karakterize edilen bu whisky, günlük içim için ideal bir seçimdir. Hafif ve erişilebilir yapısı ile whisky severler arasında büyük bir beğeni kazanmıştır.",
+      "desc_en": "The Famous Grouse is one of Scotland's most iconic blended whiskies, offering a smooth and well-balanced profile. Characterized by notes of honey, vanilla, and subtle tobacco, this whisky is an ideal choice for everyday enjoyment. Its light and approachable nature has made it a favorite among whisky enthusiasts worldwide.",
       "status": "draft",
       "active": false
     },
