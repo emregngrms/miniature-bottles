@@ -1121,10 +1121,10 @@
     },
     {
       "id": 1723997881,
-      "slug": "bottle-63",
-      "name": "Şişe #63",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "dewars-white-label-fine-scotch-whisky",
+      "name": "Dewar's White Label Fine Scotch Whisky",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1132,8 +1132,8 @@
       "images": [
         "/images/uploads/18065981896599780.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Perth, İskoçya'da John Dewar & Sons tarafından üretilen bu klasik blended scotch whisky, 50 Gold ve Prize Medals ödülüyle tanınır. Hafif, dengeli ve yumuşak karakteri ile günlük içim için ideal olan bu whisky, geleneksel İskoçya whisky yapım sanatının başarılı bir örneğidir.",
+      "desc_en": "Produced by John Dewar & Sons in Perth, Scotland, this classic blended Scotch whisky is distinguished by its 50 Gold and Prize Medals awards. With its light, balanced, and smooth character, this whisky is an exemplary representation of traditional Scottish whisky-making craftsmanship, ideal for everyday enjoyment.",
       "status": "draft",
       "active": false
     },
