@@ -1157,19 +1157,19 @@
     },
     {
       "id": 1723997836,
-      "slug": "bottle-65",
-      "name": "Şişe #65",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "beefeater-london-distilled-dry-gin",
+      "name": "Beefeater London Distilled Dry Gin",
+      "country": "England",
+      "category": "Gin",
+      "abv": "47%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18245357257258176.jpg",
       "images": [
         "/images/uploads/18245357257258176.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "James Burrough tarafından Londra'da üretilen bu klasik dry gin, 1863 yılından beri gin dünyasının simgelerinden biridir. Juniper ve botaniklerin mükemmel dengesini sunarak, keskin ve temiz bir karaktere sahiptir. Koleksiyonerlerin değer verdiği bu vintage miniatur, gin tarihinin önemli bir parçasıdır.",
+      "desc_en": "Produced in London by James Burrough, this classic dry gin has been an icon of the gin world since 1863. It offers a perfect balance of juniper and botanicals with a sharp and clean character. This vintage miniature is an important piece of gin history treasured by collectors.",
       "status": "draft",
       "active": false
     },
