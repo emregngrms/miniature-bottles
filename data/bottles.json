@@ -1661,19 +1661,19 @@
     },
     {
       "id": 1720386893,
-      "slug": "bottle-93",
-      "name": "Şişe #93",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "croatian-rose-special-reserve-finest-whisky",
+      "name": "Croatian Rose Special Reserve Finest Whisky",
+      "country": "Croatia",
+      "category": "Whisky",
+      "abv": "43%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17984078201535066.jpg",
       "images": [
         "/images/uploads/17984078201535066.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Hırvatistan'ın prestijli üreticisi tarafından hazırlanan bu özel rezerv viski, geleneksel tekniklerle distile edilmiştir. Tam olgunlaştırılmış kalitesiyle bilinen ürün, karakteristik yumuşak tadı ve zarif aromasıyla dikkat çeker. Koleksiyonculara sunulan bu miniatur şişe, Adriyatik bölgesinin viski geleneğinin çarpıcı bir örneğidir.",
+      "desc_en": "Produced by Croatia's prestigious distillery, this special reserve whisky is crafted using traditional distillation techniques. Known for its fully matured quality, the spirit stands out with its characteristically smooth palate and elegant aroma. This miniature bottle represents a striking example of the Adriatic region's whisky heritage for collectors.",
       "status": "draft",
       "active": false
     },
