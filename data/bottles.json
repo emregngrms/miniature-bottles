@@ -182,19 +182,19 @@
     },
     {
       "id": 1762693233,
-      "slug": "bottle-11",
-      "name": "Şişe #11",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "makers-mark-kentucky-straight-bourbon-whisky",
+      "name": "Maker's Mark Kentucky Straight Bourbon Whisky",
+      "country": "USA",
+      "category": "Bourbon Whisky",
+      "abv": "45%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/17982560195765304.jpg",
       "images": [
         "/images/uploads/17982560195765304.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Maker's Mark, 1953'ten beri el yapımı olarak üretilen ünlü Kentucky bourbon whisky'sidir. Karakteristik kırmızı mum mühürü ve yumuşak, dengeli profiliyle tanınan bu işletme, tatlı ve pürüzsüz tadı ile bourbon kategorisinde önemli bir yere sahiptir. Vanilya, buğday ve hafif meyveli notaları içeren bu whisky, saf içilmek veya kokteyllerde kullanılmak için idealdir.",
+      "desc_en": "Maker's Mark is a renowned Kentucky straight bourbon whisky handcrafted since 1953, identifiable by its distinctive red wax seal. Known for its smooth, well-balanced profile with notes of vanilla, wheat, and subtle fruit, it represents a cornerstone of American bourbon craftsmanship. This whisky is equally suited for neat enjoyment or as a versatile component in classic cocktails.",
       "status": "draft",
       "active": false
     },
