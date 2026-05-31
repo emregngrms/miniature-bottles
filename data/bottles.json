@@ -254,19 +254,19 @@
     },
     {
       "id": 1762693154,
-      "slug": "bottle-15",
-      "name": "Şişe #15",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "fegling",
+      "name": "Fegling",
+      "country": "Japan",
+      "category": "Liqueur",
+      "abv": "20%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/17870590632463330.jpg",
       "images": [
         "/images/uploads/17870590632463330.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Tokyo Banana ile işbirliği yapılan Fegling, Japonya'nın ünlü muz-tabanlı likörüdür. Tatlı muz aroması, kokos bisküvi notaları ve meyveli damak hissi ile karakterizedir. Miniatur koleksiyonluk bu sürüm, Tokyo'nun ikonik tatlısının özünü sıvı formda sunmaktadır.",
+      "desc_en": "Fegling, a Japanese liqueur in collaboration with Tokyo Banana, represents Japan's famous banana-based spirit. Characterized by sweet banana aroma, coconut biscuit notes, and fruity palate impressions. This miniature collector's edition encapsulates the essence of Tokyo's iconic confection in liquid form.",
       "status": "draft",
       "active": false
     },
