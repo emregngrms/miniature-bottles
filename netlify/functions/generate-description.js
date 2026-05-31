@@ -10,7 +10,7 @@ exports.handler = async (event) => {
     'Access-Control-Allow-Origin': '*',
   };
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.BOTTLES_API_KEY;
   if (!apiKey) {
     return { statusCode: 500, headers, body: JSON.stringify({ error: 'API key not configured' }) };
   }
