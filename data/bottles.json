@@ -596,10 +596,10 @@
     },
     {
       "id": 1737893720,
-      "slug": "bottle-34",
-      "name": "Şişe #34",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "kah-tequila",
+      "name": "KAH Tequila",
+      "country": "Mexico",
+      "category": "Tequila",
       "abv": "40%",
       "year": 2025,
       "qty": 1,
@@ -607,8 +607,8 @@
       "images": [
         "/images/uploads/18170872375317036.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Meksika'nın ikonik tequila markası KAH, özgün tasarımı ve kaliteli içeriği ile koleksiyoncuların favorisidir. Skull şeklindeki şişesi, Día de Muertos kültürünü yansıtırken, içindeki tequila yumuşak ve dengeli bir tadım profili sunmaktadır. Agave bitkisinden üretilen bu ruh, hem saf içilişte hem de kokteyllerde başarılı bir seçimdir.",
+      "desc_en": "KAH Tequila, Mexico's iconic brand, is a favorite among collectors for its distinctive design and quality spirit. Its skull-shaped bottle reflects the Día de Muertos culture, while the tequila inside offers a smooth and balanced flavor profile. Produced from the agave plant, this spirit is an excellent choice both neat and in cocktails.",
       "status": "draft",
       "active": false
     },
