@@ -198,13 +198,12 @@ const COUNTRY_ISO = {
   Uruguay:'uy', Philippines:'ph', Indonesia:'id', Malaysia:'my',
   Kazakhstan:'kz', Egypt:'eg', Nigeria:'ng', Kenya:'ke', Ethiopia:'et',
 };
-function flagImg(country, h=13){
+function flagImg(country){
   const iso = COUNTRY_ISO[country];
   if(!iso) return '';
-  const w = Math.round(h * 4/3);
-  return `<img src="https://flagcdn.com/w${w}/${iso}.png" style="width:${w}px;height:${h}px;border-radius:2px;display:inline-block;vertical-align:middle;margin-right:3px" alt="" loading="lazy"/>`;
+  return '<img src="https://flagcdn.com/w20/'+iso+'.png" width="20" height="15" style="border-radius:2px;display:inline-block;vertical-align:middle;margin-right:4px" alt="'+country+'" loading="lazy"/>';
 }
-function flag(country){ return ''; } // kept for compat, use flagImg()
+function flag(country){ return ''; }
 
 const IG_DM = "https://ig.me/m/miniaturebottles_5cl";
 let bottles = [], cocktails = [];
@@ -464,7 +463,14 @@ function setLang(l){setState({lang:l});}
 function goPage(p){setState({page:p,selBottle:null,selCocktail:null,search:'',cat:'',country:''});window.scrollTo(0,0);}
 function setCat(c){setState({cat:c});}
 function setCtr(c){setState({country:c});}
-function onSearch(v){state.search=v;render();}
+function onSearch(v){
+  state.search=v;
+  const inp=document.getElementById('search-input');
+  const pos=inp?inp.selectionStart:null;
+  render();
+  const inp2=document.getElementById('search-input');
+  if(inp2){inp2.focus();try{if(pos!==null)inp2.setSelectionRange(pos,pos);}catch(e){}}
+}
 function openBottle(slug){setState({selBottle:bottles.find(b=>b.slug===slug),selCocktail:null});window.scrollTo(0,0);}
 function openCocktail(id){setState({selCocktail:cocktails.find(c=>c.id===id)});window.scrollTo(0,0);}
 function openBottleFromCocktail(slug){setState({selBottle:bottles.find(b=>b.slug===slug),selCocktail:null,page:'collection'});window.scrollTo(0,0);}
