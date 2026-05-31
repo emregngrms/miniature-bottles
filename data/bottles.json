@@ -1067,10 +1067,10 @@
     },
     {
       "id": 1723998002,
-      "slug": "bottle-60",
-      "name": "Şişe #60",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "ainslies-kings-legend-finest-scotch-whisky",
+      "name": "Ainslie's King's Legend Finest Scotch Whisky",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1078,8 +1078,8 @@
       "images": [
         "/images/uploads/18039235442072992.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Glasgow'da Ainslie & Heilbron tarafından üretilen bu klasik İskoç blended whiskyi, 19. ve 20. yüzyıl boyunca prestijli bir marka olarak bilinmektedir. King's Legend, geleneksel İskoç whisky karakteri ile hafif, dengeli bir profil sunarak, dönemin tipik blended whiskilerinin özellikleri taşır.",
+      "desc_en": "Produced by Ainslie & Heilbron in Glasgow, this classic Scottish blended whisky was a prestigious brand throughout the 19th and 20th centuries. King's Legend offers traditional Scottish whisky character with a light, balanced profile, representing the typical blended whisky style of its era.",
       "status": "draft",
       "active": false
     },
