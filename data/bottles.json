@@ -1031,10 +1031,10 @@
     },
     {
       "id": 1723998096,
-      "slug": "bottle-58",
-      "name": "Şişe #58",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "the-love-story-fine-old-scotch-whisky",
+      "name": "The Love Story Fine Old Scotch Whisky",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1042,8 +1042,8 @@
       "images": [
         "/images/uploads/17937177035886049.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İskoçya'da üretilen bu klasik blend viski, retro etiketiyle koleksiyonerlerin ilgisini çeken nostaljik bir şişedir. Hafif ve dengeli profili ile günlük içim için ideal olan The Love Story, geleneksel İskoç viski karakterini yansıtır.",
+      "desc_en": "Produced in Scotland, this classic blended whisky attracts collectors with its charming retro label design from a bygone era. The Love Story offers a light and balanced profile, making it an ideal everyday dram that reflects traditional Scottish whisky character.",
       "status": "draft",
       "active": false
     },
