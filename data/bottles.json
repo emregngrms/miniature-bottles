@@ -2039,10 +2039,10 @@
     },
     {
       "id": 1720386368,
-      "slug": "bottle-114",
-      "name": "Şişe #114",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "grey-goose-vodka",
+      "name": "Grey Goose Vodka",
+      "country": "France",
+      "category": "Vodka",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2050,8 +2050,8 @@
       "images": [
         "/images/uploads/18052733530732520.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Fransa'nın Gascony bölgesinde üretilen Grey Goose, dünyaca ünlü bir vodka markasıdır. Zengin tahıl aromaları ve pürüzsüz içim karakteri ile bilinir, klasik ve kokteyl uygulamalarında mükemmel bir seçimdir. Premium kalitesi ve tutarlı kalitesi ile koleksiyoncuların ve vodka severler tarafından tercih edilen bir markadır.",
+      "desc_en": "Produced in the Gascony region of France, Grey Goose is a world-renowned vodka brand. Known for its rich grain aromas and smooth drinking character, it is an excellent choice for classic and cocktail applications. Its premium quality and consistent taste make it a preferred brand among collectors and vodka enthusiasts.",
       "status": "draft",
       "active": false
     },
