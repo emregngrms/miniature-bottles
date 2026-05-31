@@ -1,0 +1,87 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "bottles"
+    label: "Şişeler"
+    label_singular: "Şişe"
+    folder: "data/bottles"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Şişe Adı", name: "name", widget: "string" }
+      - { label: "Slug (URL)", name: "slug", widget: "string", hint: "Küçük harf, tire ile ayır. Örn: glenfiddich-12" }
+      - { label: "Ülke", name: "country", widget: "string" }
+      - { label: "Bayrak (emoji)", name: "flag", widget: "string", hint: "Ülke bayrağı emoji. Örn: 🇹🇷" }
+      - label: "Kategori"
+        name: "category"
+        widget: "select"
+        options:
+          - "Single Malt Whisky"
+          - "Blended Whisky"
+          - "Tennessee Whiskey"
+          - "Irish Whiskey"
+          - "Bourbon"
+          - "Tequila"
+          - "Gin"
+          - "Vodka"
+          - "Rum"
+          - "Liqueur"
+          - "Aperitif"
+          - "Champagne & Sparkling"
+          - "Cognac & Brandy"
+          - "Diğer"
+      - { label: "Alkol Oranı (ABV)", name: "abv", widget: "string", hint: "Örn: 40%" }
+      - { label: "Koleksiyona Giriş Yılı", name: "year", widget: "number", value_type: "int" }
+      - { label: "Adet", name: "qty", widget: "number", value_type: "int", default: 1, hint: "1'den fazlaysa Fazlalıklar sayfasında görünür" }
+      - { label: "Fotoğraf", name: "image", widget: "image" }
+      - { label: "Açıklama (Türkçe)", name: "desc_tr", widget: "text" }
+      - { label: "Açıklama (İngilizce)", name: "desc_en", widget: "text" }
+
+  - name: "cocktails"
+    label: "Kokteyller"
+    label_singular: "Kokteyl"
+    folder: "data/cocktails"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Kokteyl Adı", name: "name", widget: "string" }
+      - { label: "Fotoğraf", name: "image", widget: "image" }
+      - label: "Zorluk"
+        name: "diff"
+        widget: "select"
+        options: ["Kolay", "Orta", "Zor"]
+      - label: "Zorluk (EN)"
+        name: "diff_en"
+        widget: "select"
+        options: ["Easy", "Medium", "Hard"]
+      - { label: "Süre", name: "time", widget: "string", hint: "Örn: 5 dk" }
+      - label: "Kullanılan Şişeler (slug)"
+        name: "slugs"
+        widget: "list"
+        hint: "Şişe slug'larını gir. Örn: glenfiddich-12"
+        field: { label: "Slug", name: "slug", widget: "string" }
+      - label: "Malzemeler (Türkçe)"
+        name: "ing_tr"
+        widget: "list"
+        field: { label: "Malzeme", name: "item", widget: "string" }
+      - label: "Malzemeler (İngilizce)"
+        name: "ing_en"
+        widget: "list"
+        field: { label: "Ingredient", name: "item", widget: "string" }
+      - label: "Hazırlanış (Türkçe)"
+        name: "steps_tr"
+        widget: "list"
+        field: { label: "Adım", name: "step", widget: "string" }
+      - label: "Hazırlanış (İngilizce)"
+        name: "steps_en"
+        widget: "list"
+        field: { label: "Step", name: "step", widget: "string" }
