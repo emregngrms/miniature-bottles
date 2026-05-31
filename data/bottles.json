@@ -1607,19 +1607,19 @@
     },
     {
       "id": 1720386936,
-      "slug": "bottle-90",
-      "name": "Şişe #90",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "underberg",
+      "name": "Underberg",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "44%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17914341758867485.jpg",
       "images": [
         "/images/uploads/17914341758867485.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Almanya'nın Niederberg şehrinden gelen bu efsanevi bitki liköründe 43 farklı bitkisel malzeme kullanılmaktadır. Keskin ve aromatik bir tadı olan Underberg, mide rahatsızlıklarını gidermek için tradisyonel bir çözüm olarak bilinir ve dünya çapında içilmektedir. Küçük şişeleriyle ünlü olan bu ürün, özellikle yemekten sonra içilen bir digestif olarak tercih edilmektedir.",
+      "desc_en": "This legendary herbal liqueur from Niederberg, Germany, is crafted using 43 different botanical ingredients. Known for its sharp and aromatic taste, Underberg is a traditional digestive aid recognized worldwide for soothing digestive discomfort. Famous for its distinctive small bottles, this product is particularly enjoyed as an after-dinner digestif to settle the stomach.",
       "status": "draft",
       "active": false
     },
