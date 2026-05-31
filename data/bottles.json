@@ -1949,10 +1949,10 @@
     },
     {
       "id": 1720386476,
-      "slug": "bottle-109",
-      "name": "Şişe #109",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "lajita-mezcal-reposado",
+      "name": "Lajita Mezcal Reposado",
+      "country": "Mexico",
+      "category": "Mezcal",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1960,8 +1960,8 @@
       "images": [
         "/images/uploads/18009725150570176.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Oaxaca'dan gelen bu Mezcal Reposado, 100% agave kullanılarak üretilmiştir. Ahşap fıçılarda olgunlaştırılan bu mezcal, yumuşak ve dengeli bir profil sunarken, geleneksel agave karakterini modern işçilikle birleştirir. Koleksiyonerlerin değer verdiği, autentik Meksika mezcal deneyiminin kısaltılmış versiyonudur.",
+      "desc_en": "This Mezcal Reposado from Oaxaca is crafted from 100% agave with traditional expertise. Aged in oak barrels, it presents a smooth and balanced profile while maintaining the characteristic earthiness of agave with a refined touch. A prized miniature for collectors seeking an authentic Mexican mezcal experience.",
       "status": "draft",
       "active": false
     },
