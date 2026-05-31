@@ -1967,10 +1967,10 @@
     },
     {
       "id": 1720386465,
-      "slug": "bottle-110",
-      "name": "Şişe #110",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "willisau-kirsch-vieux",
+      "name": "Willisau Kirsch Vieux",
+      "country": "Switzerland",
+      "category": "Brandy",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1978,8 +1978,8 @@
       "images": [
         "/images/uploads/17926498547798157.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İsviçre'nin Willisau bölgesinden gelen bu kiraz brandy'si, geleneksel destilasyon yöntemiyle üretilmiştir. Olgun ve kompleks aroması ile tatlı kiraz notaları ve hafif baharatlı karakteri içerir. Koleksiyonerlerin değer verdiği, klasik Avrupa fruit brandy'lerinden biridir.",
+      "desc_en": "This cherry brandy hails from the Willisau region of Switzerland, crafted using traditional distillation methods. It presents a mature and complex profile with sweet cherry notes and subtle spicy character. A classic European fruit brandy highly valued by collectors for its authentic heritage and quality.",
       "status": "draft",
       "active": false
     },
