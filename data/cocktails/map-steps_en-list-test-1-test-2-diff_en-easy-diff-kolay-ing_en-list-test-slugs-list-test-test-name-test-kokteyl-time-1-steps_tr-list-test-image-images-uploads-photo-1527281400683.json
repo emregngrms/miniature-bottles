@@ -1,0 +1,25 @@
+{
+  "steps_en": [
+    "test 1",
+    "test 2"
+  ],
+  "diff_en": "Easy",
+  "diff": "Kolay",
+  "ing_en": [
+    "test"
+  ],
+  "slugs": [
+    "test",
+    "test"
+  ],
+  "name": "TEST kokteyl",
+  "time": "1",
+  "steps_tr": [
+    "teSt"
+  ],
+  "image": "/images/uploads/photo-1527281400683-1aae777175f8.jpg",
+  "ing_tr": [
+    "TEST",
+    "TEST"
+  ]
+}
