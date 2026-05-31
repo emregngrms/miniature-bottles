@@ -92,19 +92,19 @@
     },
     {
       "id": 1762693305,
-      "slug": "bottle-6",
-      "name": "Şişe #6",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "kaikai-junmai-daiginjo",
+      "name": "Kaikai Junmai Daiginjo",
+      "country": "Japan",
+      "category": "Sake",
+      "abv": "15.6%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18118060648477045.jpg",
       "images": [
         "/images/uploads/18118060648477045.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Japonya'nın prestijli sake üreticilerinden Kaikai tarafından üretilen bu Junmai Daiginjo, geleneksel sakızın en rafine örneklerinden biridir. Dişbudak ve çiçek notalarıyla karakterize edilen bu sake, soğuk servis edildiğinde zarafetiyle öne çıkar. Koleksiyoncuların değer verdiği bu miniature şişe, Japon içki sanatının incelikli bir temsilidır.",
+      "desc_en": "Produced by Kaikai, one of Japan's prestigious sake makers, this Junmai Daiginjo represents some of the finest examples of traditional sake. Characterized by delicate floral and herbal notes, this sake stands out for its elegance when served chilled. This miniature bottle is a refined representation of Japanese spirit craftsmanship that collectors highly appreciate.",
       "status": "draft",
       "active": false
     },
