@@ -1733,19 +1733,19 @@
     },
     {
       "id": 1720386838,
-      "slug": "bottle-97",
-      "name": "Şişe #97",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "aslan-sutu-anise-aperitif",
+      "name": "Aslan Sütü Anise Aperitif",
+      "country": "Turkey",
+      "category": "Liqueur",
+      "abv": "41%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17990910518663771.jpg",
       "images": [
         "/images/uploads/17990910518663771.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Türkiye'den gelen geleneksel bir anason aperitifi olan Aslan Sütü, Löwenmilch markasıyla üretilmektedir. Anason aromasının ön planda olduğu bu likör, soğuk servis edildiğinde beyazlaşan karakteristik özelliği ile tanınır. Klasik Türk ve Balkan içkilerinin nostalji dolu bir temsilcisidir.",
+      "desc_en": "Aslan Sütü is a traditional anise aperitif from Turkey, produced under the Löwenmilch brand. This liqueur is characterized by its prominent anise aroma and distinctive turning-white property when served cold. It represents a nostalgic example of classic Turkish and Balkan spirits.",
       "status": "draft",
       "active": false
     },
