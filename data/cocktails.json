@@ -314,6 +314,47 @@
         "sdsdss",
         "sdds"
       ]
+    },
+    {
+      "id": 1780255913709,
+      "name": "Aperitivo Alaturka",
+      "image": "",
+      "diff": "Kolay",
+      "diff_en": "Easy",
+      "time": "3 dk",
+      "slugs": [
+        "grey-goose",
+        "aperol",
+        "efe-raki"
+      ],
+      "ing_tr": [
+        "45 ml Aperol",
+        "30 ml Efe Rakı",
+        "15 ml Grey Goose",
+        "90 ml Soda Suyu",
+        "Buz",
+        "Portakal Dilimi"
+      ],
+      "ing_en": [
+        "45 ml Aperol",
+        "30 ml Efe Rakı",
+        "15 ml Grey Goose",
+        "90 ml Soda Water",
+        "Ice",
+        "Orange Slice"
+      ],
+      "steps_tr": [
+        "Bardağa buz doldurun",
+        "Aperol, Rakı ve Vodkayı ekleyin",
+        "Soda suyu ile doldurun ve hafifçe karıştırın",
+        "Portakal dilimi ile süsleyerek servis yapın"
+      ],
+      "steps_en": [
+        "Fill glass with ice",
+        "Add Aperol, Rakı and Vodka",
+        "Top with soda water and stir gently",
+        "Garnish with orange slice and serve"
+      ]
     }
   ]
 }
