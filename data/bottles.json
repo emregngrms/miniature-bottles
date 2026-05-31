@@ -1787,19 +1787,19 @@
     },
     {
       "id": 1720386734,
-      "slug": "bottle-100",
-      "name": "Şişe #100",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "original-fissessenz-aus-friesland-spezial-getrnk",
+      "name": "Original Fissessenz Aus Friesland Spezial-Getränk",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "50%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17859130287193643.jpg",
       "images": [
         "/images/uploads/17859130287193643.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Friesland bölgesinden gelen bu Alman likörü, geleneksel tarife göre hazırlanmış eşsiz bir içecektir. Yoğun ve karakteristik aromasıyla bilinen Original Fissessenz, klasik bir Avrupa likörü olarak koleksiyoncuların beğendiği nadir ürünlerdendir.",
+      "desc_en": "This German liqueur hailing from the Friesland region is a unique beverage prepared according to traditional recipes. Original Fissessenz, known for its intense and distinctive aroma, is among the rare products appreciated by collectors as a classic European liqueur.",
       "status": "draft",
       "active": false
     },
