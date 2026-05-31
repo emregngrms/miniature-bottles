@@ -2417,10 +2417,10 @@
     },
     {
       "id": 1720380159,
-      "slug": "bottle-135",
-      "name": "Şişe #135",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "gaston-de-lagrange-cognac-fine-champagne-vsop",
+      "name": "Gaston de Lagrange Cognac Fine Champagne V.S.O.P.",
+      "country": "France",
+      "category": "Cognac",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2428,8 +2428,8 @@
       "images": [
         "/images/uploads/17911861604967406.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Fransa'nın prestijli Cognac bölgesinden gelen bu V.S.O.P. kalitesinde bir konak, zarif ve dengeli bir profil sunmaktadır. Fine Champagne unvanıyla bilinen bu özel blend, meyvemsi aromalar ve ince ahşap notalarıyla tanınmaktadır. Koleksiyoncular için değerli olan bu vintage miniature şişe, klasik Cognac üretim geleneğinin güzel bir örneğidir.",
+      "desc_en": "This V.S.O.P. quality cognac from France's prestigious Cognac region presents an elegant and well-balanced profile. Known as Fine Champagne, this special blend is characterized by fruity aromas and subtle oak notes. This vintage miniature bottle is a fine example of classic Cognac production tradition, highly valued by collectors.",
       "status": "draft",
       "active": false
     },
