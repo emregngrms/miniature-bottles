@@ -869,10 +869,10 @@
     },
     {
       "id": 1723998315,
-      "slug": "bottle-49",
-      "name": "Şişe #49",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "metaxa",
+      "name": "Metaxa",
+      "country": "Greece",
+      "category": "Liqueur",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -880,8 +880,8 @@
       "images": [
         "/images/uploads/18027837746054460.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Yunan yapımı efsanevi bir likör olan Metaxa, 1888 yılından beri üretilmektedir. Anis, şarap ve aromatik otlardan oluşan özel formülasyonu sayesinde karakteristik tatı ve vanilya notalarıyla ayırt edicidir. Koleksiyonerlerin değer verdiği bu miniature şişe, Metaxa'nın klasik yeşil etiketli versiyonunu sunmaktadır.",
+      "desc_en": "Metaxa is a legendary Greek liqueur that has been produced since 1888. Its distinctive character comes from a special formulation of anise, wine, and aromatic herbs, offering characteristic taste with vanilla notes. This collector's miniature bottle presents the classic green-labeled version of Metaxa.",
       "status": "draft",
       "active": false
     },
