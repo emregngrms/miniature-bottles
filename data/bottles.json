@@ -758,10 +758,10 @@
     },
     {
       "id": 1723998735,
-      "slug": "bottle-43",
-      "name": "Şişe #43",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "johnnie-walker-old-scotch-whisky",
+      "name": "Johnnie Walker Old Scotch Whisky",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -772,8 +772,8 @@
         "/images/uploads/18023534669110822.jpg",
         "/images/uploads/18012826598618852.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İskoçya'nın efsanevi blended whisky markası Johnnie Walker'ın klasik ürünü, zengin ve dengeli bir profil sunar. Tarihsel önemi ve ödül kazanmış formülasyonu ile koleksiyoncular tarafından değerli bir miniaturedir.",
+      "desc_en": "A classic offering from Scotland's legendary Johnnie Walker blended whisky brand, presenting a rich and balanced profile. Its historical significance and award-winning formulation make it a treasured piece for collectors of vintage spirits.",
       "status": "draft",
       "active": false
     },
