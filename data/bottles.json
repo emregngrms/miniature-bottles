@@ -128,19 +128,19 @@
     },
     {
       "id": 1762693276,
-      "slug": "bottle-8",
-      "name": "Şişe #8",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "umeshu-plum-liqueur-tokyo-brand",
+      "name": "Umeshu (Plum Liqueur) - Tokyo Brand",
+      "country": "Japan",
+      "category": "Liqueur",
+      "abv": "14%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/17849282598594423.jpg",
       "images": [
         "/images/uploads/17849282598594423.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Japonya'nın ünlü şehri Tokyo'dan gelen bu şeftali likörü, geleneksel Japon üretim yöntemleriyle hazırlanmıştır. Tatlı ve hafif asidik profiliyle, armut ve bahar notaları barındıran bu likör, buz üzerinde veya kokteyllerde servis edilir. Koleksiyoncuların değer verdiği bu miniatur şişe, Japon kültürünün kesintisiz bir temsilidir.",
+      "desc_en": "This plum liqueur from Tokyo, Japan's renowned city, is crafted using traditional Japanese production methods. With its sweet and mildly acidic profile, it features pear and spice notes and is best served over ice or in cocktails. This miniature bottle represents an authentic piece of Japanese culture, treasured by collectors.",
       "status": "draft",
       "active": false
     },
