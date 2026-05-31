@@ -1895,10 +1895,10 @@
     },
     {
       "id": 1720386605,
-      "slug": "bottle-106",
-      "name": "Şişe #106",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "gorlkovka-vodka",
+      "name": "Gorlkovka Vodka",
+      "country": "Russia",
+      "category": "Vodka",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1906,8 +1906,8 @@
       "images": [
         "/images/uploads/18313479547195807.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Rusya'dan gelen Gorlkovka Vodka, 1975 yılından beri üretilen klasik bir vodka markasıdır. Selim & Son Company tarafından üretilen bu içki, saf ve kristal berraklığıyla dikkat çeker. Geleneksel Rus vodka üslubunun karakteristik özellikleri taşıyan, temiz ve net bir tat profili sunmaktadır.",
+      "desc_en": "Gorlkovka Vodka is a classic Russian vodka produced since 1975 by Selim & Son Company. This spirit stands out for its pure and crystal clarity, embodying traditional Russian vodka characteristics. It presents a clean and neutral taste profile typical of authentic Russian vodkas.",
       "status": "draft",
       "active": false
     },
