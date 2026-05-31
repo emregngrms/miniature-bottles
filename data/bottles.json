@@ -1013,10 +1013,10 @@
     },
     {
       "id": 1723998116,
-      "slug": "bottle-57",
-      "name": "Şişe #57",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "colour-dream-deluxe-scotch-whisky",
+      "name": "Colour Dream Deluxe Scotch Whisky",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1024,8 +1024,8 @@
       "images": [
         "/images/uploads/17875674792133933.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Aberdeen, İskoçya'da üretilen ve Joseph E. Seegram and Sons Ltd. tarafından şişelenen bu blend, klasik İskoç viski karakterini yansıtır. Hafif ve denli yapısıyla günlük içim için uygun olan Colour Dream, geleneksel blend viski deneyimi sunar.",
+      "desc_en": "Produced in Aberdeen, Scotland and bottled by Joseph E. Seegram and Sons Ltd., this blended Scotch whisky exemplifies classic Scottish character. With its light and balanced profile, Colour Dream offers an approachable everyday drinking experience that reflects traditional blended Scotch whisky craftsmanship.",
       "status": "draft",
       "active": false
     },
