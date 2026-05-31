@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Miniature Bottles 5cl — Minyatür Alkol Şişeleri Koleksiyonu</title>
+<meta name="description" content="Dünyanın dört bir yanından toplanan 5cl minyatür alkol şişeleri koleksiyonu. Whisky, gin, rum, tequila ve daha fazlası. Takas için Instagram'dan DM."/>
+<meta name="keywords" content="minyatür şişe koleksiyonu, miniature bottle collection, 5cl, minyatür viski, takas, miniature spirits collector, kokteyl tarifleri"/>
+<meta property="og:title" content="Miniature Bottles 5cl Collection"/>
+<meta property="og:description" content="Dünyanın dört bir yanından 5cl minyatür alkol şişeleri koleksiyonu, kokteyl tarifleri ve takas listesi."/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=600"/>
+<link rel="canonical" href="https://miniaturebottles5cl.netlify.app/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100vh;background:#060e28;color:#c8d8f0;font-family:'DM Sans',sans-serif}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#060e28}
+::-webkit-scrollbar-thumb{background:#1a2e5a;border-radius:3px}
+a{text-decoration:none;color:inherit}
+img{display:block}
+button{font-family:inherit;cursor:pointer}
+header{background:#0a1838;border-bottom:1px solid #1a2e5a;position:sticky;top:0;z-index:100}
+.header-top{max-width:1160px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;justify-content:space-between;position:relative}
+.logo{position:absolute;left:50%;transform:translateX(-50%);text-align:center;cursor:pointer}
+.logo-main{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:#d4a843;letter-spacing:.04em;line-height:1}
+.logo-sub{font-size:9px;letter-spacing:.24em;color:#4a6490;text-transform:uppercase;margin-top:2px}
+.toggle-group{display:flex;gap:3px;background:#091530;border-radius:10px;padding:4px;border:1px solid #1a2e5a}
+.toggle-btn{padding:7px 9px;border-radius:7px;border:none;background:transparent;color:#4a6490;display:flex;align-items:center;transition:all .2s}
+.toggle-btn.active{background:rgba(212,168,67,.14);color:#d4a843}
+.lang-btn{padding:6px 13px;border-radius:7px;border:none;background:transparent;color:#4a6490;font-size:12px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;transition:all .2s}
+.lang-btn.active{background:rgba(212,168,67,.14);color:#d4a843}
+.header-nav{max-width:1160px;margin:0 auto;padding:0 20px;display:flex;gap:24px;border-top:1px solid #1a2e5a}
+.nav-btn{background:none;border:none;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;padding:10px 2px;color:#4a6490;border-bottom:2px solid transparent;transition:all .2s}
+.nav-btn.active{color:#d4a843;border-bottom-color:#d4a843}
+main{max-width:1160px;margin:0 auto;padding:28px 20px 72px}
+.search-wrap{position:relative;margin-bottom:16px}
+.search-wrap svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#4a6490;pointer-events:none}
+input[type=text]{width:100%;padding:12px 16px 12px 42px;background:#091530;border:1px solid #1a2e5a;border-radius:12px;color:#c8d8f0;font-size:14px;transition:all .2s;font-family:inherit}
+input[type=text]:focus{outline:none;border-color:#5b8fff;box-shadow:0 0 0 3px rgba(91,143,255,.12)}
+input[type=text]::placeholder{color:#4a6490}
+.chips{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px}
+.chip{padding:5px 13px;border-radius:20px;font-size:12px;letter-spacing:.04em;transition:all .2s;border:1px solid #1a2e5a;background:transparent;color:#4a6490}
+.chip.active{border-color:#d4a843;background:rgba(212,168,67,.14);color:#d4a843}
+.chip.blue.active{border-color:#5b8fff;background:rgba(91,143,255,.14);color:#5b8fff}
+.count{font-size:12px;color:#4a6490;letter-spacing:.05em;margin-bottom:16px}
+.count span{color:#d4a843}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.list-view{display:flex;flex-direction:column;gap:8px}
+.bcard{background:#0d1e42;border:1px solid #1a2e5a;border-radius:16px;overflow:hidden;cursor:pointer;transition:all .25s;display:flex;flex-direction:column}
+.bcard:hover{background:#102248;border-color:#2a4a8a;transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.5)}
+.bcard-img{position:relative;padding-bottom:68%;background:#091530;flex-shrink:0}
+.bcard-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bcard-img .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,14,40,.7) 0%,transparent 55%)}
+.bcard-badges{position:absolute;top:10px;left:10px;display:flex;gap:5px;flex-wrap:wrap}
+.badge-cat{background:rgba(13,30,66,.9);color:#5b8fff;font-size:10px;padding:3px 8px;border-radius:8px;backdrop-filter:blur(4px);letter-spacing:.05em}
+.badge-swap{background:rgba(15,46,26,.9);color:#52c97a;font-size:10px;padding:3px 8px;border-radius:8px;display:flex;align-items:center;gap:4px;backdrop-filter:blur(4px)}
+.badge-qty{position:absolute;top:10px;right:10px;background:rgba(6,14,40,.9);color:#d4a843;font-size:11px;padding:3px 9px;border-radius:8px;font-weight:700;backdrop-filter:blur(4px)}
+.badge-abv{position:absolute;bottom:10px;right:10px;background:rgba(6,14,40,.85);color:#8aaad8;font-size:10px;padding:2px 8px;border-radius:6px;backdrop-filter:blur(4px)}
+.badge-cocktail{position:absolute;bottom:10px;left:10px;background:rgba(212,168,67,.2);color:#d4a843;font-size:10px;padding:3px 8px;border-radius:6px;backdrop-filter:blur(4px);display:flex;align-items:center;gap:4px}
+.bcard-body{padding:14px 16px;flex:1;display:flex;flex-direction:column;gap:5px}
+.bcard-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:#c8d8f0;line-height:1.25}
+.bcard-sub{font-size:11px;color:#4a6490}
+.brow{background:#0d1e42;border:1px solid #1a2e5a;border-radius:12px;overflow:hidden;cursor:pointer;transition:all .2s;display:flex;align-items:stretch}
+.brow:hover{background:#102248;border-color:#2a4a8a}
+.brow-img{width:80px;flex-shrink:0}
+.brow-img img{width:100%;height:100%;object-fit:cover}
+.brow-body{flex:1;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.brow-info{flex:1}
+.brow-tags{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px}
+.tag-blue{background:#0f254c;color:#5b8fff;font-size:10px;padding:2px 8px;border-radius:6px;letter-spacing:.05em}
+.tag-green{background:#0f2e1a;color:#52c97a;font-size:10px;padding:2px 8px;border-radius:6px;display:flex;align-items:center;gap:3px}
+.brow-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:#c8d8f0}
+.brow-sub{font-size:11px;color:#4a6490;margin-top:2px}
+.detail{animation:slideIn .3s ease}
+.back-btn{display:flex;align-items:center;gap:6px;background:none;border:none;color:#8aaad8;font-size:13px;margin-bottom:20px;padding:0}
+.detail-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;align-items:start}
+.detail-img{border-radius:20px;overflow:hidden;border:1px solid #1a2e5a;position:relative}
+.detail-img img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.detail-badges{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.detail-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#c8d8f0;line-height:1.2;margin-bottom:6px}
+.detail-sub{font-size:13px;color:#4a6490;margin-bottom:18px}
+.detail-desc{font-size:14px;color:#8aaad8;line-height:1.75;font-style:italic;margin-bottom:24px;padding-left:12px;border-left:2px solid #d4a843}
+.dm-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(82,201,122,.12);border:1px solid rgba(82,201,122,.3);color:#52c97a;padding:11px 18px;border-radius:10px;font-size:13px;font-weight:500;margin-bottom:24px}
+.section-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4a6490;margin-bottom:10px}
+.rel-cocktail{display:flex;align-items:center;background:#0d1e42;border:1px solid #1a2e5a;border-radius:12px;overflow:hidden;cursor:pointer;transition:all .2s;margin-bottom:8px}
+.rel-cocktail:hover{border-color:#d4a843;background:#102248}
+.rel-cocktail img{width:56px;height:56px;object-fit:cover;flex-shrink:0}
+.rel-cocktail-info{flex:1;padding:8px 12px}
+.rel-cocktail-name{font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:#c8d8f0}
+.rel-cocktail-meta{font-size:11px;color:#4a6490;margin-top:2px;display:flex;gap:8px}
+.ccard{background:#0d1e42;border:1px solid #1a2e5a;border-radius:16px;overflow:hidden;cursor:pointer;transition:all .25s}
+.ccard:hover{background:#102248;border-color:#2a4a8a;transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.5)}
+.ccard-img{position:relative;padding-bottom:62%;background:#091530}
+.ccard-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ccard-img .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,14,40,.7) 0%,transparent 50%)}
+.ccard-body{padding:14px 16px}
+.ccard-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:#c8d8f0;margin-bottom:6px}
+.ccard-bottles{font-size:11px;color:#4a6490}
+.diff-easy{color:#52c97a}
+.diff-mid{color:#d4a843}
+.ingredient-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #1a2e5a}
+.ingredient-dot{width:6px;height:6px;border-radius:50%;background:#d4a843;flex-shrink:0}
+.step-row{display:flex;gap:12px;margin-bottom:12px}
+.step-num{width:22px;height:22px;border-radius:50%;background:rgba(212,168,67,.14);color:#d4a843;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-text{font-size:13px;color:#8aaad8;line-height:1.6;padding-top:2px}
+.rel-bottle{display:flex;align-items:center;background:#0d1e42;border:1px solid #1a2e5a;border-radius:10px;overflow:hidden;cursor:pointer;transition:all .2s}
+.rel-bottle:hover{border-color:#d4a843}
+.rel-bottle img{width:36px;height:36px;object-fit:cover}
+.rel-bottle span{font-family:'Playfair Display',serif;font-size:12px;color:#c8d8f0;padding:0 10px}
+.extras-banner{background:#0f2e1a;border:1px solid rgba(82,201,122,.18);border-radius:14px;padding:18px 22px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.extras-title{font-family:'Playfair Display',serif;font-size:19px;color:#52c97a;margin-bottom:5px}
+.extras-sub{font-size:13px;color:rgba(82,201,122,.65);line-height:1.55}
+.extras-dm{display:flex;align-items:center;gap:9px;background:rgba(82,201,122,.12);border:1px solid rgba(82,201,122,.3);color:#52c97a;padding:11px 20px;border-radius:10px;font-size:13px;font-weight:500;white-space:nowrap}
+.page-title{font-family:'Playfair Display',serif;font-style:italic;font-size:28px;color:#d4a843;margin-bottom:6px}
+.page-sub{font-size:13px;color:#4a6490;margin-bottom:24px}
+footer{background:#0a1838;border-top:1px solid #1a2e5a;padding:28px 20px}
+.footer-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-title{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;color:#d4a843;margin-bottom:5px}
+.footer-sub{font-size:12px;color:#4a6490;line-height:1.6}
+.ig-btn{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#833ab4 0%,#fd1d1d 50%,#fcb045 100%);padding:12px 22px;border-radius:12px;color:#fff;font-size:13px;font-weight:600;box-shadow:0 4px 24px rgba(253,29,29,.2);letter-spacing:.03em;white-space:nowrap}
+.empty{text-align:center;padding:80px 0}
+.empty-icon{font-size:54px;margin-bottom:16px}
+.empty-text{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:#8aaad8}
+.loading{text-align:center;padding:80px 0;color:#4a6490;font-size:14px}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+.fade{animation:fadeIn .3s ease}
+.slide{animation:slideIn .3s ease}
+@media(max-width:600px){
+  .detail-grid{grid-template-columns:1fr}
+  .detail-img img{aspect-ratio:4/3}
+  .header-top{padding:0 12px}
+  main{padding:20px 12px 60px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <div class="toggle-group">
+      <button class="toggle-btn active" id="btn-grid" onclick="setView('grid')" title="Grid">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      </button>
+      <button class="toggle-btn" id="btn-list" onclick="setView('list')" title="Liste">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><line x1="9" y1="6" x2="21" y2="6"/><line x1="9" y1="12" x2="21" y2="12"/><line x1="9" y1="18" x2="21" y2="18"/><circle cx="3.5" cy="6" r="1.3" fill="currentColor" stroke="none"/><circle cx="3.5" cy="12" r="1.3" fill="currentColor" stroke="none"/><circle cx="3.5" cy="18" r="1.3" fill="currentColor" stroke="none"/></svg>
+      </button>
+    </div>
+    <div class="logo" onclick="goPage('collection')">
+      <div class="logo-main">Miniature Bottles</div>
+      <div class="logo-sub">5cl Collection</div>
+    </div>
+    <div class="toggle-group">
+      <button class="lang-btn active" id="btn-tr" onclick="setLang('tr')">TR</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+  <div class="header-nav">
+    <button class="nav-btn active" id="nav-collection" onclick="goPage('collection')" data-tr="Koleksiyon" data-en="Collection">Koleksiyon</button>
+    <button class="nav-btn" id="nav-cocktails" onclick="goPage('cocktails')" data-tr="Kokteyller" data-en="Cocktails">Kokteyller</button>
+    <button class="nav-btn" id="nav-extras" onclick="goPage('extras')" data-tr="Fazlalıklar" data-en="Extras">Fazlalıklar</button>
+  </div>
+</header>
+<main id="main-content"><div class="loading">Yükleniyor…</div></main>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-title">Miniature Bottles 5cl</div>
+      <div class="footer-sub" id="footer-sub">Dünyanın dört bir yanından minyatür alkol şişeleri koleksiyonu.</div>
+    </div>
+    <a href="https://www.instagram.com/miniaturebottles_5cl" target="_blank" rel="noopener noreferrer" class="ig-btn">
+      <svg width="19" height="19" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      <span id="ig-btn-text">Instagram'da Takip Et</span>
+    </a>
+  </div>
+</footer>
+<script>
+const IG_DM = "https://ig.me/m/miniaturebottles_5cl";
+let bottles = [], cocktails = [];
+let state = { page:'collection', view:'grid', lang:'tr', search:'', cat:'Tümü', country:'Tümü', selBottle:null, selCocktail:null };
+
+// Load data from JSON files
+async function loadData() {
+  try {
+    const [b, c] = await Promise.all([
+      fetch('/data/bottles.json').then(r => r.json()),
+      fetch('/data/cocktails.json').then(r => r.json())
+    ]);
+    bottles = b;
+    cocktails = c;
+  } catch(e) {
+    console.error('Data load failed:', e);
+  }
+  render();
+}
+
+function setState(patch) { Object.assign(state, patch); render(); }
+function t(tr, en) { return state.lang === 'tr' ? tr : en; }
+function cocktailsFor(slug) { return cocktails.filter(c => c.slugs && c.slugs.includes(slug)); }
+function bottleFor(slug) { return bottles.find(b => b.slug === slug); }
+
+function svgChevRight() { return `<svg width="14" height="14" fill="none" stroke="#4a6490" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>`; }
+function svgChevLeft() { return `<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>`; }
+function svgClock() { return `<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:middle"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>`; }
+function svgSwap() { return `<svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 16V4m0 0L3 8m4-4 4 4M17 8v12m0 0 4-4m-4 4-4-4"/></svg>`; }
+function svgDM() { return `<svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`; }
+function svgCocktail() { return `<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 22h8M12 11v11M3 3l9 8 9-8H3z"/></svg>`; }
+
+function renderBottleCard(b) {
+  const cc = cocktailsFor(b.slug).length;
+  return `<div class="bcard" onclick="openBottle('${b.slug}')">
+    <div class="bcard-img">
+      <img src="${b.image}" alt="${b.name}" loading="lazy"/>
+      <div class="overlay"></div>
+      <div class="bcard-badges">
+        <span class="badge-cat">${b.category}</span>
+        ${b.qty > 1 ? `<span class="badge-swap">${svgSwap()}TAKAS</span>` : ''}
+      </div>
+      ${b.qty > 1 ? `<span class="badge-qty">×${b.qty}</span>` : ''}
+      <span class="badge-abv">${b.abv}</span>
+      ${cc > 0 ? `<span class="badge-cocktail">${svgCocktail()} ${cc} ${t('kokteyl','cocktail')}</span>` : ''}
+    </div>
+    <div class="bcard-body">
+      <div class="bcard-name">${b.name}</div>
+      <div class="bcard-sub">${b.flag} ${b.country} · ${b.year}</div>
+    </div>
+  </div>`;
+}
+
+function renderBottleRow(b) {
+  const cc = cocktailsFor(b.slug).length;
+  return `<div class="brow" onclick="openBottle('${b.slug}')">
+    <div class="brow-img"><img src="${b.image}" alt="${b.name}" loading="lazy"/></div>
+    <div class="brow-body">
+      <div class="brow-info">
+        <div class="brow-tags">
+          <span class="brow-name">${b.name}</span>
+          <span class="tag-blue">${b.category}</span>
+          ${b.qty > 1 ? `<span class="tag-green">${svgSwap()}TAKAS</span>` : ''}
+        </div>
+        <div class="brow-sub">${b.flag} ${b.country} · ${b.abv} · ${b.year}${cc > 0 ? ` · <span style="color:#d4a843">${cc} ${t('kokteyl','cocktail')}</span>` : ''}</div>
+      </div>
+      ${b.qty > 1 ? `<span style="color:#d4a843;font-size:12px;font-weight:700">×${b.qty}</span>` : ''}
+      ${svgChevRight()}
+    </div>
+  </div>`;
+}
+
+function renderCocktailCard(c) {
+  const diff = state.lang === 'tr' ? c.diff : c.diff_en;
+  const diffClass = c.diff === 'Kolay' ? 'diff-easy' : 'diff-mid';
+  return `<div class="ccard" onclick="openCocktail(${c.id})">
+    <div class="ccard-img">
+      <img src="${c.image}" alt="${c.name}" loading="lazy"/>
+      <div class="overlay"></div>
+      <span style="position:absolute;top:10px;left:10px;background:rgba(13,30,66,.9);font-size:10px;padding:3px 8px;border-radius:8px;backdrop-filter:blur(4px)" class="${diffClass}">${diff}</span>
+      <span style="position:absolute;top:10px;right:10px;background:rgba(6,14,40,.85);color:#8aaad8;font-size:10px;padding:3px 8px;border-radius:8px;backdrop-filter:blur(4px)">${svgClock()} ${c.time}</span>
+    </div>
+    <div class="ccard-body">
+      <div class="ccard-name">${c.name}</div>
+      <div class="ccard-bottles">${(c.slugs||[]).map(s => bottleFor(s)?.name).filter(Boolean).join(' · ')}</div>
+    </div>
+  </div>`;
+}
+
+function renderSearchBar(placeholder) {
+  return `<div class="search-wrap">
+    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" id="search-input" value="${state.search}" placeholder="${placeholder}" oninput="onSearch(this.value)"/>
+  </div>`;
+}
+
+function renderCollectionPage(extrasOnly) {
+  const base = extrasOnly ? bottles.filter(b => b.qty > 1) : bottles;
+  const q = state.search.toLowerCase();
+  const filtered = base.filter(b => {
+    const match = !q || [b.name, b.country, b.category, b.desc_tr||'', b.desc_en||''].some(s => s.toLowerCase().includes(q));
+    return match && (state.cat === 'Tümü' || b.category === state.cat) && (state.country === 'Tümü' || b.country === state.country);
+  });
+  const cats = ['Tümü', ...new Set(bottles.map(b => b.category))];
+  const ctrs = ['Tümü', ...new Set(bottles.map(b => b.country))];
+  return `
+    ${extrasOnly ? `<div class="extras-banner">
+      <div>
+        <div class="extras-title">${t('Takas & Fazlalıklar','For Trade & Extras')}</div>
+        <div class="extras-sub">${t('Koleksiyonumda birden fazla bulunan şişeler. Takas için Instagram\'dan DM atabilirsiniz.','Bottles I have more than one of. DM me on Instagram to discuss trades.')}</div>
+      </div>
+      <a href="${IG_DM}" target="_blank" rel="noopener noreferrer" class="extras-dm">${svgDM()} ${t('DM Gönder','Send DM')}</a>
+    </div>` : ''}
+    ${renderSearchBar(t('İsim, ülke, kategori ara…','Search name, country, category…'))}
+    <div class="chips">${cats.map(c => `<button class="chip${state.cat===c?' active':''}" onclick="setCat('${c}')">${c}</button>`).join('')}</div>
+    <div class="chips">${ctrs.map(c => `<button class="chip blue${state.country===c?' active':''}" onclick="setCtr('${c}')">${c}</button>`).join('')}</div>
+    <div class="count">${filtered.length} ${t('şişe','bottle')}${filtered.length!==1&&state.lang==='en'?'s':''}${q?` <span>"${state.search}"</span>`:''}</div>
+    ${state.view==='grid' ? `<div class="grid">${filtered.map(renderBottleCard).join('')}</div>` : `<div class="list-view">${filtered.map(renderBottleRow).join('')}</div>`}
+    ${filtered.length===0?`<div class="empty"><div class="empty-icon">🫗</div><div class="empty-text">${t('Sonuç bulunamadı','No results found')}</div></div>`:''}`;
+}
+
+function renderBottleDetail(b) {
+  const related = cocktailsFor(b.slug);
+  const desc = state.lang==='tr' ? b.desc_tr : b.desc_en;
+  return `<div class="detail">
+    <button class="back-btn" onclick="goBack()">${svgChevLeft()} ${t('Koleksiyona Dön','Back to Collection')}</button>
+    <div class="detail-grid">
+      <div class="detail-img">
+        <img src="${b.image}" alt="${b.name}"/>
+        ${b.qty>1?`<div style="position:absolute;top:14px;right:14px;background:rgba(6,14,40,.9);color:#d4a843;font-size:13px;padding:5px 12px;border-radius:10px;font-weight:700;backdrop-filter:blur(4px)">×${b.qty} adet</div>`:''}
+      </div>
+      <div>
+        <div class="detail-badges">
+          <span class="tag-blue" style="font-size:11px;padding:4px 10px;border-radius:8px">${b.category}</span>
+          <span style="background:rgba(212,168,67,.12);color:#d4a843;font-size:11px;padding:4px 10px;border-radius:8px">${b.abv}</span>
+          ${b.qty>1?`<span class="tag-green" style="font-size:11px;padding:4px 10px;border-radius:8px">${svgSwap()} TAKAS</span>`:''}
+        </div>
+        <h1 class="detail-title">${b.name}</h1>
+        <div class="detail-sub">${b.flag} ${b.country} · ${b.year}</div>
+        <p class="detail-desc">${desc||''}</p>
+        ${b.qty>1?`<a href="${IG_DM}" target="_blank" rel="noopener noreferrer" class="dm-btn">${svgDM()} ${t('Takas için DM at','DM to Trade')}</a>`:''}
+        ${related.length>0?`
+          <div class="section-label">${t('Bu şişeyle yapılan kokteyller','Cocktails with this bottle')}</div>
+          ${related.map(c=>`<div class="rel-cocktail" onclick="openCocktail(${c.id})">
+            <img src="${c.image}" alt="${c.name}"/>
+            <div class="rel-cocktail-info">
+              <div class="rel-cocktail-name">${c.name}</div>
+              <div class="rel-cocktail-meta">
+                <span class="${c.diff==='Kolay'?'diff-easy':'diff-mid'}">${state.lang==='tr'?c.diff:c.diff_en}</span>
+                <span>${svgClock()} ${c.time}</span>
+              </div>
+            </div>
+            ${svgChevRight()}
+          </div>`).join('')}` : ''}
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderCocktailDetail(c) {
+  const ings = state.lang==='tr' ? c.ing_tr : c.ing_en;
+  const steps = state.lang==='tr' ? c.steps_tr : c.steps_en;
+  const diff = state.lang==='tr' ? c.diff : c.diff_en;
+  const relBottles = (c.slugs||[]).map(bottleFor).filter(Boolean);
+  return `<div class="detail">
+    <button class="back-btn" onclick="goBack()">${svgChevLeft()} ${t('Kokteyllere Dön','Back to Cocktails')}</button>
+    <div class="detail-grid">
+      <div class="detail-img"><img src="${c.image}" alt="${c.name}" style="aspect-ratio:4/3"/></div>
+      <div>
+        <div class="detail-badges">
+          <span style="background:${c.diff==='Kolay'?'rgba(82,201,122,.12)':'rgba(212,168,67,.14)'};color:${c.diff==='Kolay'?'#52c97a':'#d4a843'};font-size:11px;padding:4px 10px;border-radius:8px">${diff}</span>
+          <span class="tag-blue" style="font-size:11px;padding:4px 10px;border-radius:8px">${svgClock()} ${c.time}</span>
+        </div>
+        <h1 class="detail-title">${c.name}</h1>
+        <div class="section-label" style="margin-top:20px">${t('Malzemeler','Ingredients')}</div>
+        <div style="margin-bottom:20px">${(ings||[]).map(i=>`<div class="ingredient-row"><span class="ingredient-dot"></span><span style="font-size:13px;color:#c8d8f0">${i}</span></div>`).join('')}</div>
+        <div class="section-label">${t('Hazırlanış','Instructions')}</div>
+        <div style="margin-bottom:24px">${(steps||[]).map((s,i)=>`<div class="step-row"><span class="step-num">${i+1}</span><span class="step-text">${s}</span></div>`).join('')}</div>
+        ${relBottles.length>0?`
+          <div class="section-label">${t('Kullanılan şişeler','Bottles used')}</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            ${relBottles.map(b=>`<div class="rel-bottle" onclick="openBottleFromCocktail('${b.slug}')"><img src="${b.image}" alt="${b.name}"/><span>${b.name}</span></div>`).join('')}
+          </div>` : ''}
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderCocktailsPage() {
+  const q = state.search.toLowerCase();
+  const filtered = cocktails.filter(c => !q || c.name.toLowerCase().includes(q) || (c.ing_tr||[]).some(i=>i.toLowerCase().includes(q)));
+  return `<div class="fade">
+    <div class="page-title">${t('Kokteyl Tarifleri','Cocktail Recipes')}</div>
+    <div class="page-sub">${t('Koleksiyonumdaki şişelerle hazırlanan özel tarifler','Special recipes made with bottles from my collection')}</div>
+    ${renderSearchBar(t('Kokteyl veya malzeme ara…','Search cocktail or ingredient…'))}
+    <div class="grid">${filtered.map(renderCocktailCard).join('')}</div>
+    ${filtered.length===0?`<div class="empty"><div class="empty-icon">🍹</div><div class="empty-text">${t('Sonuç bulunamadı','No results found')}</div></div>`:''}
+  </div>`;
+}
+
+function render() {
+  ['collection','cocktails','extras'].forEach(p => {
+    const el = document.getElementById('nav-'+p);
+    if(el){ el.classList.toggle('active', state.page===p); el.textContent=el.dataset[state.lang]; }
+  });
+  document.getElementById('btn-grid').classList.toggle('active', state.view==='grid');
+  document.getElementById('btn-list').classList.toggle('active', state.view==='list');
+  document.getElementById('btn-tr').classList.toggle('active', state.lang==='tr');
+  document.getElementById('btn-en').classList.toggle('active', state.lang==='en');
+  document.getElementById('footer-sub').textContent = t('Dünyanın dört bir yanından minyatür alkol şişeleri koleksiyonu.','A curated collection of miniature spirit bottles from around the world.');
+  document.getElementById('ig-btn-text').textContent = t("Instagram'da Takip Et","Follow on Instagram");
+
+  const main = document.getElementById('main-content');
+  if(state.selCocktail){ main.innerHTML=renderCocktailDetail(state.selCocktail); return; }
+  if(state.selBottle){ main.innerHTML=renderBottleDetail(state.selBottle); return; }
+  if(state.page==='cocktails'){ main.innerHTML=renderCocktailsPage(); return; }
+  main.innerHTML=`<div class="fade">${renderCollectionPage(state.page==='extras')}</div>`;
+}
+
+function setView(v){ setState({view:v}); }
+function setLang(l){ setState({lang:l}); }
+function goPage(p){ setState({page:p,selBottle:null,selCocktail:null,search:'',cat:'Tümü',country:'Tümü'}); window.scrollTo(0,0); }
+function setCat(c){ setState({cat:c}); }
+function setCtr(c){ setState({country:c}); }
+function onSearch(v){ state.search=v; render(); }
+function openBottle(slug){ setState({selBottle:bottles.find(b=>b.slug===slug),selCocktail:null}); window.scrollTo(0,0); }
+function openCocktail(id){ setState({selCocktail:cocktails.find(c=>c.id===id)}); window.scrollTo(0,0); }
+function openBottleFromCocktail(slug){ setState({selBottle:bottles.find(b=>b.slug===slug),selCocktail:null,page:'collection'}); window.scrollTo(0,0); }
+function goBack(){
+  if(state.selCocktail){ setState({selCocktail:null}); }
+  else{ setState({selBottle:null}); }
+  window.scrollTo(0,0);
+}
+
+loadData();
+</script>
+</body>
+</html>
