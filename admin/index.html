@@ -448,8 +448,18 @@ function openBottleModal(b){
   document.getElementById('modal-ft').innerHTML=`
     <button class="btn btn-ghost" onclick="closeModal()">İptal</button>
     <button class="btn btn-primary" id="sbtn" onclick="saveBottle('${esc(b.slug)}','${isEdit}')">${isEdit?'Güncelle':'Ekle & Yayınla'}</button>`;
-  // Init image list state
-  window._editImages = (b.images && b.images.length) ? [...b.images] : (b.image ? [b.image] : []);
+  // Init image list state BEFORE rendering (modal HTML uses b.images directly)
+  window._editImages = [];
+  if(b.images && b.images.length){
+    window._editImages = b.images.filter(u=>u && !u.startsWith('blob:'));
+  } else if(b.image){
+    window._editImages = [b.image];
+  }
+  // Clear file input
+  const fif = document.getElementById('fif');
+  if(fif) fif.value = '';
+  const fiu = document.getElementById('fiu');
+  if(fiu) fiu.value = '';
   openModal();
   
   // After modal opens, ensure select values match (in case option wasn't pre-selected)
@@ -474,25 +484,31 @@ function openBottleModal(b){
 }
 
 function removeImg(idx){
-  window._editImages.splice(idx,1);
-  // Re-render gallery
+  if(idx >= 0) window._editImages.splice(idx,1);
+  refreshGallery();
+}
+function addMoreImg(){document.getElementById('fif').click();}
+function prevImgMulti(input){
+  if(!input.files.length)return;
+  // Show previews but DON'T store blob URLs in _editImages
+  // Real URLs will be added when saveBottle uploads the files
+  for(const file of input.files){
+    const url=URL.createObjectURL(file);
+    // Store blob temporarily for preview only, marked with blob: prefix
+    // We'll upload and replace during save
+    if(!window._editImages.includes(url)) window._editImages.push(url);
+  }
+  refreshGallery();
+}
+function refreshGallery(){
   const gallery=document.getElementById('img-gallery');
   if(!gallery)return;
-  gallery.innerHTML=(window._editImages.length?window._editImages:[]).map((img,i)=>`
+  gallery.innerHTML=(window._editImages||[]).map((img,i)=>`
     <div style="position:relative;width:80px;height:80px;flex-shrink:0">
       <img src="${img}" style="width:80px;height:80px;object-fit:cover;border-radius:8px;border:${i===0?'2px solid var(--gold)':'1px solid var(--border)'}"/>
       ${i===0?'<span style="position:absolute;bottom:2px;left:2px;background:rgba(212,168,67,.9);color:#000;font-size:9px;padding:1px 4px;border-radius:4px;font-weight:700">ANA</span>':''}
       <button onclick="removeImg(${i})" style="position:absolute;top:-5px;right:-5px;width:18px;height:18px;border-radius:50%;background:#e05c5c;border:none;color:#fff;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center">×</button>
     </div>`).join('');
-}
-function addMoreImg(){document.getElementById('fif').click();}
-function prevImgMulti(input){
-  if(!input.files.length)return;
-  for(const file of input.files){
-    const url=URL.createObjectURL(file);
-    window._editImages.push(url);
-  }
-  removeImg(-999); // trigger re-render
 }
 function addImgFromUrl(url){
   if(!url||!url.startsWith('http'))return;
