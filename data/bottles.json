@@ -1481,19 +1481,19 @@
     },
     {
       "id": 1721415557,
-      "slug": "bottle-83",
-      "name": "Şişe #83",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "malibu-original-liqueur",
+      "name": "Malibu Original Liqueur",
+      "country": "Barbados",
+      "category": "Liqueur",
+      "abv": "21%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18011465903285729.jpg",
       "images": [
         "/images/uploads/18011465903285729.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Barbados kökenli Malibu, beyaz rum ve hindistan cevizi aromasıyla yapılan klasik bir likördür. Tropikal ve tatlı profiliyle, saf içildiği gibi kokteyllerin de vazgeçilmez bileşenidir. Hafif ve erişilebilir yapısıyla başta içki sevenleri ve koleksiyonculuları çeken bir seçimdir.",
+      "desc_en": "Malibu Original is a classic liqueur from Barbados made with white rum and coconut flavour. With its tropical and sweet profile, it works equally well enjoyed straight or as an essential component in cocktails. Its light and approachable character makes it a popular choice among spirit enthusiasts and collectors.",
       "status": "draft",
       "active": false
     },
