@@ -1589,10 +1589,10 @@
     },
     {
       "id": 1720386946,
-      "slug": "bottle-89",
-      "name": "Şişe #89",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "zelenaya-marka-kedrovaya-vodka",
+      "name": "Zelenaya Marka Kedrovaya Vodka",
+      "country": "Russia",
+      "category": "Vodka",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1600,8 +1600,8 @@
       "images": [
         "/images/uploads/18321000856177228.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Rusya'nın ünlü Zelenaya Marka markasının özel bir ürünü olan bu vodka, Sibirya çam ağaçlarından elde edilen doğal özlerin kullanılmasıyla karakteristik bir profil kazanmıştır. İçinde yer alan tarçın ve ceviz notaları, geleneksel Rus tarifi takip edilerek hazırlanan bu vodkanın sofistike tarafını ortaya koymaktadır.",
+      "desc_en": "A distinctive offering from Russia's renowned Zelenaya Marka brand, this vodka gains its characteristic profile through the use of natural essences derived from Siberian pine trees. The hints of cinnamon and walnut present in the spirit showcase its sophisticated character, prepared following traditional Russian recipe techniques.",
       "status": "draft",
       "active": false
     },
