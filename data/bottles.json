@@ -2255,19 +2255,19 @@
     },
     {
       "id": 1720382848,
-      "slug": "bottle-126",
-      "name": "Şişe #126",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "bells-deluxe-blended-scotch-whisky-12-years-old",
+      "name": "Bell's DeLuxe Blended Scotch Whisky 12 Years Old",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
+      "abv": "43%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18097260043427230.jpg",
       "images": [
         "/images/uploads/18097260043427230.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Perth, İskoçya'da 1825'ten beri üretilen Bell's, klasik bir blend whiskydir. 12 yıl yaşlandırılmış bu örnek, meyvemsi notalar, tatlı baharat ve yumuşak bir finişle karakterizedir. Koleksiyonerlerin değer verdiği, İskoç whisky kültürünün önemli temsilcilerinden biridir.",
+      "desc_en": "Bell's, produced in Perth, Scotland since 1825, is a classic blended Scotch whisky. This 12-year-old expression features fruity notes, sweet spice, and a smooth finish. It represents an important part of Scottish whisky heritage, highly valued by collectors worldwide.",
       "status": "draft",
       "active": false
     },
