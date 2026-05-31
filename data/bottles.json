@@ -74,19 +74,19 @@
     },
     {
       "id": 1762693321,
-      "slug": "bottle-5",
-      "name": "Şişe #5",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "hakkaisan",
+      "name": "Hakkaisan",
+      "country": "Japan",
+      "category": "Sake",
+      "abv": "15.6%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18433084849109930.jpg",
       "images": [
         "/images/uploads/18433084849109930.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Niigata prefektörlüğünden gelen bu saké, Japonya'nın en prestijli içkilerinden biridir. Hakkai dağlarından esinlenerek üretilen bu saké, hafif, temiz ve dengeli bir tada sahiptir. Geleneksel Japon saké yapım tekniğinin mükemmel örneğidir.",
+      "desc_en": "Hailing from Niigata Prefecture, this sake is among Japan's most prestigious beverages. Inspired by the Hakkai mountains, this sake offers a light, clean, and well-balanced taste profile. It exemplifies traditional Japanese sake brewing craftsmanship at its finest.",
       "status": "draft",
       "active": false
     },
