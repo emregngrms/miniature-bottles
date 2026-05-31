@@ -9,6 +9,7 @@
 <meta property="og:title" content="Miniature Bottles 5cl Collection"/>
 <meta property="og:description" content="Dünyanın dört bir yanından 5cl minyatür alkol şişeleri koleksiyonu, kokteyl tarifleri ve takas listesi."/>
 <meta property="og:image" content="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=600"/>
+<meta name="ga-id" content="G-XXXXXXXXXX"/>
 <link rel="canonical" href="https://miniaturebottles5cl.netlify.app/"/>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -137,6 +138,31 @@ footer{background:#0a1838;border-top:1px solid #1a2e5a;padding:28px 20px}
   main{padding:20px 12px 60px}
 }
 </style>
+<!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID -->
+<script>
+(function(){
+  var GA_ID = document.querySelector('meta[name="ga-id"]')?.content;
+  if(!GA_ID || GA_ID === 'G-XXXXXXXXXX') return;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', GA_ID, { send_page_view: false });
+
+  // Track hash-based page views
+  function trackPage(){
+    var path = location.pathname + location.hash;
+    var title = document.title;
+    gtag('event', 'page_view', { page_path: path, page_title: title });
+  }
+  window.addEventListener('hashchange', trackPage);
+  document.addEventListener('DOMContentLoaded', function(){ setTimeout(trackPage, 500); });
+})();
+</script>
 </head>
 <body>
 <header>
