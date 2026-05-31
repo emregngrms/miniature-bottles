@@ -2327,10 +2327,10 @@
     },
     {
       "id": 1720382439,
-      "slug": "bottle-130",
-      "name": "Şişe #130",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "johnnie-walker-black-label",
+      "name": "Johnnie Walker Black Label",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2338,8 +2338,8 @@
       "images": [
         "/images/uploads/17890355508049140.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İkonik Johnnie Walker Black Label, İskoçya'nın en tanınmış blended whiskylerinden biridir. 12 yıl yaşlandırılmış bu spirits, zengin ve kompleks tatı profiliyle karakterize edilir; tütün, bal ve hafif çiçek notaları içerir. Dünyada milyonlarca coleksiyon ve içkiye tutkunun tercih ettiği premium bir blend.",
+      "desc_en": "The iconic Johnnie Walker Black Label is one of Scotland's most recognized blended whiskies. Aged 12 years, this spirit is characterized by its rich and complex flavor profile featuring notes of tobacco, honey, and subtle floral hints. A premium blend preferred by millions of collectors and spirit enthusiasts worldwide.",
       "status": "draft",
       "active": false
     },
