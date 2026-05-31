@@ -815,19 +815,19 @@
     },
     {
       "id": 1723998391,
-      "slug": "bottle-46",
-      "name": "Şişe #46",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "berentzen-wildbeer",
+      "name": "Berentzen Wildbeer",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "35%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17869562229170763.jpg",
       "images": [
         "/images/uploads/17869562229170763.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Almanya'nın ünlü Berentzen markasından üretilen Wildbeer, yaban mersini ve vodka karışımıyla hazırlanmış geleneksel bir likördür. Tatlı ve meyve aromaları ile karakterize olan bu içki, hem pur hem de kokteyllerde kullanılabilir. Vintage etiketleme ile koleksiyonerlerin ilgi görmesi muhtemel bu miniatur şişe, Alman içki kültürünün önemli bir parçasıdır.",
+      "desc_en": "Produced by Germany's renowned Berentzen brand, Wildbeer is a traditional liqueur made from wild berries and vodka. Characterized by sweet and fruity aromas, this spirit can be enjoyed both neat and in cocktails. This miniature bottle with vintage labeling is likely to appeal to collectors and represents an important part of German spirit culture.",
       "status": "draft",
       "active": false
     },
