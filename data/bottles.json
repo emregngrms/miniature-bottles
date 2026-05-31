@@ -434,19 +434,19 @@
     },
     {
       "id": 1757255613,
-      "slug": "bottle-25",
-      "name": "Şişe #25",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "berliner-luft",
+      "name": "Berliner Luft",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "20%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18038870912452259.jpg",
       "images": [
         "/images/uploads/18038870912452259.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Berliner Luft, Berlinli rafine zevkler için özel olarak tasarlanan Alman peppermint likörüdür. Taze nane aroması ve kristal berraklığı ile karakterize edilen bu içki, geleneksel Alman tarifine göre üretilmektedir. Soğuk servise ve digestif olarak ideal olan bu likör, Berlin'in ikonik aromasını her yudumda sunar.",
+      "desc_en": "Berliner Luft is a German peppermint liqueur specially crafted for refined Berlin tastes. Characterized by its fresh mint aroma and crystal clarity, this spirit is produced according to traditional German recipes. Ideal served cold or as a digestif, this liqueur delivers Berlin's iconic essence in every sip.",
       "status": "draft",
       "active": false
     },
