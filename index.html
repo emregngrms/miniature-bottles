@@ -37,7 +37,7 @@ header{background:#0a1838;border-bottom:1px solid #1a2e5a;position:sticky;top:0;
 .nav-btn{background:none;border:none;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;padding:10px 2px;color:#4a6490;border-bottom:2px solid transparent;transition:all .2s}
 .nav-btn.active{color:#d4a843;border-bottom-color:#d4a843}
 main{max-width:1160px;margin:0 auto;padding:28px 20px 72px}
-.search-wrap{position:relative;margin-bottom:16px}
+.search-wrap{position:relative;flex:1;min-width:200px}
 .search-wrap svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#4a6490;pointer-events:none}
 input[type=text]{width:100%;padding:12px 16px 12px 42px;background:#091530;border:1px solid #1a2e5a;border-radius:12px;color:#c8d8f0;font-size:14px;transition:all .2s;font-family:inherit}
 input[type=text]:focus{outline:none;border-color:#5b8fff;box-shadow:0 0 0 3px rgba(91,143,255,.12)}
@@ -193,18 +193,28 @@ function flag(country){ return FLAGS[country] || '🌍'; }
 
 const IG_DM = "https://ig.me/m/miniaturebottles_5cl";
 let bottles = [], cocktails = [];
-let state = { page:'collection', view:'grid', lang:'tr', search:'', cat:'Tümü', country:'Tümü', selBottle:null, selCocktail:null };
+let state = { page:'collection', view:'grid', lang:'tr', search:'', cat:'', country:'', selBottle:null, selCocktail:null };
+let categories = [];
 
 async function loadData() {
   try {
-    const [b, c] = await Promise.all([
+    const [b, c, cats] = await Promise.all([
       fetch('/data/bottles.json').then(r=>r.json()),
-      fetch('/data/cocktails.json').then(r=>r.json())
+      fetch('/data/cocktails.json').then(r=>r.json()),
+      fetch('/data/categories.json').then(r=>r.json()).catch(()=>({items:[]}))
     ]);
     bottles = b.items || b;
     cocktails = c.items || c;
+    categories = (cats.items || cats || []);
   } catch(e) { console.error('Load error:', e); }
   render();
+}
+
+function catName(en) {
+  if (!en) return en;
+  const cat = categories.find(c => c.name_en === en);
+  if (!cat) return en;
+  return state.lang === 'tr' ? (cat.name_tr || en) : en;
 }
 
 function setState(p){ Object.assign(state,p); render(); }
@@ -226,7 +236,7 @@ function renderBottleCard(b){
       <img src="${b.image}" alt="${b.name}" loading="lazy"/>
       <div class="overlay"></div>
       <div class="bcard-badges">
-        <span class="badge-cat">${b.category}</span>
+        <span class="badge-cat">${catName(b.category)}</span>
         ${b.qty>1?`<span class="badge-swap">${svgSwap()}TAKAS</span>`:''}
       </div>
       ${b.qty>1?`<span class="badge-qty">×${b.qty}</span>`:''}
@@ -248,7 +258,7 @@ function renderBottleRow(b){
       <div class="brow-info">
         <div class="brow-tags">
           <span class="brow-name">${b.name}</span>
-          <span class="tag-blue">${b.category}</span>
+          <span class="tag-blue">${catName(b.category)}</span>
           ${b.qty>1?`<span class="tag-green">${svgSwap()}TAKAS</span>`:''}
         </div>
         <div class="brow-sub">${flag(b.country)} ${b.country} · ${b.abv} · ${b.year}${cc>0?` · <span style="color:#d4a843">${cc} ${t('kokteyl','cocktail')}</span>`:''}</div>
@@ -287,10 +297,9 @@ function renderCollectionPage(extrasOnly){
   const q=state.search.toLowerCase();
   const filtered=base.filter(b=>{
     const m=!q||[b.name,b.country,b.category,b.desc_tr||'',b.desc_en||''].some(s=>s.toLowerCase().includes(q));
-    return m&&(state.cat==='Tümü'||b.category===state.cat)&&(state.country==='Tümü'||b.country===state.country);
+    return m&&(!state.cat||b.category===state.cat)&&(!state.country||b.country===state.country);
   });
-  const cats=['Tümü',...new Set(bottles.map(b=>b.category))];
-  const ctrs=['Tümü',...new Set(bottles.map(b=>b.country))];
+
   return `
     ${extrasOnly?`<div class="extras-banner">
       <div>
@@ -299,10 +308,27 @@ function renderCollectionPage(extrasOnly){
       </div>
       <a href="${IG_DM}" target="_blank" rel="noopener noreferrer" class="extras-dm">${svgDM()} ${t('DM Gönder','Send DM')}</a>
     </div>`:''}
-    ${renderSearchBar(t('İsim, ülke, kategori ara…','Search name, country, category…'))}
-    <div class="chips">${cats.map(c=>`<button class="chip${state.cat===c?' active':''}" onclick="setCat('${c}')">${c}</button>`).join('')}</div>
-    <div class="chips">${ctrs.map(c=>`<button class="chip blue${state.country===c?' active':''}" onclick="setCtr('${c}')">${c}</button>`).join('')}</div>
-    <div class="count">${filtered.length} ${t('şişe','bottle')}${filtered.length!==1&&state.lang==='en'?'s':''}${q?` <span>"${state.search}"</span>`:''}</div>
+    <div style="display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap;align-items:center">
+      ${renderSearchBar(t('İsim, ülke, kategori ara…','Search name, country, category…'))}
+      <div style="display:flex;gap:8px;flex-shrink:0">
+        <div style="position:relative">
+          <select onchange="setCat(this.value)" style="padding:11px 36px 11px 14px;background:#091530;border:1px solid ${state.cat?'#d4a843':'#1a2e5a'};border-radius:12px;color:${state.cat?'#d4a843':'#8aaad8'};font-size:13px;font-family:inherit;appearance:none;cursor:pointer;min-width:140px">
+            <option value="">${t('Tüm Kategoriler','All Categories')}</option>
+            ${[...new Set(bottles.map(b=>b.category).filter(Boolean))].map(c=>`<option value="${c}" ${state.cat===c?'selected':''}>${catName(c)}</option>`).join('')}
+          </select>
+          <svg style="position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;color:${state.cat?'#d4a843':'#4a6490'}" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+        <div style="position:relative">
+          <select onchange="setCtr(this.value)" style="padding:11px 36px 11px 14px;background:#091530;border:1px solid ${state.country?'#5b8fff':'#1a2e5a'};border-radius:12px;color:${state.country?'#5b8fff':'#8aaad8'};font-size:13px;font-family:inherit;appearance:none;cursor:pointer;min-width:140px">
+            <option value="">${t('Tüm Ülkeler','All Countries')}</option>
+            ${[...new Set(bottles.map(b=>b.country).filter(Boolean))].map(c=>`<option value="${c}" ${state.country===c?'selected':''}>${FLAGS[c]||'🌍'} ${c}</option>`).join('')}
+          </select>
+          <svg style="position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;color:${state.country?'#5b8fff':'#4a6490'}" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+        ${(state.cat||state.country)?`<button onclick="setCat('');setCtr('')" style="padding:11px 14px;background:rgba(224,92,92,.12);border:1px solid rgba(224,92,92,.25);border-radius:12px;color:#e05c5c;font-size:12px;font-family:inherit;cursor:pointer;white-space:nowrap">${t('Temizle','Clear')}</button>`:''}
+      </div>
+    </div>
+    <div class="count">${filtered.length} ${t('şişe','bottle')}${filtered.length!==1&&state.lang==='en'?'s':''}${state.cat?` · <span>${catName(state.cat)}</span>`:''}${state.country?` · <span>${FLAGS[state.country]||''} ${state.country}</span>`:''}${q?` · <span>"${state.search}"</span>`:''}</div>
     ${state.view==='grid'?`<div class="grid">${filtered.map(renderBottleCard).join('')}</div>`:`<div class="list-view">${filtered.map(renderBottleRow).join('')}</div>`}
     ${filtered.length===0?`<div class="empty"><div class="empty-icon">🫗</div><div class="empty-text">${t('Sonuç bulunamadı','No results found')}</div></div>`:''}`;
 }
@@ -319,7 +345,7 @@ function renderBottleDetail(b){
       </div>
       <div>
         <div class="detail-badges">
-          <span class="tag-blue" style="font-size:11px;padding:4px 10px;border-radius:8px">${b.category}</span>
+          <span class="tag-blue" style="font-size:11px;padding:4px 10px;border-radius:8px">${catName(b.category)}</span>
           <span style="background:rgba(212,168,67,.12);color:#d4a843;font-size:11px;padding:4px 10px;border-radius:8px">${b.abv}</span>
           ${b.qty>1?`<span class="tag-green" style="font-size:11px;padding:4px 10px;border-radius:8px">${svgSwap()} TAKAS</span>`:''}
         </div>
@@ -406,7 +432,7 @@ function render(){
 
 function setView(v){setState({view:v});}
 function setLang(l){setState({lang:l});}
-function goPage(p){setState({page:p,selBottle:null,selCocktail:null,search:'',cat:'Tümü',country:'Tümü'});window.scrollTo(0,0);}
+function goPage(p){setState({page:p,selBottle:null,selCocktail:null,search:'',cat:'',country:''});window.scrollTo(0,0);}
 function setCat(c){setState({cat:c});}
 function setCtr(c){setState({country:c});}
 function onSearch(v){state.search=v;render();}
