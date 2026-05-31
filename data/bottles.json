@@ -1193,19 +1193,19 @@
     },
     {
       "id": 1723997788,
-      "slug": "bottle-67",
-      "name": "Şişe #67",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "berentzen-appel",
+      "name": "Berentzen Appel",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "20%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18018665822437737.jpg",
       "images": [
         "/images/uploads/18018665822437737.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Berentzen Appel, Almanya'nın ünlü likör üreticisi tarafından yapılan elma aromalı bir içkidir. Taze elma notaları ve hafif tatılığı ile karakteristik bir liköördür. Geleneksel Alman yapımı bu ürün, içinde kullanılan elma ve tarçın karışımıyla ayırt edici bir lezzete sahiptir.",
+      "desc_en": "Berentzen Appel is an apple-flavored liqueur produced by Germany's renowned liqueur manufacturer. Characterized by fresh apple notes and gentle sweetness, it offers a distinctive taste profile. This traditional German-made spirit features a notable blend of apples and spices, creating its signature flavor.",
       "status": "draft",
       "active": false
     },
