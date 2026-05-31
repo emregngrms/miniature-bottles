@@ -1841,10 +1841,10 @@
     },
     {
       "id": 1720386702,
-      "slug": "bottle-103",
-      "name": "Şişe #103",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "langs-supreme-scotch-whisky",
+      "name": "Langs Supreme Scotch Whisky",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1852,8 +1852,8 @@
       "images": [
         "/images/uploads/18109237990402537.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "1861 yılından beri üretilen Langs Supreme, İskoçya'nın Glengoyne bölgesinden gelen prestijli bir blend whiskidir. Dengeli ve yumuşak karakteri, vanilya, malt ve hafif tatlı notalarıyla tanınır. Koleksiyonerlerin değer verdiği klasik bir İskoç whiskisidir.",
+      "desc_en": "Langs Supreme, produced since 1861, is a prestigious blended Scotch whisky from Scotland's Glengoyne region. Known for its balanced and smooth character, it features notes of vanilla, malt, and subtle sweetness. A classic Scottish whisky cherished by collectors.",
       "status": "draft",
       "active": false
     },
