@@ -1139,19 +1139,19 @@
     },
     {
       "id": 1723997862,
-      "slug": "bottle-64",
-      "name": "Şişe #64",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "campari",
+      "name": "Campari",
+      "country": "Italy",
+      "category": "Liqueur",
+      "abv": "28.5%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18308446339094487.jpg",
       "images": [
         "/images/uploads/18308446339094487.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İtalya'nın Milanı'nda 1860 yılından beri üretilen Campari, kırmızı rengi ve karakteristik acı-tatlı tadıyla dünya çapında tanınan bir aperitif likörüdür. Bitki ekstraktları ve baharatlardan yapılan bu ikonik içecek, Negroni ve Americano gibi klasik kokteyllerin vazgeçilmez bileşenidir.",
+      "desc_en": "Produced in Milan, Italy since 1860, Campari is a world-renowned aperitif liqueur celebrated for its distinctive red color and characteristic bitter-sweet taste. Made from herbal extracts and spices, this iconic spirit is an essential ingredient in classic cocktails such as the Negroni and Americano.",
       "status": "draft",
       "active": false
     },
