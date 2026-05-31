@@ -1175,10 +1175,10 @@
     },
     {
       "id": 1723997811,
-      "slug": "bottle-66",
-      "name": "Şişe #66",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "ouzo-metaxa",
+      "name": "Ouzo Metaxa",
+      "country": "Greece",
+      "category": "Liqueur",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1186,8 +1186,8 @@
       "images": [
         "/images/uploads/17855043645201848.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Yunan geleneğinin en ünlü temsilcisi olan Metaxa, 1888'den beri üretilen bir anason likörüdür. Yıldız rozeti ile damgalanan şişesi, Akdeniz'in sıcak rüzgarını ve Yunan mitosolojisini içinde taşır. Şeker ve meyveler ile dengeli aroması, sofralarının ve meyhane kültürünün vazgeçilmez parçasıdır.",
+      "desc_en": "Metaxa, the most renowned Greek spirit since 1888, is an anise-based liqueur representing Hellenic tradition. The iconic star-marked bottle carries the warmth of Mediterranean winds and Greek mythology. Its balanced flavor profile of anise, spices, and subtle sweetness makes it an indispensable part of Greek social culture and hospitality.",
       "status": "draft",
       "active": false
     },
