@@ -10,6 +10,7 @@
 <meta property="og:description" content="Dünyanın dört bir yanından 5cl minyatür alkol şişeleri koleksiyonu, kokteyl tarifleri ve takas listesi."/>
 <meta property="og:image" content="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=600"/>
 <link rel="canonical" href="https://miniaturebottles5cl.netlify.app/"/>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -136,7 +137,6 @@ footer{background:#0a1838;border-top:1px solid #1a2e5a;padding:28px 20px}
   main{padding:20px 12px 60px}
 }
 </style>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 <header>
@@ -178,60 +178,70 @@ footer{background:#0a1838;border-top:1px solid #1a2e5a;padding:28px 20px}
   </div>
 </footer>
 <script>
+// ── COUNTRY → FLAG LOOKUP (elle bayrak girme yok) ─────────────────────────
+const FLAGS = {
+  'Scotland':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','England':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','Ireland':'🇮🇪','USA':'🇺🇸','France':'🇫🇷',
+  'Mexico':'🇲🇽','Italy':'🇮🇹','Germany':'🇩🇪','Venezuela':'🇻🇪','Spain':'🇪🇸',
+  'Japan':'🇯🇵','Canada':'🇨🇦','Australia':'🇦🇺','Netherlands':'🇳🇱','Sweden':'🇸🇪',
+  'Russia':'🇷🇺','Turkey':'🇹🇷','Greece':'🇬🇷','Cuba':'🇨🇺','Jamaica':'🇯🇲',
+  'Barbados':'🇧🇧','Trinidad':'🇹🇹','Peru':'🇵🇪','Brazil':'🇧🇷','Argentina':'🇦🇷',
+  'South Africa':'🇿🇦','India':'🇮🇳','China':'🇨🇳','Taiwan':'🇹🇼',
+  'Czech Republic':'🇨🇿','Poland':'🇵🇱','Hungary':'🇭🇺','Austria':'🇦🇹',
+  'Switzerland':'🇨🇭','Belgium':'🇧🇪','Portugal':'🇵🇹','Diğer':'🌍'
+};
+function flag(country){ return FLAGS[country] || '🌍'; }
+
 const IG_DM = "https://ig.me/m/miniaturebottles_5cl";
 let bottles = [], cocktails = [];
 let state = { page:'collection', view:'grid', lang:'tr', search:'', cat:'Tümü', country:'Tümü', selBottle:null, selCocktail:null };
 
-// Load data from JSON files
 async function loadData() {
   try {
     const [b, c] = await Promise.all([
-      fetch('/data/bottles.json').then(r => r.json()),
-      fetch('/data/cocktails.json').then(r => r.json())
+      fetch('/data/bottles.json').then(r=>r.json()),
+      fetch('/data/cocktails.json').then(r=>r.json())
     ]);
-    bottles = b;
-    cocktails = c;
-  } catch(e) {
-    console.error('Data load failed:', e);
-  }
+    bottles = b.items || b;
+    cocktails = c.items || c;
+  } catch(e) { console.error('Load error:', e); }
   render();
 }
 
-function setState(patch) { Object.assign(state, patch); render(); }
-function t(tr, en) { return state.lang === 'tr' ? tr : en; }
-function cocktailsFor(slug) { return cocktails.filter(c => c.slugs && c.slugs.includes(slug)); }
-function bottleFor(slug) { return bottles.find(b => b.slug === slug); }
+function setState(p){ Object.assign(state,p); render(); }
+function t(tr,en){ return state.lang==='tr'?tr:en; }
+function cocktailsFor(slug){ return cocktails.filter(c=>c.slugs&&c.slugs.includes(slug)); }
+function bottleFor(slug){ return bottles.find(b=>b.slug===slug); }
 
-function svgChevRight() { return `<svg width="14" height="14" fill="none" stroke="#4a6490" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>`; }
-function svgChevLeft() { return `<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>`; }
-function svgClock() { return `<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:middle"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>`; }
-function svgSwap() { return `<svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 16V4m0 0L3 8m4-4 4 4M17 8v12m0 0 4-4m-4 4-4-4"/></svg>`; }
-function svgDM() { return `<svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`; }
-function svgCocktail() { return `<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 22h8M12 11v11M3 3l9 8 9-8H3z"/></svg>`; }
+function svgChevRight(){ return `<svg width="14" height="14" fill="none" stroke="#4a6490" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>`; }
+function svgChevLeft(){ return `<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>`; }
+function svgClock(){ return `<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:middle"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>`; }
+function svgSwap(){ return `<svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 16V4m0 0L3 8m4-4 4 4M17 8v12m0 0 4-4m-4 4-4-4"/></svg>`; }
+function svgDM(){ return `<svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`; }
+function svgCocktail(){ return `<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 22h8M12 11v11M3 3l9 8 9-8H3z"/></svg>`; }
 
-function renderBottleCard(b) {
-  const cc = cocktailsFor(b.slug).length;
+function renderBottleCard(b){
+  const cc=cocktailsFor(b.slug).length;
   return `<div class="bcard" onclick="openBottle('${b.slug}')">
     <div class="bcard-img">
       <img src="${b.image}" alt="${b.name}" loading="lazy"/>
       <div class="overlay"></div>
       <div class="bcard-badges">
         <span class="badge-cat">${b.category}</span>
-        ${b.qty > 1 ? `<span class="badge-swap">${svgSwap()}TAKAS</span>` : ''}
+        ${b.qty>1?`<span class="badge-swap">${svgSwap()}TAKAS</span>`:''}
       </div>
-      ${b.qty > 1 ? `<span class="badge-qty">×${b.qty}</span>` : ''}
+      ${b.qty>1?`<span class="badge-qty">×${b.qty}</span>`:''}
       <span class="badge-abv">${b.abv}</span>
-      ${cc > 0 ? `<span class="badge-cocktail">${svgCocktail()} ${cc} ${t('kokteyl','cocktail')}</span>` : ''}
+      ${cc>0?`<span class="badge-cocktail">${svgCocktail()} ${cc} ${t('kokteyl','cocktail')}</span>`:''}
     </div>
     <div class="bcard-body">
       <div class="bcard-name">${b.name}</div>
-      <div class="bcard-sub">${b.flag} ${b.country} · ${b.year}</div>
+      <div class="bcard-sub">${flag(b.country)} ${b.country} · ${b.year}</div>
     </div>
   </div>`;
 }
 
-function renderBottleRow(b) {
-  const cc = cocktailsFor(b.slug).length;
+function renderBottleRow(b){
+  const cc=cocktailsFor(b.slug).length;
   return `<div class="brow" onclick="openBottle('${b.slug}')">
     <div class="brow-img"><img src="${b.image}" alt="${b.name}" loading="lazy"/></div>
     <div class="brow-body">
@@ -239,68 +249,67 @@ function renderBottleRow(b) {
         <div class="brow-tags">
           <span class="brow-name">${b.name}</span>
           <span class="tag-blue">${b.category}</span>
-          ${b.qty > 1 ? `<span class="tag-green">${svgSwap()}TAKAS</span>` : ''}
+          ${b.qty>1?`<span class="tag-green">${svgSwap()}TAKAS</span>`:''}
         </div>
-        <div class="brow-sub">${b.flag} ${b.country} · ${b.abv} · ${b.year}${cc > 0 ? ` · <span style="color:#d4a843">${cc} ${t('kokteyl','cocktail')}</span>` : ''}</div>
+        <div class="brow-sub">${flag(b.country)} ${b.country} · ${b.abv} · ${b.year}${cc>0?` · <span style="color:#d4a843">${cc} ${t('kokteyl','cocktail')}</span>`:''}</div>
       </div>
-      ${b.qty > 1 ? `<span style="color:#d4a843;font-size:12px;font-weight:700">×${b.qty}</span>` : ''}
+      ${b.qty>1?`<span style="color:#d4a843;font-size:12px;font-weight:700">×${b.qty}</span>`:''}
       ${svgChevRight()}
     </div>
   </div>`;
 }
 
-function renderCocktailCard(c) {
-  const diff = state.lang === 'tr' ? c.diff : c.diff_en;
-  const diffClass = c.diff === 'Kolay' ? 'diff-easy' : 'diff-mid';
+function renderCocktailCard(c){
+  const diff=state.lang==='tr'?c.diff:c.diff_en;
   return `<div class="ccard" onclick="openCocktail(${c.id})">
     <div class="ccard-img">
       <img src="${c.image}" alt="${c.name}" loading="lazy"/>
       <div class="overlay"></div>
-      <span style="position:absolute;top:10px;left:10px;background:rgba(13,30,66,.9);font-size:10px;padding:3px 8px;border-radius:8px;backdrop-filter:blur(4px)" class="${diffClass}">${diff}</span>
+      <span style="position:absolute;top:10px;left:10px;background:rgba(13,30,66,.9);font-size:10px;padding:3px 8px;border-radius:8px;backdrop-filter:blur(4px)" class="${c.diff==='Kolay'?'diff-easy':'diff-mid'}">${diff}</span>
       <span style="position:absolute;top:10px;right:10px;background:rgba(6,14,40,.85);color:#8aaad8;font-size:10px;padding:3px 8px;border-radius:8px;backdrop-filter:blur(4px)">${svgClock()} ${c.time}</span>
     </div>
     <div class="ccard-body">
       <div class="ccard-name">${c.name}</div>
-      <div class="ccard-bottles">${(c.slugs||[]).map(s => bottleFor(s)?.name).filter(Boolean).join(' · ')}</div>
+      <div class="ccard-bottles">${(c.slugs||[]).map(s=>bottleFor(s)?.name).filter(Boolean).join(' · ')}</div>
     </div>
   </div>`;
 }
 
-function renderSearchBar(placeholder) {
+function renderSearchBar(ph){
   return `<div class="search-wrap">
     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    <input type="text" id="search-input" value="${state.search}" placeholder="${placeholder}" oninput="onSearch(this.value)"/>
+    <input type="text" id="search-input" value="${state.search}" placeholder="${ph}" oninput="onSearch(this.value)"/>
   </div>`;
 }
 
-function renderCollectionPage(extrasOnly) {
-  const base = extrasOnly ? bottles.filter(b => b.qty > 1) : bottles;
-  const q = state.search.toLowerCase();
-  const filtered = base.filter(b => {
-    const match = !q || [b.name, b.country, b.category, b.desc_tr||'', b.desc_en||''].some(s => s.toLowerCase().includes(q));
-    return match && (state.cat === 'Tümü' || b.category === state.cat) && (state.country === 'Tümü' || b.country === state.country);
+function renderCollectionPage(extrasOnly){
+  const base=extrasOnly?bottles.filter(b=>b.qty>1):bottles;
+  const q=state.search.toLowerCase();
+  const filtered=base.filter(b=>{
+    const m=!q||[b.name,b.country,b.category,b.desc_tr||'',b.desc_en||''].some(s=>s.toLowerCase().includes(q));
+    return m&&(state.cat==='Tümü'||b.category===state.cat)&&(state.country==='Tümü'||b.country===state.country);
   });
-  const cats = ['Tümü', ...new Set(bottles.map(b => b.category))];
-  const ctrs = ['Tümü', ...new Set(bottles.map(b => b.country))];
+  const cats=['Tümü',...new Set(bottles.map(b=>b.category))];
+  const ctrs=['Tümü',...new Set(bottles.map(b=>b.country))];
   return `
-    ${extrasOnly ? `<div class="extras-banner">
+    ${extrasOnly?`<div class="extras-banner">
       <div>
         <div class="extras-title">${t('Takas & Fazlalıklar','For Trade & Extras')}</div>
         <div class="extras-sub">${t('Koleksiyonumda birden fazla bulunan şişeler. Takas için Instagram\'dan DM atabilirsiniz.','Bottles I have more than one of. DM me on Instagram to discuss trades.')}</div>
       </div>
       <a href="${IG_DM}" target="_blank" rel="noopener noreferrer" class="extras-dm">${svgDM()} ${t('DM Gönder','Send DM')}</a>
-    </div>` : ''}
+    </div>`:''}
     ${renderSearchBar(t('İsim, ülke, kategori ara…','Search name, country, category…'))}
-    <div class="chips">${cats.map(c => `<button class="chip${state.cat===c?' active':''}" onclick="setCat('${c}')">${c}</button>`).join('')}</div>
-    <div class="chips">${ctrs.map(c => `<button class="chip blue${state.country===c?' active':''}" onclick="setCtr('${c}')">${c}</button>`).join('')}</div>
+    <div class="chips">${cats.map(c=>`<button class="chip${state.cat===c?' active':''}" onclick="setCat('${c}')">${c}</button>`).join('')}</div>
+    <div class="chips">${ctrs.map(c=>`<button class="chip blue${state.country===c?' active':''}" onclick="setCtr('${c}')">${c}</button>`).join('')}</div>
     <div class="count">${filtered.length} ${t('şişe','bottle')}${filtered.length!==1&&state.lang==='en'?'s':''}${q?` <span>"${state.search}"</span>`:''}</div>
-    ${state.view==='grid' ? `<div class="grid">${filtered.map(renderBottleCard).join('')}</div>` : `<div class="list-view">${filtered.map(renderBottleRow).join('')}</div>`}
+    ${state.view==='grid'?`<div class="grid">${filtered.map(renderBottleCard).join('')}</div>`:`<div class="list-view">${filtered.map(renderBottleRow).join('')}</div>`}
     ${filtered.length===0?`<div class="empty"><div class="empty-icon">🫗</div><div class="empty-text">${t('Sonuç bulunamadı','No results found')}</div></div>`:''}`;
 }
 
-function renderBottleDetail(b) {
-  const related = cocktailsFor(b.slug);
-  const desc = state.lang==='tr' ? b.desc_tr : b.desc_en;
+function renderBottleDetail(b){
+  const related=cocktailsFor(b.slug);
+  const desc=state.lang==='tr'?b.desc_tr:b.desc_en;
   return `<div class="detail">
     <button class="back-btn" onclick="goBack()">${svgChevLeft()} ${t('Koleksiyona Dön','Back to Collection')}</button>
     <div class="detail-grid">
@@ -315,7 +324,7 @@ function renderBottleDetail(b) {
           ${b.qty>1?`<span class="tag-green" style="font-size:11px;padding:4px 10px;border-radius:8px">${svgSwap()} TAKAS</span>`:''}
         </div>
         <h1 class="detail-title">${b.name}</h1>
-        <div class="detail-sub">${b.flag} ${b.country} · ${b.year}</div>
+        <div class="detail-sub">${flag(b.country)} ${b.country} · ${b.year}</div>
         <p class="detail-desc">${desc||''}</p>
         ${b.qty>1?`<a href="${IG_DM}" target="_blank" rel="noopener noreferrer" class="dm-btn">${svgDM()} ${t('Takas için DM at','DM to Trade')}</a>`:''}
         ${related.length>0?`
@@ -330,17 +339,17 @@ function renderBottleDetail(b) {
               </div>
             </div>
             ${svgChevRight()}
-          </div>`).join('')}` : ''}
+          </div>`).join('')}`:''}
       </div>
     </div>
   </div>`;
 }
 
-function renderCocktailDetail(c) {
-  const ings = state.lang==='tr' ? c.ing_tr : c.ing_en;
-  const steps = state.lang==='tr' ? c.steps_tr : c.steps_en;
-  const diff = state.lang==='tr' ? c.diff : c.diff_en;
-  const relBottles = (c.slugs||[]).map(bottleFor).filter(Boolean);
+function renderCocktailDetail(c){
+  const ings=state.lang==='tr'?c.ing_tr:c.ing_en;
+  const steps=state.lang==='tr'?c.steps_tr:c.steps_en;
+  const diff=state.lang==='tr'?c.diff:c.diff_en;
+  const relBottles=(c.slugs||[]).map(bottleFor).filter(Boolean);
   return `<div class="detail">
     <button class="back-btn" onclick="goBack()">${svgChevLeft()} ${t('Kokteyllere Dön','Back to Cocktails')}</button>
     <div class="detail-grid">
@@ -359,15 +368,15 @@ function renderCocktailDetail(c) {
           <div class="section-label">${t('Kullanılan şişeler','Bottles used')}</div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
             ${relBottles.map(b=>`<div class="rel-bottle" onclick="openBottleFromCocktail('${b.slug}')"><img src="${b.image}" alt="${b.name}"/><span>${b.name}</span></div>`).join('')}
-          </div>` : ''}
+          </div>`:''}
       </div>
     </div>
   </div>`;
 }
 
-function renderCocktailsPage() {
-  const q = state.search.toLowerCase();
-  const filtered = cocktails.filter(c => !q || c.name.toLowerCase().includes(q) || (c.ing_tr||[]).some(i=>i.toLowerCase().includes(q)));
+function renderCocktailsPage(){
+  const q=state.search.toLowerCase();
+  const filtered=cocktails.filter(c=>!q||c.name.toLowerCase().includes(q)||(c.ing_tr||[]).some(i=>i.toLowerCase().includes(q)));
   return `<div class="fade">
     <div class="page-title">${t('Kokteyl Tarifleri','Cocktail Recipes')}</div>
     <div class="page-sub">${t('Koleksiyonumdaki şişelerle hazırlanan özel tarifler','Special recipes made with bottles from my collection')}</div>
@@ -377,50 +386,47 @@ function renderCocktailsPage() {
   </div>`;
 }
 
-function render() {
-  ['collection','cocktails','extras'].forEach(p => {
-    const el = document.getElementById('nav-'+p);
-    if(el){ el.classList.toggle('active', state.page===p); el.textContent=el.dataset[state.lang]; }
+function render(){
+  ['collection','cocktails','extras'].forEach(p=>{
+    const el=document.getElementById('nav-'+p);
+    if(el){el.classList.toggle('active',state.page===p);el.textContent=el.dataset[state.lang];}
   });
-  document.getElementById('btn-grid').classList.toggle('active', state.view==='grid');
-  document.getElementById('btn-list').classList.toggle('active', state.view==='list');
-  document.getElementById('btn-tr').classList.toggle('active', state.lang==='tr');
-  document.getElementById('btn-en').classList.toggle('active', state.lang==='en');
-  document.getElementById('footer-sub').textContent = t('Dünyanın dört bir yanından minyatür alkol şişeleri koleksiyonu.','A curated collection of miniature spirit bottles from around the world.');
-  document.getElementById('ig-btn-text').textContent = t("Instagram'da Takip Et","Follow on Instagram");
-
-  const main = document.getElementById('main-content');
-  if(state.selCocktail){ main.innerHTML=renderCocktailDetail(state.selCocktail); return; }
-  if(state.selBottle){ main.innerHTML=renderBottleDetail(state.selBottle); return; }
-  if(state.page==='cocktails'){ main.innerHTML=renderCocktailsPage(); return; }
+  document.getElementById('btn-grid').classList.toggle('active',state.view==='grid');
+  document.getElementById('btn-list').classList.toggle('active',state.view==='list');
+  document.getElementById('btn-tr').classList.toggle('active',state.lang==='tr');
+  document.getElementById('btn-en').classList.toggle('active',state.lang==='en');
+  document.getElementById('footer-sub').textContent=t('Dünyanın dört bir yanından minyatür alkol şişeleri koleksiyonu.','A curated collection of miniature spirit bottles from around the world.');
+  document.getElementById('ig-btn-text').textContent=t("Instagram'da Takip Et","Follow on Instagram");
+  const main=document.getElementById('main-content');
+  if(state.selCocktail){main.innerHTML=renderCocktailDetail(state.selCocktail);return;}
+  if(state.selBottle){main.innerHTML=renderBottleDetail(state.selBottle);return;}
+  if(state.page==='cocktails'){main.innerHTML=renderCocktailsPage();return;}
   main.innerHTML=`<div class="fade">${renderCollectionPage(state.page==='extras')}</div>`;
 }
 
-function setView(v){ setState({view:v}); }
-function setLang(l){ setState({lang:l}); }
-function goPage(p){ setState({page:p,selBottle:null,selCocktail:null,search:'',cat:'Tümü',country:'Tümü'}); window.scrollTo(0,0); }
-function setCat(c){ setState({cat:c}); }
-function setCtr(c){ setState({country:c}); }
-function onSearch(v){ state.search=v; render(); }
-function openBottle(slug){ setState({selBottle:bottles.find(b=>b.slug===slug),selCocktail:null}); window.scrollTo(0,0); }
-function openCocktail(id){ setState({selCocktail:cocktails.find(c=>c.id===id)}); window.scrollTo(0,0); }
-function openBottleFromCocktail(slug){ setState({selBottle:bottles.find(b=>b.slug===slug),selCocktail:null,page:'collection'}); window.scrollTo(0,0); }
+function setView(v){setState({view:v});}
+function setLang(l){setState({lang:l});}
+function goPage(p){setState({page:p,selBottle:null,selCocktail:null,search:'',cat:'Tümü',country:'Tümü'});window.scrollTo(0,0);}
+function setCat(c){setState({cat:c});}
+function setCtr(c){setState({country:c});}
+function onSearch(v){state.search=v;render();}
+function openBottle(slug){setState({selBottle:bottles.find(b=>b.slug===slug),selCocktail:null});window.scrollTo(0,0);}
+function openCocktail(id){setState({selCocktail:cocktails.find(c=>c.id===id)});window.scrollTo(0,0);}
+function openBottleFromCocktail(slug){setState({selBottle:bottles.find(b=>b.slug===slug),selCocktail:null,page:'collection'});window.scrollTo(0,0);}
 function goBack(){
-  if(state.selCocktail){ setState({selCocktail:null}); }
-  else{ setState({selBottle:null}); }
+  if(state.selCocktail){setState({selCocktail:null});}
+  else{setState({selBottle:null});}
   window.scrollTo(0,0);
 }
 
+// Netlify Identity redirect handler
+if(window.netlifyIdentity){
+  window.netlifyIdentity.on('init',user=>{
+    if(!user){window.netlifyIdentity.on('login',()=>{document.location.href='/admin/';})}
+  });
+}
+
 loadData();
-</script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
-      }
-    });
-  }
 </script>
 </body>
 </html>
