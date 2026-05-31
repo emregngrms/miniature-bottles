@@ -1931,19 +1931,19 @@
     },
     {
       "id": 1720386501,
-      "slug": "bottle-108",
-      "name": "Şişe #108",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "nemrut-raki",
+      "name": "Nemrut Rakı",
+      "country": "Turkey",
+      "category": "Rakı",
+      "abv": "45%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18003703187352206.jpg",
       "images": [
         "/images/uploads/18003703187352206.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Nemrut Rakı, Türkiye'nin köklü rakı geleneğini temsil eden çift distile bir üründür. Anis aromasının baskın olduğu bu rakı, yumuşak ve zarif yapısıyla Türk kültürünün vazgeçilmez içeceğidir. Yüksek kaliteli üretim süreci ve üstün işçiliğiyle dikkat çeken bu rakı, koleksiyonerlerin tercih ettiği seçkin bir markadır.",
+      "desc_en": "Nemrut Rakı is a double distilled product that represents Turkey's deep-rooted rakı tradition. This spirit is characterized by its dominant anise aroma and soft, elegant profile, making it an indispensable beverage in Turkish culture. Distinguished by its superior production process and craftsmanship, this rakı is a distinguished choice among collectors.",
       "status": "draft",
       "active": false
     },
