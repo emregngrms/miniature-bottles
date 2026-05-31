@@ -1625,10 +1625,10 @@
     },
     {
       "id": 1720386921,
-      "slug": "bottle-91",
-      "name": "Şişe #91",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "fauchon-whisky",
+      "name": "Fauchon Whisky",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1636,8 +1636,8 @@
       "images": [
         "/images/uploads/18046727836841989.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İskoçya'nın klasik blend whiskylerinden biri olan Fauchon, geleneksel Scotch whisky yapımının güzel bir örneğidir. Hafif ve dengeli profiliyle, malt ve tahıl whiskylerinin uyumlu birleşimini sunarak içiciyi yumuşak bir deneyime davet eder. Koleksiyoncular için tarihsel değeri yüksek olan bu miniature şişe, eski dönem İskoçya whisky endüstrisinin tanığıdır.",
+      "desc_en": "Fauchon Whisky is a classic example of Scottish blended whisky that represents the traditional art of Scotch whisky making. With its light and balanced profile, it presents a harmonious blend of malt and grain whiskies, offering a smooth tasting experience. This miniature bottle holds historical significance for collectors as a testament to Scotland's whisky industry heritage from a bygone era.",
       "status": "draft",
       "active": false
     },
