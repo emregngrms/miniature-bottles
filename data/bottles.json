@@ -200,19 +200,19 @@
     },
     {
       "id": 1762693218,
-      "slug": "bottle-12",
-      "name": "Şişe #12",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "cocalero-clsico",
+      "name": "Cocalero Clásico",
+      "country": "Peru",
+      "category": "Liqueur",
+      "abv": "34%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/17978496347941722.jpg",
       "images": [
         "/images/uploads/17978496347941722.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Peru kökenli bu bitki likörü, coca yaprağı ve diğer Andean botanikleri kullanarak hazırlanmıştır. Cocalero Clásico, tropikal meyve notaları ve hafif bitki aromaları ile karakteristik bir içim sunmaktadır. Koleksiyonerlara yönelik bu miniatur şişe, Güney Amerika'nın eşsiz spirit kültürünü temsil eden ilginç bir örneğidir.",
+      "desc_en": "This Peruvian herbal liqueur is crafted from coca leaves and other Andean botanicals, representing the region's unique spirit-making tradition. Cocalero Clásico offers a distinctive palate with tropical fruit notes and subtle herbal aromatics characteristic of South American liqueurs. This miniature bottle is a fascinating collectible that captures the essence of Andean botanical spirits.",
       "status": "draft",
       "active": false
     },
