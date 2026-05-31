@@ -941,19 +941,19 @@
     },
     {
       "id": 1723998201,
-      "slug": "bottle-53",
-      "name": "Şişe #53",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "partners-finest-old-port",
+      "name": "Partners Finest Old Port",
+      "country": "Portugal",
+      "category": "Port Wine",
+      "abv": "19%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18025118261087511.jpg",
       "images": [
         "/images/uploads/18025118261087511.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Sandeman tarafından üretilen Partners Finest Old Port, Douro Vadisi'nin ünlü şaraplarından biridir. Zengin, kompleks aromaları ve kadife gibi yumuşak yapısıyla karakterize edilen bu port şarabı, uzun yaşlanmasının sonucunda derinlemesine bir karakter kazanmıştır. Klasik bir koleksiyoncu şarabı olarak bilinir.",
+      "desc_en": "Partners Finest Old Port, produced by Sandeman, is one of the renowned wines from the Douro Valley. Characterized by its rich, complex aromas and smooth, velvety structure, this port wine has developed a profound character as a result of extended aging. Known as a classic collector's wine.",
       "status": "draft",
       "active": false
     },
