@@ -1697,19 +1697,19 @@
     },
     {
       "id": 1720386860,
-      "slug": "bottle-95",
-      "name": "Şişe #95",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "mampe-halb-und-halb-mit-dem-schimmelgespann",
+      "name": "Mampe-Halb und Halb mit dem Schimmelgespann",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "44%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18305086657085799.jpg",
       "images": [
         "/images/uploads/18305086657085799.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Berlin'in efsanevi Mampe distillerisi tarafından üretilen bu klasik Alman likörü, geleneksel formülasyonuyla tanınır. Aromatik bitki ve baharatlarla hazırlanan Halb und Halb, hafif tatlı ve kompleks aromaları ile aperitif olarak ya da karışık içkilerde kullanılır.",
+      "desc_en": "This classic German liqueur produced by Berlin's legendary Mampe distillery is known for its traditional formulation. Prepared with aromatic herbs and spices, Halb und Halb features subtle sweetness and complex aromas, making it suitable as an aperitif or in mixed drinks.",
       "status": "draft",
       "active": false
     },
