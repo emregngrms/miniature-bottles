@@ -1247,10 +1247,10 @@
     },
     {
       "id": 1723717582,
-      "slug": "bottle-70",
-      "name": "Şişe #70",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "stolichnaya-premium-vodka",
+      "name": "Stolichnaya Premium Vodka",
+      "country": "Russia",
+      "category": "Vodka",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1258,8 +1258,8 @@
       "images": [
         "/images/uploads/18034981795926131.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Sovyet döneminden günümüze uzanan köklü geçmişe sahip Stolichnaya, Rusya'nın en ünlü vodka markalarından biridir. Buğday ve çavdardan üretilen bu premium vodka, kristal berraklığı, yumuşak ağız duyuşu ve temiz bitiş ile karakterizedir. Saf ve nötr profiliyle kokteyllerde ve sade içilişte eşit derecede başarılıdır.",
+      "desc_en": "Stolichnaya is one of Russia's most prestigious vodka brands with a heritage extending from the Soviet era to present day. Produced from wheat and rye, this premium vodka is characterized by its crystal clarity, smooth palate, and clean finish. With its pure and neutral profile, it excels equally in cocktails and neat consumption.",
       "status": "draft",
       "active": false
     },
