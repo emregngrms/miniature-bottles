@@ -1391,10 +1391,10 @@
     },
     {
       "id": 1721415715,
-      "slug": "bottle-78",
-      "name": "Şişe #78",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "marquis-cognac-fine-champagne",
+      "name": "Marquis Cognac Fine Champagne",
+      "country": "France",
+      "category": "Cognac",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1402,8 +1402,8 @@
       "images": [
         "/images/uploads/18075668329464542.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Zahlam, Hollanda'da üretilen bu Cognac, Fransa'nın prestijli Cognac bölgesinden gelmektedir. Fine Champagne sınıflandırması ile bilinen Marquis, klasik ve zarif bir karaktere sahip olup, malt ve meyvemsi notalar sunan geleneksel bir içkidir. Koleksiyonerlerin değer verdiği bu miniature şişe, başlıca şarap rotalarında bulunabilir.",
+      "desc_en": "Produced by Zahlam in the Netherlands, this Cognac originates from France's prestigious Cognac region. Known for its Fine Champagne classification, Marquis presents a classic and elegant character with malty and fruity notes, representing a traditional spirit. This collectible miniature bottle can be found along major wine routes and is valued by collectors.",
       "status": "draft",
       "active": false
     },
