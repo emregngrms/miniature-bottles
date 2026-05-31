@@ -452,19 +452,19 @@
     },
     {
       "id": 1757255592,
-      "slug": "bottle-26",
-      "name": "Şişe #26",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "ossi-100-kruterlikor",
+      "name": "Ossi 100% Kräuterlikör",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "33%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/17908602291217764.jpg",
       "images": [
         "/images/uploads/17908602291217764.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Doğu Almanya'nın efsanevi likörü Ossi, 100 çeşit ottan yapılan karakteristik bir Kräuterlikör'dür. Yoğun bitki aromaları ve hafif acılığıyla tanınan bu likör, geleneksel Alman tarifi ile üretilmektedir. Koleksiyoncular için tarihsel değeri ve nadir miniature formatı bu şişeyi özel kılmaktadır.",
+      "desc_en": "Ossi is an iconic herbal liqueur from East Germany, crafted from 100 different herbs using traditional recipes. Known for its intense botanical aromas and subtle bitterness, this Kräuterlikör represents classic German spirit-making heritage. For collectors, its historical significance and rare miniature format make this bottle particularly valuable.",
       "status": "draft",
       "active": false
     },
