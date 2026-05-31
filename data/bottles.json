@@ -1427,19 +1427,19 @@
     },
     {
       "id": 1721415660,
-      "slug": "bottle-80",
-      "name": "Şişe #80",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "disaronno-originale",
+      "name": "Disaronno Originale",
+      "country": "Italy",
+      "category": "Liqueur",
+      "abv": "28%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17872774116112612.jpg",
       "images": [
         "/images/uploads/17872774116112612.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İtalya'nın Saronno şehrinden gelen bu efsanevi likör, 1525 yılından beri üretilmektedir. Tatlı badem ve kahveye benzeyen aromaları ile karakteristik bir profil sunan Disaronno, smooth ve yumuşak içimi ile koleksiyoncuların favorisidir. Saf olarak servis edilebileceği gibi kokteyllerin de vazgeçilmez bileşenidir.",
+      "desc_en": "This legendary liqueur hailing from Saronno, Italy, has been produced since 1525. Disaronno presents a characteristic profile with sweet almond and coffee-like aromas, offering a smooth and mellow drinking experience cherished by collectors. It can be enjoyed neat or as an essential ingredient in classic cocktails.",
       "status": "draft",
       "active": false
     },
