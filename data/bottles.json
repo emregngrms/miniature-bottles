@@ -1103,19 +1103,19 @@
     },
     {
       "id": 1723997939,
-      "slug": "bottle-62",
-      "name": "Şişe #62",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "pippermint-get",
+      "name": "Pippermint Get",
+      "country": "France",
+      "category": "Liqueur",
+      "abv": "31%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18055501081706216.jpg",
       "images": [
         "/images/uploads/18055501081706216.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Fransa kökenli bu mintolu likör, klasik Avrupa likör geleneğinin güzel bir örneğidir. Peppermint Get, ferah nane aromasıyla serinletici içecek olarak bilinir ve koleksiyon değeri taşıyan vintage miniatur şişleleriyle aranan bir üründür. Soğuk servis edildiğinde ya da karışık içeceklerde kullanıldığında en iyi karakterini gösterir.",
+      "desc_en": "This French-origin peppermint liqueur represents a fine example of classic European liqueur tradition. Peppermint Get is known for its refreshing mint aroma and is sought after in collecting circles for its vintage miniature bottles. It displays its best character when served chilled or used in mixed drinks.",
       "status": "draft",
       "active": false
     },
