@@ -2075,19 +2075,19 @@
     },
     {
       "id": 1720386340,
-      "slug": "bottle-116",
-      "name": "Şişe #116",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "beefeater-london-dry-gin",
+      "name": "Beefeater London Dry Gin",
+      "country": "England",
+      "category": "Gin",
+      "abv": "47%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18003395519379638.jpg",
       "images": [
         "/images/uploads/18003395519379638.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "1761 yılından beri yapılan bu ünlü Londra Dry Gin'i, dikkatli bir şekilde seçilmiş dokuz botaniksel malzeme ile yapılmaktadır. Beefeater, keskin ardıç ve sitrus notaları ile karakterize olan, klasik ve dengeli bir gin profili sunar. İngiliz gin koleksiyonunda vazgeçilmez bir yer olan bu spritin saf tadı, kokteyllerde olduğu kadar saf içilişte de mükemmeldür.",
+      "desc_en": "Produced since 1761, this renowned London Dry Gin is crafted with nine carefully selected botanical ingredients. Beefeater is characterized by its crisp juniper and citrus notes, offering a classic and well-balanced gin profile. This spirit holds an indispensable place in English gin collections, with its pure taste being equally excellent whether enjoyed neat or in cocktails.",
       "status": "draft",
       "active": false
     },
