@@ -1229,10 +1229,10 @@
     },
     {
       "id": 1723717602,
-      "slug": "bottle-69",
-      "name": "Şişe #69",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "ouzo-of-mitilini",
+      "name": "Ouzo of Mitilini",
+      "country": "Greece",
+      "category": "Liqueur",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1240,8 +1240,8 @@
       "images": [
         "/images/uploads/18037379600007507.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Midilli adasından gelen bu ünlü Ouzo, Yunan içkilerinin en ikonik örneklerinden biridir. Anise ve drog bitkilerinin hassas karışımıyla hazırlanan bu likör, sofusu suyla seyreltildiğinde meşhur \"louche\" etkisini gösterir. Geleneksel Yunan kültürünün ve Akdeniz tatlarının mükemmel temsilcisidir.",
+      "desc_en": "This renowned Ouzo from Mytilene is one of the most iconic examples of Greek spirits. Crafted with a delicate blend of anise and aromatic herbs, this liqueur exhibits the famous louche effect when diluted with water. A perfect representation of traditional Greek culture and Mediterranean flavors.",
       "status": "draft",
       "active": false
     },
