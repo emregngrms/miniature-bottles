@@ -1985,10 +1985,10 @@
     },
     {
       "id": 1720386450,
-      "slug": "bottle-111",
-      "name": "Şişe #111",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "osa-fine-spirits-blended-malt-scotch-whisky-collec",
+      "name": "OSA Fine Spirits Blended Malt Scotch Whisky Collection (Aged 12 Years, Aged 10 Years Twilight, Cluetthouse)",
+      "country": "Scotland",
+      "category": "Blended Malt Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1996,8 +1996,8 @@
       "images": [
         "/images/uploads/17845923429253188.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "OSA Fine Spirits tarafından üretilen bu blended malt Scotch whisky koleksiyonu, İskoçya'nın zengin whisky mirasını temsil eder. Sol başta Aged 12 Years (sigara ve ısıtma notaları), orta kısımda Aged 10 Years Twilight (hafif ve delikat), sağda ise Cluetthouse (zengin ve meyveli) bulunmaktadır. Her bir ifade, farklı yaşlanma ve karıştırma profilleriyle koleksiyoncuların beğenisini kazanır.",
+      "desc_en": "This blended malt Scotch whisky collection by OSA Fine Spirits represents Scotland's rich whisky heritage. The left features Aged 12 Years with smoky and warming notes, the center offers Aged 10 Years Twilight with a fresh and delicate profile, and the right showcases Cluetthouse with rich and fruity characteristics. Each expression captures distinct aging and blending profiles that appeal to discerning collectors.",
       "status": "draft",
       "active": false
     },
