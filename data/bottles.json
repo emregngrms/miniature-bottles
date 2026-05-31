@@ -1823,10 +1823,10 @@
     },
     {
       "id": 1720386713,
-      "slug": "bottle-102",
-      "name": "Şişe #102",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "camus-grand-vso-cognac",
+      "name": "Camus Grand VSO Cognac",
+      "country": "France",
+      "category": "Cognac",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1834,8 +1834,8 @@
       "images": [
         "/images/uploads/17929957667905998.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Camus tarafından üretilen bu Grand VSO Cognac, Fransa'nın prestijli Cognac bölgesinden gelmektedir. Zarif ve dengeli bir profil sunan bu içki, meyvemsi ve çiçeksi notalarla birlikte hafif tatlılık ve derinlik sunmaktadır. Koleksiyonerlerin değerli bir parçası olan bu miniature şişe, klasik Camus kalitesini yansıtır.",
+      "desc_en": "This Grand VSO Cognac produced by Camus originates from France's prestigious Cognac region. Offering an elegant and balanced profile, this spirit presents fruity and floral notes combined with subtle sweetness and depth. This miniature bottle, a treasured piece for collectors, reflects the classic quality of Camus.",
       "status": "draft",
       "active": false
     },
