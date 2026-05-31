@@ -344,19 +344,19 @@
     },
     {
       "id": 1757255719,
-      "slug": "bottle-20",
-      "name": "Şişe #20",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "kodor-liqueur",
+      "name": "Ködör Liqueur",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "20%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18123702481471517.jpg",
       "images": [
         "/images/uploads/18123702481471517.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Berlin'den gelen bu renkli likör koleksiyonu, Alman içki kültürünün eğlenceli ve canlı yüzünü temsil eder. Farklı aromaları ile çeşitlilik sunan bu likörler, klasik Alman tatlı likör geleneğini modern bir şekilde yorumlar. Koleksiyoncu için değerli bir Berlin hatırası.",
+      "desc_en": "This colorful liqueur collection from Berlin represents the playful and vibrant side of German drinking culture. Offering various flavors and aromas, these liqueurs provide a modern interpretation of the classic German sweet liqueur tradition. A valuable Berlin souvenir for collectors.",
       "status": "draft",
       "active": false
     },
