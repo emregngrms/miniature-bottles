@@ -560,10 +560,10 @@
     },
     {
       "id": 1737893896,
-      "slug": "bottle-32",
-      "name": "Şişe #32",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "zlata-zitnia",
+      "name": "Zlata Zitnia",
+      "country": "Poland",
+      "category": "Liqueur",
       "abv": "40%",
       "year": 2025,
       "qty": 1,
@@ -571,8 +571,8 @@
       "images": [
         "/images/uploads/17943899534949767.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Polonya'dan gelen bu ünlü tahıl likörü, geleneksel üretim yöntemleri ile hazırlanmıştır. Altın sarısı rengi ve zengin, yumuşak karakteri ile koleksiyonerlerin vazgeçilmez bir parçasıdır. Tahıl özlü aromaları ve hafif tatlı profili soğuk içilmeyi tercih eder.",
+      "desc_en": "This renowned grain liqueur from Poland is crafted using traditional production methods. With its golden hue and rich, smooth character, it's an essential piece for collectors. Its grain-forward aromas and gently sweet profile make it ideal for sipping chilled.",
       "status": "draft",
       "active": false
     },
