@@ -2093,10 +2093,10 @@
     },
     {
       "id": 1720386326,
-      "slug": "bottle-117",
-      "name": "Şişe #117",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "johnnie-walker-red-label",
+      "name": "Johnnie Walker Red Label",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2104,8 +2104,8 @@
       "images": [
         "/images/uploads/17988783746679757.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Johnnie Walker Red Label, İskoçya'nın en ikonik blended whiskylerinden biri olup, 1909 yılından bu yana üretilmektedir. Hafif, yumuşak ve erişilebilir karakteri ile başlangıç seviyesi içicilerin favorisidir. Malt ve tahıl whiskylerinin dengeli karışımı, tatlı ve baharatlandırılmış notalarla çekici bir profil sunar.",
+      "desc_en": "Johnnie Walker Red Label is one of Scotland's most iconic blended whiskies, produced since 1909. Known for its light, smooth, and accessible character, it appeals to both beginners and seasoned whisky enthusiasts. The balanced blend of malt and grain whiskies delivers a pleasant profile with subtle sweet and spiced notes.",
       "status": "draft",
       "active": false
     },
