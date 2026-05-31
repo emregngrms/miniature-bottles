@@ -797,19 +797,19 @@
     },
     {
       "id": 1723998413,
-      "slug": "bottle-45",
-      "name": "Şişe #45",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "bols-banane-liqueur",
+      "name": "Bols Banane Liqueur",
+      "country": "Netherlands",
+      "category": "Liqueur",
+      "abv": "30%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17952695015818310.jpg",
       "images": [
         "/images/uploads/17952695015818310.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Amsterdam'ın ünlü Bols distillerisi tarafından üretilen bu klasik muz likörü, 1664 yılından beri yapılmaktadır. Tropikal muz aroması ve hafif tatlılığı ile aperitif veya kokteyl yapımında kullanılan zarif bir likördür. Koleksiyonerlerin değer verdiği vintage etiketli bu şişe, geçmiş dönemlerin üstün kalitesini yansıtır.",
+      "desc_en": "This classic banana liqueur produced by Amsterdam's renowned Bols distillery has been crafted since 1664. With its tropical banana aroma and subtle sweetness, it serves elegantly as an aperitif or cocktail ingredient. This vintage-labeled bottle reflects the superior quality of a bygone era that collectors cherish.",
       "status": "draft",
       "active": false
     },
