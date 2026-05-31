@@ -888,9 +888,9 @@
     {
       "id": 1723998280,
       "slug": "bottle-50",
-      "name": "Şişe #50",
-      "country": "Diğer",
-      "category": "Diğer",
+      "name": "Cointreau",
+      "country": "France",
+      "category": "Liqueur",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -898,8 +898,8 @@
       "images": [
         "/images/uploads/18308414149091579.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Fransa'nın Angers şehrinde 1849 yılından beri üretilen Cointreau, portakal likörü kategorisinin en prestijli örneğidir. Tatlı ve ekzotik portakal aromaları ile hafif bir acılık dengesinin mükemmel kombinasyonunu sunarak, içki ve kokteyl dünyasında bir klasik haline gelmiştir. Kristal berraklığı ve sofistike karakteriyle koleksiyonerlerin ve spirits meraklılarının tercih ettiği bir şaheseridir.",
+      "desc_en": "Produced in Angers, France since 1849, Cointreau is the most prestigious example in the orange liqueur category. It offers a perfect balance of sweet and exotic orange aromas with a subtle bitterness, making it a classic in the world of spirits and cocktails. With its crystal clarity and sophisticated character, it remains a preferred choice for collectors and spirits enthusiasts.",
       "status": "draft",
       "active": false
     },
