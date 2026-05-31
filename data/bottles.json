@@ -578,19 +578,19 @@
     },
     {
       "id": 1737893756,
-      "slug": "bottle-33",
-      "name": "Şişe #33",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "mozart-chocolate-cream",
+      "name": "Mozart Chocolate Cream",
+      "country": "Austria",
+      "category": "Liqueur",
+      "abv": "17%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18056300344829929.jpg",
       "images": [
         "/images/uploads/18056300344829929.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Avusturya'nın ünlü Mozart Chocolate Cream likörü, başkentte Salzburg'da üretilen zarif bir likördür. Belgili çikolata ve krema notalarıyla zenginleştirilmiş bu ürün, soğuk içildiğinde veya tatlı olarak kullanıldığında melezyen bir deneyim sunmaktadır. Karakteristik altın ambalajı koleksiyonerlerin arasında oldukça değerli bir ürün haline gelmiştir.",
+      "desc_en": "Mozart Chocolate Cream is an elegant Austrian liqueur produced in Salzburg, Austria's capital city. Enriched with rich chocolate and cream notes, this product delivers a delightful experience when served cold or used as a dessert liqueur. Its signature golden packaging has made it a highly valued item among collectors and spirits enthusiasts.",
       "status": "draft",
       "active": false
     },
