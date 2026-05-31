@@ -1085,10 +1085,10 @@
     },
     {
       "id": 1723997960,
-      "slug": "bottle-61",
-      "name": "Şişe #61",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "zinn-40-klarer-aus-wein",
+      "name": "Zinn 40 Klarer aus Wein",
+      "country": "Germany",
+      "category": "Brandy",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1096,8 +1096,8 @@
       "images": [
         "/images/uploads/18237859501277585.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Alman yapımı bu klasik brandi, 1857'den beri Peter Eckes tarafından üretilmektedir. Mild ve ince aromalı yapısıyla karakterize edilen Zinn 40, şarap kaynaklı saflığı ve yumuşak içim profiliyle koleksiyoncuların beğenisini kazanmıştır.",
+      "desc_en": "This classic German brandy has been produced by Peter Eckes since 1857. Characterized by its mild and refined aromatics, Zinn 40 is distinguished by its wine-based purity and smooth drinking profile that appeals to discerning collectors.",
       "status": "draft",
       "active": false
     },
