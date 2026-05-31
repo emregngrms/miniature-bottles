@@ -1,0 +1,17 @@
+{
+  "items": [
+    {"id":1,"name":"Single Malt Whisky"},
+    {"id":2,"name":"Blended Whisky"},
+    {"id":3,"name":"Tennessee Whiskey"},
+    {"id":4,"name":"Irish Whiskey"},
+    {"id":5,"name":"Bourbon"},
+    {"id":6,"name":"Tequila"},
+    {"id":7,"name":"Gin"},
+    {"id":8,"name":"Vodka"},
+    {"id":9,"name":"Rum"},
+    {"id":10,"name":"Liqueur"},
+    {"id":11,"name":"Aperitif"},
+    {"id":12,"name":"Champagne & Sparkling"},
+    {"id":13,"name":"Cognac & Brandy"}
+  ]
+}

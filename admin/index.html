@@ -1,12 +1,736 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Miniature Bottles — Admin</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Admin — Miniature Bottles</title>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#060e28;--surface:#091530;--nav:#0a1838;--card:#0d1e42;--cardho:#102248;
+  --border:#1a2e5a;--borderhi:#2a4a8a;
+  --gold:#d4a843;--goldd:rgba(212,168,67,.14);
+  --blue:#5b8fff;--blued:rgba(91,143,255,.14);
+  --green:#52c97a;--greend:rgba(82,201,122,.12);
+  --red:#e05c5c;--redd:rgba(224,92,92,.12);
+  --text:#c8d8f0;--sub:#4a6490;--mid:#8aaad8;
+}
+html,body{min-height:100vh;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','DM Sans',sans-serif;font-size:14px}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+img{display:block}
+
+/* LOGIN */
+#login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+.login-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px;max-width:380px;width:100%;text-align:center}
+.login-logo{font-size:22px;color:var(--gold);font-style:italic;margin-bottom:6px}
+.login-sub{font-size:12px;color:var(--sub);letter-spacing:.15em;text-transform:uppercase;margin-bottom:32px}
+.btn-login{width:100%;padding:14px;background:linear-gradient(135deg,#1a3a8a,#2d5fd4);border:none;border-radius:12px;color:#fff;font-size:15px;font-weight:600}
+
+/* LAYOUT */
+#app{display:none;min-height:100vh;flex-direction:column}
+header{background:var(--nav);border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
+.header-logo{font-size:16px;color:var(--gold);font-style:italic}
+.header-right{display:flex;align-items:center;gap:12px}
+.site-link{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:5px}
+.site-link:hover{color:var(--blue)}
+.btn-logout{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--sub);font-size:12px}
+.btn-logout:hover{border-color:var(--red);color:var(--red)}
+
+/* SIDEBAR + CONTENT */
+.layout{display:flex;flex:1}
+aside{width:200px;flex-shrink:0;background:var(--nav);border-right:1px solid var(--border);padding:16px 0;position:sticky;top:56px;height:calc(100vh - 56px)}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 20px;color:var(--sub);font-size:13px;font-weight:500;cursor:pointer;border-left:3px solid transparent;transition:all .2s}
+.nav-item:hover{color:var(--text);background:rgba(91,143,255,.05)}
+.nav-item.active{color:var(--gold);border-left-color:var(--gold);background:var(--goldd)}
+.nav-badge{margin-left:auto;background:var(--border);color:var(--mid);font-size:11px;padding:1px 7px;border-radius:10px}
+.nav-item.active .nav-badge{background:var(--goldd);color:var(--gold)}
+
+main{flex:1;padding:28px 32px;max-width:1000px}
+
+/* TOPBAR */
+.page-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;gap:16px;flex-wrap:wrap}
+.page-title{font-size:22px;font-weight:700;color:var(--text)}
+.page-title span{color:var(--sub);font-size:14px;font-weight:400;margin-left:8px}
+
+/* BUTTONS */
+.btn{padding:9px 18px;border-radius:10px;border:none;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all .2s}
+.btn-primary{background:linear-gradient(135deg,#1a3a8a,#2d5fd4);color:#fff}
+.btn-primary:hover{opacity:.9}
+.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--mid)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn-danger{background:var(--redd);border:1px solid rgba(224,92,92,.25);color:var(--red)}
+.btn-sm{padding:6px 12px;font-size:12px;border-radius:8px}
+.btn-green{background:var(--greend);border:1px solid rgba(82,201,122,.25);color:var(--green)}
+
+/* SEARCH */
+.search-wrap{position:relative;flex:1;max-width:320px}
+.search-wrap input{width:100%;padding:9px 14px 9px 38px;background:var(--surface);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:13px;font-family:inherit}
+.search-wrap input:focus{outline:none;border-color:var(--blue)}
+.search-wrap input::placeholder{color:var(--sub)}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--sub);pointer-events:none}
+
+/* TABLE */
+.table-wrap{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.table-row{display:grid;align-items:center;padding:12px 16px;border-bottom:1px solid var(--border);transition:background .15s;gap:12px}
+.table-row:last-child{border-bottom:none}
+.table-row:hover{background:var(--cardho)}
+.table-head{background:var(--surface);color:var(--sub);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.table-head:hover{background:var(--surface)}
+.bottle-row{grid-template-columns:52px 1fr 120px 80px 50px 80px}
+.cat-row{grid-template-columns:1fr 80px 80px}
+.row-img{width:44px;height:44px;border-radius:8px;object-fit:cover;background:var(--surface)}
+.row-img-placeholder{width:44px;height:44px;border-radius:8px;background:var(--surface);display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:18px}
+.row-name{font-weight:600;color:var(--text);font-size:14px}
+.row-meta{font-size:11px;color:var(--sub);margin-top:2px}
+.tag{display:inline-block;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:500}
+.tag-blue{background:rgba(91,143,255,.14);color:var(--blue)}
+.tag-gold{background:var(--goldd);color:var(--gold)}
+.tag-green{background:var(--greend);color:var(--green)}
+.qty-badge{width:28px;height:28px;border-radius:50%;background:var(--goldd);color:var(--gold);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.row-actions{display:flex;gap:6px;justify-content:flex-end}
+
+/* EMPTY */
+.empty{text-align:center;padding:60px 20px;color:var(--sub)}
+.empty-icon{font-size:48px;margin-bottom:12px}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px}
+.stat-num{font-size:28px;font-weight:700;color:var(--gold);line-height:1}
+.stat-label{font-size:12px;color:var(--sub);margin-top:4px}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;display:flex;align-items:flex-start;justify-content:center;padding:24px;overflow-y:auto;backdrop-filter:blur(4px)}
+.modal{background:var(--card);border:1px solid var(--border);border-radius:20px;width:100%;max-width:600px;margin:auto}
+.modal-header{padding:20px 24px 0;display:flex;align-items:center;justify-content:space-between}
+.modal-title{font-size:18px;font-weight:700;color:var(--text)}
+.modal-close{width:32px;height:32px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--sub);font-size:18px;display:flex;align-items:center;justify-content:center;line-height:1}
+.modal-close:hover{border-color:var(--red);color:var(--red)}
+.modal-body{padding:20px 24px}
+.modal-footer{padding:0 24px 20px;display:flex;gap:10px;justify-content:flex-end}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-full{grid-column:1/-1}
+.form-group{display:flex;flex-direction:column;gap:6px}
+label{font-size:12px;color:var(--sub);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+input,select,textarea{padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:14px;font-family:inherit;width:100%;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+input::placeholder,textarea::placeholder{color:var(--sub)}
+select option{background:var(--card)}
+textarea{resize:vertical;min-height:80px}
+.hint{font-size:11px;color:var(--sub);margin-top:3px}
+.slug-preview{font-size:11px;color:var(--blue);margin-top:3px}
+
+/* IMAGE UPLOAD */
+.img-upload{border:2px dashed var(--border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:all .2s}
+.img-upload:hover{border-color:var(--blue);background:var(--blued)}
+.img-upload input{display:none}
+.img-preview{width:100%;max-height:180px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+.img-upload-text{color:var(--sub);font-size:13px}
+.img-upload-text strong{color:var(--blue)}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:10px;z-index:999;font-size:13px;box-shadow:0 8px 32px rgba(0,0,0,.4);animation:slideUp .3s ease;max-width:320px}
+.toast.success{border-color:rgba(82,201,122,.4);color:var(--green)}
+.toast.error{border-color:rgba(224,92,92,.4);color:var(--red)}
+@keyframes slideUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.fade{animation:fadeIn .25s ease}
+
+/* LOADING */
+.spinner{width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite;display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-full{display:flex;align-items:center;justify-content:center;padding:60px;gap:12px;color:var(--sub)}
+
+/* CONFIRM */
+.confirm-box{background:var(--redd);border:1px solid rgba(224,92,92,.3);border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:13px;color:var(--red)}
+
+@media(max-width:768px){
+  aside{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .form-grid{grid-template-columns:1fr}
+  .bottle-row{grid-template-columns:44px 1fr 70px}
+  main{padding:20px 16px}
+}
+</style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+<!-- LOGIN -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">Miniature Bottles</div>
+    <div class="login-sub">Admin Panel</div>
+    <button class="btn-login" onclick="netlifyIdentity.open()">Giriş Yap</button>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;flex-direction:column">
+  <header>
+    <div class="header-logo">🥃 Miniature Admin</div>
+    <div class="header-right">
+      <a href="/" target="_blank" class="site-link">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Siteye Git
+      </a>
+      <button class="btn-logout" onclick="logout()">Çıkış</button>
+    </div>
+  </header>
+  <div class="layout">
+    <aside>
+      <div class="nav-item active" id="nav-dashboard" onclick="showPage('dashboard')">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </div>
+      <div class="nav-item" id="nav-bottles" onclick="showPage('bottles')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l1 7H8L9 3z"/><path d="M8 10c0 0-2 2-2 6a6 6 0 0 0 12 0c0-4-2-6-2-6"/></svg>
+        Şişeler
+        <span class="nav-badge" id="badge-bottles">0</span>
+      </div>
+      <div class="nav-item" id="nav-categories" onclick="showPage('categories')">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h8"/></svg>
+        Kategoriler
+        <span class="nav-badge" id="badge-cats">0</span>
+      </div>
+      <div class="nav-item" id="nav-cocktails" onclick="showPage('cocktails')">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 22h8M12 11v11M3 3l9 8 9-8H3z"/></svg>
+        Kokteyller
+        <span class="nav-badge" id="badge-cocktails">0</span>
+      </div>
+    </aside>
+    <main id="page-content">
+      <div class="loading-full"><div class="spinner"></div> Yükleniyor…</div>
+    </main>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div id="modal" style="display:none" class="modal-overlay" onclick="closeModalOnOverlay(event)">
+  <div class="modal" id="modal-box">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title">Modal</div>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-footer" id="modal-footer"></div>
+  </div>
+</div>
+
+<script>
+// ── CONSTANTS ────────────────────────────────────────────────────────────────
+const BOTTLES_PATH  = 'data/bottles.json';
+const CATS_PATH     = 'data/categories.json';
+const COCKTAILS_PATH= 'data/cocktails.json';
+const GIT_BASE      = '/.netlify/git/github/contents/';
+
+const FLAGS = {
+  Scotland:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',England:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',Ireland:'🇮🇪',USA:'🇺🇸',France:'🇫🇷',
+  Mexico:'🇲🇽',Italy:'🇮🇹',Germany:'🇩🇪',Venezuela:'🇻🇪',Spain:'🇪🇸',
+  Japan:'🇯🇵',Canada:'🇨🇦',Australia:'🇦🇺',Netherlands:'🇳🇱',Sweden:'🇸🇪',
+  Russia:'🇷🇺',Turkey:'🇹🇷',Greece:'🇬🇷',Cuba:'🇨🇺',Jamaica:'🇯🇲',
+  Barbados:'🇧🇧',Trinidad:'🇹🇹',Peru:'🇵🇪',Brazil:'🇧🇷',Argentina:'🇦🇷',
+  'South Africa':'🇿🇦',India:'🇮🇳',China:'🇨🇳',Taiwan:'🇹🇼',
+  'Czech Republic':'🇨🇿',Poland:'🇵🇱',Hungary:'🇭🇺',Austria:'🇦🇹',
+  Switzerland:'🇨🇭',Belgium:'🇧🇪',Portugal:'🇵🇹','Diğer':'🌍'
+};
+const COUNTRIES = Object.keys(FLAGS);
+
+// ── STATE ─────────────────────────────────────────────────────────────────────
+let token = null;
+let bottles = [], categories = [], cocktails = [];
+let shas = {};
+let currentPage = 'dashboard';
+let searchQ = '';
+
+// ── AUTH ─────────────────────────────────────────────────────────────────────
+window.netlifyIdentity.on('init', u => { if(u) onLogin(u); });
+window.netlifyIdentity.on('login', u => { window.netlifyIdentity.close(); onLogin(u); });
+window.netlifyIdentity.on('logout', () => { token=null; document.getElementById('app').style.display='none'; document.getElementById('login-screen').style.display='flex'; });
+
+async function onLogin(user) {
+  token = user.token?.access_token;
+  if(!token){ token = await user.jwt(); }
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('app').style.display='flex';
+  await loadAll();
+}
+function logout(){ window.netlifyIdentity.logout(); }
+
+// ── GIT API ───────────────────────────────────────────────────────────────────
+function utf8ToB64(str){ return btoa(unescape(encodeURIComponent(str))); }
+function b64ToUtf8(str){ return decodeURIComponent(escape(atob(str.replace(/\n/g,'')))); }
+
+async function gitGet(path){
+  const r = await fetch(GIT_BASE+path, { headers:{'Authorization':'Bearer '+token} });
+  if(!r.ok) return null;
+  const d = await r.json();
+  shas[path] = d.sha;
+  return JSON.parse(b64ToUtf8(d.content));
+}
+
+async function gitPut(path, data, msg){
+  const body = { message:msg, content:utf8ToB64(JSON.stringify(data,null,2)) };
+  if(shas[path]) body.sha = shas[path];
+  const r = await fetch(GIT_BASE+path, {
+    method:'PUT',
+    headers:{'Authorization':'Bearer '+token,'Content-Type':'application/json'},
+    body:JSON.stringify(body)
+  });
+  if(r.ok){ const d=await r.json(); shas[path]=d.content?.sha; return true; }
+  return false;
+}
+
+async function uploadImage(file){
+  return new Promise((res,rej)=>{
+    const fr = new FileReader();
+    fr.onload = async e => {
+      const b64 = e.target.result.split(',')[1];
+      const ext = file.name.split('.').pop().toLowerCase();
+      const fname = `images/uploads/${Date.now()}.${ext}`;
+      const r = await fetch(GIT_BASE+fname, {
+        method:'PUT',
+        headers:{'Authorization':'Bearer '+token,'Content-Type':'application/json'},
+        body:JSON.stringify({ message:'Upload image', content:b64 })
+      });
+      if(r.ok){ const d=await r.json(); shas[fname]=d.content?.sha; res('/'+fname); }
+      else rej(new Error('Upload failed'));
+    };
+    fr.readAsDataURL(file);
+  });
+}
+
+// ── LOAD ──────────────────────────────────────────────────────────────────────
+async function loadAll(){
+  showLoading();
+  try {
+    const [bd, cd, ctd] = await Promise.all([
+      gitGet(BOTTLES_PATH),
+      gitGet(CATS_PATH).catch(()=>null),
+      gitGet(COCKTAILS_PATH)
+    ]);
+    bottles   = (bd?.items || bd || []);
+    cocktails = (ctd?.items || ctd || []);
+    if(cd){ categories = cd.items || cd; }
+    else {
+      // Init categories from existing bottles
+      categories = [...new Set(bottles.map(b=>b.category).filter(Boolean))].map((n,i)=>({id:i+1,name:n}));
+      await saveCategories('Init categories');
+    }
+    updateBadges();
+    showPage(currentPage);
+  } catch(e){ toast('Veri yüklenemedi: '+e.message,'error'); }
+}
+
+function updateBadges(){
+  document.getElementById('badge-bottles').textContent = bottles.length;
+  document.getElementById('badge-cats').textContent = categories.length;
+  document.getElementById('badge-cocktails').textContent = cocktails.length;
+}
+
+async function saveBottles(msg='Update bottles'){
+  const ok = await gitPut(BOTTLES_PATH, {items:bottles}, msg);
+  if(ok){ updateBadges(); toast('Kaydedildi ✓'); return true; }
+  toast('Kayıt hatası','error'); return false;
+}
+async function saveCategories(msg='Update categories'){
+  const ok = await gitPut(CATS_PATH, {items:categories}, msg);
+  if(ok){ updateBadges(); toast('Kategoriler kaydedildi ✓'); return true; }
+  toast('Kayıt hatası','error'); return false;
+}
+
+// ── NAV ───────────────────────────────────────────────────────────────────────
+function showPage(page){
+  currentPage = page;
+  searchQ = '';
+  document.querySelectorAll('.nav-item').forEach(el=>el.classList.remove('active'));
+  const nav = document.getElementById('nav-'+page);
+  if(nav) nav.classList.add('active');
+  const pages = {
+    dashboard: renderDashboard,
+    bottles:   renderBottles,
+    categories:renderCategories,
+    cocktails: renderCocktails,
+  };
+  document.getElementById('page-content').innerHTML = '';
+  (pages[page]||renderDashboard)();
+}
+function showLoading(){
+  document.getElementById('page-content').innerHTML = '<div class="loading-full"><div class="spinner"></div> Yükleniyor…</div>';
+}
+
+// ── DASHBOARD ─────────────────────────────────────────────────────────────────
+function renderDashboard(){
+  const extras = bottles.filter(b=>b.qty>1).length;
+  document.getElementById('page-content').innerHTML = `
+    <div class="fade">
+      <div class="page-header"><div class="page-title">Dashboard</div></div>
+      <div class="stats">
+        <div class="stat-card"><div class="stat-num">${bottles.length}</div><div class="stat-label">Toplam Şişe</div></div>
+        <div class="stat-card"><div class="stat-num" style="color:var(--green)">${extras}</div><div class="stat-label">Fazlalık / Takas</div></div>
+        <div class="stat-card"><div class="stat-num" style="color:var(--blue)">${cocktails.length}</div><div class="stat-label">Kokteyl Tarifi</div></div>
+        <div class="stat-card"><div class="stat-num" style="color:var(--mid)">${categories.length}</div><div class="stat-label">Kategori</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div class="table-wrap" style="padding:20px">
+          <div style="font-size:13px;color:var(--sub);margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em">Hızlı İşlemler</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <button class="btn btn-primary" onclick="openAddBottle()" style="justify-content:center">+ Yeni Şişe Ekle</button>
+            <button class="btn btn-ghost" onclick="showPage('categories')" style="justify-content:center">+ Kategori Ekle</button>
+          </div>
+        </div>
+        <div class="table-wrap" style="padding:20px">
+          <div style="font-size:13px;color:var(--sub);margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em">Son Eklenenler</div>
+          ${bottles.slice(-4).reverse().map(b=>`
+            <div style="display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--border)">
+              <img src="${b.image}" style="width:32px;height:32px;border-radius:6px;object-fit:cover"/>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${b.name}</div>
+                <div style="font-size:11px;color:var(--sub)">${b.category}</div>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+}
+
+// ── BOTTLES ───────────────────────────────────────────────────────────────────
+function renderBottles(){
+  const q = searchQ.toLowerCase();
+  const filtered = q ? bottles.filter(b=>[b.name,b.country,b.category].some(s=>s?.toLowerCase().includes(q))) : bottles;
+  document.getElementById('page-content').innerHTML = `
+    <div class="fade">
+      <div class="page-header">
+        <div class="page-title">Şişeler <span>${bottles.length} şişe</span></div>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+          <div class="search-wrap">
+            <svg class="search-icon" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" placeholder="Ara…" value="${searchQ}" oninput="searchQ=this.value;renderBottles()"/>
+          </div>
+          <button class="btn btn-primary" onclick="openAddBottle()">+ Şişe Ekle</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <div class="table-row bottle-row table-head">
+          <div></div><div>Şişe</div><div>Kategori</div><div>Ülke</div><div>Adet</div><div style="text-align:right">İşlem</div>
+        </div>
+        ${filtered.length===0?`<div class="empty"><div class="empty-icon">🫗</div><div>Sonuç yok</div></div>`:''}
+        ${filtered.map(b=>`
+          <div class="table-row bottle-row">
+            <div>${b.image?`<img class="row-img" src="${b.image}" loading="lazy"/>`:`<div class="row-img-placeholder">🥃</div>`}</div>
+            <div>
+              <div class="row-name">${b.name}</div>
+              <div class="row-meta">${FLAGS[b.country]||'🌍'} ${b.country} · ${b.abv} · ${b.year}</div>
+            </div>
+            <div><span class="tag tag-blue">${b.category||'—'}</span></div>
+            <div style="color:var(--sub);font-size:13px">${FLAGS[b.country]||'🌍'} ${b.country}</div>
+            <div>${b.qty>1?`<span class="qty-badge">×${b.qty}</span>`:`<span style="color:var(--sub)">1</span>`}</div>
+            <div class="row-actions">
+              <button class="btn btn-ghost btn-sm" onclick="openEditBottle('${b.slug}')">Düzenle</button>
+              <button class="btn btn-danger btn-sm" onclick="confirmDeleteBottle('${b.slug}')">Sil</button>
+            </div>
+          </div>`).join('')}
+      </div>
+    </div>`;
+}
+
+// ── BOTTLE FORM ───────────────────────────────────────────────────────────────
+function slugify(str){ return str.toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
+
+function openAddBottle(){
+  openBottleModal(null);
+}
+function openEditBottle(slug){
+  const b = bottles.find(b=>b.slug===slug);
+  openBottleModal(b);
+}
+
+function openBottleModal(bottle){
+  const isEdit = !!bottle;
+  const b = bottle || { id:Date.now(), slug:'', name:'', country:'Scotland', category:'', abv:'', year:new Date().getFullYear(), qty:1, image:'', desc_tr:'', desc_en:'' };
+  const catOptions = categories.map(c=>`<option value="${c.name}" ${b.category===c.name?'selected':''}>${c.name}</option>`).join('');
+
+  document.getElementById('modal-title').textContent = isEdit ? 'Şişe Düzenle' : 'Yeni Şişe Ekle';
+  document.getElementById('modal-body').innerHTML = `
+    <div class="form-grid">
+      <div class="form-group form-full">
+        <label>Şişe Adı</label>
+        <input id="f-name" type="text" value="${b.name}" placeholder="Glenfiddich 12" oninput="autoSlug()"/>
+      </div>
+      <div class="form-group">
+        <label>Slug (URL)</label>
+        <input id="f-slug" type="text" value="${b.slug}" placeholder="glenfiddich-12"/>
+        <div class="slug-preview" id="slug-preview">miniaturebottles5cl.netlify.app/…</div>
+      </div>
+      <div class="form-group">
+        <label>Ülke</label>
+        <select id="f-country" onchange="updateFlagPreview()">
+          ${COUNTRIES.map(c=>`<option value="${c}" ${b.country===c?'selected':''}>${FLAGS[c]||''} ${c}</option>`).join('')}
+        </select>
+        <div class="hint" id="flag-preview">Bayrak: ${FLAGS[b.country]||'🌍'}</div>
+      </div>
+      <div class="form-group">
+        <label>Kategori</label>
+        <select id="f-category">
+          <option value="">— Seç —</option>
+          ${catOptions}
+        </select>
+        <div class="hint">Kategori yoksa önce <strong>Kategoriler</strong> sayfasından ekle</div>
+      </div>
+      <div class="form-group">
+        <label>ABV (Alkol)</label>
+        <input id="f-abv" type="text" value="${b.abv}" placeholder="40%"/>
+      </div>
+      <div class="form-group">
+        <label>Yıl</label>
+        <input id="f-year" type="number" value="${b.year}" min="2000" max="2099"/>
+      </div>
+      <div class="form-group form-full">
+        <label>Adet <span style="color:var(--sub);font-weight:400">(1'den fazlaysa Fazlalıklar'da görünür)</span></label>
+        <input id="f-qty" type="number" value="${b.qty}" min="1" max="99"/>
+      </div>
+      <div class="form-group form-full">
+        <label>Fotoğraf</label>
+        <div class="img-upload" onclick="document.getElementById('f-img-file').click()" id="img-upload-box">
+          ${b.image?`<img class="img-preview" id="img-preview-el" src="${b.image}"/>`:`<div id="img-preview-el" style="margin-bottom:8px">📷</div>`}
+          <div class="img-upload-text"><strong>Tıkla veya sürükle</strong><br/>JPG, PNG, WEBP</div>
+          <input type="file" id="f-img-file" accept="image/*" onchange="previewImg(this)"/>
+        </div>
+        <input id="f-img-url" type="text" value="${b.image}" placeholder="ya da URL gir" style="margin-top:8px" oninput="updateImgFromUrl(this.value)"/>
+      </div>
+      <div class="form-group form-full">
+        <label>Açıklama (Türkçe)</label>
+        <textarea id="f-desc-tr" placeholder="Tadım notu, hikaye…">${b.desc_tr||''}</textarea>
+      </div>
+      <div class="form-group form-full">
+        <label>Açıklama (İngilizce)</label>
+        <textarea id="f-desc-en" placeholder="Tasting notes, story…">${b.desc_en||''}</textarea>
+      </div>
+    </div>`;
+  document.getElementById('modal-footer').innerHTML = `
+    <button class="btn btn-ghost" onclick="closeModal()">İptal</button>
+    <button class="btn btn-primary" id="save-btn" onclick="saveBottle('${b.slug}','${isEdit}')">
+      ${isEdit?'Güncelle':'Ekle & Yayınla'}
+    </button>`;
+  document.getElementById('modal').style.display='flex';
+  updateSlugPreview(b.slug);
+}
+
+function autoSlug(){
+  const name = document.getElementById('f-name').value;
+  const slug = slugify(name);
+  document.getElementById('f-slug').value = slug;
+  updateSlugPreview(slug);
+}
+function updateSlugPreview(slug){
+  document.getElementById('slug-preview').textContent = slug ? `/${slug}` : '';
+}
+function updateFlagPreview(){
+  const country = document.getElementById('f-country').value;
+  document.getElementById('flag-preview').textContent = 'Bayrak: '+(FLAGS[country]||'🌍');
+}
+function previewImg(input){
+  if(!input.files[0]) return;
+  const url = URL.createObjectURL(input.files[0]);
+  const el = document.getElementById('img-preview-el');
+  if(el.tagName==='IMG'){ el.src=url; }
+  else{ el.outerHTML=`<img class="img-preview" id="img-preview-el" src="${url}"/>`; }
+  document.getElementById('f-img-url').value='';
+}
+function updateImgFromUrl(url){
+  const el = document.getElementById('img-preview-el');
+  if(!url) return;
+  if(el.tagName==='IMG'){ el.src=url; }
+  else{ el.outerHTML=`<img class="img-preview" id="img-preview-el" src="${url}"/>`; }
+}
+
+async function saveBottle(oldSlug, isEdit){
+  const btn = document.getElementById('save-btn');
+  btn.disabled=true; btn.innerHTML='<div class="spinner"></div> Kaydediliyor…';
+
+  const name     = document.getElementById('f-name').value.trim();
+  const slug     = document.getElementById('f-slug').value.trim();
+  const country  = document.getElementById('f-country').value;
+  const category = document.getElementById('f-category').value;
+  const abv      = document.getElementById('f-abv').value.trim();
+  const year     = parseInt(document.getElementById('f-year').value)||new Date().getFullYear();
+  const qty      = parseInt(document.getElementById('f-qty').value)||1;
+  const desc_tr  = document.getElementById('f-desc-tr').value.trim();
+  const desc_en  = document.getElementById('f-desc-en').value.trim();
+  const imgFile  = document.getElementById('f-img-file').files[0];
+  let   imgUrl   = document.getElementById('f-img-url').value.trim();
+
+  if(!name||!slug){ toast('Ad ve slug zorunlu','error'); btn.disabled=false; btn.textContent='Tekrar Dene'; return; }
+
+  // Upload image if file selected
+  if(imgFile){
+    try { imgUrl = await uploadImage(imgFile); }
+    catch(e){ toast('Görsel yüklenemedi: '+e.message,'error'); btn.disabled=false; btn.textContent='Tekrar Dene'; return; }
+  }
+
+  const entry = { id:Date.now(), slug, name, country, category, abv, year, qty, image:imgUrl, desc_tr, desc_en };
+
+  if(isEdit==='true'){
+    const idx = bottles.findIndex(b=>b.slug===oldSlug);
+    if(idx>=0){ entry.id=bottles[idx].id; bottles[idx]=entry; }
+    else bottles.push(entry);
+  } else {
+    if(bottles.find(b=>b.slug===slug)){ toast('Bu slug zaten var','error'); btn.disabled=false; btn.textContent='Tekrar Dene'; return; }
+    bottles.push(entry);
+  }
+
+  const ok = await saveBottles(isEdit==='true'?`Edit: ${name}`:`Add: ${name}`);
+  if(ok){ closeModal(); renderBottles(); }
+  else { btn.disabled=false; btn.textContent='Tekrar Dene'; }
+}
+
+function confirmDeleteBottle(slug){
+  const b = bottles.find(b=>b.slug===slug);
+  if(!b) return;
+  document.getElementById('modal-title').textContent = 'Şişeyi Sil';
+  document.getElementById('modal-body').innerHTML = `
+    <div class="confirm-box">⚠️ <strong>${b.name}</strong> silinecek. Bu işlem geri alınamaz.</div>
+    <div style="display:flex;align-items:center;gap:12px">
+      ${b.image?`<img src="${b.image}" style="width:60px;height:60px;border-radius:8px;object-fit:cover"/>`:'' }
+      <div><div style="font-weight:600">${b.name}</div><div style="color:var(--sub);font-size:12px">${b.category} · ${b.country}</div></div>
+    </div>`;
+  document.getElementById('modal-footer').innerHTML = `
+    <button class="btn btn-ghost" onclick="closeModal()">İptal</button>
+    <button class="btn btn-danger" onclick="deleteBottle('${slug}')">Evet, Sil</button>`;
+  document.getElementById('modal').style.display='flex';
+}
+
+async function deleteBottle(slug){
+  bottles = bottles.filter(b=>b.slug!==slug);
+  const ok = await saveBottles('Delete bottle: '+slug);
+  if(ok){ closeModal(); renderBottles(); }
+}
+
+// ── CATEGORIES ────────────────────────────────────────────────────────────────
+function renderCategories(){
+  document.getElementById('page-content').innerHTML = `
+    <div class="fade">
+      <div class="page-header">
+        <div class="page-title">Kategoriler <span>${categories.length} kategori</span></div>
+        <button class="btn btn-primary" onclick="openAddCategory()">+ Kategori Ekle</button>
+      </div>
+      <div class="table-wrap">
+        <div class="table-row cat-row table-head">
+          <div>Kategori Adı</div><div>Şişe Sayısı</div><div style="text-align:right">İşlem</div>
+        </div>
+        ${categories.length===0?`<div class="empty"><div class="empty-icon">📋</div><div>Henüz kategori yok</div></div>`:''}
+        ${categories.map(c=>{
+          const count = bottles.filter(b=>b.category===c.name).length;
+          return `<div class="table-row cat-row">
+            <div style="font-weight:600">${c.name}</div>
+            <div><span class="tag tag-blue">${count} şişe</span></div>
+            <div class="row-actions">
+              <button class="btn btn-danger btn-sm" onclick="confirmDeleteCat(${c.id},'${c.name.replace(/'/g,"\\'")}',${count})">Sil</button>
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`;
+}
+
+function openAddCategory(){
+  document.getElementById('modal-title').textContent = 'Yeni Kategori';
+  document.getElementById('modal-body').innerHTML = `
+    <div class="form-group">
+      <label>Kategori Adı</label>
+      <input id="f-cat-name" type="text" placeholder="Örn: Single Malt Whisky" autofocus/>
+    </div>`;
+  document.getElementById('modal-footer').innerHTML = `
+    <button class="btn btn-ghost" onclick="closeModal()">İptal</button>
+    <button class="btn btn-primary" onclick="addCategory()">Ekle</button>`;
+  document.getElementById('modal').style.display='flex';
+  setTimeout(()=>document.getElementById('f-cat-name')?.focus(),100);
+}
+
+async function addCategory(){
+  const name = document.getElementById('f-cat-name').value.trim();
+  if(!name){ toast('Kategori adı gerekli','error'); return; }
+  if(categories.find(c=>c.name.toLowerCase()===name.toLowerCase())){ toast('Bu kategori zaten var','error'); return; }
+  categories.push({ id:Date.now(), name });
+  const ok = await saveCategories('Add category: '+name);
+  if(ok){ closeModal(); renderCategories(); }
+}
+
+function confirmDeleteCat(id, name, count){
+  document.getElementById('modal-title').textContent = 'Kategori Sil';
+  document.getElementById('modal-body').innerHTML = `
+    <div class="confirm-box">⚠️ <strong>${name}</strong> kategorisi silinecek.
+    ${count>0?`<br/>Bu kategoride <strong>${count} şişe</strong> var — şişeler kategorisiz kalacak.`:''}</div>`;
+  document.getElementById('modal-footer').innerHTML = `
+    <button class="btn btn-ghost" onclick="closeModal()">İptal</button>
+    <button class="btn btn-danger" onclick="deleteCategory(${id})">Evet, Sil</button>`;
+  document.getElementById('modal').style.display='flex';
+}
+
+async function deleteCategory(id){
+  categories = categories.filter(c=>c.id!==id);
+  const ok = await saveCategories('Delete category');
+  if(ok){ closeModal(); renderCategories(); }
+}
+
+// ── COCKTAILS (basic list) ────────────────────────────────────────────────────
+function renderCocktails(){
+  document.getElementById('page-content').innerHTML = `
+    <div class="fade">
+      <div class="page-header">
+        <div class="page-title">Kokteyller <span>${cocktails.length} tarif</span></div>
+      </div>
+      <div class="table-wrap">
+        ${cocktails.map(c=>`
+          <div class="table-row" style="grid-template-columns:52px 1fr auto">
+            <div>${c.image?`<img class="row-img" src="${c.image}" loading="lazy"/>`:`<div class="row-img-placeholder">🍹</div>`}</div>
+            <div>
+              <div class="row-name">${c.name}</div>
+              <div class="row-meta"><span class="${c.diff==='Kolay'?'tag-gold':'tag-blue'} tag">${c.diff}</span> · ${c.time} · ${(c.slugs||[]).length} şişe</div>
+            </div>
+          </div>`).join('')}
+      </div>
+      <div style="margin-top:16px;padding:14px 16px;background:var(--card);border:1px solid var(--border);border-radius:12px;font-size:13px;color:var(--sub)">
+        💡 Kokteyl düzenleme yakında eklenecek. Şimdilik GitHub'daki <code>data/cocktails.json</code> üzerinden düzenleyebilirsin.
+      </div>
+    </div>`;
+}
+
+// ── MODAL ─────────────────────────────────────────────────────────────────────
+function closeModal(){
+  document.getElementById('modal').style.display='none';
+}
+function closeModalOnOverlay(e){
+  if(e.target===document.getElementById('modal')) closeModal();
+}
+
+// ── TOAST ─────────────────────────────────────────────────────────────────────
+let toastTimeout;
+function toast(msg, type='success'){
+  const el = document.getElementById('toast-el');
+  const icon = type==='success'?'✓':'✕';
+  if(!el){
+    const t=document.createElement('div');
+    t.id='toast-el';t.className=`toast ${type}`;
+    t.innerHTML=`<span>${icon}</span><span>${msg}</span>`;
+    document.body.appendChild(t);
+  } else {
+    el.className=`toast ${type}`;
+    el.innerHTML=`<span>${icon}</span><span>${msg}</span>`;
+    el.style.animation='none'; void el.offsetWidth; el.style.animation='';
+  }
+  clearTimeout(toastTimeout);
+  toastTimeout=setTimeout(()=>document.getElementById('toast-el')?.remove(),3000);
+}
+
+// Keyboard: Esc closes modal
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
+</script>
 </body>
 </html>
