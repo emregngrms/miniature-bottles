@@ -179,17 +179,32 @@ footer{background:#0a1838;border-top:1px solid #1a2e5a;padding:28px 20px}
 </footer>
 <script>
 // ── COUNTRY → FLAG LOOKUP (elle bayrak girme yok) ─────────────────────────
-const FLAGS = {
-  'Scotland':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','England':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','Ireland':'🇮🇪','USA':'🇺🇸','France':'🇫🇷',
-  'Mexico':'🇲🇽','Italy':'🇮🇹','Germany':'🇩🇪','Venezuela':'🇻🇪','Spain':'🇪🇸',
-  'Japan':'🇯🇵','Canada':'🇨🇦','Australia':'🇦🇺','Netherlands':'🇳🇱','Sweden':'🇸🇪',
-  'Russia':'🇷🇺','Turkey':'🇹🇷','Greece':'🇬🇷','Cuba':'🇨🇺','Jamaica':'🇯🇲',
-  'Barbados':'🇧🇧','Trinidad':'🇹🇹','Peru':'🇵🇪','Brazil':'🇧🇷','Argentina':'🇦🇷',
-  'South Africa':'🇿🇦','India':'🇮🇳','China':'🇨🇳','Taiwan':'🇹🇼',
-  'Czech Republic':'🇨🇿','Poland':'🇵🇱','Hungary':'🇭🇺','Austria':'🇦🇹',
-  'Switzerland':'🇨🇭','Belgium':'🇧🇪','Portugal':'🇵🇹','Diğer':'🌍'
+// flagcdn.com — cross-platform flag images (works on Windows, Android etc.)
+const COUNTRY_ISO = {
+  Scotland:'gb-sct', England:'gb-eng', Wales:'gb-wls', Ireland:'ie',
+  USA:'us', France:'fr', Mexico:'mx', Italy:'it', Germany:'de',
+  Venezuela:'ve', Spain:'es', Japan:'jp', Canada:'ca', Australia:'au',
+  Netherlands:'nl', Sweden:'se', Russia:'ru', Turkey:'tr', Greece:'gr',
+  Cuba:'cu', Jamaica:'jm', Barbados:'bb', Trinidad:'tt', Peru:'pe',
+  Brazil:'br', Argentina:'ar', 'South Africa':'za', India:'in',
+  China:'cn', Taiwan:'tw', 'Czech Republic':'cz', Poland:'pl',
+  Hungary:'hu', Austria:'at', Switzerland:'ch', Belgium:'be',
+  Portugal:'pt', Albania:'al', Denmark:'dk', Finland:'fi', Iceland:'is',
+  Serbia:'rs', Croatia:'hr', Slovenia:'si', Bosnia:'ba', Bulgaria:'bg',
+  Romania:'ro', Ukraine:'ua', Georgia:'ge', Armenia:'am', Azerbaijan:'az',
+  Israel:'il', Lebanon:'lb', Morocco:'ma', 'South Korea':'kr',
+  Vietnam:'vn', Thailand:'th', Singapore:'sg', 'New Zealand':'nz',
+  Colombia:'co', Chile:'cl', Bolivia:'bo', Guatemala:'gt', Ecuador:'ec',
+  Uruguay:'uy', Philippines:'ph', Indonesia:'id', Malaysia:'my',
+  Kazakhstan:'kz', Egypt:'eg', Nigeria:'ng', Kenya:'ke', Ethiopia:'et',
 };
-function flag(country){ return FLAGS[country] || '🌍'; }
+function flagImg(country, h=13){
+  const iso = COUNTRY_ISO[country];
+  if(!iso) return '';
+  const w = Math.round(h * 4/3);
+  return `<img src="https://flagcdn.com/w${w}/${iso}.png" style="width:${w}px;height:${h}px;border-radius:2px;display:inline-block;vertical-align:middle;margin-right:3px" alt="" loading="lazy"/>`;
+}
+function flag(country){ return ''; } // kept for compat, use flagImg()
 
 const IG_DM = "https://ig.me/m/miniaturebottles_5cl";
 let bottles = [], cocktails = [];
@@ -208,6 +223,20 @@ async function loadData() {
     categories = (cats.items || cats || []);
   } catch(e) { console.error('Load error:', e); }
   render();
+}
+
+function abvFmt(abv){
+  if(!abv) return '';
+  abv = String(abv).trim();
+  if(!abv.includes('%')) abv += '%';
+  return abv;
+}
+
+function abvFmt(v){
+  if(!v) return '';
+  v = String(v).trim();
+  if(!v.includes('%')) v += '%';
+  return v;
 }
 
 function catName(en) {
@@ -240,12 +269,12 @@ function renderBottleCard(b){
         ${b.qty>1?`<span class="badge-swap">${svgSwap()}${t("TAKAS","TRADE")}</span>`:''}
       </div>
       ${b.qty>1?`<span class="badge-qty">×${b.qty}</span>`:''}
-      <span class="badge-abv">${b.abv}</span>
+      <span class="badge-abv">${abvFmt(b.abv)}</span>
       ${cc>0?`<span class="badge-cocktail">${svgCocktail()} ${cc} ${t('kokteyl','cocktail')}</span>`:''}
     </div>
     <div class="bcard-body">
       <div class="bcard-name">${b.name}</div>
-      <div class="bcard-sub">${flag(b.country)} ${b.country} · ${b.year}</div>
+      <div class="bcard-sub">${flagImg(b.country)} ${b.country} · ${b.year}</div>
     </div>
   </div>`;
 }
@@ -261,7 +290,7 @@ function renderBottleRow(b){
           <span class="tag-blue">${catName(b.category)}</span>
           ${b.qty>1?`<span class="tag-green">${svgSwap()}${t("TAKAS","TRADE")}</span>`:''}
         </div>
-        <div class="brow-sub">${flag(b.country)} ${b.country} · ${b.abv} · ${b.year}${cc>0?` · <span style="color:#d4a843">${cc} ${t('kokteyl','cocktail')}</span>`:''}</div>
+        <div class="brow-sub">${flagImg(b.country)} ${b.country} · ${abvFmt(b.abv)} · ${b.year}${cc>0?` · <span style="color:#d4a843">${cc} ${t('kokteyl','cocktail')}</span>`:''}</div>
       </div>
       ${b.qty>1?`<span style="color:#d4a843;font-size:12px;font-weight:700">×${b.qty}</span>`:''}
       ${svgChevRight()}
@@ -321,14 +350,14 @@ function renderCollectionPage(extrasOnly){
         <div style="position:relative">
           <select onchange="setCtr(this.value)" style="padding:11px 36px 11px 14px;background:#091530;border:1px solid ${state.country?'#5b8fff':'#1a2e5a'};border-radius:12px;color:${state.country?'#5b8fff':'#8aaad8'};font-size:13px;font-family:inherit;appearance:none;cursor:pointer;min-width:140px">
             <option value="">${t('Tüm Ülkeler','All Countries')}</option>
-            ${[...new Set(bottles.map(b=>b.country).filter(Boolean))].map(c=>`<option value="${c}" ${state.country===c?'selected':''}>${FLAGS[c]||'🌍'} ${c}</option>`).join('')}
+            ${[...new Set(bottles.map(b=>b.country).filter(Boolean))].map(c=>`<option value="${c}" ${state.country===c?'selected':''}>${c}</option>`).join('')}
           </select>
           <svg style="position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;color:${state.country?'#5b8fff':'#4a6490'}" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </div>
         ${(state.cat||state.country)?`<button onclick="setCat('');setCtr('')" style="padding:11px 14px;background:rgba(224,92,92,.12);border:1px solid rgba(224,92,92,.25);border-radius:12px;color:#e05c5c;font-size:12px;font-family:inherit;cursor:pointer;white-space:nowrap">${t('Temizle','Clear')}</button>`:''}
       </div>
     </div>
-    <div class="count">${filtered.length} ${t('şişe','bottle')}${filtered.length!==1&&state.lang==='en'?'s':''}${state.cat?` · <span>${catName(state.cat)}</span>`:''}${state.country?` · <span>${FLAGS[state.country]||''} ${state.country}</span>`:''}${q?` · <span>"${state.search}"</span>`:''}</div>
+    <div class="count">${filtered.length} ${t('şişe','bottle')}${filtered.length!==1&&state.lang==='en'?'s':''}${state.cat?` · <span>${catName(state.cat)}</span>`:''}${state.country?` · <span>${flagImg(state.country)} ${state.country}</span>`:''}${q?` · <span>"${state.search}"</span>`:''}</div>
     ${state.view==='grid'?`<div class="grid">${filtered.map(renderBottleCard).join('')}</div>`:`<div class="list-view">${filtered.map(renderBottleRow).join('')}</div>`}
     ${filtered.length===0?`<div class="empty"><div class="empty-icon">🫗</div><div class="empty-text">${t('Sonuç bulunamadı','No results found')}</div></div>`:''}`;
 }
@@ -346,11 +375,11 @@ function renderBottleDetail(b){
       <div>
         <div class="detail-badges">
           <span class="tag-blue" style="font-size:11px;padding:4px 10px;border-radius:8px">${catName(b.category)}</span>
-          <span style="background:rgba(212,168,67,.12);color:#d4a843;font-size:11px;padding:4px 10px;border-radius:8px">${b.abv}</span>
+          <span style="background:rgba(212,168,67,.12);color:#d4a843;font-size:11px;padding:4px 10px;border-radius:8px">🍷 Alkol: ${abvFmt(b.abv)}</span>
           ${b.qty>1?`<span class="tag-green" style="font-size:11px;padding:4px 10px;border-radius:8px">${svgSwap()} ${t("TAKAS","TRADE")}</span>`:''}
         </div>
         <h1 class="detail-title">${b.name}</h1>
-        <div class="detail-sub">${flag(b.country)} ${b.country} · ${b.year}</div>
+        <div class="detail-sub">${flagImg(b.country)} ${b.country} · ${b.year}</div>
         <p class="detail-desc">${desc||''}</p>
         ${b.qty>1?`<a href="${IG_DM}" target="_blank" rel="noopener noreferrer" class="dm-btn">${svgDM()} ${t('Takas için DM at','DM to Trade')}</a>`:''}
         ${related.length>0?`
