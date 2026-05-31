@@ -56,19 +56,19 @@
     },
     {
       "id": 1762693358,
-      "slug": "bottle-4",
-      "name": "Şişe #4",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "hakkaisan-55-special-honkaku-shochu",
+      "name": "Hakkaisan 55 - Special Honkaku Shochu",
+      "country": "Japan",
+      "category": "Shochu",
+      "abv": "55%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18509207965070550.jpg",
       "images": [
         "/images/uploads/18509207965070550.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Niigata bölgesinden gelen bu özel shochu, 55 derecelik yüksek alkol oranıyla güçlü bir karakter sunar. Geleneksel Japonya distilasyon sanatının mükemmel örneği olan Hakkaisan, aromatik ve keskin bir profil sunarak koleksiyoncuların tercih ettiği bir şarap türüdür.",
+      "desc_en": "This special shochu from Niigata prefecture presents a powerful character with its impressive 55% alcohol content. Hakkaisan represents a perfect example of traditional Japanese distillation craftsmanship, offering an aromatic and crisp profile that makes it a preferred choice among collectors.",
       "status": "draft",
       "active": false
     },
