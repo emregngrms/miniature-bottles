@@ -2381,19 +2381,19 @@
     },
     {
       "id": 1720382285,
-      "slug": "bottle-133",
-      "name": "Şişe #133",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "baileys-the-original-irish-cream",
+      "name": "Baileys The Original Irish Cream",
+      "country": "Ireland",
+      "category": "Liqueur",
+      "abv": "17%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18021157673340253.jpg",
       "images": [
         "/images/uploads/18021157673340253.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İrlanda'nın en ünlü krem likörü olan Baileys, 1974 yılından beri dünyanın her yerinde severler tarafından bilinir. Zengin çikolata, kahve ve krema notalarıyla oluşan dengeli tadı, soğuk içildiğinde veya çeşitli kokteyllerde kullanılmak üzere mükemmeldir. Koleksiyonerlerin vazgeçilmez bir ürünü olan bu miniature şişe, klasik Irish cream likörünün ikonik temsilcisidir.",
+      "desc_en": "Baileys, Ireland's most iconic cream liqueur known worldwide since 1974, combines rich notes of chocolate, coffee, and cream in a perfectly balanced taste. Best enjoyed chilled or mixed into various cocktails, this elegant spirit represents the pinnacle of Irish cream liqueurs. This miniature bottle is a cherished collector's item representing a timeless classic.",
       "status": "draft",
       "active": false
     },
