@@ -216,8 +216,38 @@ function esc(s){ return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;')
 // ── CONSTANTS ────────────────────────────────────────────────────────────────
 const GIT = '/.netlify/git/github/contents/';
 const PATHS = { bottles:'data/bottles.json', cats:'data/categories.json', cocktails:'data/cocktails.json' };
-const FLAGS = {Scotland:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',England:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',Ireland:'🇮🇪',USA:'🇺🇸',France:'🇫🇷',Mexico:'🇲🇽',Italy:'🇮🇹',Germany:'🇩🇪',Venezuela:'🇻🇪',Spain:'🇪🇸',Japan:'🇯🇵',Canada:'🇨🇦',Australia:'🇦🇺',Netherlands:'🇳🇱',Sweden:'🇸🇪',Russia:'🇷🇺',Turkey:'🇹🇷',Greece:'🇬🇷',Cuba:'🇨🇺',Jamaica:'🇯🇲',Barbados:'🇧🇧',Trinidad:'🇹🇹',Peru:'🇵🇪',Brazil:'🇧🇷',Argentina:'🇦🇷','South Africa':'🇿🇦',India:'🇮🇳',China:'🇨🇳',Taiwan:'🇹🇼','Czech Republic':'🇨🇿',Poland:'🇵🇱',Hungary:'🇭🇺',Austria:'🇦🇹',Switzerland:'🇨🇭',Belgium:'🇧🇪',Portugal:'🇵🇹','Diğer':'🌍'};
-const COUNTRIES = Object.keys(FLAGS);
+const COUNTRY_ISO = {
+  Scotland:'gb-sct',England:'gb-eng',Wales:'gb-wls',Ireland:'ie',USA:'us',
+  France:'fr',Mexico:'mx',Italy:'it',Germany:'de',Venezuela:'ve',Spain:'es',
+  Japan:'jp',Canada:'ca',Australia:'au',Netherlands:'nl',Sweden:'se',
+  Russia:'ru',Turkey:'tr',Greece:'gr',Cuba:'cu',Jamaica:'jm',Barbados:'bb',
+  Trinidad:'tt',Peru:'pe',Brazil:'br',Argentina:'ar','South Africa':'za',
+  India:'in',China:'cn',Taiwan:'tw','Czech Republic':'cz',Poland:'pl',
+  Hungary:'hu',Austria:'at',Switzerland:'ch',Belgium:'be',Portugal:'pt',
+  Albania:'al',Denmark:'dk',Finland:'fi',Iceland:'is',Serbia:'rs',
+  Croatia:'hr',Slovenia:'si',Bosnia:'ba',Bulgaria:'bg',Romania:'ro',
+  Ukraine:'ua',Georgia:'ge',Armenia:'am',Azerbaijan:'az',Israel:'il',
+  Lebanon:'lb',Morocco:'ma','South Korea':'kr',Vietnam:'vn',Thailand:'th',
+  Singapore:'sg','New Zealand':'nz',Colombia:'co',Chile:'cl',Bolivia:'bo',
+  Guatemala:'gt',Ecuador:'ec',Uruguay:'uy',Philippines:'ph',Indonesia:'id',
+  Malaysia:'my',Kazakhstan:'kz',Egypt:'eg',Nigeria:'ng',Kenya:'ke',
+};
+// Keep FLAGS alias for compat
+const FLAGS = COUNTRY_ISO;
+function getFlagEmoji(c){ const iso=COUNTRY_ISO[c]; return iso?`🏳`:'🌍'; }
+const COUNTRIES = [
+  'Scotland','England','Wales','Ireland','USA','France','Mexico','Italy',
+  'Germany','Venezuela','Spain','Japan','Canada','Australia','Netherlands',
+  'Sweden','Russia','Turkey','Greece','Cuba','Jamaica','Barbados','Trinidad',
+  'Peru','Brazil','Argentina','South Africa','India','China','Taiwan',
+  'Czech Republic','Poland','Hungary','Austria','Switzerland','Belgium',
+  'Portugal','Albania','Denmark','Finland','Iceland','Serbia','Croatia',
+  'Slovenia','Bosnia','Bulgaria','Romania','Ukraine','Georgia','Armenia',
+  'Azerbaijan','Israel','Lebanon','Morocco','South Korea','Vietnam',
+  'Thailand','Singapore','New Zealand','Colombia','Chile','Bolivia',
+  'Guatemala','Ecuador','Uruguay','Philippines','Indonesia','Malaysia',
+  'Kazakhstan','Egypt','Nigeria','Kenya','Diğer'
+];
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
 let token=null, bottles=[], categories=[], cocktails=[], shas={}, currentPage='dashboard', sq='';
@@ -347,7 +377,7 @@ function renderBottles(){
       ${!list.length?`<div class="empty"><div class="empty-ico">🫗</div>Sonuç yok</div>`:''}
       ${list.map(b=>`<div class="trow bottle-cols">
         <div>${b.image?`<img class="row-img" src="${esc(b.image)}" loading="lazy" onerror="this.style.opacity='.3'"/>`:`<div class="row-ph">🥃</div>`}</div>
-        <div><div class="rname">${esc(b.name)}</div><div class="rmeta">${esc(FLAGS[b.country]||'🌍')} ${esc(b.country)} · ${esc(b.year)}</div></div>
+        <div><div class="rname">${esc(b.name)}</div><div class="rmeta">${esc(b.country)} · ${esc(b.year)}</div></div>
         <div><span class="tag tag-b">${esc(b.category)}</span></div>
         <div>${b.qty>1?`<span class="qty-b">×${esc(b.qty)}</span>`:`<span style="color:var(--sub)">1</span>`}</div>
         <div>${b.active===false
@@ -372,13 +402,13 @@ function openBottleModal(b){
   const isEdit=!!b;
   b=b||{id:0,slug:'',name:'',country:'Scotland',category:'',abv:'',year:new Date().getFullYear(),qty:1,image:'',desc_tr:'',desc_en:''};
   const catOpts=categories.map(c=>`<option value="${esc(c.name_en)}" ${b.category===c.name_en?'selected':''}>${esc(c.name_tr)} / ${esc(c.name_en)}</option>`).join('');
-  const cntOpts=COUNTRIES.map(c=>`<option value="${esc(c)}" ${b.country===c?'selected':''}>${FLAGS[c]||''} ${esc(c)}</option>`).join('');
+  const cntOpts=COUNTRIES.map(c=>`<option value="${esc(c)}" ${b.country===c?'selected':''}>${esc(c)}</option>`).join('');
   document.getElementById('modal-ttl').textContent=isEdit?'Şişe Düzenle':'Yeni Şişe Ekle';
   document.getElementById('modal-bd').innerHTML=`
   <div class="fg-grid">
     <div class="fg fg-full"><label>Şişe Adı *</label><input id="fn" value="${esc(b.name)}" placeholder="Glenfiddich 12" oninput="autoSlug()"/></div>
     <div class="fg"><label>Slug (URL) *</label><input id="fs" value="${esc(b.slug)}" placeholder="glenfiddich-12"/><div class="slug-pv" id="spv">${b.slug?'/'+esc(b.slug):''}</div></div>
-    <div class="fg"><label>Ülke</label><select id="fc" onchange="updFlag()">${cntOpts}</select><div class="flag-pv" id="fpv">Bayrak: ${FLAGS[b.country]||'🌍'}</div></div>
+    <div class="fg"><label>Ülke</label><select id="fc" onchange="updFlag()">${cntOpts}</select><div class="flag-pv" id="fpv">Bayrak: ${COUNTRY_ISO[b.country] ? '✓' : '?'} ${b.country||''}</div></div>
     <div class="fg"><label>Kategori</label><select id="fcat"><option value="">— Seç —</option>${catOpts}</select><div class="hint">Yoksa önce Kategoriler'den ekle</div></div>
     <div class="fg"><label>ABV</label><input id="fa" value="${esc(b.abv)}" placeholder="40%"/></div>
     <div class="fg"><label>Yıl</label><input id="fy" type="number" value="${esc(b.year)}" min="2000" max="2099"/></div>
@@ -471,7 +501,7 @@ function addImgFromUrl(url){
 }
 
 function autoSlug(){const s=slugify(document.getElementById('fn').value);document.getElementById('fs').value=s;document.getElementById('spv').textContent=s?'/'+s:'';}
-function updFlag(){const c=document.getElementById('fc').value;document.getElementById('fpv').textContent='Bayrak: '+(FLAGS[c]||'🌍');}
+function updFlag(){const c=document.getElementById('fc').value;document.getElementById('fpv').textContent='Ülke: '+c;}
 function prevImg(input){
   if(!input.files[0])return;
   const url=URL.createObjectURL(input.files[0]);
@@ -1023,6 +1053,13 @@ async function toggleActive(type, id) {
 }
 
 // ── MODAL ─────────────────────────────────────────────────────────────────────
+function abvFmt(v){
+  if(!v) return '';
+  v = String(v).trim();
+  if(!v.includes('%')) v += '%';
+  return v;
+}
+
 function openModal(){document.getElementById('modal').style.display='flex';}
 function closeModal(){document.getElementById('modal').style.display='none';}
 function closeModalOv(e){if(e.target===document.getElementById('modal'))closeModal();}
