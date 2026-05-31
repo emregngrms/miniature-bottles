@@ -2111,10 +2111,10 @@
     },
     {
       "id": 1720383193,
-      "slug": "bottle-118",
-      "name": "Şişe #118",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "absolut-vodka-swedish-vodka",
+      "name": "Absolut Vodka Swedish Vodka",
+      "country": "Sweden",
+      "category": "Vodka",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2122,8 +2122,8 @@
       "images": [
         "/images/uploads/17915460989955250.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İsveç'in Ahus köyünde üretilen Absolut Vodka, İsveç suyu ve kış buğdayından yapılmış premium bir vodonadır. Kristal berraklığı ve yumuşak, temiz karakteriyle tanınan bu ikon içki, klasik kokteyllerden saf içime kadar pek çok kullanımda mükemmel bir seçimdir.",
+      "desc_en": "Produced in the village of Ahus, Sweden, Absolut Vodka is a premium spirit crafted from Swedish water and winter wheat. Known for its crystal clarity and smooth, clean character, this iconic spirit is a perfect choice for classic cocktails or enjoyed neat by collectors.",
       "status": "draft",
       "active": false
     },
