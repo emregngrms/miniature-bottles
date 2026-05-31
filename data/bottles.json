@@ -290,19 +290,19 @@
     },
     {
       "id": 1762693093,
-      "slug": "bottle-17",
-      "name": "Şişe #17",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "hypnotiq-liqueur",
+      "name": "HYPNOTIQ Liqueur",
+      "country": "France",
+      "category": "Liqueur",
+      "abv": "17%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18062250428185633.jpg",
       "images": [
         "/images/uploads/18062250428185633.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Fransa'da üretilen Hypnotiq, premium votka, Cognac ve doğal tropikal meyve suları ile hazırlanmış zarif bir likördür. Parlak turkuaz rengine sahip bu likör, tropikal meyveler ve Cognac'ın zengin aromatlarını uyumlu bir şekilde birleştirerek sofistike bir içki deneyimi sunmaktadır.",
+      "desc_en": "Produced in France, Hypnotiq is an elegant liqueur crafted with premium vodka, Cognac, and natural tropical fruit juices. Distinguished by its vibrant turquoise color, this sophisticated spirit harmoniously blends tropical fruit aromatics with the richness of Cognac, offering a refined drinking experience.",
       "status": "draft",
       "active": false
     },
