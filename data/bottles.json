@@ -155,6 +155,19 @@
       "image": "https://images.unsplash.com/photo-1568644396922-5c3bfae12521?w=500&q=80",
       "year": 2023,
       "category": "Bourbon"
+    },
+    {
+      "id": 1780254907654,
+      "slug": "efe-raki",
+      "name": "Efe Rakı",
+      "country": "Turkey",
+      "category": "Rakı",
+      "abv": "40",
+      "year": 2026,
+      "qty": 1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLr0T52uihFWfCdgoyGO1Y5KUHY3_DNZ4LeQ&s",
+      "desc_tr": "Ege'nin bereketli topraklarından gelen Efe Rakı, geleneksel Türk rakıcılık geleneğinin modern yorumunu sunar. Anason ağırlıklı yapısında taze üzüm notaları ve hafif meyan kökü aroması hissedilir. Koleksiyonerlerin gözdesi olan bu 40° minyatür, Türk içki kültürünün özünü küçük bir şişeye sığdırıyor.",
+      "desc_en": "Efe Rakı hails from the fertile lands of the Aegean region, offering a modern take on traditional Turkish rakı craftsmanship. The 40% ABV spirit reveals dominant anise notes complemented by fresh grape undertones and a subtle hint of licorice. A charming miniature that captures the very soul of Turkish drinking culture."
     }
   ]
 }
