@@ -1769,10 +1769,10 @@
     },
     {
       "id": 1720386768,
-      "slug": "bottle-99",
-      "name": "Şişe #99",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "black-white-special-blend",
+      "name": "Black & White Special Blend",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1780,8 +1780,8 @@
       "images": [
         "/images/uploads/18060978886532396.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "James Buchanan & Co. Ltd tarafından Glasgow ve Londra'da üretilen bu klasik Scotch whisky, Kraliyet Ailesi'ne atanmış prestijli bir markanın ürünüdür. Black & White, Buchanan's seçkin eski Scotch whiskylerinin özel bir karışımı olarak, dengeli ve yumuşak karakteriyle tanınır. Bu ikonik yeşil şişe, 20. yüzyıl whisky tarihinin önemli bir parçasıdır.",
+      "desc_en": "This classic Scotch whisky by James Buchanan & Co. Ltd, produced in Glasgow and London, is a prestigious brand appointed to the Royal Household. Black & White represents a special blend of Buchanan's choice old Scotch whiskies, known for its balanced and smooth character. This iconic green bottle represents an important piece of 20th century whisky heritage.",
       "status": "draft",
       "active": false
     },
