@@ -779,19 +779,19 @@
     },
     {
       "id": 1723998455,
-      "slug": "bottle-44",
-      "name": "Şişe #44",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "marken-boonekamp-cuter-stern",
+      "name": "Marken Boonekamp Cuter Stern",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "20%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18058931071594356.jpg",
       "images": [
         "/images/uploads/18058931071594356.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Almanya'nın klasik bitki likörlerinden biri olan Marken Boonekamp Cuter Stern, geleneksel reçetesiyle bilinir. Aromatik ve keskin karakteri, tarihi bir içecek koleksiyonuna değerli bir katkı sağlar.",
+      "desc_en": "Marken Boonekamp Cuter Stern is a classic German herbal liqueur known for its traditional recipe. With its aromatic and sharp character, it represents an important piece of German spirits heritage and makes a valuable addition to any historic beverage collection.",
       "status": "draft",
       "active": false
     },
