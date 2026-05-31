@@ -2399,19 +2399,19 @@
     },
     {
       "id": 1720380324,
-      "slug": "bottle-134",
-      "name": "Şişe #134",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "gordons-london-dry-gin",
+      "name": "Gordon's London Dry Gin",
+      "country": "England",
+      "category": "Gin",
+      "abv": "37.5%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18030586010498887.jpg",
       "images": [
         "/images/uploads/18030586010498887.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "1769'den beri yapılan Gordon's, dünyanın en ikonik London Dry Ginlerinden biridir. Botaniklerinin özellikle jüniper ağırlıklı profili, klasik ve kuruluğu ile tanınır. Bu miniatur şişe, koleksiyonculuğun ve gin sanatının en temsilci örneğidir.",
+      "desc_en": "Gordon's, produced since 1769, is one of the world's most iconic London Dry Gins. Known for its juniper-forward botanical profile and classic dry character, it remains a benchmark spirit. This miniature bottle represents both the collector's gem and the embodiment of gin-making tradition.",
       "status": "draft",
       "active": false
     },
