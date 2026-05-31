@@ -378,6 +378,16 @@ function openBottleModal(b){
       </div>
       <input id="fiu" type="text" value="${esc(b.image)}" placeholder="https://… ya da yükle" style="margin-top:6px" oninput="updImgUrl(this.value)"/>
     </div>
+    <div class="fg fg-full" style="margin-bottom:4px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+        <label>Açıklamalar</label>
+        <button type="button" id="ai-btn" onclick="genAI()" style="display:flex;align-items:center;gap:6px;padding:7px 14px;background:linear-gradient(135deg,rgba(91,143,255,.2),rgba(212,168,67,.15));border:1px solid rgba(91,143,255,.35);border-radius:9px;color:#8aaad8;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s" onmouseover="this.style.color='#c8d8f0'" onmouseout="this.style.color='#8aaad8'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg>
+          AI ile Üret
+        </button>
+      </div>
+      <div id="ai-status" style="display:none;font-size:12px;color:#8aaad8;margin-bottom:8px;display:flex;align-items:center;gap:6px"></div>
+    </div>
     <div class="fg fg-full"><label>Açıklama Türkçe</label><textarea id="fdt">${esc(b.desc_tr||'')}</textarea></div>
     <div class="fg fg-full"><label>Açıklama İngilizce</label><textarea id="fde">${esc(b.desc_en||'')}</textarea></div>
   </div>`;
@@ -615,6 +625,80 @@ function confirmDelCocktail(id){
 }
 async function delCocktail(id){cocktails=cocktails.filter(c=>c.id!==id);const ok=await saveCocktails('Delete cocktail');if(ok){closeModal();renderCocktails();}}
 
+
+// ── AI DESCRIPTION GENERATION ────────────────────────────────────────────────
+async function resizeImg(file, maxPx = 800) {
+  return new Promise(resolve => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      let { width: w, height: h } = img;
+      if (w > maxPx || h > maxPx) {
+        if (w > h) { h = Math.round(h * maxPx / w); w = maxPx; }
+        else { w = Math.round(w * maxPx / h); h = maxPx; }
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      const b64 = canvas.toDataURL('image/jpeg', 0.82).split(',')[1];
+      URL.revokeObjectURL(url);
+      resolve(b64);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); resolve(null); };
+    img.src = url;
+  });
+}
+
+async function genAI() {
+  const name     = document.getElementById('fn')?.value?.trim();
+  const country  = document.getElementById('fc')?.value;
+  const category = document.getElementById('fcat')?.value;
+  const abv      = document.getElementById('fa')?.value?.trim();
+  const year     = document.getElementById('fy')?.value;
+
+  if (!name) { toast('Önce şişe adını gir', 'err'); return; }
+
+  const btn    = document.getElementById('ai-btn');
+  const status = document.getElementById('ai-status');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner"></div> Üretiliyor…';
+  status.style.display = 'flex';
+  status.innerHTML = '✨ Claude şişeyi analiz ediyor…';
+
+  try {
+    // Try to get image
+    let imageBase64 = null, mediaType = 'image/jpeg';
+    const imgFile = document.getElementById('fif')?.files?.[0];
+    if (imgFile) {
+      status.innerHTML = '🖼️ Görsel işleniyor…';
+      imageBase64 = await resizeImg(imgFile);
+      mediaType = imgFile.type || 'image/jpeg';
+    }
+
+    status.innerHTML = '🤖 Açıklama yazılıyor…';
+
+    const res = await fetch('/.netlify/functions/generate-description', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, country, category, abv, year, imageBase64, mediaType }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'API hatası');
+
+    document.getElementById('fdt').value = data.desc_tr;
+    document.getElementById('fde').value = data.desc_en;
+
+    status.style.display = 'none';
+    toast('Açıklamalar üretildi ✓');
+  } catch (e) {
+    status.innerHTML = '❌ ' + e.message;
+    toast('Hata: ' + e.message, 'err');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg> AI ile Üret';
+  }
+}
 // ── MODAL ─────────────────────────────────────────────────────────────────────
 function openModal(){document.getElementById('modal').style.display='flex';}
 function closeModal(){document.getElementById('modal').style.display='none';}
