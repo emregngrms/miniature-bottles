@@ -923,10 +923,10 @@
     },
     {
       "id": 1723998221,
-      "slug": "bottle-52",
-      "name": "Şişe #52",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "dimple-haig-blended-scotch-whisky",
+      "name": "Dimple Haig Blended Scotch Whisky",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -934,8 +934,8 @@
       "images": [
         "/images/uploads/17933839457875853.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İskoçya'nın klasik blend whiskylerinden Dimple Haig, karakteristik altıgen şişesiyle koleksiyonculara tanıdık bir isimdir. Yumuşak, dengeli ve hafif tatlı profili ile gündelik içim için idealdir, meyvemsi notalar ve nazik çıkışı ile dikkat çeker.",
+      "desc_en": "Dimple Haig is a classic Scottish blended whisky recognized by collectors for its distinctive hexagonal bottle shape. With a soft, balanced, and slightly sweet profile, it offers fruity notes and a gentle finish, making it ideal for everyday enjoyment.",
       "status": "draft",
       "active": false
     },
