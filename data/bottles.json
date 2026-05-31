@@ -38,10 +38,10 @@
     },
     {
       "id": 1762693380,
-      "slug": "bottle-3",
-      "name": "Şişe #3",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "viljamovka",
+      "name": "Viljamovka",
+      "country": "Serbia",
+      "category": "Rakı",
       "abv": "40%",
       "year": 2025,
       "qty": 1,
@@ -49,8 +49,8 @@
       "images": [
         "/images/uploads/17991038684722622.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Sırpça kökenli Viljamovka, William armudundan üretilen geleneksel bir rakıdır. Zarif aroması, meyve karakteri ve yumuşak yapısıyla ayırt edici bir içkidir. Balkanlarda yüksek saygınlığa sahip bu rakı, klassik bir rakı deneyimi sunar.",
+      "desc_en": "Viljamovka is a traditional rakı from Serbia, distilled from Williams pears. Distinguished by its elegant aroma, fruity character, and smooth profile. This rakı, highly respected in the Balkans, offers a classic rakı experience with distinctive pear notes.",
       "status": "draft",
       "active": false
     },
