@@ -19,6 +19,11 @@
 }
 html,body{min-height:100vh;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+/* Hide signup in Netlify Identity widget */
+[data-netlify-identity-modal] .tabs .tab:last-child,
+[data-netlify-identity-modal] .btn-link,
+.netlify-identity-widget-iframe { }
+
 a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}img{display:block}
 #login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
 .login-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px;max-width:360px;width:100%;text-align:center}
@@ -128,8 +133,12 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loading-full{display:flex;align-items:center;justify-content:center;padding:60px;gap:12px;color:var(--sub)}
 .security-badge{display:flex;align-items:center;gap:6px;padding:6px 12px;background:var(--greend);border:1px solid rgba(82,201,122,.2);border-radius:8px;font-size:11px;color:var(--green)}
+#sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:49;backdrop-filter:blur(2px)}
 @media(max-width:768px){
-  aside{display:none}
+  aside{display:flex;position:fixed;top:0;left:-210px;height:100vh;z-index:50;transition:left .25s ease;flex-direction:column}
+  aside.open{left:0}
+  #sidebar-overlay.visible{display:block}
+  #hamburger{display:flex!important}
   .stats{grid-template-columns:1fr 1fr}
   .fg-grid{grid-template-columns:1fr}
   .bottle-check-grid{grid-template-columns:1fr}
@@ -147,13 +156,20 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
   <div class="login-card">
     <div class="login-logo">Miniature Bottles</div>
     <div class="login-sub">Admin Panel</div>
-    <button class="btn-login" onclick="netlifyIdentity.open()">Giriş Yap</button>
+    <button class="btn-login" onclick="netlifyIdentity.open('login')">Giriş Yap</button>
   </div>
 </div>
 
 <div id="app">
   <header>
-    <div class="header-logo">🥃 Miniature Admin</div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button id="hamburger" onclick="toggleSidebar()" style="display:none;padding:7px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--sub);flex-direction:column;gap:4px;cursor:pointer">
+        <span style="display:block;width:18px;height:2px;background:currentColor;border-radius:2px"></span>
+        <span style="display:block;width:18px;height:2px;background:currentColor;border-radius:2px"></span>
+        <span style="display:block;width:18px;height:2px;background:currentColor;border-radius:2px"></span>
+      </button>
+      <div class="header-logo">🥃 Miniature Admin</div>
+    </div>
     <div class="header-right">
       <div class="security-badge" title="Git Gateway ile sunucu taraflı doğrulama aktif">🔒 Güvenli</div>
       <a href="/" target="_blank" class="site-link">
@@ -163,6 +179,7 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
       <button class="btn-logout" onclick="logout()">Çıkış</button>
     </div>
   </header>
+  <div id="sidebar-overlay" onclick="closeSidebar()"></div>
   <div class="layout">
     <aside>
       <div class="nav-item active" id="nav-dashboard" onclick="showPage('dashboard')">
@@ -216,23 +233,26 @@ function esc(s){ return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;')
 // ── CONSTANTS ────────────────────────────────────────────────────────────────
 const GIT = '/.netlify/git/github/contents/';
 const PATHS = { bottles:'data/bottles.json', cats:'data/categories.json', cocktails:'data/cocktails.json' };
-const COUNTRY_ISO = {
-  Scotland:'gb-sct',England:'gb-eng',Wales:'gb-wls',Ireland:'ie',USA:'us',
-  France:'fr',Mexico:'mx',Italy:'it',Germany:'de',Venezuela:'ve',Spain:'es',
-  Japan:'jp',Canada:'ca',Australia:'au',Netherlands:'nl',Sweden:'se',
-  Russia:'ru',Turkey:'tr',Greece:'gr',Cuba:'cu',Jamaica:'jm',Barbados:'bb',
-  Trinidad:'tt',Peru:'pe',Brazil:'br',Argentina:'ar','South Africa':'za',
-  India:'in',China:'cn',Taiwan:'tw','Czech Republic':'cz',Poland:'pl',
-  Hungary:'hu',Austria:'at',Switzerland:'ch',Belgium:'be',Portugal:'pt',
-  Albania:'al',Denmark:'dk',Finland:'fi',Iceland:'is',Serbia:'rs',
-  Croatia:'hr',Slovenia:'si',Bosnia:'ba',Bulgaria:'bg',Romania:'ro',
-  Ukraine:'ua',Georgia:'ge',Armenia:'am',Azerbaijan:'az',Israel:'il',
-  Lebanon:'lb',Morocco:'ma','South Korea':'kr',Vietnam:'vn',Thailand:'th',
-  Singapore:'sg','New Zealand':'nz',Colombia:'co',Chile:'cl',Bolivia:'bo',
-  Guatemala:'gt',Ecuador:'ec',Uruguay:'uy',Philippines:'ph',Indonesia:'id',
-  Malaysia:'my',Kazakhstan:'kz',Egypt:'eg',Nigeria:'ng',Kenya:'ke',
+const FLAG_EMOJI = {
+  Scotland:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',England:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',Wales:'🏴󠁧󠁢󠁷󠁬󠁳󠁿',Ireland:'🇮🇪',USA:'🇺🇸',France:'🇫🇷',
+  Mexico:'🇲🇽',Italy:'🇮🇹',Germany:'🇩🇪',Venezuela:'🇻🇪',Spain:'🇪🇸',
+  Japan:'🇯🇵',Canada:'🇨🇦',Australia:'🇦🇺',Netherlands:'🇳🇱',Sweden:'🇸🇪',
+  Russia:'🇷🇺',Turkey:'🇹🇷',Greece:'🇬🇷',Cuba:'🇨🇺',Jamaica:'🇯🇲',
+  Barbados:'🇧🇧',Trinidad:'🇹🇹',Peru:'🇵🇪',Brazil:'🇧🇷',Argentina:'🇦🇷',
+  'South Africa':'🇿🇦',India:'🇮🇳',China:'🇨🇳',Taiwan:'🇹🇼',
+  'Czech Republic':'🇨🇿',Poland:'🇵🇱',Hungary:'🇭🇺',Austria:'🇦🇹',
+  Switzerland:'🇨🇭',Belgium:'🇧🇪',Portugal:'🇵🇹',Albania:'🇦🇱',
+  Denmark:'🇩🇰',Finland:'🇫🇮',Iceland:'🇮🇸',Serbia:'🇷🇸',Croatia:'🇭🇷',
+  Slovenia:'🇸🇮',Bosnia:'🇧🇦',Bulgaria:'🇧🇬',Romania:'🇷🇴',Ukraine:'🇺🇦',
+  Georgia:'🇬🇪',Armenia:'🇦🇲',Azerbaijan:'🇦🇿',Israel:'🇮🇱',Lebanon:'🇱🇧',
+  Morocco:'🇲🇦','South Korea':'🇰🇷',Vietnam:'🇻🇳',Thailand:'🇹🇭',
+  Singapore:'🇸🇬','New Zealand':'🇳🇿',Colombia:'🇨🇴',Chile:'🇨🇱',
+  Bolivia:'🇧🇴',Guatemala:'🇬🇹',Ecuador:'🇪🇨',Uruguay:'🇺🇾',
+  Philippines:'🇵🇭',Indonesia:'🇮🇩',Malaysia:'🇲🇾',Kazakhstan:'🇰🇿',
+  Egypt:'🇪🇬',Nigeria:'🇳🇬',Kenya:'🇰🇪','Diğer':'🌍'
 };
-// Keep FLAGS alias for compat
+const COUNTRY_ISO = FLAG_EMOJI;
+const FLAGS = FLAG_EMOJI;
 const FLAGS = COUNTRY_ISO;
 function getFlagEmoji(c){ const iso=COUNTRY_ISO[c]; return iso?`🏳`:'🌍'; }
 const COUNTRIES = [
@@ -254,6 +274,22 @@ let token=null, bottles=[], categories=[], cocktails=[], shas={}, currentPage='d
 
 // ── AUTH ─────────────────────────────────────────────────────────────────────
 netlifyIdentity.on('init',u=>{if(u)onLogin(u);});
+// Disable signup — hide the tab when widget opens
+netlifyIdentity.on('open', ()=>{
+  setTimeout(()=>{
+    // Hide signup links in the widget iframe
+    const iframes = document.querySelectorAll('iframe');
+    iframes.forEach(iframe => {
+      try {
+        const doc = iframe.contentDocument;
+        if(doc){
+          const signupLinks = doc.querySelectorAll('a[href*="signup"], .signup, [data-tab="signup"]');
+          signupLinks.forEach(el => el.style.display='none');
+        }
+      } catch(e){}
+    });
+  }, 300);
+});
 netlifyIdentity.on('login',u=>{netlifyIdentity.close();onLogin(u);});
 netlifyIdentity.on('logout',()=>{token=null;document.getElementById('app').style.display='none';document.getElementById('login-screen').style.display='flex';});
 async function onLogin(u){
@@ -319,7 +355,7 @@ async function saveCats(msg){const ok=await gitPut(PATHS.cats,{items:categories}
 async function saveCocktails(msg){const ok=await gitPut(PATHS.cocktails,{items:cocktails},msg);if(ok){updateBadges();toast('Kaydedildi ✓');}else toast('Hata','err');return ok;}
 
 // ── NAV ───────────────────────────────────────────────────────────────────────
-function showPage(p){
+function showPage(p){closeSidebar();
   currentPage=p;sq='';
   document.querySelectorAll('.nav-item').forEach(el=>el.classList.remove('active'));
   document.getElementById('nav-'+p)?.classList.add('active');
@@ -377,7 +413,7 @@ function renderBottles(){
       ${!list.length?`<div class="empty"><div class="empty-ico">🫗</div>Sonuç yok</div>`:''}
       ${list.map(b=>`<div class="trow bottle-cols">
         <div>${b.image?`<img class="row-img" src="${esc(b.image)}" loading="lazy" onerror="this.style.opacity='.3'"/>`:`<div class="row-ph">🥃</div>`}</div>
-        <div><div class="rname">${esc(b.name)}</div><div class="rmeta">${esc(b.country)} · ${esc(b.year)}</div></div>
+        <div><div class="rname">${esc(b.name)}</div><div class="rmeta">${FLAG_EMOJI[b.country]||""} ${esc(b.country)} · ${esc(b.year)}</div></div>
         <div><span class="tag tag-b">${esc(b.category)}</span></div>
         <div>${b.qty>1?`<span class="qty-b">×${esc(b.qty)}</span>`:`<span style="color:var(--sub)">1</span>`}</div>
         <div>${b.active===false
@@ -517,7 +553,7 @@ function addImgFromUrl(url){
 }
 
 function autoSlug(){const s=slugify(document.getElementById('fn').value);document.getElementById('fs').value=s;document.getElementById('spv').textContent=s?'/'+s:'';}
-function updFlag(){const c=document.getElementById('fc').value;document.getElementById('fpv').textContent='Ülke: '+c;}
+function updFlag(){const c=document.getElementById('fc').value;document.getElementById('fpv').textContent=(FLAG_EMOJI[c]||'🌍')+' '+c;}
 function prevImg(input){
   if(!input.files[0])return;
   const url=URL.createObjectURL(input.files[0]);
@@ -1076,9 +1112,28 @@ function abvFmt(v){
   return v;
 }
 
+function toggleSidebar(){
+  const aside=document.querySelector('aside');
+  const overlay=document.getElementById('sidebar-overlay');
+  if(!aside||!overlay)return;
+  const open=aside.classList.toggle('open');
+  overlay.classList.toggle('visible',open);
+}
+function closeSidebar(){
+  document.querySelector('aside')?.classList.remove('open');
+  document.getElementById('sidebar-overlay')?.classList.remove('visible');
+}
+
 function openModal(){document.getElementById('modal').style.display='flex';}
 function closeModal(){document.getElementById('modal').style.display='none';}
-function closeModalOv(e){if(e.target===document.getElementById('modal'))closeModal();}
+let _mdTarget=null;
+document.addEventListener('mousedown',e=>{_mdTarget=e.target;});
+document.addEventListener('touchstart',e=>{_mdTarget=e.target;},{passive:true});
+function closeModalOv(e){
+  // Only close if BOTH mousedown and mouseup/click fired on the overlay (not while selecting text)
+  const overlay=document.getElementById('modal');
+  if(e.target===overlay && _mdTarget===overlay) closeModal();
+}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 
 // ── TOAST ─────────────────────────────────────────────────────────────────────

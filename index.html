@@ -208,6 +208,42 @@ function flag(country){ return ''; }
 const IG_DM = "https://ig.me/m/miniaturebottles_5cl";
 let bottles = [], cocktails = [];
 let state = { page:'collection', view:'grid', lang:'tr', search:'', cat:'', country:'', selBottle:null, selCocktail:null };
+
+// ── HASH ROUTING ──────────────────────────────────────────────────────────
+function updateHash(){
+  let hash = '';
+  if(state.selCocktail) hash = 'cocktail/' + state.selCocktail.id;
+  else if(state.selBottle) hash = 'bottle/' + state.selBottle.slug;
+  else if(state.page !== 'collection') hash = state.page;
+  const newHash = hash ? '#' + hash : location.pathname;
+  if(location.hash !== (hash ? '#'+hash : '')) {
+    history.pushState(null, '', hash ? '#'+hash : location.pathname + location.search);
+  }
+}
+
+function restoreFromHash(){
+  const hash = location.hash.replace('#','');
+  if(!hash) return;
+  if(hash.startsWith('bottle/')){
+    const slug = hash.replace('bottle/','');
+    const b = bottles.find(x=>x.slug===slug);
+    if(b){ state.selBottle=b; state.selCocktail=null; }
+  } else if(hash.startsWith('cocktail/')){
+    const id = parseInt(hash.replace('cocktail/',''));
+    const c = cocktails.find(x=>x.id===id);
+    if(c){ state.selCocktail=c; }
+  } else if(['cocktails','extras'].includes(hash)){
+    state.page = hash;
+  }
+}
+
+window.addEventListener('popstate', ()=>{
+  // Re-parse hash on back/forward
+  state.selBottle=null; state.selCocktail=null; state.page='collection';
+  restoreFromHash();
+  render();
+  updateHash();
+});
 let categories = [];
 
 async function loadData() {
@@ -221,7 +257,9 @@ async function loadData() {
     cocktails = (c.items || c).filter(x => x.active !== false);
     categories = (cats.items || cats || []);
   } catch(e) { console.error('Load error:', e); }
+  restoreFromHash();
   render();
+  updateHash();
 }
 
 function abvFmt(abv){
@@ -245,7 +283,11 @@ function catName(en) {
   return state.lang === 'tr' ? (cat.name_tr || en) : en;
 }
 
-function setState(p){ Object.assign(state,p); render(); }
+function setState(p){
+  Object.assign(state,p);
+  render();
+  updateHash();
+}
 function t(tr,en){ return state.lang==='tr'?tr:en; }
 function cocktailsFor(slug){ return cocktails.filter(c=>c.slugs&&c.slugs.includes(slug)); }
 function bottleFor(slug){ return bottles.find(b=>b.slug===slug); }
@@ -441,6 +483,13 @@ function renderCocktailsPage(){
 }
 
 function render(){
+  // Update page title for analytics
+  let title = 'Miniature Bottles 5cl';
+  if(state.selBottle) title = state.selBottle.name + ' — ' + title;
+  else if(state.selCocktail) title = state.selCocktail.name + ' — ' + title;
+  else if(state.page==='cocktails') title = 'Kokteyller — ' + title;
+  else if(state.page==='extras') title = 'Fazlalıklar — ' + title;
+  document.title = title;
   ['collection','cocktails','extras'].forEach(p=>{
     const el=document.getElementById('nav-'+p);
     if(el){el.classList.toggle('active',state.page===p);el.textContent=el.dataset[state.lang];}
