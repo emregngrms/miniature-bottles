@@ -558,7 +558,16 @@ function openCocktailModal(c){
   document.getElementById('modal-ttl').textContent=isEdit?'Kokteyl Düzenle':'Yeni Kokteyl';
   document.getElementById('modal-bd').innerHTML=`
   <div class="fg-grid">
-    <div class="fg fg-full"><label>Kokteyl Adı *</label><input id="cn" value="${esc(c.name)}" placeholder="Old Fashioned"/></div>
+    <div class="fg fg-full">
+      <div style="display:flex;align-items:flex-end;gap:10px">
+        <div style="flex:1"><label>Kokteyl Adı *</label><input id="cn" value="${esc(c.name)}" placeholder="Old Fashioned" oninput="clearCocktailAI()"/></div>
+        <button type="button" id="cai-btn" onclick="genCocktailAI()" style="flex-shrink:0;display:flex;align-items:center;gap:6px;padding:10px 16px;background:linear-gradient(135deg,rgba(91,143,255,.2),rgba(212,168,67,.15));border:1px solid rgba(91,143,255,.35);border-radius:9px;color:#8aaad8;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg>
+          AI ile Doldur
+        </button>
+      </div>
+      <div id="cai-status" style="display:none;font-size:12px;color:#8aaad8;margin-top:6px;display:flex;align-items:center;gap:6px"></div>
+    </div>
     <div class="fg"><label>Zorluk (TR)</label><select id="cd"><option value="Kolay" ${c.diff==='Kolay'?'selected':''}>Kolay</option><option value="Orta" ${c.diff==='Orta'?'selected':''}>Orta</option><option value="Zor" ${c.diff==='Zor'?'selected':''}>Zor</option></select></div>
     <div class="fg"><label>Zorluk (EN)</label><select id="cde"><option value="Easy" ${c.diff_en==='Easy'?'selected':''}>Easy</option><option value="Medium" ${c.diff_en==='Medium'?'selected':''}>Medium</option><option value="Hard" ${c.diff_en==='Hard'?'selected':''}>Hard</option></select></div>
     <div class="fg fg-full"><label>Süre</label><input id="ct" value="${esc(c.time)}" placeholder="5 dk"/></div>
@@ -706,6 +715,90 @@ async function genAI() {
   } finally {
     btn.disabled = false;
     btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg> AI ile Üret';
+  }
+}
+
+
+// ── AI COCKTAIL GENERATION ────────────────────────────────────────────────────
+function clearCocktailAI() {
+  // Reset status when name changes
+  const s = document.getElementById('cai-status');
+  if (s) s.style.display = 'none';
+}
+
+async function genCocktailAI() {
+  const name = document.getElementById('cn')?.value?.trim();
+  if (!name) { toast('Önce kokteyl adını gir', 'err'); return; }
+
+  const btn = document.getElementById('cai-btn');
+  const status = document.getElementById('cai-status');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner"></div> Üretiliyor…';
+  status.style.display = 'flex';
+  status.innerHTML = '🤖 Tarif hazırlanıyor…';
+
+  try {
+    // Send bottle names so AI can match them
+    const bottleNames = bottles.map(b => ({ slug: b.slug, name: b.name }));
+
+    const res = await fetch('/.netlify/functions/generate-cocktail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, bottleNames: bottleNames.map(b => b.name) }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'API hatası');
+
+    // Fill difficulty
+    const cd = document.getElementById('cd');
+    const cde = document.getElementById('cde');
+    if (cd && data.diff) cd.value = data.diff;
+    if (cde && data.diff_en) cde.value = data.diff_en;
+
+    // Fill time
+    const ct = document.getElementById('ct');
+    if (ct && data.time) ct.value = data.time;
+
+    // Check matching bottle slugs
+    if (data.slugs?.length) {
+      document.querySelectorAll('#slug-grid .bottle-check').forEach(el => {
+        el.classList.remove('selected');
+      });
+      // Match by slug or by name similarity
+      data.slugs.forEach(slug => {
+        const el = document.getElementById('bc-' + slug);
+        if (el) { el.classList.add('selected'); return; }
+        // Try name match as fallback
+        const matched = bottleNames.find(b =>
+          b.name.toLowerCase().includes(slug.toLowerCase()) ||
+          slug.toLowerCase().includes(b.slug)
+        );
+        if (matched) {
+          const el2 = document.getElementById('bc-' + matched.slug);
+          if (el2) el2.classList.add('selected');
+        }
+      });
+    }
+
+    // Fill ingredients and steps (textarea, one per line)
+    const cit = document.getElementById('cit');
+    const cie = document.getElementById('cie');
+    const cst = document.getElementById('cst');
+    const cse = document.getElementById('cse');
+    if (cit && data.ing_tr) cit.value = data.ing_tr.join('\n');
+    if (cie && data.ing_en) cie.value = data.ing_en.join('\n');
+    if (cst && data.steps_tr) cst.value = data.steps_tr.join('\n');
+    if (cse && data.steps_en) cse.value = data.steps_en.join('\n');
+
+    status.style.display = 'none';
+    toast('Tarif üretildi ✓ — kontrol edip yayınla');
+  } catch (e) {
+    status.innerHTML = '❌ ' + esc(e.message);
+    toast('Hata: ' + esc(e.message), 'err');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg> AI ile Doldur';
   }
 }
 
