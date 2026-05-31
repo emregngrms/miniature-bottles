@@ -2057,10 +2057,10 @@
     },
     {
       "id": 1720386350,
-      "slug": "bottle-115",
-      "name": "Şişe #115",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "ballantines-finest-blended-scotch-whisky",
+      "name": "Ballantine's Finest Blended Scotch Whisky",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2068,8 +2068,8 @@
       "images": [
         "/images/uploads/18030776827907038.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İskoçya'nın Dumbarton bölgesinden gelen Ballantine's Finest, klasik bir blend whisky'dir. Hafif, dengeli ve içimi kolay karakteri ile günlük içkiler arasında yerini almıştır. Vanilya ve meyvemsi notalarla belirgin olan bu whisky, koleksiyonerlerin sevdiği ikonik bir şişedir.",
+      "desc_en": "Ballantine's Finest, a classic blended Scotch whisky from Dumbarton, Scotland, is known for its light, balanced, and accessible character. With distinctive notes of vanilla and fruit, it stands as an everyday dram that appeals to both casual drinkers and collectors. This iconic bottle represents one of Scotland's most recognizable whisky brands.",
       "status": "draft",
       "active": false
     },
