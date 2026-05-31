@@ -421,6 +421,26 @@ function openBottleModal(b){
   // Init image list state
   window._editImages = (b.images && b.images.length) ? [...b.images] : (b.image ? [b.image] : []);
   openModal();
+  
+  // After modal opens, ensure select values match (in case option wasn't pre-selected)
+  setTimeout(()=>{
+    const fc = document.getElementById('fc');
+    const fcat = document.getElementById('fcat');
+    if(fc && b.country) fc.value = b.country;
+    if(fcat && b.category){
+      // Try exact match first
+      fcat.value = b.category;
+      // If not found, try case-insensitive match
+      if(!fcat.value){
+        for(const opt of fcat.options){
+          if(opt.value.toLowerCase() === b.category.toLowerCase()){
+            fcat.value = opt.value; break;
+          }
+        }
+      }
+    }
+    updFlag();
+  }, 50);
 }
 
 function removeImg(idx){
@@ -882,7 +902,7 @@ function renderDrafts(){
                 style="flex:1;background:linear-gradient(135deg,rgba(91,143,255,.2),rgba(212,168,67,.15));border:1px solid rgba(91,143,255,.3);color:var(--mid);font-size:11px;justify-content:center">
                 🤖 Analiz
               </button>
-              <button class="btn btn-ghost btn-sm" onclick="openEditBottle('${esc(b.slug)}')" style="font-size:11px">
+              <button class="btn btn-ghost btn-sm" id="edit-btn-${esc(b.slug)}" onclick="openEditBottle('${esc(b.slug)}')" style="font-size:11px" title="Düzenle">
                 ✎
               </button>
             </div>
@@ -921,37 +941,33 @@ async function analyzeDraft(slug){
     const data = await res.json();
     if(!res.ok) throw new Error(data.error||'API hatası');
     
-    // Update bottle in-memory
+    // Update bottle in-memory — keep original slug to avoid lookup issues
     const idx = bottles.findIndex(x=>x.slug===slug);
     if(idx>=0){
       bottles[idx] = {
         ...bottles[idx],
-        name: data.name || bottles[idx].name,
-        country: data.country || bottles[idx].country,
+        name:     data.name     || bottles[idx].name,
+        country:  data.country  || bottles[idx].country,
         category: data.category || bottles[idx].category,
-        abv: data.abv || bottles[idx].abv,
-        desc_tr: data.desc_tr || '',
-        desc_en: data.desc_en || '',
-        status: 'draft', // keep as draft — user must review
-        active: false,
+        abv:      data.abv      || bottles[idx].abv,
+        desc_tr:  data.desc_tr  || '',
+        desc_en:  data.desc_en  || '',
+        // Keep slug, status, active, image, images unchanged
       };
-      // Auto-generate slug from name if we got a name
-      if(data.name){
-        const newSlug = data.name.toLowerCase().trim()
-          .replace(/[çÇ]/g,'c').replace(/[şŞ]/g,'s').replace(/[ğĞ]/g,'g')
-          .replace(/[üÜ]/g,'u').replace(/[öÖ]/g,'o').replace(/[ıİ]/g,'i')
-          .replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+/g,'-')
-          .substring(0,50).replace(/^-|-$/g,'');
-        if(newSlug && newSlug !== slug && !bottles.find(x=>x.slug===newSlug)){
-          bottles[idx].slug = newSlug;
-        }
-      }
     }
     
     if(nameEl) nameEl.textContent = data.name || slug;
     if(statusEl) statusEl.innerHTML = '<span style="color:var(--green)">✓ Analiz tamam — düzenleyip yayınla</span>';
-    if(card) card.style.border='1px solid var(--green)';
-    if(btn){ btn.disabled=false; btn.innerHTML='✎ Düzenle'; btn.onclick=()=>openEditBottle(bottles.find(x=>x.name===data.name)?.slug||slug); }
+    if(card) card.style.border='1px solid rgba(82,201,122,.5)';
+    // Edit button now opens the bottle using SAME slug (unchanged)
+    if(btn){
+      btn.disabled=false;
+      btn.innerHTML='✎ Düzenle';
+      btn.style.background='linear-gradient(135deg,#1a3a8a,#2d5fd4)';
+      btn.style.color='#fff';
+      btn.style.border='none';
+      btn.onclick=()=>openEditBottle(slug);
+    }
     
     // Auto-save after analysis
     await saveBottles('AI analyze: '+slug);
