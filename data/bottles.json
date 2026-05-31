@@ -995,10 +995,10 @@
     },
     {
       "id": 1723998136,
-      "slug": "bottle-56",
-      "name": "Şişe #56",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "the-saint-fine-old-scotch-whisky",
+      "name": "The Saint Fine Old Scotch Whisky",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1006,8 +1006,8 @@
       "images": [
         "/images/uploads/18037788581096486.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İskoçya'da üretilen ve şişelenen The Saint, klasik bir blended Scotch whisky'dir. Dengeli ve yumuşak karakteri ile günlük içimlik bir seçim sunarken, geleneksel İskoç whisky yapımının izlerini taşır. Küçük boyutlu bu şişe, koleksiyonculara ve deneyenler için nostaljik bir parça.",
+      "desc_en": "The Saint is a classic blended Scotch whisky produced and bottled in Scotland, representing the traditional character of Scottish whisky production. With its balanced and smooth profile, it offers an approachable daily dram that reflects the heritage of Scotch whisky making. This miniature format is a nostalgic piece for collectors and enthusiasts alike.",
       "status": "draft",
       "active": false
     },
