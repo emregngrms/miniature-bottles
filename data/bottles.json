@@ -1679,19 +1679,19 @@
     },
     {
       "id": 1720386879,
-      "slug": "bottle-94",
-      "name": "Şişe #94",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "old-grand-dad-whiskey",
+      "name": "Old Grand-Dad Whiskey",
+      "country": "USA",
+      "category": "Bourbon Whisky",
+      "abv": "43%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17923119494825079.jpg",
       "images": [
         "/images/uploads/17923119494825079.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "1882 yılından beri Frankfort, Kentucky'de üretilen Old Grand-Dad, klasik Amerikan bourbon whiskisinin önemli temsilcilerinden biridir. Keskin ve aromatik profiliyle tanınan bu whiskey, tahıl ve vanilya notalarıyla dengelenmiş, güçlü bir karakter sunmaktadır. Koleksiyonerlerin değer verdiği vintage şişelerinden biri olarak, American whiskey tarihinin önemli bir parçasıdır.",
+      "desc_en": "Produced since 1882 in Frankfort, Kentucky, Old Grand-Dad is one of the significant representatives of classic American bourbon whiskey. Known for its sharp and aromatic profile, this whiskey offers a robust character balanced with grain and vanilla notes. As one of the vintage bottles valued by collectors, it represents an important part of American whiskey history.",
       "status": "draft",
       "active": false
     },
