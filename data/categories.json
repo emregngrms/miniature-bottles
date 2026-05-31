@@ -1,17 +1,74 @@
 {
   "items": [
-    {"id":1,"name_tr":"Tek Malt Viski","name_en":"Single Malt Whisky"},
-    {"id":2,"name_tr":"Harman Viski","name_en":"Blended Whisky"},
-    {"id":3,"name_tr":"Tennessee Viskisi","name_en":"Tennessee Whiskey"},
-    {"id":4,"name_tr":"İrlanda Viskisi","name_en":"Irish Whiskey"},
-    {"id":5,"name_tr":"Bourbon","name_en":"Bourbon"},
-    {"id":6,"name_tr":"Tequila","name_en":"Tequila"},
-    {"id":7,"name_tr":"Cin","name_en":"Gin"},
-    {"id":8,"name_tr":"Votka","name_en":"Vodka"},
-    {"id":9,"name_tr":"Rom","name_en":"Rum"},
-    {"id":10,"name_tr":"Likör","name_en":"Liqueur"},
-    {"id":11,"name_tr":"Aperitif","name_en":"Aperitif"},
-    {"id":12,"name_tr":"Şampanya & Köpüklü","name_en":"Champagne & Sparkling"},
-    {"id":13,"name_tr":"Konyak & Brendi","name_en":"Cognac & Brandy"}
+    {
+      "id": 1,
+      "name_tr": "Tek Malt Viski",
+      "name_en": "Single Malt Whisky"
+    },
+    {
+      "id": 2,
+      "name_tr": "Harman Viski",
+      "name_en": "Blended Whisky"
+    },
+    {
+      "id": 3,
+      "name_tr": "Tennessee Viskisi",
+      "name_en": "Tennessee Whiskey"
+    },
+    {
+      "id": 4,
+      "name_tr": "İrlanda Viskisi",
+      "name_en": "Irish Whiskey"
+    },
+    {
+      "id": 5,
+      "name_tr": "Bourbon",
+      "name_en": "Bourbon"
+    },
+    {
+      "id": 6,
+      "name_tr": "Tequila",
+      "name_en": "Tequila"
+    },
+    {
+      "id": 7,
+      "name_tr": "Cin",
+      "name_en": "Gin"
+    },
+    {
+      "id": 8,
+      "name_tr": "Votka",
+      "name_en": "Vodka"
+    },
+    {
+      "id": 9,
+      "name_tr": "Rom",
+      "name_en": "Rum"
+    },
+    {
+      "id": 10,
+      "name_tr": "Likör",
+      "name_en": "Liqueur"
+    },
+    {
+      "id": 11,
+      "name_tr": "Aperitif",
+      "name_en": "Aperitif"
+    },
+    {
+      "id": 12,
+      "name_tr": "Şampanya & Köpüklü",
+      "name_en": "Champagne & Sparkling"
+    },
+    {
+      "id": 13,
+      "name_tr": "Konyak & Brendi",
+      "name_en": "Cognac & Brandy"
+    },
+    {
+      "id": 1780254724894,
+      "name_tr": "RAKI",
+      "name_en": "RAKI"
+    }
   ]
 }
