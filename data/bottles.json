@@ -398,19 +398,19 @@
     },
     {
       "id": 1757255652,
-      "slug": "bottle-23",
-      "name": "Şişe #23",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "wodka-gorbatschow",
+      "name": "Wodka Gorbatschow",
+      "country": "Germany",
+      "category": "Vodka",
+      "abv": "37.5%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/17958312977841254.jpg",
       "images": [
         "/images/uploads/17958312977841254.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Gorbatschow, Berlinli bir klasik olan bu vodka, 1894 yılından beri üretilmektedir. Saf tahıldan elde edilen ve özel tuzlu filtreden geçirilen bu içki, hafif ve temiz bir profil sunarak bardağın sevilen seçeneklerinden biridir. Koleksiyoncular için, Berlin'in içki kültürünün önemli bir temsilcisi olarak değerlidir.",
+      "desc_en": "Gorbatschow is a classic Berlin vodka that has been produced since 1894. Crafted from pure grain and filtered through special salt filters, this spirit offers a clean and light profile, making it a beloved choice for cocktails and neat consumption. For collectors, it represents an important piece of Berlin's drinking culture and heritage.",
       "status": "draft",
       "active": false
     },
