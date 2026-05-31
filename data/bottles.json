@@ -1499,19 +1499,19 @@
     },
     {
       "id": 1721415500,
-      "slug": "bottle-84",
-      "name": "Şişe #84",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "ketel-1-original-jenever",
+      "name": "Ketel 1 Original Jenever",
+      "country": "Netherlands",
+      "category": "Jenever",
+      "abv": "35%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17857819206165522.jpg",
       "images": [
         "/images/uploads/17857819206165522.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Schiedam'dan gelen efsanevi Ketel 1, 1691 yılından beri üretilen saf ve sofistike bir jeneverdir. Buğday ve maltan yapılan bu İç Anadolu ruhu, hafif malt aromaları ve çiçeksi notalarıyla dikkat çeker. Klasik Hollanda jenever kültürünün en iyi temsilcilerinden biri olarak koleksiyonerlarca değerlidir.",
+      "desc_en": "The legendary Ketel 1 from Schiedam is a pure and sophisticated jenever produced since 1691. Made from wheat and malt, this Dutch spirit is characterized by subtle malt aromas and floral notes. It stands as one of the finest representatives of classic Dutch jenever culture and is highly valued by collectors.",
       "status": "draft",
       "active": false
     },
