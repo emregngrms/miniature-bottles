@@ -2363,10 +2363,10 @@
     },
     {
       "id": 1720382369,
-      "slug": "bottle-132",
-      "name": "Şişe #132",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "chivas-regal-aged-12-years-blended-scotch-whisky",
+      "name": "Chivas Regal Aged 12 Years Blended Scotch Whisky",
+      "country": "Scotland",
+      "category": "Blended Scotch Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2374,8 +2374,8 @@
       "images": [
         "/images/uploads/17956726598672837.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İskoçya'nın en prestijli blend whiskylerinden biri olan Chivas Regal 12 Yaş, 1801'den beri üretilen bir mirası temsil eder. Dengeli ve yumuşak karakteri, tatlı buğday, malt ve hafif meyvemsi notalarıyla koleksiyonerlerin vazgeçilmez seçimidir.",
+      "desc_en": "One of Scotland's most prestigious blended whiskies, Chivas Regal 12 Years represents a heritage dating back to 1801. Its balanced and smooth character, featuring notes of sweet grain, malt, and subtle fruit, makes it an indispensable choice for collectors.",
       "status": "draft",
       "active": false
     },
