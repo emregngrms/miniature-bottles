@@ -2003,19 +2003,19 @@
     },
     {
       "id": 1720386410,
-      "slug": "bottle-112",
-      "name": "Şişe #112",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "whisky-pche-yachting",
+      "name": "Whisky Pêche Yachting",
+      "country": "France",
+      "category": "Liqueur",
+      "abv": "18%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17896314387017788.jpg",
       "images": [
         "/images/uploads/17896314387017788.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Le Havre, Fransa'dan gelen bu peşe likörü, viski ve şeftali aromasının zarif bir birleşimidir. Yachting teması ile tasarlanan şişesi, klasik Fransız likör üretiminin güzel bir örneğidir. Tatlı ve yumuşak karakteri ile aperitif veya kokteyl içeriği olarak tercih edilir.",
+      "desc_en": "This peach liqueur from Le Havre, France, is an elegant blend of whisky and peach aromatics. Its yachting-themed bottle represents a fine example of classic French liqueur production. With its sweet and smooth character, it is preferred as an aperitif or cocktail ingredient.",
       "status": "draft",
       "active": false
     },
