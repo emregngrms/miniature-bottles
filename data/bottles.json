@@ -959,10 +959,10 @@
     },
     {
       "id": 1723998180,
-      "slug": "bottle-54",
-      "name": "Şişe #54",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "glen-moray-scotch-whisky",
+      "name": "Glen Moray Scotch Whisky",
+      "country": "Scotland",
+      "category": "Single Malt Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -970,8 +970,8 @@
       "images": [
         "/images/uploads/18022630250109286.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Glen Moray, İskoçya'nın Speyside bölgesinden gelen klasik bir single malt whiskidir. Hafif ve dengeli profiliyle bilinen bu içki, meyvemsi notalar ve nazik vanilya tonlarıyla karakterizedir. Koleksiyonerlerin değer verdiği bu vintage miniature, İskoç viski geleneğinin erişilebilir bir örneğidir.",
+      "desc_en": "Glen Moray is a classic single malt whisky from Scotland's Speyside region, distilled by The Glen Moray Distillery. Known for its light and balanced profile, this whisky showcases fruity notes with delicate vanilla undertones. This vintage miniature is a fine example of Scottish whisky heritage, cherished by collectors worldwide.",
       "status": "draft",
       "active": false
     },
