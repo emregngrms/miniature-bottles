@@ -110,19 +110,19 @@
     },
     {
       "id": 1762693290,
-      "slug": "bottle-7",
-      "name": "Şişe #7",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "daiginjo",
+      "name": "Daiginjo (大吟醸)",
+      "country": "Japan",
+      "category": "Sake",
+      "abv": "15-16%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18096318670750490.jpg",
       "images": [
         "/images/uploads/18096318670750490.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Japonya'nın en saygın sake kategorilerinden biri olan Daiginjo, pirinç tanelerinin %50 veya daha fazlasının cilalı halidir. Zarif, çiçeksi ve meyve notaları ile karakterize edilen bu premium sake, sofistike içiciler için ideal bir tercih sunmaktadır.",
+      "desc_en": "Daiginjo is one of Japan's most prestigious sake categories, made from rice grains polished by at least 50%. Characterized by elegant, floral, and fruity notes, this premium sake represents the pinnacle of sake craftsmanship and is ideal for discerning drinkers seeking sophistication.",
       "status": "draft",
       "active": false
     },
