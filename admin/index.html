@@ -185,6 +185,12 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
         Kokteyller
         <span class="nav-badge" id="badge-cocktails">0</span>
       </div>
+      <div class="nav-sep"></div>
+      <div class="nav-item" id="nav-drafts" onclick="showPage('drafts')">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Taslaklar
+        <span class="nav-badge" id="badge-drafts" style="background:rgba(224,92,92,.2);color:#e05c5c">0</span>
+      </div>
     </aside>
     <main id="page-content">
       <div class="loading-full"><div class="spinner"></div> Yükleniyor…</div>
@@ -272,9 +278,11 @@ async function loadAll(){
   }catch(e){toast('Yüklenemedi: '+esc(e.message),'err');}
 }
 function updateBadges(){
-  document.getElementById('badge-bottles').textContent=bottles.length;
+  const drafts = bottles.filter(b=>b.status==='draft');
+  document.getElementById('badge-bottles').textContent=bottles.filter(b=>b.status!=='draft').length;
   document.getElementById('badge-cats').textContent=categories.length;
   document.getElementById('badge-cocktails').textContent=cocktails.length;
+  document.getElementById('badge-drafts').textContent=drafts.length;
 }
 async function saveBottles(msg){const ok=await gitPut(PATHS.bottles,{items:bottles},msg);if(ok){updateBadges();toast('Kaydedildi ✓');}else toast('Hata','err');return ok;}
 async function saveCats(msg){const ok=await gitPut(PATHS.cats,{items:categories},msg);if(ok){updateBadges();toast('Kategoriler kaydedildi ✓');}else toast('Hata','err');return ok;}
@@ -285,7 +293,7 @@ function showPage(p){
   currentPage=p;sq='';
   document.querySelectorAll('.nav-item').forEach(el=>el.classList.remove('active'));
   document.getElementById('nav-'+p)?.classList.add('active');
-  ({dashboard:renderDashboard,bottles:renderBottles,categories:renderCategories,cocktails:renderCocktails}[p]||renderDashboard)();
+  ({dashboard:renderDashboard,bottles:renderBottles,categories:renderCategories,cocktails:renderCocktails,drafts:renderDrafts}[p]||renderDashboard)();
 }
 
 // ── DASHBOARD ─────────────────────────────────────────────────────────────────
@@ -294,9 +302,10 @@ function renderDashboard(){
   document.getElementById('page-content').innerHTML=`
   <div class="fade">
     <div class="page-header"><div class="page-title">Dashboard</div></div>
-    <div class="stats">
+    <div class="stats" style="grid-template-columns:repeat(5,1fr)">
       <div class="stat-card"><div class="stat-num">${esc(bottles.length)}</div><div class="stat-lbl">Toplam Şişe</div></div>
       <div class="stat-card"><div class="stat-num" style="color:var(--green)">${esc(extras)}</div><div class="stat-lbl">Fazlalık / Takas</div></div>
+      <div class="stat-card" onclick="showPage('drafts')" style="cursor:pointer"><div class="stat-num" style="color:var(--red)">${esc(bottles.filter(b=>b.status==='draft').length)}</div><div class="stat-lbl">Taslak</div></div>
       <div class="stat-card"><div class="stat-num" style="color:var(--blue)">${esc(cocktails.length)}</div><div class="stat-lbl">Kokteyl Tarifi</div></div>
       <div class="stat-card"><div class="stat-num" style="color:var(--mid)">${esc(categories.length)}</div><div class="stat-lbl">Kategori</div></div>
     </div>
@@ -319,11 +328,12 @@ function renderDashboard(){
 // ── BOTTLES ───────────────────────────────────────────────────────────────────
 function renderBottles(){
   const q=sq.toLowerCase();
-  const list=q?bottles.filter(b=>[b.name,b.country,b.category].some(s=>s?.toLowerCase().includes(q))):bottles;
+  const published=bottles.filter(b=>b.status!=='draft');
+  const list=q?published.filter(b=>[b.name,b.country,b.category].some(s=>s?.toLowerCase().includes(q))):published;
   document.getElementById('page-content').innerHTML=`
   <div class="fade">
     <div class="page-header">
-      <div class="page-title">Şişeler <span>${esc(bottles.length)} şişe</span></div>
+      <div class="page-title">Şişeler <span>${esc(published.length)} şişe</span></div>
       <div class="header-actions">
         <div class="search-wrap">
           <svg class="search-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -373,13 +383,24 @@ function openBottleModal(b){
     <div class="fg"><label>ABV</label><input id="fa" value="${esc(b.abv)}" placeholder="40%"/></div>
     <div class="fg"><label>Yıl</label><input id="fy" type="number" value="${esc(b.year)}" min="2000" max="2099"/></div>
     <div class="fg fg-full"><label>Adet <span style="color:var(--sub);font-weight:400">(1'den fazlaysa Fazlalıklar'da görünür)</span></label><input id="fq" type="number" value="${esc(b.qty)}" min="1" max="99"/></div>
-    <div class="fg fg-full"><label>Fotoğraf</label>
-      <div class="img-up" onclick="document.getElementById('fif').click()" id="iub">
-        ${b.image?`<img class="img-pv" id="ipv" src="${esc(b.image)}"/>`:`<div id="ipv" style="font-size:32px;margin-bottom:6px">📷</div>`}
-        <div class="img-up-txt"><strong>Tıkla</strong> veya URL gir</div>
-        <input type="file" id="fif" accept="image/*" onchange="prevImg(this)"/>
+    <div class="fg fg-full">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+        <label>Fotoğraflar</label>
+        <button type="button" onclick="addMoreImg()" style="font-size:11px;padding:4px 10px;background:var(--blued);border:1px solid var(--blue);color:var(--blue);border-radius:7px;cursor:pointer">+ Görsel Ekle</button>
       </div>
-      <input id="fiu" type="text" value="${esc(b.image)}" placeholder="https://… ya da yükle" style="margin-top:6px" oninput="updImgUrl(this.value)"/>
+      <div id="img-gallery" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+        ${(b.images&&b.images.length?b.images:[b.image]).filter(Boolean).map((img,idx)=>`
+          <div style="position:relative;width:80px;height:80px;flex-shrink:0" id="img-item-${idx}">
+            <img src="${esc(img)}" style="width:80px;height:80px;object-fit:cover;border-radius:8px;border:${idx===0?'2px solid var(--gold)':'1px solid var(--border)'}"/>
+            ${idx===0?'<span style="position:absolute;bottom:2px;left:2px;background:rgba(212,168,67,.9);color:#000;font-size:9px;padding:1px 4px;border-radius:4px;font-weight:700">ANA</span>':''}
+            <button onclick="removeImg(${idx})" style="position:absolute;top:-5px;right:-5px;width:18px;height:18px;border-radius:50%;background:var(--red);border:none;color:#fff;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1">×</button>
+          </div>`).join('')}
+      </div>
+      <div class="img-up" onclick="document.getElementById('fif').click()" id="iub">
+        <div class="img-up-txt"><strong>Tıkla</strong> veya URL gir</div>
+        <input type="file" id="fif" accept="image/*" multiple onchange="prevImgMulti(this)"/>
+      </div>
+      <input id="fiu" type="text" placeholder="https://… ekle" style="margin-top:6px" oninput="addImgFromUrl(this.value)"/>
     </div>
     <div class="fg fg-full" style="margin-bottom:4px">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
@@ -397,7 +418,36 @@ function openBottleModal(b){
   document.getElementById('modal-ft').innerHTML=`
     <button class="btn btn-ghost" onclick="closeModal()">İptal</button>
     <button class="btn btn-primary" id="sbtn" onclick="saveBottle('${esc(b.slug)}','${isEdit}')">${isEdit?'Güncelle':'Ekle & Yayınla'}</button>`;
+  // Init image list state
+  window._editImages = (b.images && b.images.length) ? [...b.images] : (b.image ? [b.image] : []);
   openModal();
+}
+
+function removeImg(idx){
+  window._editImages.splice(idx,1);
+  // Re-render gallery
+  const gallery=document.getElementById('img-gallery');
+  if(!gallery)return;
+  gallery.innerHTML=(window._editImages.length?window._editImages:[]).map((img,i)=>`
+    <div style="position:relative;width:80px;height:80px;flex-shrink:0">
+      <img src="${img}" style="width:80px;height:80px;object-fit:cover;border-radius:8px;border:${i===0?'2px solid var(--gold)':'1px solid var(--border)'}"/>
+      ${i===0?'<span style="position:absolute;bottom:2px;left:2px;background:rgba(212,168,67,.9);color:#000;font-size:9px;padding:1px 4px;border-radius:4px;font-weight:700">ANA</span>':''}
+      <button onclick="removeImg(${i})" style="position:absolute;top:-5px;right:-5px;width:18px;height:18px;border-radius:50%;background:#e05c5c;border:none;color:#fff;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center">×</button>
+    </div>`).join('');
+}
+function addMoreImg(){document.getElementById('fif').click();}
+function prevImgMulti(input){
+  if(!input.files.length)return;
+  for(const file of input.files){
+    const url=URL.createObjectURL(file);
+    window._editImages.push(url);
+  }
+  removeImg(-999); // trigger re-render
+}
+function addImgFromUrl(url){
+  if(!url||!url.startsWith('http'))return;
+  if(!window._editImages.includes(url)){window._editImages.push(url);}
+  removeImg(-999);
 }
 
 function autoSlug(){const s=slugify(document.getElementById('fn').value);document.getElementById('fs').value=s;document.getElementById('spv').textContent=s?'/'+s:'';}
@@ -800,6 +850,137 @@ async function genCocktailAI() {
     btn.disabled = false;
     btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg> AI ile Doldur';
   }
+}
+
+
+// ── DRAFTS PAGE ───────────────────────────────────────────────────────────────
+function renderDrafts(){
+  const drafts = bottles.filter(b=>b.status==='draft');
+  document.getElementById('page-content').innerHTML=`
+  <div class="fade">
+    <div class="page-header">
+      <div>
+        <div class="page-title">Taslaklar <span>${esc(drafts.length)} şişe</span></div>
+        <div style="font-size:12px;color:var(--sub);margin-top:4px">Her şişe için AI analizi yap, düzenle ve yayınla.</div>
+      </div>
+      <button class="btn btn-primary" onclick="analyzeAllDrafts()" id="batch-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg>
+        Tümünü Analiz Et
+      </button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px">
+      ${drafts.map(b=>`
+        <div id="draft-card-${esc(b.slug)}" style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column">
+          <div style="position:relative;padding-bottom:75%;background:var(--surface);flex-shrink:0">
+            ${b.image?`<img src="${esc(b.image)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy"/>`:'<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:36px">📷</div>'}
+          </div>
+          <div style="padding:10px;flex:1;display:flex;flex-direction:column;gap:6px">
+            <div id="draft-name-${esc(b.slug)}" style="font-size:12px;color:var(--sub);word-break:break-all">${esc(b.slug)}</div>
+            <div id="draft-status-${esc(b.slug)}" style="font-size:11px;color:var(--sub)"></div>
+            <div style="display:flex;gap:5px;margin-top:auto;flex-wrap:wrap">
+              <button id="ai-btn-${esc(b.slug)}" class="btn btn-sm" onclick="analyzeDraft('${esc(b.slug)}')"
+                style="flex:1;background:linear-gradient(135deg,rgba(91,143,255,.2),rgba(212,168,67,.15));border:1px solid rgba(91,143,255,.3);color:var(--mid);font-size:11px;justify-content:center">
+                🤖 Analiz
+              </button>
+              <button class="btn btn-ghost btn-sm" onclick="openEditBottle('${esc(b.slug)}')" style="font-size:11px">
+                ✎
+              </button>
+            </div>
+          </div>
+        </div>`).join('')}
+    </div>
+    ${drafts.length===0?'<div class="empty"><div class="empty-ico">🎉</div>Tüm taslaklar tamamlandı!</div>':''}
+  </div>`;
+}
+
+let analyzeQueue = [];
+let analyzeRunning = false;
+
+async function analyzeDraft(slug){
+  const b = bottles.find(x=>x.slug===slug);
+  if(!b || !b.image) { toast('Görsel bulunamadı','err'); return; }
+
+  const btn = document.getElementById('ai-btn-'+slug);
+  const nameEl = document.getElementById('draft-name-'+slug);
+  const statusEl = document.getElementById('draft-status-'+slug);
+  const card = document.getElementById('draft-card-'+slug);
+  
+  if(btn){ btn.disabled=true; btn.innerHTML='<div class="spinner"></div>'; }
+  if(statusEl) statusEl.textContent='Analiz ediliyor…';
+
+  try {
+    // Build full URL for the image
+    const imgUrl = b.image.startsWith('http') ? b.image : (window.location.origin + b.image);
+    
+    const res = await fetch('/.netlify/functions/analyze-bottle-image', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({ imageUrl: imgUrl, slug })
+    });
+    
+    const data = await res.json();
+    if(!res.ok) throw new Error(data.error||'API hatası');
+    
+    // Update bottle in-memory
+    const idx = bottles.findIndex(x=>x.slug===slug);
+    if(idx>=0){
+      bottles[idx] = {
+        ...bottles[idx],
+        name: data.name || bottles[idx].name,
+        country: data.country || bottles[idx].country,
+        category: data.category || bottles[idx].category,
+        abv: data.abv || bottles[idx].abv,
+        desc_tr: data.desc_tr || '',
+        desc_en: data.desc_en || '',
+        status: 'draft', // keep as draft — user must review
+        active: false,
+      };
+      // Auto-generate slug from name if we got a name
+      if(data.name){
+        const newSlug = data.name.toLowerCase().trim()
+          .replace(/[çÇ]/g,'c').replace(/[şŞ]/g,'s').replace(/[ğĞ]/g,'g')
+          .replace(/[üÜ]/g,'u').replace(/[öÖ]/g,'o').replace(/[ıİ]/g,'i')
+          .replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+/g,'-')
+          .substring(0,50).replace(/^-|-$/g,'');
+        if(newSlug && newSlug !== slug && !bottles.find(x=>x.slug===newSlug)){
+          bottles[idx].slug = newSlug;
+        }
+      }
+    }
+    
+    if(nameEl) nameEl.textContent = data.name || slug;
+    if(statusEl) statusEl.innerHTML = '<span style="color:var(--green)">✓ Analiz tamam — düzenleyip yayınla</span>';
+    if(card) card.style.border='1px solid var(--green)';
+    if(btn){ btn.disabled=false; btn.innerHTML='✎ Düzenle'; btn.onclick=()=>openEditBottle(bottles.find(x=>x.name===data.name)?.slug||slug); }
+    
+    // Auto-save after analysis
+    await saveBottles('AI analyze: '+slug);
+    
+  } catch(e){
+    if(statusEl) statusEl.innerHTML='<span style="color:var(--red)">✗ '+esc(e.message)+'</span>';
+    if(btn){ btn.disabled=false; btn.innerHTML='🤖 Tekrar'; }
+    toast('Hata: '+esc(e.message),'err');
+  }
+}
+
+async function analyzeAllDrafts(){
+  const pending = bottles.filter(b=>b.status==='draft'&&b.image);
+  if(!pending.length){ toast('Analiz edilecek taslak yok'); return; }
+  
+  const batchBtn = document.getElementById('batch-btn');
+  if(batchBtn){ batchBtn.disabled=true; batchBtn.textContent=`Analiz ediliyor (0/${pending.length})…`; }
+  
+  let done = 0;
+  // Process one by one to avoid rate limits
+  for(const b of pending){
+    await analyzeDraft(b.slug);
+    done++;
+    if(batchBtn) batchBtn.textContent=`Analiz ediliyor (${done}/${pending.length})…`;
+    await new Promise(r=>setTimeout(r,800)); // small delay between requests
+  }
+  
+  if(batchBtn){ batchBtn.disabled=false; batchBtn.textContent='Tümünü Analiz Et'; }
+  toast(`${done} taslak analiz edildi ✓`);
 }
 
 // ── ACTIVE TOGGLE ─────────────────────────────────────────────────────────────

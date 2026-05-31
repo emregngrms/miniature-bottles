@@ -66,9 +66,24 @@
       "name_en": "Cognac & Brandy"
     },
     {
-      "id": 1780254724894,
+      "name_tr": "Meyve Damıtması",
+      "name_en": "Fruit Spirits",
+      "id": 14
+    },
+    {
+      "name_tr": "Jenever",
+      "name_en": "Jenever",
+      "id": 15
+    },
+    {
       "name_tr": "Rakı",
-      "name_en": "Rakı"
+      "name_en": "Rakı",
+      "id": 16
+    },
+    {
+      "name_tr": "Diğer Spiritler",
+      "name_en": "Spirits",
+      "id": 17
     }
   ]
 }

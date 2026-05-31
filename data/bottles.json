@@ -1,173 +1,2473 @@
 {
   "items": [
     {
-      "name": "Jack Daniel's No.7",
-      "slug": "jack-daniels",
-      "desc_tr": "Amerika'nın ikonik Tennessee viskisi. Charcoal Mellowing yöntemiyle dinlendirilmiş; tatlı vanilya, meşe ve kahve notaları ile dengeli ve yumuşak bir karakter.",
-      "abv": "40%",
-      "qty": 2,
-      "country": "USA",
-      "desc_en": "America's iconic Tennessee whiskey, charcoal mellowed for smoothness. Sweet vanilla, toasted oak and coffee notes.",
-      "id": 2,
-      "image": "https://images.unsplash.com/photo-1574669432768-4f464d97069a?w=500&q=80",
-      "year": 2024,
-      "category": "Tennessee Whiskey"
-    },
-    {
-      "name": "Johnnie Walker Black",
-      "slug": "johnnie-walker-black",
-      "desc_tr": "En az 12 yıl yaşlandırılmış maltlardan harmanlanan JW Black Label. Duman, tatlı kuru meyve ve meşe baharatının mükemmel dengesi.",
-      "abv": "40%",
-      "qty": 1,
-      "country": "Scotland",
-      "desc_en": "Blended from whiskies aged at least 12 years. Perfect balance of smoke, dried fruit and oak spice.",
-      "id": 3,
-      "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=500&q=80",
-      "year": 2023,
-      "category": "Blended Whisky"
-    },
-    {
-      "name": "Jameson Irish",
-      "slug": "jameson",
-      "desc_tr": "Üç kez damıtılan İrlanda viskisi. Fındık, vanilya ve hafif biberli notalarla son derece pürüzsüz; dünyanın en çok satan İrlanda viskisi.",
-      "abv": "40%",
-      "qty": 3,
-      "country": "Ireland",
-      "desc_en": "Triple distilled Irish whiskey. Exceptionally smooth with toasted wood, vanilla and a hint of spice.",
-      "id": 4,
-      "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=500&q=80",
-      "year": 2024,
-      "category": "Irish Whiskey"
-    },
-    {
-      "name": "Patrón Silver",
-      "slug": "patron-silver",
-      "desc_tr": "Jalisco'nun Los Altos bölgesinde el yapımı üretilen blanco tequila. Taze limon, hafif biber ve temiz agave notaları.",
-      "abv": "40%",
-      "qty": 2,
-      "country": "Mexico",
-      "desc_en": "Handcrafted blanco tequila from Los Altos, Jalisco. Fresh lemon, light pepper and clean agave.",
-      "id": 5,
-      "image": "https://images.unsplash.com/photo-1629778712393-4f18e59c4e43?w=500&q=80",
-      "year": 2024,
-      "category": "Tequila"
-    },
-    {
-      "name": "Glenfiddich 12",
-      "slug": "glenfiddich-12",
-      "desc_tr": "İskoçya'nın Speyside bölgesinde üretilen, 12 yıl Amerikan meşesi ve İspanyol şeri fıçılarında dinlendirilmiş klasik tek malt viski. Taze armut, meşe ve hafif baharatlı notalar; uzun, yumuşak bitiş.",
-      "abv": "40%",
-      "qty": 1,
-      "country": "Scotland",
-      "desc_en": "The quintessential Speyside single malt, matured 12 years in American oak and Spanish sherry casks. Fresh pear, oak and gentle spice with a long, smooth finish.",
-      "id": 1,
-      "image": "https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=500&q=80",
-      "year": 2024,
-      "category": "Single Malt Whisky"
-    },
-    {
-      "name": "Hendrick's Gin",
-      "slug": "hendricks",
-      "desc_tr": "Salatalık ve Bulgarca gül ile infüze edilmiş alışılmadık İskoç gini. Taze, çiçeksi ve hafif tatlı bir karakter.",
-      "abv": "41.4%",
-      "qty": 1,
-      "country": "Scotland",
-      "desc_en": "Unusually Scottish gin infused with cucumber and Bulgarian rose. Fresh, floral and delicately sweet.",
-      "id": 6,
-      "image": "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500&q=80",
-      "year": 2023,
-      "category": "Gin"
-    },
-    {
-      "name": "Diplomatico Reserva",
-      "slug": "diplomatico",
-      "desc_tr": "Venezuela'nın şeker kamışı bölgelerinden, 12 yıl yaşlandırılmış premium karanlık rom. Karamel, bitter çikolata ve vanilya.",
-      "abv": "40%",
-      "qty": 1,
-      "country": "Venezuela",
-      "desc_en": "Premium dark rum aged 12 years from Venezuela. Rich caramel, dark chocolate and vanilla complexity.",
-      "id": 7,
-      "image": "https://images.unsplash.com/photo-1571112596886-8f37dbde8b1f?w=500&q=80",
-      "year": 2024,
-      "category": "Rum"
-    },
-    {
-      "name": "Grey Goose",
-      "slug": "grey-goose",
-      "desc_tr": "Cognac bölgesinde tek distilasyon ile üretilen Fransız premium votka. Kremsi, yumuşak doku; hafif badem notaları.",
-      "abv": "40%",
-      "qty": 4,
-      "country": "France",
-      "desc_en": "French premium vodka distilled in the Cognac region. Creamy texture with subtle almond notes.",
-      "id": 8,
-      "image": "https://images.unsplash.com/photo-1574551980701-bd28f54fd8c9?w=500&q=80",
-      "year": 2023,
-      "category": "Vodka"
-    },
-    {
-      "name": "Baileys Original",
-      "slug": "baileys",
-      "desc_tr": "İrlanda viskisi ve taze İrlanda kremasıyla üretilen ikonik kremsi likör. Sütlü çikolata, kahve ve karamel notaları.",
-      "abv": "17%",
-      "qty": 2,
-      "country": "Ireland",
-      "desc_en": "Iconic creamy liqueur with Irish whiskey and cream. Milk chocolate, coffee and caramel notes.",
-      "id": 9,
-      "image": "https://images.unsplash.com/photo-1560512823-829485b8bf24?w=500&q=80",
-      "year": 2024,
-      "category": "Liqueur"
-    },
-    {
-      "name": "Jägermeister",
-      "slug": "jagermeister",
-      "desc_tr": "56 bitki, meyve, kök ve baharat ile üretilen Alman bitkisel likiörü. Baharatlı, reçineli ve hafif tatlı.",
-      "abv": "35%",
-      "qty": 1,
-      "country": "Germany",
-      "desc_en": "German herbal liqueur crafted from 56 herbs, fruits, roots and spices. Spiced, resinous and slightly sweet.",
-      "id": 10,
-      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80",
-      "year": 2024,
-      "category": "Liqueur"
-    },
-    {
-      "name": "Aperol",
-      "slug": "aperol",
-      "desc_tr": "Portakal kabuğu, ravent ve kiniyle üretilen İtalyan aperitifi. Hafif acı-tatlı dengesiyle Aperol Spritz'in vazgeçilmezi.",
-      "abv": "11%",
-      "qty": 2,
-      "country": "Italy",
-      "desc_en": "Italian aperitif with bitter orange, rhubarb and cinchona. The essential Aperol Spritz ingredient.",
-      "id": 11,
-      "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500&q=80",
-      "year": 2024,
-      "category": "Aperitif"
-    },
-    {
-      "name": "Bulleit Bourbon",
-      "slug": "bulleit",
-      "desc_tr": "Yüksek çavdar oranı (%28) ile öne çıkan Frontier Whiskey. Vanilya, meşe ve ısrarcı baharatlı çavdar notaları.",
-      "abv": "45%",
-      "qty": 1,
-      "country": "USA",
-      "desc_en": "The Frontier Whiskey with a high rye mash bill (28%). Vanilla, oak and persistent spicy rye.",
-      "id": 12,
-      "image": "https://images.unsplash.com/photo-1568644396922-5c3bfae12521?w=500&q=80",
-      "year": 2023,
-      "category": "Bourbon"
-    },
-    {
-      "id": 1780254907654,
-      "slug": "efe-raki",
-      "name": "Efe Rakı",
-      "country": "Turkey",
+      "id": 1771154676,
+      "slug": "skenderbeu-raki-rrushi",
+      "name": "Skenderbeu Rakı Rrushi",
+      "country": "Albania",
       "category": "Rakı",
-      "abv": "40",
+      "abv": "40%",
       "year": 2026,
       "qty": 1,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLr0T52uihFWfCdgoyGO1Y5KUHY3_DNZ4LeQ&s",
-      "desc_tr": "Ege'nin bereketli topraklarından gelen Efe Rakı, geleneksel Türk rakıcılık geleneğinin modern yorumunu sunar. Anason ağırlıklı yapısında taze üzüm notaları ve hafif meyan kökü aroması hissedilir. Koleksiyonerlerin gözdesi olan bu 40° minyatür, Türk içki kültürünün özünü küçük bir şişeye sığdırıyor.",
-      "desc_en": "Efe Rakı hails from the fertile lands of the Aegean region, offering a modern take on traditional Turkish rakı craftsmanship. The 40% ABV spirit reveals dominant anise notes complemented by fresh grape undertones and a subtle hint of licorice. A charming miniature that captures the very soul of Turkish drinking culture."
+      "image": "/images/uploads/18092933678288206.jpg",
+      "images": [
+        "/images/uploads/18092933678288206.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1768055776,
+      "slug": "freihof-1885-marille-kayisi",
+      "name": "Freihof 1885 Marille",
+      "country": "Austria",
+      "category": "Fruit Spirits",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/18252289501293500.jpg",
+      "images": [
+        "/images/uploads/18252289501293500.jpg"
+      ],
+      "desc_tr": "Freihof 1885 serisinden muhteşem bir kayısı schnapps'ı. Mütevazı kayısının çoğu zaman göz ardı edildiğini düşünüyoruz, oysa ne kadar lezzetli olduğu düşünüldüğünde bu üzücü bir durum. Eğer sizi rahatsız eden şey dışındaki tüylü kabuk ise, endişelenmeyin, bu lezzetli içkide böyle bir kabuk yok. Bu meyveli küçük lezzet, bazı burbon kokteyllerine çok iyi eşlik edecektir.",
+      "desc_en": "",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1762693380,
+      "slug": "bottle-3",
+      "name": "Şişe #3",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17991038684722622.jpg",
+      "images": [
+        "/images/uploads/17991038684722622.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693358,
+      "slug": "bottle-4",
+      "name": "Şişe #4",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18509207965070550.jpg",
+      "images": [
+        "/images/uploads/18509207965070550.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693321,
+      "slug": "bottle-5",
+      "name": "Şişe #5",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18433084849109930.jpg",
+      "images": [
+        "/images/uploads/18433084849109930.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693305,
+      "slug": "bottle-6",
+      "name": "Şişe #6",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18118060648477045.jpg",
+      "images": [
+        "/images/uploads/18118060648477045.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693290,
+      "slug": "bottle-7",
+      "name": "Şişe #7",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18096318670750490.jpg",
+      "images": [
+        "/images/uploads/18096318670750490.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693276,
+      "slug": "bottle-8",
+      "name": "Şişe #8",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17849282598594423.jpg",
+      "images": [
+        "/images/uploads/17849282598594423.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693264,
+      "slug": "bottle-9",
+      "name": "Şişe #9",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17914473471217697.jpg",
+      "images": [
+        "/images/uploads/17914473471217697.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693252,
+      "slug": "bottle-10",
+      "name": "Şişe #10",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18025989302573931.jpg",
+      "images": [
+        "/images/uploads/18025989302573931.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693233,
+      "slug": "bottle-11",
+      "name": "Şişe #11",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17982560195765304.jpg",
+      "images": [
+        "/images/uploads/17982560195765304.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693218,
+      "slug": "bottle-12",
+      "name": "Şişe #12",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17978496347941722.jpg",
+      "images": [
+        "/images/uploads/17978496347941722.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693190,
+      "slug": "bottle-13",
+      "name": "Şişe #13",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17860273683536484.jpg",
+      "images": [
+        "/images/uploads/17860273683536484.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693174,
+      "slug": "bottle-14",
+      "name": "Şişe #14",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18397565314193663.jpg",
+      "images": [
+        "/images/uploads/18397565314193663.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693154,
+      "slug": "bottle-15",
+      "name": "Şişe #15",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17870590632463330.jpg",
+      "images": [
+        "/images/uploads/17870590632463330.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693119,
+      "slug": "bottle-16",
+      "name": "Şişe #16",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18067907303609804.jpg",
+      "images": [
+        "/images/uploads/18067907303609804.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1762693093,
+      "slug": "bottle-17",
+      "name": "Şişe #17",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18062250428185633.jpg",
+      "images": [
+        "/images/uploads/18062250428185633.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255789,
+      "slug": "bottle-18",
+      "name": "Şişe #18",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18055051907548820.jpg",
+      "images": [
+        "/images/uploads/18055051907548820.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255765,
+      "slug": "bottle-19",
+      "name": "Şişe #19",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18088411876836234.jpg",
+      "images": [
+        "/images/uploads/18088411876836234.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255719,
+      "slug": "bottle-20",
+      "name": "Şişe #20",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18123702481471517.jpg",
+      "images": [
+        "/images/uploads/18123702481471517.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255689,
+      "slug": "bottle-21",
+      "name": "Şişe #21",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18137594449442172.jpg",
+      "images": [
+        "/images/uploads/18137594449442172.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255674,
+      "slug": "bottle-22",
+      "name": "Şişe #22",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17858708643436660.jpg",
+      "images": [
+        "/images/uploads/17858708643436660.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255652,
+      "slug": "bottle-23",
+      "name": "Şişe #23",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17958312977841254.jpg",
+      "images": [
+        "/images/uploads/17958312977841254.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255628,
+      "slug": "bottle-24",
+      "name": "Şişe #24",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18072348251122497.jpg",
+      "images": [
+        "/images/uploads/18072348251122497.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255613,
+      "slug": "bottle-25",
+      "name": "Şişe #25",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18038870912452259.jpg",
+      "images": [
+        "/images/uploads/18038870912452259.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255592,
+      "slug": "bottle-26",
+      "name": "Şişe #26",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17908602291217764.jpg",
+      "images": [
+        "/images/uploads/17908602291217764.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255573,
+      "slug": "bottle-27",
+      "name": "Şişe #27",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18062024867075943.jpg",
+      "images": [
+        "/images/uploads/18062024867075943.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255550,
+      "slug": "bottle-28",
+      "name": "Şişe #28",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18069949145167042.jpg",
+      "images": [
+        "/images/uploads/18069949145167042.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1757255526,
+      "slug": "bottle-29",
+      "name": "Şişe #29",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18062415143075628.jpg",
+      "images": [
+        "/images/uploads/18062415143075628.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1756034592,
+      "slug": "rose-de-rogues",
+      "name": "Rose de Rogues",
+      "country": "France",
+      "category": "Gin",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18092117602680309.jpg",
+      "images": [
+        "/images/uploads/18092117602680309.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1756034550,
+      "slug": "leib-wchter",
+      "name": "Leib Wächter",
+      "country": "Germany",
+      "category": "Spirits",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18075877189817602.jpg",
+      "images": [
+        "/images/uploads/18075877189817602.jpg"
+      ],
+      "desc_tr": "LEIB WATCHTER 5cl",
+      "desc_en": "",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1737893896,
+      "slug": "bottle-32",
+      "name": "Şişe #32",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17943899534949767.jpg",
+      "images": [
+        "/images/uploads/17943899534949767.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1737893756,
+      "slug": "bottle-33",
+      "name": "Şişe #33",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18056300344829929.jpg",
+      "images": [
+        "/images/uploads/18056300344829929.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1737893720,
+      "slug": "bottle-34",
+      "name": "Şişe #34",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18170872375317036.jpg",
+      "images": [
+        "/images/uploads/18170872375317036.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1737893703,
+      "slug": "bottle-35",
+      "name": "Şişe #35",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/17882577225211740.jpg",
+      "images": [
+        "/images/uploads/17882577225211740.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1737893683,
+      "slug": "bottle-36",
+      "name": "Şişe #36",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18053339962894289.jpg",
+      "images": [
+        "/images/uploads/18053339962894289.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1737893537,
+      "slug": "jack-daniels-tennessee-honey",
+      "name": "Jack Daniel's Tennessee Honey",
+      "country": "USA",
+      "category": "Liqueur",
+      "abv": "35%",
+      "year": 2025,
+      "qty": 1,
+      "image": "/images/uploads/18000369977567533.jpg",
+      "images": [
+        "/images/uploads/18000369977567533.jpg"
+      ],
+      "desc_tr": "Kehribar renginde. Bal, vanilya ve karamel kokuları viskiden gelen bukelerin önünde. Damakta tatlılık hafif bir baharlılık ve Jack’in ekşimsi nüansları ile dengeleniyor, iç baymıyor. İlginç, viski ile likör arasında bir yerde. Sek ya da bol buzla veya iyi soğutularak içilmeli.",
+      "desc_en": "Amber in color. Aromas of honey, vanilla and caramel precede the bouquet from the whisky. On the palate the sweetness is balanced by a slight spiciness and the sour nuances of Jack, it doesn't faint. Interesting, somewhere between whisky and liqueur. It should be drunk neat or with lots of ice or well chilled.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1729951969,
+      "slug": "danzka-forty",
+      "name": "Danzka Forty Vodka",
+      "country": "Denmark",
+      "category": "Vodka",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18048888016819950.jpg",
+      "images": [
+        "/images/uploads/18048888016819950.jpg"
+      ],
+      "desc_tr": "Danimarka’da üretilen bu premium vodka, %40 alkol oranıyla saf ve yumuşak bir içim sunar. Buğdaydan yapılan Danzka Forty, temiz ve hafif bir tada sahiptir.",
+      "desc_en": "Produced in Denmark, this premium vodka offers a smooth and pure drinking experience with a 40% ABV. Made from wheat, Danzka Forty has a clean and light flavor.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1729951863,
+      "slug": "glenfiddich-single-malt",
+      "name": "Glenfiddich Single Malt",
+      "country": "Scotland",
+      "category": "Single Malt Whisky",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17984623754735921.jpg",
+      "images": [
+        "/images/uploads/17984623754735921.jpg"
+      ],
+      "desc_tr": "İskoçya'nın Speyside bölgesinde damıtılan bu single malt, meşe fıçılarda olgunlaştırılarak zengin ve pürüzsüz bir tat kazanır. Narin meyve aromaları ve hafif bir baharat dokunuşuyla öne çıkar.",
+      "desc_en": "Distilled in the Speyside region of Scotland, this single malt is matured in oak casks for a rich and smooth taste. It features delicate fruit notes with a hint of spice.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1729949599,
+      "slug": "sierra-tropical-chilli-liqueur",
+      "name": "Sierra Tropical Chilli Liqueur",
+      "country": "Mexico",
+      "category": "Liqueur",
+      "abv": "17%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17990939759571153.jpg",
+      "images": [
+        "/images/uploads/17990939759571153.jpg"
+      ],
+      "desc_tr": "Meksika’da üretilen bu likör, tropikal meyvelerin tatlılığına hafif bir acı biber dokunuşu katıyor. Tutku meyvesi ve mango aromaları ile dengeli ve egzotik bir lezzet sunar.",
+      "desc_en": "Produced in Mexico, this liqueur blends the sweetness of tropical fruits with a hint of chili spice. It offers a balanced and exotic flavor with passionfruit and mango notes.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1729949378,
+      "slug": "finlandia-vodka",
+      "name": "Finlandia Vodka",
+      "country": "Finland",
+      "category": "Vodka",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17843914224343207.jpg",
+      "images": [
+        "/images/uploads/17843914224343207.jpg"
+      ],
+      "desc_tr": "Arctic çavdar ve saf, doğal buzullardan gelen kaynak suyu kullanılarak Finlandiya’da özenle damıtılmıştır. İnce ve pürüzsüz bir yapıya sahiptir; hafif bir narenciye aromasıyla taze ve ferah bir tat sunar.",
+      "desc_en": "Distilled carefully in Finland using Arctic rye and pure glacial spring water. It has a smooth, clean texture with a refreshing hint of citrus.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1729948573,
+      "slug": "reyka-vodka",
+      "name": "Reyka Vodka",
+      "country": "Iceland",
+      "category": "Vodka",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17958919349823672.jpg",
+      "images": [
+        "/images/uploads/17958919349823672.jpg"
+      ],
+      "desc_tr": "Reyka, dünyanın en saf buzul kaynak sularından birinden yapılan, yumuşak, canlı ve temiz bir tada sahip İzlanda votkasıdır. Buz ve diğer her şeyle iyi gider. Mozzarella Caprese Bloody Mary ile harika gideceği belirtiliyor. Reyka, olağanüstü kaliteyi garantilemek için küçük partiler halinde buğday ve arpadan damıtılır. Her damıtma yaklaşık 6 saat sürer ve sadece 255 kasa yapar. Damıtımevi, yeraltı volkanlarından gelen jeotermal enerjiyle çalışır.",
+      "desc_en": "Reyka is an Icelandic vodka with a smooth, crisp and clean taste made from one the purest glacial spring water in the world.Pairs well with ice and everything else. You never go wrong with The Mozzarella Caprese Bloody Mary! That’s what every tomato dreams of being when they grow up.Reyka is distilled from wheat and barley in small batches to ensure exceptional quality. Each distillation takes about 6 hours and makes only 255 cases. The distillery is powered by geothermal energy from underground volcanoes.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1723998735,
+      "slug": "bottle-43",
+      "name": "Şişe #43",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17898460155029149.jpg",
+      "images": [
+        "/images/uploads/17898460155029149.jpg",
+        "/images/uploads/18284700955225537.jpg",
+        "/images/uploads/18023534669110822.jpg",
+        "/images/uploads/18012826598618852.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998455,
+      "slug": "bottle-44",
+      "name": "Şişe #44",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18058931071594356.jpg",
+      "images": [
+        "/images/uploads/18058931071594356.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998413,
+      "slug": "bottle-45",
+      "name": "Şişe #45",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17952695015818310.jpg",
+      "images": [
+        "/images/uploads/17952695015818310.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998391,
+      "slug": "bottle-46",
+      "name": "Şişe #46",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17869562229170763.jpg",
+      "images": [
+        "/images/uploads/17869562229170763.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998369,
+      "slug": "bottle-47",
+      "name": "Şişe #47",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18035047853113482.jpg",
+      "images": [
+        "/images/uploads/18035047853113482.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998338,
+      "slug": "bottle-48",
+      "name": "Şişe #48",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18038001506088894.jpg",
+      "images": [
+        "/images/uploads/18038001506088894.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998315,
+      "slug": "bottle-49",
+      "name": "Şişe #49",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18027837746054460.jpg",
+      "images": [
+        "/images/uploads/18027837746054460.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998280,
+      "slug": "bottle-50",
+      "name": "Şişe #50",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18308414149091579.jpg",
+      "images": [
+        "/images/uploads/18308414149091579.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998253,
+      "slug": "bottle-51",
+      "name": "Şişe #51",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18045167278919458.jpg",
+      "images": [
+        "/images/uploads/18045167278919458.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998221,
+      "slug": "bottle-52",
+      "name": "Şişe #52",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17933839457875853.jpg",
+      "images": [
+        "/images/uploads/17933839457875853.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998201,
+      "slug": "bottle-53",
+      "name": "Şişe #53",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18025118261087511.jpg",
+      "images": [
+        "/images/uploads/18025118261087511.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998180,
+      "slug": "bottle-54",
+      "name": "Şişe #54",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18022630250109286.jpg",
+      "images": [
+        "/images/uploads/18022630250109286.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998156,
+      "slug": "bottle-55",
+      "name": "Şişe #55",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18041324626950842.jpg",
+      "images": [
+        "/images/uploads/18041324626950842.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998136,
+      "slug": "bottle-56",
+      "name": "Şişe #56",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18037788581096486.jpg",
+      "images": [
+        "/images/uploads/18037788581096486.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998116,
+      "slug": "bottle-57",
+      "name": "Şişe #57",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17875674792133933.jpg",
+      "images": [
+        "/images/uploads/17875674792133933.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998096,
+      "slug": "bottle-58",
+      "name": "Şişe #58",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17937177035886049.jpg",
+      "images": [
+        "/images/uploads/17937177035886049.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998053,
+      "slug": "bottle-59",
+      "name": "Şişe #59",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17943563690854536.jpg",
+      "images": [
+        "/images/uploads/17943563690854536.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723998002,
+      "slug": "bottle-60",
+      "name": "Şişe #60",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18039235442072992.jpg",
+      "images": [
+        "/images/uploads/18039235442072992.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723997960,
+      "slug": "bottle-61",
+      "name": "Şişe #61",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18237859501277585.jpg",
+      "images": [
+        "/images/uploads/18237859501277585.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723997939,
+      "slug": "bottle-62",
+      "name": "Şişe #62",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18055501081706216.jpg",
+      "images": [
+        "/images/uploads/18055501081706216.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723997881,
+      "slug": "bottle-63",
+      "name": "Şişe #63",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18065981896599780.jpg",
+      "images": [
+        "/images/uploads/18065981896599780.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723997862,
+      "slug": "bottle-64",
+      "name": "Şişe #64",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18308446339094487.jpg",
+      "images": [
+        "/images/uploads/18308446339094487.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723997836,
+      "slug": "bottle-65",
+      "name": "Şişe #65",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18245357257258176.jpg",
+      "images": [
+        "/images/uploads/18245357257258176.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723997811,
+      "slug": "bottle-66",
+      "name": "Şişe #66",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17855043645201848.jpg",
+      "images": [
+        "/images/uploads/17855043645201848.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723997788,
+      "slug": "bottle-67",
+      "name": "Şişe #67",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18018665822437737.jpg",
+      "images": [
+        "/images/uploads/18018665822437737.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723997759,
+      "slug": "bottle-68",
+      "name": "Şişe #68",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18042678844798370.jpg",
+      "images": [
+        "/images/uploads/18042678844798370.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723717602,
+      "slug": "bottle-69",
+      "name": "Şişe #69",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18037379600007507.jpg",
+      "images": [
+        "/images/uploads/18037379600007507.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1723717582,
+      "slug": "bottle-70",
+      "name": "Şişe #70",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18034981795926131.jpg",
+      "images": [
+        "/images/uploads/18034981795926131.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1721416045,
+      "slug": "villa-massa-limoncello",
+      "name": "Villa Massa Limoncello",
+      "country": "Italy",
+      "category": "Liqueur",
+      "abv": "30%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18051156610748680.jpg",
+      "images": [
+        "/images/uploads/18051156610748680.jpg"
+      ],
+      "desc_tr": "Villa Massa Limoncello, Massa kardeşler tarafından 1991 yılında piyasaya sürülen sertifikalı bir “Liquore di Limoni di Sorrento”dur. 1890 yılına dayanan bir aile tarifine göre likör, q Campania bölgesindeki Sorrento’daki Napoli Körfezi yakınlarındaki kendi yamaç teraslarından coğrafi olarak korunan Sorrento limonlarından yapılır.",
+      "desc_en": "Villa Massa Limoncello is a certified \"Liquore di Limoni di Sorrento\" released by the Massa brothers in 1991. According to a family recipe dating back to 1890, the liqueur is made from Sorrento lemons, geographically protected from their own hillside terraces near the Bay of Naples in Sorrento, in the Campania region of Italy.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1721416030,
+      "slug": "licor-43",
+      "name": "Licor 43 Original",
+      "country": "Spain",
+      "category": "Liqueur",
+      "abv": "31%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17977569575718870.jpg",
+      "images": [
+        "/images/uploads/17977569575718870.jpg"
+      ],
+      "desc_tr": "Parlak sarı ve hafif baharatlı bu çok yönlü likör, 43 bileşenle yapılır, bu yüzden adı buradan gelir. Lezzet profili vanilyadan esmer şekere ve pişirme baharatına kadar uzanır. Özellikle rom ve brendi gibi koyu içkilerle çok iyi uyum sağlar, ancak baskın değildir.",
+      "desc_en": "Bright yellow and slightly spicy, this versatile liqueur is made with 43 ingredients, hence the name. The flavor profile ranges from vanilla to brown sugar and baking spice. It pairs particularly well with dark spirits such as rum and brandy, but is not overpowering.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1721416009,
+      "slug": "bols-corenwyn-2-years",
+      "name": "Bols Corenwyn 2 Years",
+      "country": "Netherlands",
+      "category": "Jenever",
+      "abv": "38%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18452284594056895.jpg",
+      "images": [
+        "/images/uploads/18452284594056895.jpg"
+      ],
+      "desc_tr": "Bu iki yıllık Corenwyn, tatlı meşe notaları ve tarçın ve balla dolu hafif otsu bir bitişle hoş bir malt damağa sahiptir. Geleneksel Corenwyn damıtılmış içkisi, ona belirgin lezzetini veren %51'den fazla malt şarabı içerir.",
+      "desc_en": "This two year old Corenwyn has a pleasant malty palate with sweet oaky notes and a subtle herbaceous finish full of cinnamon and honey. The traditional Corenwyn distillate contains over 51% malt wine, which gives it its distinct flavour.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1721415968,
+      "slug": "the-glenlivet-founders-reserve",
+      "name": "The Glenlivet Founder's Reserve",
+      "country": "Scotland",
+      "category": "Single Malt Whisky",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17898522471012976.jpg",
+      "images": [
+        "/images/uploads/17898522471012976.jpg"
+      ],
+      "desc_tr": "Glenlivet'in klasik tatlarını kremsi ve pürüzsüz bir dokuda bir araya getiren tek malt viski. Geleneksel meşe fıçılarından seçilen harman, elma ve ananas notalarıyla dikkat çeker.",
+      "desc_en": "Boasting the classic flavours of The Glenlivet in a creamy, smooth texture. Selected from traditional oak casks, with notes of apple and pineapple.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1721415911,
+      "slug": "flugel",
+      "name": "Flügel",
+      "country": "Netherlands",
+      "category": "Liqueur",
+      "abv": "16.6%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18012039071601859.jpg",
+      "images": [
+        "/images/uploads/18012039071601859.jpg"
+      ],
+      "desc_tr": "İçinde cranberryli votka ve red bull olan bir çeşit hollanda içkisidir.\nPaylaştığım gibi küçücük tek kullanımlık - shotlık - şişeciklerde satılır.\nŞişenin kapağı diş ile açılır, kafa yukarı kaldırılır, kapak burna konur, şişenin ucu ısırılarak ağızda tutulur, el kullanmak yasaktır! :) Kapak düşmeyecek sekilde kafa yukarı kaldırılır ve lıkırt diye içilir.",
+      "desc_en": "It is a kind of Dutch drink containing cranberry vodka and red bull.\nIt is sold in tiny disposable - shot - bottles like the one I shared.\nThe cap of the bottle is opened with the teeth, the head is lifted up, the cap is put on the nose, the tip of the bottle is bitten and held in the mouth, no hands allowed! :) The head is lifted up so that the cap does not fall off and the drink is gulped down.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1721415798,
+      "slug": "cointreau",
+      "name": "Cointreau",
+      "country": "France",
+      "category": "Liqueur",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18059482870627720.jpg",
+      "images": [
+        "/images/uploads/18059482870627720.jpg"
+      ],
+      "desc_tr": "Cointreau'nun dengesinin temelinde tatlı ve acı portakalların kurutulmuş kabukları ile tatlı portakalların taze kabuklarının evliliği vardır. Tatlı ve acı portakal kabuklarının özleri sadece üç bileşenle büyütülür: saf su, şeker ve nötr alkol. Cointreau'da aromatik dengesini korumak için yapay tatlandırıcılar eklenmez. Cointreau,\nÉdouard Cointreau tarafından tanımlanan geleneksel damıtma yöntemlerine göre, tam olarak doğum yeri olan Angers'da Fransa'da hala geliştirilmektedir. Tarif artık Cointreau'nun zengin bilgi birikiminin koruyucusu olan Baş Damıtıcımız Carole Quinton tarafından tutulmaktadır.\n\n---\n\nThe balance of Cointreau is based on the marriage of the dried peels of sweet and bitter oranges and the fresh peels of sweet oranges. The extracts of sweet and bitter orange peels are grown with only three ingredients: pure water, sugar and neutral alcohol. No artificial sweeteners are added to Cointreau to maintain its aromatic balance. Cointreau\nIt is still being developed in France, precisely in its birthplace, Angers, according to the traditional distillation methods described by Édouard Cointreau. The recipe is now held by our Head Distiller Carole Quinton, the keeper of Cointreau's rich know-how.",
+      "desc_en": "",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1721415771,
+      "slug": "dropshot-black-magic",
+      "name": "Dropshot Black Magic",
+      "country": "Netherlands",
+      "category": "Liqueur",
+      "abv": "17%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18021523202097236.jpg",
+      "images": [
+        "/images/uploads/18021523202097236.jpg"
+      ],
+      "desc_tr": "Original Dropshot Black Magic Liqueur\n\nDropShot, asırlık Hollanda meyankökü şekeri tadındaki tek gerçek likördür. Partilerin ve kulüplerin vazgeçilmezi olan bu likör, lezzetli ve güçlü bir shot olarak hizmet etmek için idealdir.",
+      "desc_en": "DropShot is the only true liqueur with the flavour of centuries-old Dutch liquorice candy. This liqueur, which is indispensable for parties and clubs, is ideal for serving as a delicious and strong shot.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1721415715,
+      "slug": "bottle-78",
+      "name": "Şişe #78",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18075668329464542.jpg",
+      "images": [
+        "/images/uploads/18075668329464542.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1721415679,
+      "slug": "bottle-79",
+      "name": "Şişe #79",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18032543524927095.jpg",
+      "images": [
+        "/images/uploads/18032543524927095.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1721415660,
+      "slug": "bottle-80",
+      "name": "Şişe #80",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17872774116112612.jpg",
+      "images": [
+        "/images/uploads/17872774116112612.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1721415628,
+      "slug": "bottle-81",
+      "name": "Şişe #81",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17849776620250212.jpg",
+      "images": [
+        "/images/uploads/17849776620250212.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1721415592,
+      "slug": "bottle-82",
+      "name": "Şişe #82",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17867264568157801.jpg",
+      "images": [
+        "/images/uploads/17867264568157801.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1721415557,
+      "slug": "bottle-83",
+      "name": "Şişe #83",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18011465903285729.jpg",
+      "images": [
+        "/images/uploads/18011465903285729.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1721415500,
+      "slug": "bottle-84",
+      "name": "Şişe #84",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17857819206165522.jpg",
+      "images": [
+        "/images/uploads/17857819206165522.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1721163804,
+      "slug": "bottle-85",
+      "name": "Şişe #85",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18033960293025489.jpg",
+      "images": [
+        "/images/uploads/18033960293025489.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1721163765,
+      "slug": "bottle-86",
+      "name": "Şişe #86",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17937489959764614.jpg",
+      "images": [
+        "/images/uploads/17937489959764614.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1721163723,
+      "slug": "bottle-87",
+      "name": "Şişe #87",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18410568487076573.jpg",
+      "images": [
+        "/images/uploads/18410568487076573.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1721163664,
+      "slug": "bottle-88",
+      "name": "Şişe #88",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17913086270974765.jpg",
+      "images": [
+        "/images/uploads/17913086270974765.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386946,
+      "slug": "bottle-89",
+      "name": "Şişe #89",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18321000856177228.jpg",
+      "images": [
+        "/images/uploads/18321000856177228.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386936,
+      "slug": "bottle-90",
+      "name": "Şişe #90",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17914341758867485.jpg",
+      "images": [
+        "/images/uploads/17914341758867485.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386921,
+      "slug": "bottle-91",
+      "name": "Şişe #91",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18046727836841989.jpg",
+      "images": [
+        "/images/uploads/18046727836841989.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386905,
+      "slug": "bottle-92",
+      "name": "Şişe #92",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18013618064423000.jpg",
+      "images": [
+        "/images/uploads/18013618064423000.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386893,
+      "slug": "bottle-93",
+      "name": "Şişe #93",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17984078201535066.jpg",
+      "images": [
+        "/images/uploads/17984078201535066.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386879,
+      "slug": "bottle-94",
+      "name": "Şişe #94",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17923119494825079.jpg",
+      "images": [
+        "/images/uploads/17923119494825079.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386860,
+      "slug": "bottle-95",
+      "name": "Şişe #95",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18305086657085799.jpg",
+      "images": [
+        "/images/uploads/18305086657085799.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386848,
+      "slug": "bottle-96",
+      "name": "Şişe #96",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17864846706159782.jpg",
+      "images": [
+        "/images/uploads/17864846706159782.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386838,
+      "slug": "bottle-97",
+      "name": "Şişe #97",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17990910518663771.jpg",
+      "images": [
+        "/images/uploads/17990910518663771.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386818,
+      "slug": "bottle-98",
+      "name": "Şişe #98",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18052890658673640.jpg",
+      "images": [
+        "/images/uploads/18052890658673640.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386768,
+      "slug": "bottle-99",
+      "name": "Şişe #99",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18060978886532396.jpg",
+      "images": [
+        "/images/uploads/18060978886532396.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386734,
+      "slug": "bottle-100",
+      "name": "Şişe #100",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17859130287193643.jpg",
+      "images": [
+        "/images/uploads/17859130287193643.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386723,
+      "slug": "bottle-101",
+      "name": "Şişe #101",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18052012567738482.jpg",
+      "images": [
+        "/images/uploads/18052012567738482.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386713,
+      "slug": "bottle-102",
+      "name": "Şişe #102",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17929957667905998.jpg",
+      "images": [
+        "/images/uploads/17929957667905998.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386702,
+      "slug": "bottle-103",
+      "name": "Şişe #103",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18109237990402537.jpg",
+      "images": [
+        "/images/uploads/18109237990402537.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386691,
+      "slug": "bottle-104",
+      "name": "Şişe #104",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18029717296942989.jpg",
+      "images": [
+        "/images/uploads/18029717296942989.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386631,
+      "slug": "bottle-105",
+      "name": "Şişe #105",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18030650254942244.jpg",
+      "images": [
+        "/images/uploads/18030650254942244.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386605,
+      "slug": "bottle-106",
+      "name": "Şişe #106",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18313479547195807.jpg",
+      "images": [
+        "/images/uploads/18313479547195807.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386537,
+      "slug": "bottle-107",
+      "name": "Şişe #107",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18406519171077032.jpg",
+      "images": [
+        "/images/uploads/18406519171077032.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386501,
+      "slug": "bottle-108",
+      "name": "Şişe #108",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18003703187352206.jpg",
+      "images": [
+        "/images/uploads/18003703187352206.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386476,
+      "slug": "bottle-109",
+      "name": "Şişe #109",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18009725150570176.jpg",
+      "images": [
+        "/images/uploads/18009725150570176.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386465,
+      "slug": "bottle-110",
+      "name": "Şişe #110",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17926498547798157.jpg",
+      "images": [
+        "/images/uploads/17926498547798157.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386450,
+      "slug": "bottle-111",
+      "name": "Şişe #111",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17845923429253188.jpg",
+      "images": [
+        "/images/uploads/17845923429253188.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386410,
+      "slug": "bottle-112",
+      "name": "Şişe #112",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17896314387017788.jpg",
+      "images": [
+        "/images/uploads/17896314387017788.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386393,
+      "slug": "bottle-113",
+      "name": "Şişe #113",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17929860929791772.jpg",
+      "images": [
+        "/images/uploads/17929860929791772.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386368,
+      "slug": "bottle-114",
+      "name": "Şişe #114",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18052733530732520.jpg",
+      "images": [
+        "/images/uploads/18052733530732520.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386350,
+      "slug": "bottle-115",
+      "name": "Şişe #115",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18030776827907038.jpg",
+      "images": [
+        "/images/uploads/18030776827907038.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386340,
+      "slug": "bottle-116",
+      "name": "Şişe #116",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18003395519379638.jpg",
+      "images": [
+        "/images/uploads/18003395519379638.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720386326,
+      "slug": "bottle-117",
+      "name": "Şişe #117",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17988783746679757.jpg",
+      "images": [
+        "/images/uploads/17988783746679757.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720383193,
+      "slug": "bottle-118",
+      "name": "Şişe #118",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17915460989955250.jpg",
+      "images": [
+        "/images/uploads/17915460989955250.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720383182,
+      "slug": "bottle-119",
+      "name": "Şişe #119",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17866732026154770.jpg",
+      "images": [
+        "/images/uploads/17866732026154770.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720383163,
+      "slug": "bottle-120",
+      "name": "Şişe #120",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18141660916332803.jpg",
+      "images": [
+        "/images/uploads/18141660916332803.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720383146,
+      "slug": "bottle-121",
+      "name": "Şişe #121",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18008951585310535.jpg",
+      "images": [
+        "/images/uploads/18008951585310535.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720383128,
+      "slug": "bottle-122",
+      "name": "Şişe #122",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18063529867586536.jpg",
+      "images": [
+        "/images/uploads/18063529867586536.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720383094,
+      "slug": "bottle-123",
+      "name": "Şişe #123",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17929781789902842.jpg",
+      "images": [
+        "/images/uploads/17929781789902842.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720383067,
+      "slug": "bottle-124",
+      "name": "Şişe #124",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18050553295688071.jpg",
+      "images": [
+        "/images/uploads/18050553295688071.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720383051,
+      "slug": "bottle-125",
+      "name": "Şişe #125",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18026383607269988.jpg",
+      "images": [
+        "/images/uploads/18026383607269988.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720382848,
+      "slug": "bottle-126",
+      "name": "Şişe #126",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18097260043427230.jpg",
+      "images": [
+        "/images/uploads/18097260043427230.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720382676,
+      "slug": "bottle-127",
+      "name": "Şişe #127",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18328021801193585.jpg",
+      "images": [
+        "/images/uploads/18328021801193585.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720382603,
+      "slug": "bottle-128",
+      "name": "Şişe #128",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18025085822471358.jpg",
+      "images": [
+        "/images/uploads/18025085822471358.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720382518,
+      "slug": "bottle-129",
+      "name": "Şişe #129",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18055186876714394.jpg",
+      "images": [
+        "/images/uploads/18055186876714394.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720382439,
+      "slug": "bottle-130",
+      "name": "Şişe #130",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17890355508049140.jpg",
+      "images": [
+        "/images/uploads/17890355508049140.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720382399,
+      "slug": "bottle-131",
+      "name": "Şişe #131",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18018110264138766.jpg",
+      "images": [
+        "/images/uploads/18018110264138766.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720382369,
+      "slug": "bottle-132",
+      "name": "Şişe #132",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17956726598672837.jpg",
+      "images": [
+        "/images/uploads/17956726598672837.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720382285,
+      "slug": "bottle-133",
+      "name": "Şişe #133",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18021157673340253.jpg",
+      "images": [
+        "/images/uploads/18021157673340253.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720380324,
+      "slug": "bottle-134",
+      "name": "Şişe #134",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18030586010498887.jpg",
+      "images": [
+        "/images/uploads/18030586010498887.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720380159,
+      "slug": "bottle-135",
+      "name": "Şişe #135",
+      "country": "Diğer",
+      "category": "Diğer",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17911861604967406.jpg",
+      "images": [
+        "/images/uploads/17911861604967406.jpg"
+      ],
+      "desc_tr": "",
+      "desc_en": "",
+      "status": "draft",
+      "active": false
+    },
+    {
+      "id": 1720380020,
+      "slug": "efe-raki-yas-uzum",
+      "name": "Efe Rakı Yaş Üzüm",
+      "country": "Turkey",
+      "category": "Rakı",
+      "abv": "45%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/17891010285048289.jpg",
+      "images": [
+        "/images/uploads/17891010285048289.jpg"
+      ],
+      "desc_tr": "Mayis 2005`te rakı severleri \"yaş üzüm rakısı\" ile tanıştıran Efe Yaş Üzüm Rakısı kisa sürede rakı sofralarının aranılan lezzeti oldu. %100 yaş üzümden üretilen ve ilk yaş üzüm rakı markası olarak rakı dünyasına farklı bir soluk getiren Efe Yaş Üzüm Rakısı \"İlk Aşk\" konsepti ile fark ediliyor. \"İlk aşk\" Efe Yas Üzüm`ün ilk kez tadıldığı andan itibaren tutkuya dönüşmesini ifade ediyor. Sektörün inovatif şirketi Efe Alkollü Içecekler`in fabrikaya gelen bir kamyon dolusu iştah açici taze üzümü gördükten sonra \"Sadece yaş üzüm kullanarak bir rakı üretsek nasil olur?\" fikri üzerine ürettiği \"Efe Yaş Üzüm Rakısı\" kısa zamanda o kadar başarılı oldu ki, rakı sektöründe başlı başına %100 yaş üzümlerden üretilen ayrı bir kategorinin`de doğmasına neden oldu. Türkiye`nin %100 yaş üzümlerden üretilen ilk yaş üzüm rakı markası Efe Yaş Üzüm Rakısı`nın üstün kalitesi, dünyanın en prestijli içki yarışmalarından biri olan 2010 San Francisco Word Spirits Competition`dan gelen altın madalya ile tescillendi. Dünya`nın dört bir yanından tanınmış içki markalarının katıldığı uluslararası yarışmada Efe Yaş Üzüm Rakısı, tadı, yumuşak içimi, kokusu gibi kategorilerden en üst puanları toplayarak sınıfında altın madalyanın en üst dereci olan \"Double Gold Medal\" ödülünün sahibi oldu.",
+      "desc_en": "Efe Yas Üzüm Raki, which introduced \"fresh grape raki\" to raki lovers in May 2005, quickly became the most sought-after flavor of raki tables. Produced from 100% fresh grapes, Efe Yas Üzüm Raki, which brings a breath of fresh air to the raki world as the first fresh grape raki brand, is distinguished by its \"First Love\" concept. \"First love\" means that Efe Fresh Grape Raki turns into a passion from the moment it is tasted for the first time. In the international competition attended by well-known spirits brands from all over the world, Efe Wet Grape Raki won the \"Double Gold Medal\" award, which is the highest level of gold medal in its class, by collecting the highest scores in categories such as taste, soft drink and smell.",
+      "status": "published",
+      "active": true
+    },
+    {
+      "id": 1720379892,
+      "slug": "dewars-white-label",
+      "name": "Dewar's White Label",
+      "country": "Scotland",
+      "category": "Blended Whisky",
+      "abv": "40%",
+      "year": 2024,
+      "qty": 1,
+      "image": "/images/uploads/18068282224554021.jpg",
+      "images": [
+        "/images/uploads/18068282224554021.jpg"
+      ],
+      "desc_tr": "Yumuşak, meyvemsi ve çok yönlü. Duman kıvrımı ile ince bir q. Dolu, dengeli ve tatmin edici, Dewar's White Label Harmanlanmış Scotch Viski.",
+      "desc_en": "Soft, fruity and well-rounded. A subtle sweetness with a curl of smoke. Full, balanced and satisfying,  Dewar’s White Label Blended Scotch Whisky.",
+      "status": "published",
+      "active": true
     }
   ]
 }
