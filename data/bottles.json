@@ -164,19 +164,19 @@
     },
     {
       "id": 1762693252,
-      "slug": "bottle-10",
-      "name": "Şişe #10",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "kirin-prime-brew-beer",
+      "name": "Kirin Prime Brew Beer",
+      "country": "Japan",
+      "category": "Beer",
+      "abv": "5%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18025989302573931.jpg",
       "images": [
         "/images/uploads/18025989302573931.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Kirin Brewery tarafından üretilen Japonya'nın en meşhur bira markalarından biri olan Prime Brew, ilk sıkma malt özünden yapılmış lüks bir pilsner birasidir. Sadece en iyi maltan damıtılan bu bira, çok ince ve temiz bir tat profili sunarken, klasik pilsner karakterinin hafif ve ferah bir versiyonunu yeğlenmiş tüketicilere sunmaktadır.",
+      "desc_en": "Kirin Prime Brew, produced by Kirin Brewery, is one of Japan's most renowned beer brands and a luxury pilsner crafted from the first press of premium malt. Brewed exclusively from the finest malt for a crisp, delicate taste, this beer offers a refined and refreshing interpretation of classic pilsner character for discerning consumers.",
       "status": "draft",
       "active": false
     },
