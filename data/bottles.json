@@ -38,19 +38,19 @@
     },
     {
       "id": 1762693380,
-      "slug": "viljamovka",
-      "name": "Viljamovka",
+      "slug": "viljamovka-rakija-od-voca",
+      "name": "Viljamovka Rakija od Voca",
       "country": "Serbia",
       "category": "Rakı",
-      "abv": "40%",
+      "abv": "42%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/17991038684722622.jpg",
       "images": [
         "/images/uploads/17991038684722622.jpg"
       ],
-      "desc_tr": "Sırpça kökenli Viljamovka, William armudundan üretilen geleneksel bir rakıdır. Zarif aroması, meyve karakteri ve yumuşak yapısıyla ayırt edici bir içkidir. Balkanlarda yüksek saygınlığa sahip bu rakı, klassik bir rakı deneyimi sunar.",
-      "desc_en": "Viljamovka is a traditional rakı from Serbia, distilled from Williams pears. Distinguished by its elegant aroma, fruity character, and smooth profile. This rakı, highly respected in the Balkans, offers a classic rakı experience with distinctive pear notes.",
+      "desc_tr": "Sırbistan'ın ünlü William armut rakısı olan Viljamovka, geleneksel üretim yöntemleriyle hazırlanan yüksek kaliteli bir destile işkembesüdür. Yumuşak, meyvemsi aromaları ve armut çiçeğinin karakteristik notaları ile tat almanızı sağlayan bu rakı, Balkan bölgesinin en iyi örneklerinden birini temsil eder.",
+      "desc_en": "Viljamovka, Serbia's celebrated pear rakija, is a premium distilled spirit crafted using traditional methods. With its smooth, fruity aromas and distinctive pear blossom notes, this rakija represents one of the finest examples from the Balkan region, showcasing authentic regional character and craftsmanship.",
       "status": "draft",
       "active": false
     },
