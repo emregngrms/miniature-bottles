@@ -1571,10 +1571,10 @@
     },
     {
       "id": 1721163664,
-      "slug": "bottle-88",
-      "name": "Şişe #88",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "unicum",
+      "name": "Unicum",
+      "country": "Hungary",
+      "category": "Liqueur",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1582,8 +1582,8 @@
       "images": [
         "/images/uploads/17913086270974765.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Macaristan'ın efsanevi bitki likörü Unicum, 1790'dan beri Budapest'te üretilmektedir. Gizli formülüyle hazırlanan bu ikonik içecek, 40 çeşit otun karışımından oluşan kompleks ve hafif acı tadı ile dikkat çeker. Keskin ve aromatik karakteri, hem neat içilmeye hem de kokteylerde kullanılmaya uygundur.",
+      "desc_en": "Hungary's legendary herbal liqueur Unicum has been produced in Budapest since 1790. Crafted with a secret formula, this iconic spirit features a complex and subtly bitter taste from a blend of 40 different herbs. Its sharp and aromatic character makes it suitable for enjoying neat or in cocktails.",
       "status": "draft",
       "active": false
     },
