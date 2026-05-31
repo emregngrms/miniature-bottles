@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://miniaturebottles5cl.netlify.app/sitemap.xml
+Sitemap: https://miniaturebottles5cl.com/sitemap.xml
