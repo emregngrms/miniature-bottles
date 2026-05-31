@@ -237,7 +237,7 @@ function renderBottleCard(b){
       <div class="overlay"></div>
       <div class="bcard-badges">
         <span class="badge-cat">${catName(b.category)}</span>
-        ${b.qty>1?`<span class="badge-swap">${svgSwap()}TAKAS</span>`:''}
+        ${b.qty>1?`<span class="badge-swap">${svgSwap()}${t("TAKAS","TRADE")}</span>`:''}
       </div>
       ${b.qty>1?`<span class="badge-qty">×${b.qty}</span>`:''}
       <span class="badge-abv">${b.abv}</span>
@@ -259,7 +259,7 @@ function renderBottleRow(b){
         <div class="brow-tags">
           <span class="brow-name">${b.name}</span>
           <span class="tag-blue">${catName(b.category)}</span>
-          ${b.qty>1?`<span class="tag-green">${svgSwap()}TAKAS</span>`:''}
+          ${b.qty>1?`<span class="tag-green">${svgSwap()}${t("TAKAS","TRADE")}</span>`:''}
         </div>
         <div class="brow-sub">${flag(b.country)} ${b.country} · ${b.abv} · ${b.year}${cc>0?` · <span style="color:#d4a843">${cc} ${t('kokteyl','cocktail')}</span>`:''}</div>
       </div>
@@ -347,7 +347,7 @@ function renderBottleDetail(b){
         <div class="detail-badges">
           <span class="tag-blue" style="font-size:11px;padding:4px 10px;border-radius:8px">${catName(b.category)}</span>
           <span style="background:rgba(212,168,67,.12);color:#d4a843;font-size:11px;padding:4px 10px;border-radius:8px">${b.abv}</span>
-          ${b.qty>1?`<span class="tag-green" style="font-size:11px;padding:4px 10px;border-radius:8px">${svgSwap()} TAKAS</span>`:''}
+          ${b.qty>1?`<span class="tag-green" style="font-size:11px;padding:4px 10px;border-radius:8px">${svgSwap()} ${t("TAKAS","TRADE")}</span>`:''}
         </div>
         <h1 class="detail-title">${b.name}</h1>
         <div class="detail-sub">${flag(b.country)} ${b.country} · ${b.year}</div>
