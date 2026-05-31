@@ -2201,19 +2201,19 @@
     },
     {
       "id": 1720383094,
-      "slug": "bottle-123",
-      "name": "Şişe #123",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "yeni-raki",
+      "name": "Yeni Rakı",
+      "country": "Turkey",
+      "category": "Rakı",
+      "abv": "45%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17929781789902842.jpg",
       "images": [
         "/images/uploads/17929781789902842.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Türkiye'nin en ünlü rakı markalarından biri olan Yeni Rakı, anisli bir ruh içeceğidir ve geleneksel Türk kültürünün ayrılmaz parçasıdır. Su ile karıştırıldığında beyaza dönen bu rakı, yoğun anise aroması ve pürüzsüz içim karakteri ile ünlüdür. Koleksiyoncular için bu miniature şişe, klasik Türk spiritinin nostalojik bir parçasıdır.",
+      "desc_en": "Yeni Rakı is one of Turkey's most iconic spirit brands, a traditional anise-flavored spirit that is deeply rooted in Turkish culture. When mixed with water, it turns milky white and is celebrated for its pronounced anise aroma and smooth, balanced character. This miniature bottle represents a nostalgic piece of classic Turkish distilling heritage for collectors.",
       "status": "draft",
       "active": false
     },
