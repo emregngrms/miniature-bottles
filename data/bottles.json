@@ -2021,19 +2021,19 @@
     },
     {
       "id": 1720386393,
-      "slug": "bottle-113",
-      "name": "Şişe #113",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "kuemmerling",
+      "name": "Kuemmerling",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "35%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17929860929791772.jpg",
       "images": [
         "/images/uploads/17929860929791772.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Almanya'nın Bodenheim bölgesinden gelen Kuemmerling, aromatik otlar ve bitkilerin karışımıyla hazırlanan geleneksel bir likördür. Yoğun ve kompleks tat profiliyle, soğuk içildiğinde veya digestif olarak tercih edilen bu ürün, Alman likör kültürünün önemli bir temsilcisidir.",
+      "desc_en": "Originating from Bodenheim, Germany, Kuemmerling is a traditional herbal liqueur crafted from a blend of aromatic herbs and botanicals. With its rich and complex flavor profile, this spirit is best enjoyed chilled or as a digestif, representing an important part of German liqueur heritage.",
       "status": "draft",
       "active": false
     },
