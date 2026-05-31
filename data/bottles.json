@@ -1643,19 +1643,19 @@
     },
     {
       "id": 1720386905,
-      "slug": "bottle-92",
-      "name": "Şişe #92",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "wodka-kirsch-likor",
+      "name": "Wodka-Kirsch-Likör",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "16%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18013618064423000.jpg",
       "images": [
         "/images/uploads/18013618064423000.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Almanya'nın Kapselrodeck bölgesindeki Brennerei Weisenbach tarafından üretilen bu likör, vodka ve kiraz aromasının zarif bir kombinasyonudur. İnce kiraz aromatiği ve yumuşak karakteriyle, klasik Alman likörü koleksiyonlarının sevilen bir parçasıdır.",
+      "desc_en": "Produced by Brennerei Weisenbach in Kapselrodeck, Germany, this liqueur is an elegant combination of vodka and cherry aroma. With its delicate cherry character and smooth profile, it remains a cherished piece of classic German liqueur collections.",
       "status": "draft",
       "active": false
     },
