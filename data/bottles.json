@@ -1913,10 +1913,10 @@
     },
     {
       "id": 1720386537,
-      "slug": "bottle-107",
-      "name": "Şişe #107",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "holloways-dry-gin",
+      "name": "Holloway's Dry Gin",
+      "country": "Cyprus",
+      "category": "Gin",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1924,8 +1924,8 @@
       "images": [
         "/images/uploads/18406519171077032.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Kıbrıs'ta üretilen bu klasik dry gin, 1975'ten beri damıtılmakta ve Selim & Son Co. Ltd. tarafından şişelenmektedir. Geleneksel botaniklerle yapılan bu ürün, saf ve kurumaş bir profil sunarak klasik gin kokteyllerine mükemmel uyum sağlar.",
+      "desc_en": "This classic dry gin from Cyprus has been distilled since 1975 and bottled by Selim & Son Co. Ltd. Crafted with traditional botanicals, it offers a clean and dry profile that pairs perfectly with classic gin cocktails and serves as an excellent base spirit.",
       "status": "draft",
       "active": false
     },
