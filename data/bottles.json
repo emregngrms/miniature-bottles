@@ -9,14 +9,9 @@
       "abv": "40%",
       "year": 2026,
       "qty": 1,
-      "image": "/images/uploads/18092933678288206.jpg",
-      "images": [
-        "/images/uploads/18092933678288206.jpg"
-      ],
-      "desc_tr": "",
-      "desc_en": "",
-      "status": "published",
-      "active": true
+      "image": "",
+      "desc_tr": "Arnavutluk'un köklü rakı geleneğini temsil eden Skenderbeu Rrushi, 40° alkol oranıyla karakteristik anason aroması ve sıcak baharat notaları sunuyor. Balkan toprağında yetişen üzümlerden üretilen bu rakı, keskin ve tatlımsı profiliyle damağında uzun bir izlenim bırakır.",
+      "desc_en": "Skenderbeu's Rrushi represents Albania's distilling heritage with a distinctive anise aroma and warming spice notes at 40% ABV. Crafted from regional grapes, this Balkan spirit delivers a sharp yet balanced character with a lingering finish that captures the essence of traditional Albanian rakı production."
     },
     {
       "id": 1768055776,
