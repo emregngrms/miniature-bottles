@@ -1445,10 +1445,10 @@
     },
     {
       "id": 1721415628,
-      "slug": "bottle-81",
-      "name": "Şişe #81",
-      "country": "Diğer",
-      "category": "Diğer",
+      "slug": "busnel-calvados-pays-dauge",
+      "name": "Busnel Calvados Pays d'Auge",
+      "country": "France",
+      "category": "Calvados",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1456,8 +1456,8 @@
       "images": [
         "/images/uploads/17849776620250212.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Normandiya bölgesinin prestijli Pays d'Auge sahası'ndan gelen bu Calvados, elma şaraplarının distilasyonuyla elde edilir. Busnel markası geleneksel üretim yöntemlerine sadık kalarak, kompleks aromaları ve yumuşak karakter ile bilinir. Tarihsel kalitesi ve otantik Fransız espirisi koleksiyonculuların tercih ettikleri bir içkidir.",
+      "desc_en": "This Calvados hails from the prestigious Pays d'Auge region of Normandy, crafted through the distillation of apple ciders. The Busnel brand maintains commitment to traditional production methods, offering complex aromatics and a smooth character. A historically esteemed spirit prized by collectors for its authentic French heritage and quality craftsmanship.",
       "status": "draft",
       "active": false
     },
