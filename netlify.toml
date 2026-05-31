@@ -2,6 +2,9 @@
   publish = "."
   functions = "netlify/functions"
 
+[build.environment]
+  URL = "https://miniaturebottles5cl.com"
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -16,6 +19,12 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
     Cache-Control = "no-store, no-cache"
+
+[[redirects]]
+  from = "https://miniaturebottles5cl.netlify.app/*"
+  to = "https://miniaturebottles5cl.com/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/admin"
