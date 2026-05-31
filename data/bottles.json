@@ -1877,19 +1877,19 @@
     },
     {
       "id": 1720386631,
-      "slug": "bottle-105",
-      "name": "Şişe #105",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "cyprus-bitter",
+      "name": "Cyprus Bitter",
+      "country": "Cyprus",
+      "category": "Liqueur",
+      "abv": "32%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18030650254942244.jpg",
       "images": [
         "/images/uploads/18030650254942244.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Kıbrıs'ın Jamagusta şehrinde üretilen, Aphrodite Denizi'nden ilham alan bu bitter likörü, geleneksel formülasyonuyla bilinir. Yoğun ve karmaşık aroması ile kokteyllerde veya saf olarak içilebilen, Kıbrıs'ın otantik tatlarını yansıtan bir içkidir.",
+      "desc_en": "Produced in Famagusta, Cyprus, this bitter liqueur draws inspiration from the Aphrodite Sea and is known for its traditional formulation. With its intense and complex aroma, it can be enjoyed in cocktails or neat, reflecting the authentic flavors of Cyprus.",
       "status": "draft",
       "active": false
     },
