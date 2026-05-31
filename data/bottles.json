@@ -1715,19 +1715,19 @@
     },
     {
       "id": 1720386848,
-      "slug": "bottle-96",
-      "name": "Şişe #96",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "gordons-vodka",
+      "name": "Gordon's Vodka",
+      "country": "USA",
+      "category": "Vodka",
+      "abv": "80 proof (40%)",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17864846706159782.jpg",
       "images": [
         "/images/uploads/17864846706159782.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Gordon's Vodka, 1769 yılından beri üretilen ünlü İngiliz markasının Amerikan üretimi olan bu viski alternatifidir. \"Smoothest Most Mixable\" (En Pürüzsüz En Karışabilir) sloganıyla pazarlanan bu vodka, klasik kokteyllerde kullanım için tasarlanmıştır. Koleksiyonerlerin önemsediği vintage etiket tasarımı ve eski üretim tarihi, bu şişeyi tarihi bir değer taşır.",
+      "desc_en": "Gordon's Vodka, an American-produced version of the renowned British brand established in 1769. Marketed as the \"Smoothest Most Mixable\" vodka, it was specifically designed for use in classic cocktails. The vintage label design and production history make this miniature a notable collector's item with historical significance.",
       "status": "draft",
       "active": false
     },
