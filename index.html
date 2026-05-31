@@ -203,8 +203,8 @@ async function loadData() {
       fetch('/data/cocktails.json').then(r=>r.json()),
       fetch('/data/categories.json').then(r=>r.json()).catch(()=>({items:[]}))
     ]);
-    bottles = b.items || b;
-    cocktails = c.items || c;
+    bottles = (b.items || b).filter(x => x.active !== false);
+    cocktails = (c.items || c).filter(x => x.active !== false);
     categories = (cats.items || cats || []);
   } catch(e) { console.error('Load error:', e); }
   render();

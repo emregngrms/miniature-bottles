@@ -333,14 +333,17 @@ function renderBottles(){
       </div>
     </div>
     <div class="table-wrap">
-      <div class="trow bottle-cols thead"><div></div><div>Şişe</div><div>Kategori</div><div>Adet</div><div>ABV</div><div style="text-align:right">İşlem</div></div>
+      <div class="trow bottle-cols thead"><div></div><div>Şişe</div><div>Kategori</div><div>Adet</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
       ${!list.length?`<div class="empty"><div class="empty-ico">🫗</div>Sonuç yok</div>`:''}
       ${list.map(b=>`<div class="trow bottle-cols">
         <div>${b.image?`<img class="row-img" src="${esc(b.image)}" loading="lazy" onerror="this.style.opacity='.3'"/>`:`<div class="row-ph">🥃</div>`}</div>
         <div><div class="rname">${esc(b.name)}</div><div class="rmeta">${esc(FLAGS[b.country]||'🌍')} ${esc(b.country)} · ${esc(b.year)}</div></div>
         <div><span class="tag tag-b">${esc(b.category)}</span></div>
         <div>${b.qty>1?`<span class="qty-b">×${esc(b.qty)}</span>`:`<span style="color:var(--sub)">1</span>`}</div>
-        <div style="font-size:12px;color:var(--sub)">${esc(b.abv)}</div>
+        <div>${b.active===false
+          ? `<button onclick="toggleActive('bottle','${esc(b.slug)}')" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(224,92,92,.3);background:rgba(224,92,92,.1);color:#e05c5c;font-size:11px;font-weight:600;cursor:pointer">Pasif</button>`
+          : `<button onclick="toggleActive('bottle','${esc(b.slug)}')" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(82,201,122,.3);background:rgba(82,201,122,.1);color:#52c97a;font-size:11px;font-weight:600;cursor:pointer">Aktif</button>`
+        }</div>
         <div class="row-acts">
           <button class="btn btn-ghost btn-sm" onclick="openEditBottle('${esc(b.slug)}')">Düzenle</button>
           <button class="btn btn-danger btn-sm" onclick="confirmDelBottle('${esc(b.slug)}')">Sil</button>
@@ -453,14 +456,17 @@ function renderCategories(){
       <button class="btn btn-primary" onclick="openAddCat()">+ Kategori Ekle</button>
     </div>
     <div class="table-wrap">
-      <div class="trow cat-cols thead"><div>Türkçe</div><div>İngilizce</div><div>Şişe</div><div style="text-align:right">İşlem</div></div>
+      <div class="trow cat-cols thead"><div>Türkçe</div><div>İngilizce</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
       ${!categories.length?`<div class="empty"><div class="empty-ico">📋</div>Henüz kategori yok</div>`:''}
       ${categories.map(c=>{
         const cnt=bottles.filter(b=>b.category===c.name_en).length;
         return`<div class="trow cat-cols">
           <div style="font-weight:600">${esc(c.name_tr)}</div>
           <div style="color:var(--mid)">${esc(c.name_en)}</div>
-          <div><span class="tag tag-b">${esc(cnt)} şişe</span></div>
+          <div>${c.active===false
+            ? `<button onclick="toggleActive('cat',${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(224,92,92,.3);background:rgba(224,92,92,.1);color:#e05c5c;font-size:11px;font-weight:600;cursor:pointer">Pasif</button>`
+            : `<button onclick="toggleActive('cat',${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(82,201,122,.3);background:rgba(82,201,122,.1);color:#52c97a;font-size:11px;font-weight:600;cursor:pointer">Aktif</button>`
+          }</div>
           <div class="row-acts">
             <button class="btn btn-ghost btn-sm" onclick="openEditCat(${c.id})">Düzenle</button>
             <button class="btn btn-danger btn-sm" onclick="confirmDelCat(${c.id})">Sil</button>
@@ -518,13 +524,16 @@ function renderCocktails(){
       </div>
     </div>
     <div class="table-wrap">
-      <div class="trow cocktail-cols thead"><div></div><div>Kokteyl</div><div>Zorluk</div><div>Süre</div><div style="text-align:right">İşlem</div></div>
+      <div class="trow cocktail-cols thead"><div></div><div>Kokteyl</div><div>Zorluk</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
       ${!list.length?`<div class="empty"><div class="empty-ico">🍹</div>Kokteyl yok</div>`:''}
       ${list.map(c=>`<div class="trow cocktail-cols">
         <div>${c.image?`<img class="row-img" src="${esc(c.image)}" loading="lazy" onerror="this.style.opacity='.3'"/>`:`<div class="row-ph">🍹</div>`}</div>
         <div><div class="rname">${esc(c.name)}</div><div class="rmeta">${esc((c.slugs||[]).length)} şişe</div></div>
         <div><span class="tag ${c.diff==='Kolay'?'tag-gr':'tag-g'}">${esc(c.diff||'')}</span></div>
-        <div style="font-size:12px;color:var(--sub)">${esc(c.time||'')}</div>
+        <div>${c.active===false
+          ? `<button onclick="toggleActive('cocktail',${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(224,92,92,.3);background:rgba(224,92,92,.1);color:#e05c5c;font-size:11px;font-weight:600;cursor:pointer">Pasif</button>`
+          : `<button onclick="toggleActive('cocktail',${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(82,201,122,.3);background:rgba(82,201,122,.1);color:#52c97a;font-size:11px;font-weight:600;cursor:pointer">Aktif</button>`
+        }</div>
         <div class="row-acts">
           <button class="btn btn-ghost btn-sm" onclick="openEditCocktail(${c.id})">Düzenle</button>
           <button class="btn btn-danger btn-sm" onclick="confirmDelCocktail(${c.id})">Sil</button>
@@ -699,6 +708,30 @@ async function genAI() {
     btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg> AI ile Üret';
   }
 }
+
+// ── ACTIVE TOGGLE ─────────────────────────────────────────────────────────────
+async function toggleActive(type, id) {
+  if (type === 'bottle') {
+    const b = bottles.find(x => x.slug === id);
+    if (!b) return;
+    b.active = b.active === false ? true : false;
+    const ok = await saveBottles((b.active ? 'Activate' : 'Deactivate') + ': ' + b.name);
+    if (ok) renderBottles();
+  } else if (type === 'cocktail') {
+    const c = cocktails.find(x => x.id === id);
+    if (!c) return;
+    c.active = c.active === false ? true : false;
+    const ok = await saveCocktails((c.active ? 'Activate' : 'Deactivate') + ': ' + c.name);
+    if (ok) renderCocktails();
+  } else if (type === 'cat') {
+    const c = categories.find(x => x.id === id);
+    if (!c) return;
+    c.active = c.active === false ? true : false;
+    const ok = await saveCats((c.active ? 'Activate' : 'Deactivate') + ': ' + c.name_en);
+    if (ok) renderCategories();
+  }
+}
+
 // ── MODAL ─────────────────────────────────────────────────────────────────────
 function openModal(){document.getElementById('modal').style.display='flex';}
 function closeModal(){document.getElementById('modal').style.display='none';}
