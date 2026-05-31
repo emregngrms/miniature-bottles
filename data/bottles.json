@@ -416,19 +416,19 @@
     },
     {
       "id": 1757255628,
-      "slug": "bottle-24",
-      "name": "Şişe #24",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "hendricks-gin",
+      "name": "Hendrick's Gin",
+      "country": "Scotland",
+      "category": "Gin",
+      "abv": "44%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18072348251122497.jpg",
       "images": [
         "/images/uploads/18072348251122497.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "İskoçya'da üretilen Hendrick's, klasik botaniklerin yanı sıra salatalık ve gül suyu ile aromatize edilen benzersiz birgin'dir. Hafif, ferahlatıcı ve zarif profili ile premium gin severlerin favorisidir. Tonic su ile servis edildiğinde taze salatalık notaları ön plana çıkan sofistike bir içecektir.",
+      "desc_en": "Produced in Scotland, Hendrick's is a distinctive gin infused with cucumber and rose water alongside classic botanicals. With its light, refreshing and elegant profile, it is a favorite among premium gin enthusiasts. When served with tonic water, the fresh cucumber notes come to the forefront, creating a sophisticated beverage.",
       "status": "draft",
       "active": false
     },
