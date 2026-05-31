@@ -1049,19 +1049,19 @@
     },
     {
       "id": 1723998053,
-      "slug": "bottle-59",
-      "name": "Şişe #59",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "gold-crow",
+      "name": "Gold Crow",
+      "country": "USA",
+      "category": "Bourbon",
+      "abv": "86 proof (43%)",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17943563690854536.jpg",
       "images": [
         "/images/uploads/17943563690854536.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "The Old Craus Company tarafından Frankfort, Kentucky'de üretilen Gold Crow, Amerika'nın klasik bourbon whiskilerinden biridir. Hükümet denetimi altında bond'da şişelenen bu whiskey, export için özel olarak hazırlanmış ve National Distillers tarafından dağıtılmıştır. Tarihi bir ürün olarak koleksiyonerlerin ilgisini çekmektedir.",
+      "desc_en": "Gold Crow, produced by The Old Craus Company in Frankfort, Kentucky, is a classic American bourbon whiskey. Bottled in bond under government supervision specifically for export, this whiskey was distributed by National Distillers. As a historical product, it holds significant appeal for collectors of vintage spirits.",
       "status": "draft",
       "active": false
     },
