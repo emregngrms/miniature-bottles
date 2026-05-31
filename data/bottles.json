@@ -2130,18 +2130,18 @@
     {
       "id": 1720383182,
       "slug": "bottle-119",
-      "name": "Şişe #119",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "name": "Jägermeister",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "35%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17866732026154770.jpg",
       "images": [
         "/images/uploads/17866732026154770.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
+      "desc_tr": "Wolfenbüttel, Almanya'da 1878 yılından beri üretilen bu efsanevi bitki likörü, 56 farklı botanik malzemenin soğuk maceration yöntemiyle elde edilen özünden yapılmaktadır. Koyu yeşil rengindeki bu içecek, meyveli ve otlu notalarla beraber karakteristik tat profiline sahip olup, geleneksel Alman içki kültürünün simgesi haline gelmiştir.",
+      "desc_en": "This legendary herbal liqueur, produced since 1878 in Wolfenbüttel, Germany, is crafted from a macerated essence of 56 different botanical ingredients using the cold maceration method. With its distinctive dark green color and characteristic flavor profile featuring fruity and herbal notes, Jägermeister has become an iconic symbol of traditional German drinking culture.",
       "status": "draft",
       "active": false
     },
