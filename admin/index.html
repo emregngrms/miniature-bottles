@@ -602,9 +602,13 @@ function openBottleModal(b){
     <button class="btn btn-ghost" onclick="closeModal()">İptal</button>
     <button class="btn btn-primary" id="sbtn" onclick="saveBottle('${esc(b.slug)}','${isEdit}')">${isEdit?'Güncelle':'Ekle & Yayınla'}</button>`;
   // Init image list state BEFORE rendering (modal HTML uses b.images directly)
-  // Init image list — exclude blobs, include all real URLs
+  // Init image list — exclude blobs, fallback to b.image if needed
   const allImgs = b.images?.length ? b.images : (b.image ? [b.image] : []);
-  window._editImages = allImgs.filter(u => u && !u.startsWith('blob:'));
+  window._editImages = allImgs.filter(u => u && u.trim() && !u.startsWith('blob:'));
+  // Fallback: if filtered list is empty but b.image is valid, use it
+  if (!window._editImages.length && b.image && !b.image.startsWith('blob:')) {
+    window._editImages = [b.image];
+  }
   // Clear file input
   const fif = document.getElementById('fif');
   if(fif) fif.value = '';
