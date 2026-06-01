@@ -297,6 +297,7 @@ const COUNTRIES = [
 // ── STATE ─────────────────────────────────────────────────────────────────────
 let token=null, bottles=[], categories=[], cocktails=[], shas={}, currentPage='dashboard', sq='';
 let state={igFilter:''};
+function setState(patch){ Object.assign(state, patch); renderBottles(); }
 
 // ── AUTH ─────────────────────────────────────────────────────────────────────
 // ── CUSTOM AUTH ──────────────────────────────────────────────────────────────
@@ -576,12 +577,9 @@ function openBottleModal(b){
     <button class="btn btn-ghost" onclick="closeModal()">İptal</button>
     <button class="btn btn-primary" id="sbtn" onclick="saveBottle('${esc(b.slug)}','${isEdit}')">${isEdit?'Güncelle':'Ekle & Yayınla'}</button>`;
   // Init image list state BEFORE rendering (modal HTML uses b.images directly)
-  window._editImages = [];
-  if(b.images && b.images.length){
-    window._editImages = b.images.filter(u=>u && !u.startsWith('blob:'));
-  } else if(b.image){
-    window._editImages = [b.image];
-  }
+  // Init image list — exclude blobs, include all real URLs
+  const allImgs = b.images?.length ? b.images : (b.image ? [b.image] : []);
+  window._editImages = allImgs.filter(u => u && !u.startsWith('blob:'));
   // Clear file input
   const fif = document.getElementById('fif');
   if(fif) fif.value = '';
