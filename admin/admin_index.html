@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://identity.netlify.com https://netlify-identity-widget.netlify.com; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://netlify-identity-widget.netlify.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; connect-src 'self' https://*.netlify.com https://*.netlify.app;"/>
+<title>Admin — Miniature Bottles</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#060e28;--surface:#091530;--nav:#0a1838;--card:#0d1e42;--cardho:#102248;
+  --border:#1a2e5a;--borderhi:#2a4a8a;
+  --gold:#d4a843;--goldd:rgba(212,168,67,.14);
+  --blue:#5b8fff;--blued:rgba(91,143,255,.14);
+  --green:#52c97a;--greend:rgba(82,201,122,.12);
+  --red:#e05c5c;--redd:rgba(224,92,92,.12);
+  --text:#c8d8f0;--sub:#4a6490;--mid:#8aaad8;
+}
+html,body{min-height:100vh;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+/* Force hide Netlify Identity widget when admin is active */
+body.admin-active [data-netlify-identity-widget],
+body.admin-active .netlify-identity-widget,
+body.admin-active iframe[src*="identity"],
+body.admin-active iframe[src*="netlify-identity"] {
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+/* Hide signup in Netlify Identity widget */
+[data-netlify-identity-modal] .tabs .tab:last-child,
+[data-netlify-identity-modal] .btn-link,
+.netlify-identity-widget-iframe { }
+
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer}img{display:block}
+#login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+.login-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px;max-width:360px;width:100%;text-align:center}
+.login-logo{font-size:22px;color:var(--gold);font-style:italic;margin-bottom:6px}
+.login-sub{font-size:11px;color:var(--sub);letter-spacing:.18em;text-transform:uppercase;margin-bottom:32px}
+.btn-login{width:100%;padding:14px;background:linear-gradient(135deg,#1a3a8a,#2d5fd4);border:none;border-radius:12px;color:#fff;font-size:15px;font-weight:600}
+#app{display:none;min-height:100vh;flex-direction:column}
+header{background:var(--nav);border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
+.header-logo{font-size:15px;color:var(--gold);font-style:italic}
+.header-right{display:flex;align-items:center;gap:12px}
+.site-link{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:5px}
+.site-link:hover{color:var(--blue)}
+.btn-logout{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--sub);font-size:12px}
+.btn-logout:hover{border-color:var(--red);color:var(--red)}
+.layout{display:flex;flex:1}
+aside{width:196px;flex-shrink:0;background:var(--nav);border-right:1px solid var(--border);padding:16px 0;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 20px;color:var(--sub);font-size:13px;font-weight:500;cursor:pointer;border-left:3px solid transparent;transition:all .15s;user-select:none}
+.nav-item:hover{color:var(--text);background:rgba(91,143,255,.05)}
+.nav-item.active{color:var(--gold);border-left-color:var(--gold);background:var(--goldd)}
+.nav-badge{margin-left:auto;background:var(--border);color:var(--mid);font-size:10px;padding:1px 7px;border-radius:10px;font-weight:600}
+.nav-item.active .nav-badge{background:var(--goldd);color:var(--gold)}
+.nav-sep{height:1px;background:var(--border);margin:8px 16px}
+main{flex:1;padding:28px 32px;min-width:0}
+.page-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;gap:12px;flex-wrap:wrap}
+.page-title{font-size:20px;font-weight:700;color:var(--text)}
+.page-title span{color:var(--sub);font-size:13px;font-weight:400;margin-left:8px}
+.btn{padding:9px 18px;border-radius:10px;border:none;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all .15s;cursor:pointer}
+.btn-primary{background:linear-gradient(135deg,#1a3a8a,#2d5fd4);color:#fff}
+.btn-primary:hover{filter:brightness(1.1)}
+.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--mid)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn-danger{background:var(--redd);border:1px solid rgba(224,92,92,.25);color:var(--red)}
+.btn-danger:hover{background:rgba(224,92,92,.2)}
+.btn-sm{padding:6px 12px;font-size:12px;border-radius:8px}
+.header-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.search-wrap{position:relative}
+.search-wrap input{padding:8px 12px 8px 36px;background:var(--surface);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:13px;font-family:inherit;width:240px}
+.search-wrap input:focus{outline:none;border-color:var(--blue)}
+.search-wrap input::placeholder{color:var(--sub)}
+.search-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--sub);pointer-events:none}
+.table-wrap{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.trow{display:grid;align-items:center;padding:11px 16px;border-bottom:1px solid var(--border);gap:12px;transition:background .12s}
+.trow:last-child{border-bottom:none}
+.trow:hover:not(.thead){background:var(--cardho)}
+.thead{background:var(--surface);color:var(--sub);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.thead:hover{background:var(--surface)!important}
+.bottle-cols{grid-template-columns:48px 1fr 130px 60px 50px 100px}
+.cat-cols{grid-template-columns:1fr 1fr 80px 90px}
+.cocktail-cols{grid-template-columns:48px 1fr 90px 70px 100px}
+.row-img{width:40px;height:40px;border-radius:8px;object-fit:cover;background:var(--surface)}
+.row-ph{width:40px;height:40px;border-radius:8px;background:var(--surface);display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:18px}
+.rname{font-weight:600;color:var(--text);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rmeta{font-size:11px;color:var(--sub);margin-top:2px}
+.tag{display:inline-block;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:500;white-space:nowrap}
+.tag-b{background:var(--blued);color:var(--blue)}
+.tag-g{background:var(--goldd);color:var(--gold)}
+.tag-gr{background:var(--greend);color:var(--green)}
+.qty-b{width:26px;height:26px;border-radius:50%;background:var(--goldd);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.row-acts{display:flex;gap:5px;justify-content:flex-end}
+.empty{text-align:center;padding:48px 20px;color:var(--sub)}
+.empty-ico{font-size:40px;margin-bottom:10px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
+.stat-num{font-size:26px;font-weight:700;color:var(--gold);line-height:1}
+.stat-lbl{font-size:11px;color:var(--sub);margin-top:3px}
+.modal-ov{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;display:flex;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;backdrop-filter:blur(4px)}
+.modal{background:var(--card);border:1px solid var(--border);border-radius:20px;width:100%;max-width:620px;margin:auto}
+.modal-hd{padding:20px 24px 0;display:flex;align-items:center;justify-content:space-between}
+.modal-ttl{font-size:17px;font-weight:700;color:var(--text)}
+.modal-x{width:30px;height:30px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--sub);font-size:17px;display:flex;align-items:center;justify-content:center}
+.modal-x:hover{border-color:var(--red);color:var(--red)}
+.modal-bd{padding:18px 24px}
+.modal-ft{padding:0 24px 18px;display:flex;gap:8px;justify-content:flex-end}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.fg-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fg-full{grid-column:1/-1}
+label{font-size:11px;color:var(--sub);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+input,select,textarea{padding:9px 12px;background:var(--surface);border:1px solid var(--border);border-radius:9px;color:var(--text);font-size:13px;font-family:inherit;width:100%;transition:border-color .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+input::placeholder,textarea::placeholder{color:var(--sub)}
+select option{background:var(--card)}
+textarea{resize:vertical;min-height:72px;line-height:1.5}
+.hint{font-size:11px;color:var(--sub);margin-top:3px;line-height:1.4}
+.slug-pv{font-size:11px;color:var(--blue);margin-top:3px}
+.flag-pv{font-size:13px;margin-top:3px}
+.img-up{border:2px dashed var(--border);border-radius:12px;padding:16px;text-align:center;cursor:pointer;transition:all .15s}
+.img-up:hover{border-color:var(--blue);background:var(--blued)}
+.img-up input{display:none}
+.img-pv{width:100%;max-height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+.img-up-txt{color:var(--sub);font-size:12px}
+.img-up-txt strong{color:var(--blue)}
+.confirm-box{background:var(--redd);border:1px solid rgba(224,92,92,.3);border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:13px;color:var(--red)}
+.section-ttl{font-size:11px;color:var(--sub);letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:8px;margin-top:4px}
+.bottle-check-grid{display:flex;flex-direction:column;gap:5px;max-height:240px;overflow-y:auto;padding:2px;min-width:0}
+.bottle-check{display:flex;align-items:center;gap:8px;padding:7px 10px;background:var(--surface);border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:all .15s;width:100%;box-sizing:border-box}
+.bottle-check:hover{border-color:var(--blue)}
+.bottle-check.selected{border-color:var(--gold);background:var(--goldd)}
+.bottle-check img{width:28px;height:28px;border-radius:5px;object-fit:cover;flex-shrink:0}
+.bottle-check-name{font-size:12px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.toast{position:fixed;bottom:20px;right:20px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:8px;z-index:999;font-size:13px;box-shadow:0 8px 32px rgba(0,0,0,.5);animation:slideUp .25s ease;max-width:300px}
+.toast.ok{border-color:rgba(82,201,122,.4);color:var(--green)}
+.toast.err{border-color:rgba(224,92,92,.4);color:var(--red)}
+@keyframes slideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.fade{animation:fadeIn .2s ease}
+.spinner{width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .6s linear infinite;display:inline-block;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-full{display:flex;align-items:center;justify-content:center;padding:60px;gap:12px;color:var(--sub)}
+.security-badge{display:flex;align-items:center;gap:6px;padding:6px 12px;background:var(--greend);border:1px solid rgba(82,201,122,.2);border-radius:8px;font-size:11px;color:var(--green)}
+#sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:49;backdrop-filter:blur(2px)}
+@media(max-width:768px){
+  aside{display:flex;position:fixed;top:0;left:-210px;height:100vh;z-index:50;transition:left .25s ease;flex-direction:column}
+  aside.open{left:0}
+  #sidebar-overlay.visible{display:block}
+  #hamburger{display:flex!important}
+  .stats{grid-template-columns:1fr 1fr}
+  .fg-grid{grid-template-columns:1fr}
+  .bottle-cols{grid-template-columns:40px 1fr 60px 80px}
+  .cat-cols{grid-template-columns:1fr 1fr 80px}
+  .cocktail-cols{grid-template-columns:40px 1fr 80px}
+  main{padding:16px}
+  .search-wrap input{width:160px}
+}
+</style>
+</head>
+<body>
+
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">Miniature Bottles</div>
+    <div class="login-sub">Admin Panel</div>
+    <div class="fg" style="margin-bottom:12px">
+      <label style="text-align:left">E-posta</label>
+      <input type="email" id="login-email" placeholder="e-posta" autocomplete="email" onkeydown="if(event.key==='Enter')doLogin()"/>
+    </div>
+    <div class="fg" style="margin-bottom:20px">
+      <label style="text-align:left">Şifre</label>
+      <div style="position:relative">
+        <input type="password" id="login-pass" placeholder="••••••••" autocomplete="current-password"
+          onkeydown="if(event.key==='Enter')doLogin()"
+          style="padding-right:44px"/>
+        <button type="button" onclick="togglePass()" id="pass-eye"
+          style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#4a6490;cursor:pointer;font-size:16px;padding:0">
+          👁
+        </button>
+      </div>
+    </div>
+    <div id="login-err" style="display:none;color:#e05c5c;font-size:13px;margin-bottom:12px;text-align:center"></div>
+    <button class="btn-login" id="login-btn" onclick="doLogin()">Giriş Yap</button>
+  </div>
+</div>
+
+<div id="app">
+  <header>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button id="hamburger" onclick="toggleSidebar()" style="display:none;padding:7px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--sub);flex-direction:column;gap:4px;cursor:pointer">
+        <span style="display:block;width:18px;height:2px;background:currentColor;border-radius:2px"></span>
+        <span style="display:block;width:18px;height:2px;background:currentColor;border-radius:2px"></span>
+        <span style="display:block;width:18px;height:2px;background:currentColor;border-radius:2px"></span>
+      </button>
+      <div class="header-logo">🥃 Miniature Admin</div>
+    </div>
+    <div class="header-right">
+      <div class="security-badge" title="Git Gateway ile sunucu taraflı doğrulama aktif">🔒 Güvenli</div>
+      <a href="/" target="_blank" class="site-link">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Siteye Git
+      </a>
+      <button class="btn-logout" onclick="logout()">Çıkış</button>
+    </div>
+  </header>
+  <div id="sidebar-overlay" onclick="closeSidebar()"></div>
+  <div class="layout">
+    <aside>
+      <div class="nav-item active" id="nav-dashboard" onclick="showPage('dashboard')">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </div>
+      <div class="nav-sep"></div>
+      <div class="nav-item" id="nav-bottles" onclick="showPage('bottles')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l1 7H8L9 3z"/><path d="M8 10s-2 2-2 6a6 6 0 0 0 12 0c0-4-2-6-2-6"/></svg>
+        Şişeler
+        <span class="nav-badge" id="badge-bottles">0</span>
+      </div>
+      <div class="nav-item" id="nav-categories" onclick="showPage('categories')">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h8"/></svg>
+        Kategoriler
+        <span class="nav-badge" id="badge-cats">0</span>
+      </div>
+      <div class="nav-item" id="nav-cocktails" onclick="showPage('cocktails')">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 22h8M12 11v11M3 3l9 8 9-8H3z"/></svg>
+        Kokteyller
+        <span class="nav-badge" id="badge-cocktails">0</span>
+      </div>
+      <div class="nav-sep"></div>
+      <div class="nav-item" id="nav-drafts" onclick="showPage('drafts')">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Taslaklar
+        <span class="nav-badge" id="badge-drafts" style="background:rgba(224,92,92,.2);color:#e05c5c">0</span>
+      </div>
+    </aside>
+    <main id="page-content">
+      <div class="loading-full"><div class="spinner"></div> Yükleniyor…</div>
+    </main>
+  </div>
+</div>
+
+<div id="modal" style="display:none" class="modal-ov" onclick="closeModalOv(event)">
+  <div class="modal" id="modal-box">
+    <div class="modal-hd">
+      <div class="modal-ttl" id="modal-ttl"></div>
+      <button class="modal-x" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-bd" id="modal-bd"></div>
+    <div class="modal-ft" id="modal-ft"></div>
+  </div>
+</div>
+
+<script>
+// ── SECURITY: HTML escape — tüm user datası bu fonksiyondan geçecek ─────────
+function esc(s){ return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
+// ── CONSTANTS ────────────────────────────────────────────────────────────────
+const GIT = '/.netlify/git/github/contents/';
+const PATHS = { bottles:'data/bottles.json', cats:'data/categories.json', cocktails:'data/cocktails.json' };
+const FLAG_EMOJI = {
+  Scotland:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',England:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',Wales:'🏴󠁧󠁢󠁷󠁬󠁳󠁿',Ireland:'🇮🇪',USA:'🇺🇸',France:'🇫🇷',
+  Mexico:'🇲🇽',Italy:'🇮🇹',Germany:'🇩🇪',Venezuela:'🇻🇪',Spain:'🇪🇸',
+  Japan:'🇯🇵',Canada:'🇨🇦',Australia:'🇦🇺',Netherlands:'🇳🇱',Sweden:'🇸🇪',
+  Russia:'🇷🇺',Turkey:'🇹🇷',Greece:'🇬🇷',Cuba:'🇨🇺',Jamaica:'🇯🇲',
+  Barbados:'🇧🇧',Trinidad:'🇹🇹',Peru:'🇵🇪',Brazil:'🇧🇷',Argentina:'🇦🇷',
+  'South Africa':'🇿🇦',India:'🇮🇳',China:'🇨🇳',Taiwan:'🇹🇼',
+  'Czech Republic':'🇨🇿',Poland:'🇵🇱',Hungary:'🇭🇺',Austria:'🇦🇹',
+  Switzerland:'🇨🇭',Belgium:'🇧🇪',Portugal:'🇵🇹',Albania:'🇦🇱',
+  Denmark:'🇩🇰',Finland:'🇫🇮',Iceland:'🇮🇸',Serbia:'🇷🇸',Croatia:'🇭🇷',
+  Slovenia:'🇸🇮',Bosnia:'🇧🇦',Bulgaria:'🇧🇬',Romania:'🇷🇴',Ukraine:'🇺🇦',
+  Georgia:'🇬🇪',Armenia:'🇦🇲',Azerbaijan:'🇦🇿',Israel:'🇮🇱',Lebanon:'🇱🇧',
+  Morocco:'🇲🇦','South Korea':'🇰🇷',Vietnam:'🇻🇳',Thailand:'🇹🇭',
+  Singapore:'🇸🇬','New Zealand':'🇳🇿',Colombia:'🇨🇴',Chile:'🇨🇱',
+  Bolivia:'🇧🇴',Guatemala:'🇬🇹',Ecuador:'🇪🇨',Uruguay:'🇺🇾',
+  Philippines:'🇵🇭',Indonesia:'🇮🇩',Malaysia:'🇲🇾',Kazakhstan:'🇰🇿',
+  Egypt:'🇪🇬',Nigeria:'🇳🇬',Kenya:'🇰🇪','Diğer':'🌍'
+};
+const COUNTRY_ISO = FLAG_EMOJI;
+const FLAGS = FLAG_EMOJI;
+function getFlagEmoji(c){ const iso=COUNTRY_ISO[c]; return iso?`🏳`:'🌍'; }
+const COUNTRIES = [
+  'Albania','Argentina','Armenia','Australia','Austria','Azerbaijan',
+  'Barbados','Belgium','Bolivia','Bosnia','Brazil','Bulgaria',
+  'Canada','Chile','China','Colombia','Croatia','Cuba','Czech Republic',
+  'Denmark','Ecuador','Egypt','England','Ethiopia','Finland','France',
+  'Georgia','Germany','Greece','Guatemala','Hungary','Iceland','India',
+  'Indonesia','Ireland','Israel','Italy','Jamaica','Japan','Kazakhstan',
+  'Kenya','Latvia','Lebanon','Malaysia','Mexico','Morocco',
+  'Netherlands','New Zealand','Nigeria','Norway','Panama',
+  'Peru','Philippines','Poland','Portugal','Romania','Russia',
+  'Scotland','Serbia','Singapore','Slovenia','South Africa','South Korea',
+  'Spain','Sweden','Switzerland','Taiwan','Thailand','Trinidad',
+  'Turkey','Ukraine','Uruguay','USA','Venezuela','Vietnam','Wales','Diğer'
+];
+
+// ── STATE ─────────────────────────────────────────────────────────────────────
+let token=null, bottles=[], categories=[], cocktails=[], shas={}, currentPage='dashboard', sq='';
+
+// ── AUTH ─────────────────────────────────────────────────────────────────────
+// ── CUSTOM AUTH ──────────────────────────────────────────────────────────────
+function togglePass(){
+  const inp = document.getElementById('login-pass');
+  inp.type = inp.type === 'password' ? 'text' : 'password';
+}
+
+async function doLogin(){
+  const email = document.getElementById('login-email').value.trim();
+  const pass  = document.getElementById('login-pass').value;
+  const btn   = document.getElementById('login-btn');
+  const err   = document.getElementById('login-err');
+  if(!email||!pass){showErr('E-posta ve şifre gerekli');return;}
+  btn.disabled=true; btn.textContent='Giriş yapılıyor…'; err.style.display='none';
+  try{
+    const res = await fetch('/.netlify/identity/token',{
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:`grant_type=password&username=${encodeURIComponent(email)}&password=${encodeURIComponent(pass)}`
+    });
+    if(!res.ok){
+      const d=await res.json().catch(()=>({}));
+      throw new Error(d.error_description||d.msg||'Hatalı e-posta veya şifre');
+    }
+    const data=await res.json();
+    token=data.access_token;
+    sessionStorage.setItem('mb_token',token);
+    sessionStorage.setItem('mb_exp',Date.now()+(data.expires_in||3600)*1000);
+    showAdmin(); await loadAll();
+  }catch(e){
+    showErr(e.message);
+    btn.disabled=false; btn.textContent='Giriş Yap';
+  }
+}
+function showErr(msg){const e=document.getElementById('login-err');if(e){e.textContent=msg;e.style.display='block';}}
+function showAdmin(){
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('app').style.display='flex';
+}
+function logout(){
+  token=null;
+  sessionStorage.removeItem('mb_token');sessionStorage.removeItem('mb_exp');
+  document.getElementById('app').style.display='none';
+  document.getElementById('login-screen').style.display='flex';
+  document.getElementById('login-pass').value='';
+}
+// Restore session on page load
+(function(){
+  const t=sessionStorage.getItem('mb_token');
+  const exp=parseInt(sessionStorage.getItem('mb_exp')||'0');
+  if(t&&exp>Date.now()){token=t;showAdmin();loadAll();}
+})();
+
+// ── GIT API ───────────────────────────────────────────────────────────────────
+function u2b(s){return btoa(unescape(encodeURIComponent(s)));}
+function b2u(s){return decodeURIComponent(escape(atob(s.replace(/\n/g,''))));}
+async function gitGet(p){
+  const r=await fetch(GIT+p,{headers:{'Authorization':'Bearer '+token}});
+  if(!r.ok)return null;
+  const d=await r.json(); shas[p]=d.sha;
+  return JSON.parse(b2u(d.content));
+}
+async function gitPut(p,data,msg){
+  const body={message:msg,content:u2b(JSON.stringify(data,null,2))};
+  if(shas[p])body.sha=shas[p];
+  const r=await fetch(GIT+p,{method:'PUT',headers:{'Authorization':'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify(body)});
+  if(r.ok){const d=await r.json();shas[p]=d.content?.sha;return true;}
+  return false;
+}
+async function uploadImg(file){
+  return new Promise((res,rej)=>{
+    const fr=new FileReader();
+    fr.onload=async e=>{
+      const b64=e.target.result.split(',')[1];
+      const ext=file.name.split('.').pop().toLowerCase().replace(/[^a-z0-9]/g,'');
+      const fname=`images/uploads/${Date.now()}.${ext}`;
+      const r=await fetch(GIT+fname,{method:'PUT',headers:{'Authorization':'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({message:'Upload image',content:b64})});
+      if(r.ok){const d=await r.json();shas[fname]=d.content?.sha;res('/'+fname);}
+      else rej(new Error('Upload başarısız ('+r.status+')'));
+    };
+    fr.readAsDataURL(file);
+  });
+}
+
+// ── LOAD ──────────────────────────────────────────────────────────────────────
+async function loadAll(){
+  document.getElementById('page-content').innerHTML='<div class="loading-full"><div class="spinner"></div> Yükleniyor…</div>';
+  try{
+    const[b,c,ct]=await Promise.all([gitGet(PATHS.bottles),gitGet(PATHS.cats),gitGet(PATHS.cocktails)]);
+    bottles=(b?.items||b||[]);
+    cocktails=(ct?.items||ct||[]);
+    if(c){categories=c.items||c;}
+    else{categories=[...new Set(bottles.map(x=>x.category).filter(Boolean))].map((n,i)=>({id:i+1,name_en:n,name_tr:n}));await saveCats('Init');}
+    updateBadges();showPage(currentPage);
+  }catch(e){toast('Yüklenemedi: '+esc(e.message),'err');}
+}
+function updateBadges(){
+  const drafts = bottles.filter(b=>b.status==='draft');
+  document.getElementById('badge-bottles').textContent=bottles.filter(b=>b.status!=='draft').length;
+  document.getElementById('badge-cats').textContent=categories.length;
+  document.getElementById('badge-cocktails').textContent=cocktails.length;
+  document.getElementById('badge-drafts').textContent=drafts.length;
+}
+async function saveBottles(msg){const ok=await gitPut(PATHS.bottles,{items:bottles},msg);if(ok){updateBadges();toast('Kaydedildi ✓');}else toast('Hata','err');return ok;}
+async function saveCats(msg){const ok=await gitPut(PATHS.cats,{items:categories},msg);if(ok){updateBadges();toast('Kategoriler kaydedildi ✓');}else toast('Hata','err');return ok;}
+async function saveCocktails(msg){const ok=await gitPut(PATHS.cocktails,{items:cocktails},msg);if(ok){updateBadges();toast('Kaydedildi ✓');}else toast('Hata','err');return ok;}
+
+// ── NAV ───────────────────────────────────────────────────────────────────────
+function showPage(p){closeSidebar();
+  currentPage=p;sq='';
+  document.querySelectorAll('.nav-item').forEach(el=>el.classList.remove('active'));
+  document.getElementById('nav-'+p)?.classList.add('active');
+  ({dashboard:renderDashboard,bottles:renderBottles,categories:renderCategories,cocktails:renderCocktails,drafts:renderDrafts}[p]||renderDashboard)();
+}
+
+// ── DASHBOARD ─────────────────────────────────────────────────────────────────
+function renderDashboard(){
+  const extras=bottles.filter(b=>b.qty>1).length;
+  document.getElementById('page-content').innerHTML=`
+  <div class="fade">
+    <div class="page-header"><div class="page-title">Dashboard</div></div>
+    <div class="stats" style="grid-template-columns:repeat(5,1fr)">
+      <div class="stat-card"><div class="stat-num">${esc(bottles.length)}</div><div class="stat-lbl">Toplam Şişe</div></div>
+      <div class="stat-card"><div class="stat-num" style="color:var(--green)">${esc(extras)}</div><div class="stat-lbl">Fazlalık / Takas</div></div>
+      <div class="stat-card" onclick="showPage('drafts')" style="cursor:pointer"><div class="stat-num" style="color:var(--red)">${esc(bottles.filter(b=>b.status==='draft').length)}</div><div class="stat-lbl">Taslak</div></div>
+      <div class="stat-card"><div class="stat-num" style="color:var(--blue)">${esc(cocktails.length)}</div><div class="stat-lbl">Kokteyl Tarifi</div></div>
+      <div class="stat-card"><div class="stat-num" style="color:var(--mid)">${esc(categories.length)}</div><div class="stat-lbl">Kategori</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+      <button class="btn btn-primary" onclick="showPage('bottles');setTimeout(openAddBottle,50)" style="justify-content:center;padding:14px">+ Yeni Şişe Ekle</button>
+      <button class="btn btn-ghost" onclick="showPage('cocktails');setTimeout(openAddCocktail,50)" style="justify-content:center;padding:14px">🍹 Yeni Kokteyl Ekle</button>
+    </div>
+    <div class="table-wrap" style="padding:18px">
+      <div class="section-ttl">Son Eklenenler</div>
+      ${bottles.slice(-5).reverse().map(b=>`
+        <div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--border)">
+          <img src="${esc(b.image)}" style="width:32px;height:32px;border-radius:6px;object-fit:cover" onerror="this.style.display='none'"/>
+          <div style="flex:1;min-width:0"><div style="font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(b.name)}</div>
+          <div style="font-size:11px;color:var(--sub)">${esc(b.category)}</div></div>
+        </div>`).join('')}
+    </div>
+  </div>`;
+}
+
+// ── BOTTLES ───────────────────────────────────────────────────────────────────
+function renderBottles(){
+  const q=sq.toLowerCase();
+  const published=bottles.filter(b=>b.status!=='draft');
+  const list=q?published.filter(b=>[b.name,b.country,b.category].some(s=>s?.toLowerCase().includes(q))):published;
+  document.getElementById('page-content').innerHTML=`
+  <div class="fade">
+    <div class="page-header">
+      <div class="page-title">Şişeler <span>${esc(published.length)} şişe</span></div>
+      <div class="header-actions">
+        <div class="search-wrap">
+          <svg class="search-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" placeholder="Ara…" value="${esc(sq)}" oninput="sq=this.value;renderBottles()"/>
+        </div>
+        <button class="btn btn-primary" onclick="openAddBottle()">+ Şişe Ekle</button>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <div class="trow bottle-cols thead"><div></div><div>Şişe</div><div>Kategori</div><div>Adet</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
+      ${!list.length?`<div class="empty"><div class="empty-ico">🫗</div>Sonuç yok</div>`:''}
+      ${list.map(b=>`<div class="trow bottle-cols">
+        <div>${b.image?`<img class="row-img" src="${esc(b.image)}" loading="lazy" onerror="this.style.opacity='.3'"/>`:`<div class="row-ph">🥃</div>`}</div>
+        <div><div class="rname">${esc(b.name)}</div><div class="rmeta">${FLAG_EMOJI[b.country]||""} ${esc(b.country)} · ${esc(b.year)}</div></div>
+        <div><span class="tag tag-b">${esc(b.category)}</span></div>
+        <div>${b.qty>1?`<span class="qty-b">×${esc(b.qty)}</span>`:`<span style="color:var(--sub)">1</span>`}</div>
+        <div>${b.active===false
+          ? `<button onclick="toggleActive('bottle','${esc(b.slug)}')" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(224,92,92,.3);background:rgba(224,92,92,.1);color:#e05c5c;font-size:11px;font-weight:600;cursor:pointer">Pasif</button>`
+          : `<button onclick="toggleActive('bottle','${esc(b.slug)}')" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(82,201,122,.3);background:rgba(82,201,122,.1);color:#52c97a;font-size:11px;font-weight:600;cursor:pointer">Aktif</button>`
+        }</div>
+        <div class="row-acts">
+          <button class="btn btn-ghost btn-sm" onclick="openEditBottle('${esc(b.slug)}')">Düzenle</button>
+          <button class="btn btn-danger btn-sm" onclick="confirmDelBottle('${esc(b.slug)}')">Sil</button>
+        </div>
+      </div>`).join('')}
+    </div>
+  </div>`;
+}
+
+// ── BOTTLE FORM ───────────────────────────────────────────────────────────────
+function slugify(s){return s.toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');}
+function openAddBottle(){openBottleModal(null);}
+function openEditBottle(slug){openBottleModal(bottles.find(b=>b.slug===slug));}
+
+function openBottleModal(b){
+  const isEdit=!!b;
+  b=b||{id:0,slug:'',name:'',country:'Scotland',category:'',abv:'',year:new Date().getFullYear(),qty:1,image:'',desc_tr:'',desc_en:''};
+  const catOpts=[...categories].sort((a,b)=>a.name_tr.localeCompare(b.name_tr,'tr')).map(c=>`<option value="${esc(c.name_en)}" ${b.category===c.name_en?'selected':''}>${esc(c.name_tr)} / ${esc(c.name_en)}</option>`).join('');
+  const cntOpts=COUNTRIES.map(c=>`<option value="${esc(c)}" ${b.country===c?'selected':''}>${esc(c)}</option>`).join('');
+  document.getElementById('modal-ttl').textContent=isEdit?'Şişe Düzenle':'Yeni Şişe Ekle';
+  document.getElementById('modal-bd').innerHTML=`
+  <div class="fg-grid">
+    <div class="fg fg-full" style="margin-bottom:4px">
+      <button type="button" id="ai-btn" onclick="genAI()" style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:linear-gradient(135deg,rgba(91,143,255,.15),rgba(212,168,67,.12));border:1px solid rgba(91,143,255,.4);border-radius:10px;color:#8aaad8;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg>
+        ✨ Görselden Tüm Alanları AI ile Doldur
+      </button>
+      <div id="ai-status" style="display:none;font-size:12px;color:#8aaad8;margin-top:6px;align-items:center;gap:6px"></div>
+    </div>
+    <div class="fg fg-full"><label>Şişe Adı *</label><input id="fn" value="${esc(b.name)}" placeholder="Glenfiddich 12" oninput="autoSlug()"/></div>
+    <div class="fg"><label>Slug (URL) *</label><input id="fs" value="${esc(b.slug)}" placeholder="glenfiddich-12"/><div class="slug-pv" id="spv">${b.slug?'/'+esc(b.slug):''}</div></div>
+    <div class="fg"><label>Ülke</label><select id="fc" onchange="updFlag()">${cntOpts}</select><div class="flag-pv" id="fpv">Bayrak: ${COUNTRY_ISO[b.country] ? '✓' : '?'} ${b.country||''}</div></div>
+    <div class="fg"><label>Kategori</label><select id="fcat"><option value="">— Seç —</option>${catOpts}</select><div class="hint">Yoksa önce Kategoriler'den ekle</div></div>
+    <div class="fg"><label>ABV</label><input id="fa" value="${esc(b.abv)}" placeholder="40%"/></div>
+    <div class="fg"><label>Yıl</label><input id="fy" type="number" value="${esc(b.year)}" min="2000" max="2099"/></div>
+    <div class="fg fg-full"><label>Adet <span style="color:var(--sub);font-weight:400">(1'den fazlaysa Fazlalıklar'da görünür)</span></label><input id="fq" type="number" value="${esc(b.qty)}" min="1" max="99"/></div>
+    <div class="fg fg-full">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+        <label>Fotoğraflar</label>
+        <button type="button" onclick="addMoreImg()" style="font-size:11px;padding:4px 10px;background:var(--blued);border:1px solid var(--blue);color:var(--blue);border-radius:7px;cursor:pointer">+ Görsel Ekle</button>
+      </div>
+      <div id="img-gallery" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+        ${(b.images&&b.images.length?b.images:[b.image]).filter(Boolean).map((img,idx)=>`
+          <div style="position:relative;width:80px;height:80px;flex-shrink:0" id="img-item-${idx}">
+            <img src="${esc(img)}" style="width:80px;height:80px;object-fit:cover;border-radius:8px;border:${idx===0?'2px solid var(--gold)':'1px solid var(--border)'}"/>
+            ${idx===0?'<span style="position:absolute;bottom:2px;left:2px;background:rgba(212,168,67,.9);color:#000;font-size:9px;padding:1px 4px;border-radius:4px;font-weight:700">ANA</span>':''}
+            <button onclick="removeImg(${idx})" style="position:absolute;top:-5px;right:-5px;width:18px;height:18px;border-radius:50%;background:var(--red);border:none;color:#fff;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1">×</button>
+          </div>`).join('')}
+      </div>
+      <div class="img-up" onclick="document.getElementById('fif').click()" id="iub">
+        <div class="img-up-txt"><strong>Tıkla</strong> veya URL gir</div>
+        <input type="file" id="fif" accept="image/*" multiple onchange="prevImgMulti(this)"/>
+      </div>
+      <input id="fiu" type="text" placeholder="https://… ekle" style="margin-top:6px" oninput="addImgFromUrl(this.value)"/>
+    </div>
+    <div class="fg fg-full" style="margin-bottom:2px">
+      <label>Açıklamalar</label>
+    </div>
+    <div class="fg fg-full"><label>Açıklama Türkçe</label><textarea id="fdt">${esc(b.desc_tr||'')}</textarea></div>
+    <div class="fg fg-full"><label>Açıklama İngilizce</label><textarea id="fde">${esc(b.desc_en||'')}</textarea></div>
+  </div>`;
+  document.getElementById('modal-ft').innerHTML=`
+    <button class="btn btn-ghost" onclick="closeModal()">İptal</button>
+    <button class="btn btn-primary" id="sbtn" onclick="saveBottle('${esc(b.slug)}','${isEdit}')">${isEdit?'Güncelle':'Ekle & Yayınla'}</button>`;
+  // Init image list state BEFORE rendering (modal HTML uses b.images directly)
+  window._editImages = [];
+  if(b.images && b.images.length){
+    window._editImages = b.images.filter(u=>u && !u.startsWith('blob:'));
+  } else if(b.image){
+    window._editImages = [b.image];
+  }
+  // Clear file input
+  const fif = document.getElementById('fif');
+  if(fif) fif.value = '';
+  const fiu = document.getElementById('fiu');
+  if(fiu) fiu.value = '';
+  openModal();
+  
+  // After modal opens, ensure select values match (in case option wasn't pre-selected)
+  setTimeout(()=>{
+    const fc = document.getElementById('fc');
+    const fcat = document.getElementById('fcat');
+    if(fc && b.country) fc.value = b.country;
+    if(fcat && b.category){
+      // Try exact match first
+      fcat.value = b.category;
+      // If not found, try case-insensitive match
+      if(!fcat.value){
+        for(const opt of fcat.options){
+          if(opt.value.toLowerCase() === b.category.toLowerCase()){
+            fcat.value = opt.value; break;
+          }
+        }
+      }
+    }
+    updFlag();
+  }, 50);
+}
+
+function removeImg(idx){
+  if(idx >= 0) window._editImages.splice(idx,1);
+  refreshGallery();
+}
+function addMoreImg(){document.getElementById('fif').click();}
+function prevImgMulti(input){
+  if(!input.files.length)return;
+  // Show previews but DON'T store blob URLs in _editImages
+  // Real URLs will be added when saveBottle uploads the files
+  for(const file of input.files){
+    const url=URL.createObjectURL(file);
+    // Store blob temporarily for preview only, marked with blob: prefix
+    // We'll upload and replace during save
+    if(!window._editImages.includes(url)) window._editImages.push(url);
+  }
+  refreshGallery();
+}
+function refreshGallery(){
+  const gallery=document.getElementById('img-gallery');
+  if(!gallery)return;
+  gallery.innerHTML=(window._editImages||[]).map((img,i)=>`
+    <div style="position:relative;width:80px;height:80px;flex-shrink:0">
+      <img src="${img}" style="width:80px;height:80px;object-fit:cover;border-radius:8px;border:${i===0?'2px solid var(--gold)':'1px solid var(--border)'}"/>
+      ${i===0?'<span style="position:absolute;bottom:2px;left:2px;background:rgba(212,168,67,.9);color:#000;font-size:9px;padding:1px 4px;border-radius:4px;font-weight:700">ANA</span>':''}
+      <button onclick="removeImg(${i})" style="position:absolute;top:-5px;right:-5px;width:18px;height:18px;border-radius:50%;background:#e05c5c;border:none;color:#fff;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center">×</button>
+    </div>`).join('');
+}
+function addImgFromUrl(url){
+  if(!url||!url.startsWith('http'))return;
+  if(!window._editImages.includes(url)){window._editImages.push(url);}
+  removeImg(-999);
+}
+
+function autoSlug(){const s=slugify(document.getElementById('fn').value);document.getElementById('fs').value=s;document.getElementById('spv').textContent=s?'/'+s:'';}
+function updFlag(){const c=document.getElementById('fc').value;document.getElementById('fpv').textContent=(FLAG_EMOJI[c]||'🌍')+' '+c;}
+function prevImg(input){
+  if(!input.files[0])return;
+  const url=URL.createObjectURL(input.files[0]);
+  const el=document.getElementById('ipv');
+  if(el.tagName==='IMG'){el.src=url;}else{el.outerHTML=`<img class="img-pv" id="ipv" src="${url}"/>`;}
+  document.getElementById('fiu').value='';
+}
+function updImgUrl(url){
+  if(!url)return;
+  const el=document.getElementById('ipv');
+  if(el.tagName==='IMG'){el.src=url;}else{el.outerHTML=`<img class="img-pv" id="ipv" src="${url}"/>`;}
+}
+
+async function saveBottle(oldSlug,isEdit){
+  const btn=document.getElementById('sbtn');
+  btn.disabled=true;btn.innerHTML='<div class="spinner"></div>';
+  const name=document.getElementById('fn').value.trim();
+  const slug=document.getElementById('fs').value.trim();
+  const country=document.getElementById('fc').value;
+  const category=document.getElementById('fcat').value;
+  const abv=document.getElementById('fa').value.trim();
+  const year=parseInt(document.getElementById('fy').value)||new Date().getFullYear();
+  const qty=parseInt(document.getElementById('fq').value)||1;
+  const desc_tr=document.getElementById('fdt').value.trim();
+  const desc_en=document.getElementById('fde').value.trim();
+  const imgFile=document.getElementById('fif').files[0];
+  let image=document.getElementById('fiu').value.trim();
+  if(!name||!slug){toast('Ad ve slug gerekli','err');btn.disabled=false;btn.textContent='Tekrar';return;}
+  if(imgFile){try{image=await uploadImg(imgFile);}catch(e){toast(esc(e.message),'err');btn.disabled=false;btn.textContent='Tekrar';return;}}
+  const entry={id:isEdit==='true'?(bottles.find(b=>b.slug===oldSlug)?.id||Date.now()):Date.now(),slug,name,country,category,abv,year,qty,image,desc_tr,desc_en};
+  if(isEdit==='true'){const i=bottles.findIndex(b=>b.slug===oldSlug);if(i>=0)bottles[i]=entry;else bottles.push(entry);}
+  else{if(bottles.find(b=>b.slug===slug)){toast('Bu slug zaten var','err');btn.disabled=false;btn.textContent='Tekrar';return;}bottles.push(entry);}
+  const ok=await saveBottles(isEdit==='true'?`Edit: ${name}`:`Add: ${name}`);
+  if(ok){closeModal();renderBottles();}else{btn.disabled=false;btn.textContent='Tekrar';}
+}
+
+function confirmDelBottle(slug){
+  const b=bottles.find(x=>x.slug===slug);if(!b)return;
+  document.getElementById('modal-ttl').textContent='Şişeyi Sil';
+  document.getElementById('modal-bd').innerHTML=`<div class="confirm-box">⚠️ <strong>${esc(b.name)}</strong> silinecek. Geri alınamaz.</div><div style="display:flex;align-items:center;gap:10px"><img src="${esc(b.image)}" style="width:52px;height:52px;border-radius:8px;object-fit:cover" onerror="this.style.display='none'"/><div><div style="font-weight:600">${esc(b.name)}</div><div style="font-size:12px;color:var(--sub)">${esc(b.category)} · ${esc(b.country)}</div></div></div>`;
+  document.getElementById('modal-ft').innerHTML=`<button class="btn btn-ghost" onclick="closeModal()">İptal</button><button class="btn btn-danger" onclick="delBottle('${esc(slug)}')">Evet, Sil</button>`;
+  openModal();
+}
+async function delBottle(slug){bottles=bottles.filter(b=>b.slug!==slug);const ok=await saveBottles('Delete: '+slug);if(ok){closeModal();renderBottles();}}
+
+// ── CATEGORIES ────────────────────────────────────────────────────────────────
+function renderCategories(){
+  document.getElementById('page-content').innerHTML=`
+  <div class="fade">
+    <div class="page-header">
+      <div class="page-title">Kategoriler <span>${esc(categories.length)} kategori</span></div>
+      <button class="btn btn-primary" onclick="openAddCat()">+ Kategori Ekle</button>
+    </div>
+    <div class="table-wrap">
+      <div class="trow cat-cols thead"><div>Türkçe</div><div>İngilizce</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
+      ${!categories.length?`<div class="empty"><div class="empty-ico">📋</div>Henüz kategori yok</div>`:''}
+      ${categories.map(c=>{
+        const cnt=bottles.filter(b=>b.category===c.name_en).length;
+        return`<div class="trow cat-cols">
+          <div style="font-weight:600">${esc(c.name_tr)}</div>
+          <div style="color:var(--mid)">${esc(c.name_en)}</div>
+          <div>${c.active===false
+            ? `<button onclick="toggleActive('cat',${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(224,92,92,.3);background:rgba(224,92,92,.1);color:#e05c5c;font-size:11px;font-weight:600;cursor:pointer">Pasif</button>`
+            : `<button onclick="toggleActive('cat',${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(82,201,122,.3);background:rgba(82,201,122,.1);color:#52c97a;font-size:11px;font-weight:600;cursor:pointer">Aktif</button>`
+          }</div>
+          <div class="row-acts">
+            <button class="btn btn-ghost btn-sm" onclick="openEditCat(${c.id})">Düzenle</button>
+            <button class="btn btn-danger btn-sm" onclick="confirmDelCat(${c.id})">Sil</button>
+          </div>
+        </div>`;
+      }).join('')}
+    </div>
+  </div>`;
+}
+
+function openAddCat(){openCatModal(null);}
+function openEditCat(id){openCatModal(categories.find(c=>c.id===id));}
+function openCatModal(c){
+  const isEdit=!!c;c=c||{id:0,name_tr:'',name_en:''};
+  document.getElementById('modal-ttl').textContent=isEdit?'Kategori Düzenle':'Yeni Kategori';
+  document.getElementById('modal-bd').innerHTML=`
+    <div class="fg"><label>Türkçe Ad *</label><input id="fctr" value="${esc(c.name_tr)}" placeholder="Tek Malt Viski"/></div>
+    <div class="fg"><label>İngilizce Ad *</label><input id="fcen" value="${esc(c.name_en)}" placeholder="Single Malt Whisky"/></div>`;
+  document.getElementById('modal-ft').innerHTML=`<button class="btn btn-ghost" onclick="closeModal()">İptal</button><button class="btn btn-primary" onclick="saveCat(${c.id},'${isEdit}')">${isEdit?'Güncelle':'Ekle'}</button>`;
+  openModal();setTimeout(()=>document.getElementById('fctr')?.focus(),50);
+}
+async function saveCat(id,isEdit){
+  const tr=document.getElementById('fctr').value.trim();
+  const en=document.getElementById('fcen').value.trim();
+  if(!tr||!en){toast('Her iki ad da gerekli','err');return;}
+  if(isEdit==='true'){const i=categories.findIndex(c=>c.id===id);if(i>=0)categories[i]={...categories[i],name_tr:tr,name_en:en};}
+  else{if(categories.find(c=>c.name_en.toLowerCase()===en.toLowerCase())){toast('Bu kategori zaten var','err');return;}categories.push({id:Date.now(),name_tr:tr,name_en:en});}
+  const ok=await saveCats(isEdit==='true'?`Edit cat: ${en}`:`Add cat: ${en}`);
+  if(ok){closeModal();renderCategories();}
+}
+function confirmDelCat(id){
+  const c=categories.find(x=>x.id===id);if(!c)return;
+  const cnt=bottles.filter(b=>b.category===c.name_en).length;
+  document.getElementById('modal-ttl').textContent='Kategori Sil';
+  document.getElementById('modal-bd').innerHTML=`<div class="confirm-box">⚠️ <strong>${esc(c.name_tr)} / ${esc(c.name_en)}</strong> silinecek.${cnt>0?`<br/><strong>${esc(cnt)} şişe</strong> kategorisiz kalacak.`:''}</div>`;
+  document.getElementById('modal-ft').innerHTML=`<button class="btn btn-ghost" onclick="closeModal()">İptal</button><button class="btn btn-danger" onclick="delCat(${id})">Evet, Sil</button>`;
+  openModal();
+}
+async function delCat(id){categories=categories.filter(c=>c.id!==id);const ok=await saveCats('Delete category');if(ok){closeModal();renderCategories();}}
+
+// ── COCKTAILS ─────────────────────────────────────────────────────────────────
+function renderCocktails(){
+  const q=sq.toLowerCase();
+  const list=q?cocktails.filter(c=>c.name?.toLowerCase().includes(q)):cocktails;
+  document.getElementById('page-content').innerHTML=`
+  <div class="fade">
+    <div class="page-header">
+      <div class="page-title">Kokteyller <span>${esc(cocktails.length)} tarif</span></div>
+      <div class="header-actions">
+        <div class="search-wrap">
+          <svg class="search-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" placeholder="Ara…" value="${esc(sq)}" oninput="sq=this.value;renderCocktails()"/>
+        </div>
+        <button class="btn btn-primary" onclick="openAddCocktail()">+ Kokteyl Ekle</button>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <div class="trow cocktail-cols thead"><div></div><div>Kokteyl</div><div>Zorluk</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
+      ${!list.length?`<div class="empty"><div class="empty-ico">🍹</div>Kokteyl yok</div>`:''}
+      ${list.map(c=>`<div class="trow cocktail-cols">
+        <div>${c.image?`<img class="row-img" src="${esc(c.image)}" loading="lazy" onerror="this.style.opacity='.3'"/>`:`<div class="row-ph">🍹</div>`}</div>
+        <div><div class="rname">${esc(c.name)}</div><div class="rmeta">${esc((c.slugs||[]).length)} şişe</div></div>
+        <div><span class="tag ${c.diff==='Kolay'?'tag-gr':'tag-g'}">${esc(c.diff||'')}</span></div>
+        <div>${c.active===false
+          ? `<button onclick="toggleActive('cocktail',${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(224,92,92,.3);background:rgba(224,92,92,.1);color:#e05c5c;font-size:11px;font-weight:600;cursor:pointer">Pasif</button>`
+          : `<button onclick="toggleActive('cocktail',${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(82,201,122,.3);background:rgba(82,201,122,.1);color:#52c97a;font-size:11px;font-weight:600;cursor:pointer">Aktif</button>`
+        }</div>
+        <div class="row-acts">
+          <button class="btn btn-ghost btn-sm" onclick="openEditCocktail(${c.id})">Düzenle</button>
+          <button class="btn btn-danger btn-sm" onclick="confirmDelCocktail(${c.id})">Sil</button>
+        </div>
+      </div>`).join('')}
+    </div>
+  </div>`;
+}
+
+function openAddCocktail(){openCocktailModal(null);}
+function openEditCocktail(id){openCocktailModal(cocktails.find(c=>c.id===id));}
+
+function openCocktailModal(c){
+  const isEdit=!!c;
+  c=c||{id:0,name:'',image:'',diff:'Kolay',diff_en:'Easy',time:'',slugs:[],ing_tr:[],ing_en:[],steps_tr:[],steps_en:[]};
+  const selSlugs=c.slugs||[];
+  const bottleChecks=bottles.map(b=>`
+    <div class="bottle-check ${selSlugs.includes(b.slug)?'selected':''}" id="bc-${esc(b.slug)}" onclick="toggleSlug('${esc(b.slug)}')">
+      ${b.image?`<img src="${esc(b.image)}" onerror="this.style.display='none'"/>`:''}
+      <span class="bottle-check-name">${esc(b.name)}</span>
+    </div>`).join('');
+  document.getElementById('modal-ttl').textContent=isEdit?'Kokteyl Düzenle':'Yeni Kokteyl';
+  document.getElementById('modal-bd').innerHTML=`
+  <div class="fg-grid">
+    <div class="fg fg-full">
+      <div style="display:flex;align-items:flex-end;gap:10px">
+        <div style="flex:1"><label>Kokteyl Adı *</label><input id="cn" value="${esc(c.name)}" placeholder="Old Fashioned" oninput="clearCocktailAI()"/></div>
+        <button type="button" id="cai-btn" onclick="genCocktailAI()" style="flex-shrink:0;display:flex;align-items:center;gap:6px;padding:10px 16px;background:linear-gradient(135deg,rgba(91,143,255,.2),rgba(212,168,67,.15));border:1px solid rgba(91,143,255,.35);border-radius:9px;color:#8aaad8;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg>
+          AI ile Doldur
+        </button>
+      </div>
+      <div id="cai-status" style="display:none;font-size:12px;color:#8aaad8;margin-top:6px;display:flex;align-items:center;gap:6px"></div>
+    </div>
+    <div class="fg"><label>Zorluk (TR)</label><select id="cd"><option value="Kolay" ${c.diff==='Kolay'?'selected':''}>Kolay</option><option value="Orta" ${c.diff==='Orta'?'selected':''}>Orta</option><option value="Zor" ${c.diff==='Zor'?'selected':''}>Zor</option></select></div>
+    <div class="fg"><label>Zorluk (EN)</label><select id="cde"><option value="Easy" ${c.diff_en==='Easy'?'selected':''}>Easy</option><option value="Medium" ${c.diff_en==='Medium'?'selected':''}>Medium</option><option value="Hard" ${c.diff_en==='Hard'?'selected':''}>Hard</option></select></div>
+    <div class="fg fg-full"><label>Süre</label><input id="ct" value="${esc(c.time)}" placeholder="5 dk"/></div>
+    <div class="fg fg-full"><label>Fotoğraf</label>
+      <div class="img-up" onclick="document.getElementById('cif').click()" id="ciub">
+        ${c.image?`<img class="img-pv" id="cipv" src="${esc(c.image)}"/>`:`<div id="cipv" style="font-size:32px;margin-bottom:6px">🍹</div>`}
+        <div class="img-up-txt"><strong>Tıkla</strong> veya URL gir</div>
+        <input type="file" id="cif" accept="image/*" onchange="prevCImg(this)"/>
+      </div>
+      <input id="ciu" type="text" value="${esc(c.image)}" placeholder="https://… ya da yükle" style="margin-top:6px" oninput="updCImgUrl(this.value)"/>
+    </div>
+    <div class="fg fg-full">
+      <label>Kullanılan Şişeler</label>
+      <div class="bottle-check-grid" id="slug-grid">${bottleChecks}</div>
+    </div>
+    <div class="fg fg-full"><label>Malzemeler TR <span style="color:var(--sub);font-weight:400">(her satıra bir malzeme)</span></label><textarea id="cit" rows="5">${esc((c.ing_tr||[]).join('\n'))}</textarea></div>
+    <div class="fg fg-full"><label>Malzemeler EN</label><textarea id="cie" rows="5">${esc((c.ing_en||[]).join('\n'))}</textarea></div>
+    <div class="fg fg-full"><label>Hazırlanış TR <span style="color:var(--sub);font-weight:400">(her satıra bir adım)</span></label><textarea id="cst" rows="5">${esc((c.steps_tr||[]).join('\n'))}</textarea></div>
+    <div class="fg fg-full"><label>Hazırlanış EN</label><textarea id="cse" rows="5">${esc((c.steps_en||[]).join('\n'))}</textarea></div>
+  </div>`;
+  document.getElementById('modal-ft').innerHTML=`<button class="btn btn-ghost" onclick="closeModal()">İptal</button><button class="btn btn-primary" id="csbtn" onclick="saveCocktail(${c.id},'${isEdit}')">${isEdit?'Güncelle':'Ekle & Yayınla'}</button>`;
+  openModal();
+}
+
+function toggleSlug(slug){
+  const el=document.getElementById('bc-'+slug);
+  if(!el)return;
+  el.classList.toggle('selected');
+}
+function prevCImg(input){
+  if(!input.files[0])return;
+  const url=URL.createObjectURL(input.files[0]);
+  const el=document.getElementById('cipv');
+  if(el.tagName==='IMG'){el.src=url;}else{el.outerHTML=`<img class="img-pv" id="cipv" src="${url}"/>`;}
+  document.getElementById('ciu').value='';
+}
+function updCImgUrl(url){
+  if(!url)return;
+  const el=document.getElementById('cipv');
+  if(el.tagName==='IMG'){el.src=url;}else{el.outerHTML=`<img class="img-pv" id="cipv" src="${url}"/>`;}
+}
+
+async function saveCocktail(oldId,isEdit){
+  const btn=document.getElementById('csbtn');
+  btn.disabled=true;btn.innerHTML='<div class="spinner"></div>';
+  const name=document.getElementById('cn').value.trim();
+  if(!name){toast('Kokteyl adı gerekli','err');btn.disabled=false;btn.textContent='Tekrar';return;}
+  const diff=document.getElementById('cd').value;
+  const diff_en=document.getElementById('cde').value;
+  const time=document.getElementById('ct').value.trim();
+  const imgFile=document.getElementById('cif').files[0];
+  let image=document.getElementById('ciu').value.trim();
+  if(imgFile){try{image=await uploadImg(imgFile);}catch(e){toast(esc(e.message),'err');btn.disabled=false;btn.textContent='Tekrar';return;}}
+  const slugs=[...document.querySelectorAll('#slug-grid .bottle-check.selected')].map(el=>el.id.replace('bc-',''));
+  const lines=t=>t.split('\n').map(s=>s.trim()).filter(Boolean);
+  const ing_tr=lines(document.getElementById('cit').value);
+  const ing_en=lines(document.getElementById('cie').value);
+  const steps_tr=lines(document.getElementById('cst').value);
+  const steps_en=lines(document.getElementById('cse').value);
+  const entry={id:isEdit==='true'?(oldId||Date.now()):Date.now(),name,image,diff,diff_en,time,slugs,ing_tr,ing_en,steps_tr,steps_en};
+  if(isEdit==='true'){const i=cocktails.findIndex(c=>c.id===oldId);if(i>=0)cocktails[i]=entry;else cocktails.push(entry);}
+  else cocktails.push(entry);
+  const ok=await saveCocktails(isEdit==='true'?`Edit cocktail: ${name}`:`Add cocktail: ${name}`);
+  if(ok){closeModal();renderCocktails();}else{btn.disabled=false;btn.textContent='Tekrar';}
+}
+
+function confirmDelCocktail(id){
+  const c=cocktails.find(x=>x.id===id);if(!c)return;
+  document.getElementById('modal-ttl').textContent='Kokteyl Sil';
+  document.getElementById('modal-bd').innerHTML=`<div class="confirm-box">⚠️ <strong>${esc(c.name)}</strong> silinecek. Geri alınamaz.</div>`;
+  document.getElementById('modal-ft').innerHTML=`<button class="btn btn-ghost" onclick="closeModal()">İptal</button><button class="btn btn-danger" onclick="delCocktail(${id})">Evet, Sil</button>`;
+  openModal();
+}
+async function delCocktail(id){cocktails=cocktails.filter(c=>c.id!==id);const ok=await saveCocktails('Delete cocktail');if(ok){closeModal();renderCocktails();}}
+
+
+// ── AI DESCRIPTION GENERATION ────────────────────────────────────────────────
+async function resizeImg(file, maxPx = 800) {
+  return new Promise(resolve => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      let { width: w, height: h } = img;
+      if (w > maxPx || h > maxPx) {
+        if (w > h) { h = Math.round(h * maxPx / w); w = maxPx; }
+        else { w = Math.round(w * maxPx / h); h = maxPx; }
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      const b64 = canvas.toDataURL('image/jpeg', 0.82).split(',')[1];
+      URL.revokeObjectURL(url);
+      resolve(b64);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); resolve(null); };
+    img.src = url;
+  });
+}
+
+async function genAI() {
+  const btn    = document.getElementById('ai-btn');
+  const status = document.getElementById('ai-status');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner"></div> Analiz ediliyor…';
+  status.style.display = 'flex';
+  status.innerHTML = '🖼️ Görsel işleniyor…';
+
+  try {
+    // Get image — required for full mode, optional for desc-only
+    let imageBase64 = null, mediaType = 'image/jpeg';
+    const imgFile = document.getElementById('fif')?.files?.[0];
+
+    // Also try existing image URL if no file selected
+    const existingImgs = (window._editImages||[]).filter(u=>u&&!u.startsWith('blob:'));
+    
+    if (imgFile) {
+      imageBase64 = await resizeImg(imgFile);
+      mediaType = imgFile.type || 'image/jpeg';
+    } else if (existingImgs.length) {
+      // Fetch existing image and convert to base64
+      status.innerHTML = '🖼️ Mevcut görsel yükleniyor…';
+      try {
+        const imgRes = await fetch(existingImgs[0]);
+        const blob = await imgRes.blob();
+        mediaType = blob.type || 'image/jpeg';
+        imageBase64 = await new Promise(res => {
+          const r = new FileReader();
+          r.onload = e => res(e.target.result.split(',')[1]);
+          r.readAsDataURL(blob);
+        });
+      } catch(e) { /* image fetch failed, continue without */ }
+    }
+
+    // No image is ok — AI will use any name/hints available
+
+    status.innerHTML = '🤖 Claude analiz ediyor…';
+
+    const res = await fetch('/.netlify/functions/generate-description', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        mode: 'full',
+        name: document.getElementById('fn')?.value?.trim() || '',
+        imageBase64,
+        mediaType,
+        categories, // pass category list for AI to pick from
+      }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'API hatası');
+
+    // ── Fill ALL form fields ──────────────────────────────────────────────
+    // Name
+    if (data.name) {
+      document.getElementById('fn').value = data.name;
+      autoSlug(); // regenerate slug
+    }
+
+    // Country — set select + update flag
+    if (data.country) {
+      const fc = document.getElementById('fc');
+      if (fc) {
+        // Try exact match first
+        const opt = [...fc.options].find(o => o.value === data.country);
+        if (opt) fc.value = data.country;
+        else {
+          // Try case-insensitive
+          const opt2 = [...fc.options].find(o => o.value.toLowerCase() === data.country.toLowerCase());
+          if (opt2) fc.value = opt2.value;
+        }
+        updFlag();
+      }
+    }
+
+    // Category — match by English name
+    if (data.category) {
+      const fcat = document.getElementById('fcat');
+      if (fcat) {
+        const opt = [...fcat.options].find(o => o.value.toLowerCase() === data.category.toLowerCase());
+        if (opt) fcat.value = opt.value;
+      }
+    }
+
+    // ABV
+    if (data.abv) document.getElementById('fa').value = data.abv;
+
+    // Descriptions
+    if (data.desc_tr) document.getElementById('fdt').value = data.desc_tr;
+    if (data.desc_en) document.getElementById('fde').value = data.desc_en;
+
+    // Show what was filled
+    const filled = [
+      data.name && 'Ad',
+      data.country && 'Ülke',
+      data.category && 'Kategori',
+      data.abv && 'ABV',
+      data.desc_tr && 'TR Açıklama',
+      data.desc_en && 'EN Açıklama',
+    ].filter(Boolean).join(', ');
+
+    status.style.display = 'none';
+    toast('✓ Dolduruldu: ' + filled);
+
+  } catch (e) {
+    status.innerHTML = '❌ ' + esc(e.message);
+    toast('Hata: ' + esc(e.message), 'err');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg> ✨ AI ile Doldur';
+  }
+}
+
+
+// ── AI COCKTAIL GENERATION ────────────────────────────────────────────────────
+function clearCocktailAI() {
+  // Reset status when name changes
+  const s = document.getElementById('cai-status');
+  if (s) s.style.display = 'none';
+}
+
+async function genCocktailAI() {
+  const name = document.getElementById('cn')?.value?.trim();
+  if (!name) { toast('Önce kokteyl adını gir', 'err'); return; }
+
+  const btn = document.getElementById('cai-btn');
+  const status = document.getElementById('cai-status');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner"></div> Üretiliyor…';
+  status.style.display = 'flex';
+  status.innerHTML = '🤖 Tarif hazırlanıyor…';
+
+  try {
+    // Send bottle names so AI can match them
+    const bottleNames = bottles.map(b => ({ slug: b.slug, name: b.name }));
+
+    const res = await fetch('/.netlify/functions/generate-cocktail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, bottleNames: bottleNames.map(b => b.name) }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'API hatası');
+
+    // Fill difficulty
+    const cd = document.getElementById('cd');
+    const cde = document.getElementById('cde');
+    if (cd && data.diff) cd.value = data.diff;
+    if (cde && data.diff_en) cde.value = data.diff_en;
+
+    // Fill time
+    const ct = document.getElementById('ct');
+    if (ct && data.time) ct.value = data.time;
+
+    // Check matching bottle slugs
+    if (data.slugs?.length) {
+      document.querySelectorAll('#slug-grid .bottle-check').forEach(el => {
+        el.classList.remove('selected');
+      });
+      // Match by slug or by name similarity
+      data.slugs.forEach(slug => {
+        const el = document.getElementById('bc-' + slug);
+        if (el) { el.classList.add('selected'); return; }
+        // Try name match as fallback
+        const matched = bottleNames.find(b =>
+          b.name.toLowerCase().includes(slug.toLowerCase()) ||
+          slug.toLowerCase().includes(b.slug)
+        );
+        if (matched) {
+          const el2 = document.getElementById('bc-' + matched.slug);
+          if (el2) el2.classList.add('selected');
+        }
+      });
+    }
+
+    // Fill ingredients and steps (textarea, one per line)
+    const cit = document.getElementById('cit');
+    const cie = document.getElementById('cie');
+    const cst = document.getElementById('cst');
+    const cse = document.getElementById('cse');
+    if (cit && data.ing_tr) cit.value = data.ing_tr.join('\n');
+    if (cie && data.ing_en) cie.value = data.ing_en.join('\n');
+    if (cst && data.steps_tr) cst.value = data.steps_tr.join('\n');
+    if (cse && data.steps_en) cse.value = data.steps_en.join('\n');
+
+    status.style.display = 'none';
+    toast('Tarif üretildi ✓ — kontrol edip yayınla');
+  } catch (e) {
+    status.innerHTML = '❌ ' + esc(e.message);
+    toast('Hata: ' + esc(e.message), 'err');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg> AI ile Doldur';
+  }
+}
+
+
+// ── DRAFTS PAGE ───────────────────────────────────────────────────────────────
+function renderDrafts(){
+  const drafts = bottles.filter(b=>b.status==='draft');
+  document.getElementById('page-content').innerHTML=`
+  <div class="fade">
+    <div class="page-header">
+      <div>
+        <div class="page-title">Taslaklar <span>${esc(drafts.length)} şişe</span></div>
+        <div style="font-size:12px;color:var(--sub);margin-top:4px">Her şişe için AI analizi yap, düzenle ve yayınla.</div>
+      </div>
+      <button class="btn btn-primary" onclick="analyzeAllDrafts()" id="batch-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg>
+        Tümünü Analiz Et
+      </button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px">
+      ${drafts.map(b=>`
+        <div id="draft-card-${esc(b.slug)}" style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column">
+          <div style="position:relative;padding-bottom:75%;background:var(--surface);flex-shrink:0">
+            ${b.image?`<img src="${esc(b.image)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy"/>`:'<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:36px">📷</div>'}
+          </div>
+          <div style="padding:10px;flex:1;display:flex;flex-direction:column;gap:6px">
+            <div id="draft-name-${esc(b.slug)}" style="font-size:12px;color:var(--sub);word-break:break-all">${esc(b.slug)}</div>
+            <div id="draft-status-${esc(b.slug)}" style="font-size:11px;color:var(--sub)"></div>
+            <div style="display:flex;gap:5px;margin-top:auto;flex-wrap:wrap">
+              <button id="ai-btn-${esc(b.slug)}" class="btn btn-sm" onclick="analyzeDraft('${esc(b.slug)}')"
+                style="flex:1;background:linear-gradient(135deg,rgba(91,143,255,.2),rgba(212,168,67,.15));border:1px solid rgba(91,143,255,.3);color:var(--mid);font-size:11px;justify-content:center">
+                🤖 Analiz
+              </button>
+              <button class="btn btn-ghost btn-sm" id="edit-btn-${esc(b.slug)}" onclick="openEditBottle('${esc(b.slug)}')" style="font-size:11px" title="Düzenle">
+                ✎
+              </button>
+            </div>
+          </div>
+        </div>`).join('')}
+    </div>
+    ${drafts.length===0?'<div class="empty"><div class="empty-ico">🎉</div>Tüm taslaklar tamamlandı!</div>':''}
+  </div>`;
+}
+
+let analyzeQueue = [];
+let analyzeRunning = false;
+
+async function analyzeDraft(slug){
+  const b = bottles.find(x=>x.slug===slug);
+  if(!b || !b.image) { toast('Görsel bulunamadı','err'); return; }
+
+  const btn = document.getElementById('ai-btn-'+slug);
+  const nameEl = document.getElementById('draft-name-'+slug);
+  const statusEl = document.getElementById('draft-status-'+slug);
+  const card = document.getElementById('draft-card-'+slug);
+  
+  if(btn){ btn.disabled=true; btn.innerHTML='<div class="spinner"></div>'; }
+  if(statusEl) statusEl.textContent='Analiz ediliyor…';
+
+  try {
+    // Build full URL for the image
+    const imgUrl = b.image.startsWith('http') ? b.image : (window.location.origin + b.image);
+    
+    const res = await fetch('/.netlify/functions/analyze-bottle-image', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({ imageUrl: imgUrl, slug })
+    });
+    
+    const data = await res.json();
+    if(!res.ok) throw new Error(data.error||'API hatası');
+    
+    // Update bottle in-memory — keep original slug to avoid lookup issues
+    const idx = bottles.findIndex(x=>x.slug===slug);
+    if(idx>=0){
+      bottles[idx] = {
+        ...bottles[idx],
+        name:     data.name     || bottles[idx].name,
+        country:  data.country  || bottles[idx].country,
+        category: data.category || bottles[idx].category,
+        abv:      data.abv      || bottles[idx].abv,
+        desc_tr:  data.desc_tr  || '',
+        desc_en:  data.desc_en  || '',
+        // Keep slug, status, active, image, images unchanged
+      };
+    }
+    
+    if(nameEl) nameEl.textContent = data.name || slug;
+    if(statusEl) statusEl.innerHTML = '<span style="color:var(--green)">✓ Analiz tamam — düzenleyip yayınla</span>';
+    if(card) card.style.border='1px solid rgba(82,201,122,.5)';
+    // Edit button now opens the bottle using SAME slug (unchanged)
+    if(btn){
+      btn.disabled=false;
+      btn.innerHTML='✎ Düzenle';
+      btn.style.background='linear-gradient(135deg,#1a3a8a,#2d5fd4)';
+      btn.style.color='#fff';
+      btn.style.border='none';
+      btn.onclick=()=>openEditBottle(slug);
+    }
+    
+    // Auto-save after analysis
+    await saveBottles('AI analyze: '+slug);
+    
+  } catch(e){
+    if(statusEl) statusEl.innerHTML='<span style="color:var(--red)">✗ '+esc(e.message)+'</span>';
+    if(btn){ btn.disabled=false; btn.innerHTML='🤖 Tekrar'; }
+    toast('Hata: '+esc(e.message),'err');
+  }
+}
+
+async function analyzeAllDrafts(){
+  const pending = bottles.filter(b=>b.status==='draft'&&b.image);
+  if(!pending.length){ toast('Analiz edilecek taslak yok'); return; }
+  
+  const batchBtn = document.getElementById('batch-btn');
+  if(batchBtn){ batchBtn.disabled=true; batchBtn.textContent=`Analiz ediliyor (0/${pending.length})…`; }
+  
+  let done = 0;
+  // Process one by one to avoid rate limits
+  for(const b of pending){
+    await analyzeDraft(b.slug);
+    done++;
+    if(batchBtn) batchBtn.textContent=`Analiz ediliyor (${done}/${pending.length})…`;
+    await new Promise(r=>setTimeout(r,800)); // small delay between requests
+  }
+  
+  if(batchBtn){ batchBtn.disabled=false; batchBtn.textContent='Tümünü Analiz Et'; }
+  toast(`${done} taslak analiz edildi ✓`);
+}
+
+// ── ACTIVE TOGGLE ─────────────────────────────────────────────────────────────
+async function toggleActive(type, id) {
+  if (type === 'bottle') {
+    const b = bottles.find(x => x.slug === id);
+    if (!b) return;
+    b.active = b.active === false ? true : false;
+    const ok = await saveBottles((b.active ? 'Activate' : 'Deactivate') + ': ' + b.name);
+    if (ok) renderBottles();
+  } else if (type === 'cocktail') {
+    const c = cocktails.find(x => x.id === id);
+    if (!c) return;
+    c.active = c.active === false ? true : false;
+    const ok = await saveCocktails((c.active ? 'Activate' : 'Deactivate') + ': ' + c.name);
+    if (ok) renderCocktails();
+  } else if (type === 'cat') {
+    const c = categories.find(x => x.id === id);
+    if (!c) return;
+    c.active = c.active === false ? true : false;
+    const ok = await saveCats((c.active ? 'Activate' : 'Deactivate') + ': ' + c.name_en);
+    if (ok) renderCategories();
+  }
+}
+
+// ── MODAL ─────────────────────────────────────────────────────────────────────
+function abvFmt(v){
+  if(!v) return '';
+  v = String(v).trim();
+  if(!v.includes('%')) v += '%';
+  return v;
+}
+
+function toggleSidebar(){
+  const aside=document.querySelector('aside');
+  const overlay=document.getElementById('sidebar-overlay');
+  if(!aside||!overlay)return;
+  const open=aside.classList.toggle('open');
+  overlay.classList.toggle('visible',open);
+}
+function closeSidebar(){
+  document.querySelector('aside')?.classList.remove('open');
+  document.getElementById('sidebar-overlay')?.classList.remove('visible');
+}
+
+function openModal(){document.getElementById('modal').style.display='flex';}
+function closeModal(){document.getElementById('modal').style.display='none';}
+let _mdTarget=null;
+document.addEventListener('mousedown',e=>{_mdTarget=e.target;});
+document.addEventListener('touchstart',e=>{_mdTarget=e.target;},{passive:true});
+function closeModalOv(e){
+  // Only close if BOTH mousedown and mouseup/click fired on the overlay (not while selecting text)
+  const overlay=document.getElementById('modal');
+  if(e.target===overlay && _mdTarget===overlay) closeModal();
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+// ── TOAST ─────────────────────────────────────────────────────────────────────
+let _tt;
+function toast(msg,type='ok'){
+  let el=document.getElementById('_toast');
+  const html=`<span>${type==='ok'?'✓':'✕'}</span><span>${msg}</span>`;
+  if(!el){el=document.createElement('div');el.id='_toast';document.body.appendChild(el);}
+  el.className=`toast ${type}`;el.innerHTML=html;
+  clearTimeout(_tt);_tt=setTimeout(()=>el.remove(),3000);
+}
+</script>
+</body>
+</html>
