@@ -33,21 +33,16 @@
     },
     {
       "id": 1762693380,
-      "slug": "viljamovka",
-      "name": "Viljamovka",
+      "slug": "viljamovka-rakija-od-voca",
+      "name": "Viljamovka Rakija od Voca",
       "country": "Serbia",
       "category": "Rakı",
-      "abv": "40%",
+      "abv": "84%",
       "year": 2025,
       "qty": 1,
-      "image": "/images/uploads/17991038684722622.jpg",
-      "images": [
-        "/images/uploads/17991038684722622.jpg"
-      ],
-      "desc_tr": "Balkanlara özgü bir pear brandy olan Viljamovka, Serbistan'ın en ünlü rakısıdır ve William armudundan üretilir. Hafif ve zarif yapısıyla, kusursuz meyve aroması ve soğuk servis edildiğinde ortaya çıkan anise notaları ile karakteristiktir. Balkan içki kültürünün en seçkin örneklerinden biri olarak, koleksiyonerlerin değer verdiği bir rakıdır.",
-      "desc_en": "Viljamovka is a pear brandy characteristic of the Balkans and Serbia's most renowned rakı, produced from William pears. It is characterized by its light and elegant structure, with a perfect fruit aroma and subtle anise notes that emerge when served chilled. As one of the finest examples of Balkan spirits culture, it is a spirit highly valued by collectors.",
-      "status": "draft",
-      "active": false
+      "image": "",
+      "desc_tr": "Viljamovka, Sırbistan'dan gelen geleneksel bir meyve rakısıdır ve armut aroması ile ünlüdür. Yüksek alkol derecesi ve saf tat profili ile bu özel damıtılmış içki, Balkan bölgesinin içki kültürünün güzel bir temsilcisidir. Koleksiyonunuza eklemek için değerli ve nadir bir şişe.",
+      "desc_en": "Viljamovka is a traditional fruit rakija from Serbia, renowned for its distinctive pear aroma and flavor profile. With its high alcohol content and pure taste, this exceptional spirit represents the rich drinking culture of the Balkan region. A rare and valuable addition to any serious miniature collection."
     },
     {
       "id": 1762693358,
