@@ -369,13 +369,18 @@ async function gitPut(p,data,msg){
   return false;
 }
 async function uploadImg(file){
-  // Always convert to JPEG via canvas (handles HEIC, BMP, TIFF etc.)
-  return new Promise((res,rej)=>{
+  // Try canvas conversion first (JPEG output, works for HEIC on Mac/modern browsers)
+  // Fall back to direct upload if canvas fails (e.g. HEIC on Windows Chrome)
+  const tryCanvas = () => new Promise((res, rej) => {
     const img = new Image();
     const objUrl = URL.createObjectURL(file);
-    img.onload = async () => {
+    const timeout = setTimeout(() => {
+      URL.revokeObjectURL(objUrl);
+      rej(new Error('timeout'));
+    }, 8000);
+    img.onload = () => {
+      clearTimeout(timeout);
       try {
-        // Resize if needed
         let {width: w, height: h} = img;
         const maxPx = 1200;
         if(w > maxPx || h > maxPx){
@@ -385,23 +390,43 @@ async function uploadImg(file){
         const canvas = document.createElement('canvas');
         canvas.width = w; canvas.height = h;
         canvas.getContext('2d').drawImage(img, 0, 0, w, h);
-        // Always output JPEG
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.88);
-        const b64 = dataUrl.split(',')[1];
-        const fname = `images/uploads/${Date.now()}.jpg`; // always .jpg
+        const b64 = canvas.toDataURL('image/jpeg', 0.88).split(',')[1];
         URL.revokeObjectURL(objUrl);
-        const r = await fetch(GIT+fname, {
-          method:'PUT',
-          headers:{'Authorization':'Bearer '+token,'Content-Type':'application/json'},
-          body: JSON.stringify({message:'Upload image', content: b64})
-        });
-        if(r.ok){ const d=await r.json(); shas[fname]=d.content?.sha; res('/'+fname); }
-        else rej(new Error('Upload başarısız ('+r.status+')'));
+        res({ b64, ext: 'jpg' });
       } catch(e){ URL.revokeObjectURL(objUrl); rej(e); }
     };
-    img.onerror = () => { URL.revokeObjectURL(objUrl); rej(new Error('Görsel yüklenemedi')); };
+    img.onerror = () => { clearTimeout(timeout); URL.revokeObjectURL(objUrl); rej(new Error('load failed')); };
     img.src = objUrl;
   });
+
+  const directRead = () => new Promise((res, rej) => {
+    const fr = new FileReader();
+    fr.onload = e => {
+      const b64 = e.target.result.split(',')[1];
+      const ext = file.name.split('.').pop().toLowerCase().replace(/[^a-z0-9]/g,'') || 'jpg';
+      res({ b64, ext });
+    };
+    fr.onerror = rej;
+    fr.readAsDataURL(file);
+  });
+
+  try {
+    // Try canvas (converts HEIC → JPEG on supported browsers)
+    var { b64, ext } = await tryCanvas();
+  } catch(e) {
+    // Fallback: read file directly (HEIC stays HEIC but at least uploads)
+    var { b64, ext } = await directRead();
+  }
+
+  const fname = `images/uploads/${Date.now()}.${ext}`;
+  const r = await fetch(GIT+fname, {
+    method: 'PUT',
+    headers: {'Authorization':'Bearer '+token, 'Content-Type':'application/json'},
+    body: JSON.stringify({message:'Upload image', content: b64})
+  });
+  if(r.ok){ const d=await r.json(); shas[fname]=d.content?.sha; return '/'+fname; }
+  const errData = await r.json().catch(()=>({}));
+  throw new Error('Upload başarısız: ' + (errData.message||r.status));
 }
 
 // ── LOAD ──────────────────────────────────────────────────────────────────────
