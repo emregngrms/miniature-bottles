@@ -1,10 +1,8 @@
 exports.handler = async (event) => {
-  // Only POST
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method not allowed' };
   }
 
-  // CORS preflight
   const headers = {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
@@ -16,54 +14,66 @@ exports.handler = async (event) => {
   }
 
   let body;
-  try {
-    body = JSON.parse(event.body);
-  } catch {
-    return { statusCode: 400, headers, body: JSON.stringify({ error: 'Invalid JSON' }) };
-  }
+  try { body = JSON.parse(event.body); }
+  catch { return { statusCode: 400, headers, body: JSON.stringify({ error: 'Invalid JSON' }) }; }
 
-  const { name, country, category, abv, year, imageBase64, mediaType } = body;
+  const { name, country, category, abv, year, imageBase64, mediaType, categories, mode } = body;
+  // mode: 'full' = fill all fields, 'desc' = descriptions only (legacy)
 
-  if (!name) {
-    return { statusCode: 400, headers, body: JSON.stringify({ error: 'name is required' }) };
-  }
+  const catList = (categories || []).map(c => `${c.name_en} / ${c.name_tr}`).join(', ');
+  const COUNTRIES = [
+    'Scotland','England','Wales','Ireland','USA','France','Mexico','Italy',
+    'Germany','Venezuela','Spain','Japan','Canada','Australia','Netherlands',
+    'Sweden','Russia','Turkey','Greece','Cuba','Jamaica','Barbados','Trinidad',
+    'Peru','Brazil','Argentina','South Africa','India','China','Taiwan',
+    'Czech Republic','Poland','Hungary','Austria','Switzerland','Belgium',
+    'Portugal','Albania','Denmark','Finland','Iceland','Serbia','Croatia',
+    'Slovenia','Bosnia','Bulgaria','Romania','Ukraine','Georgia','Armenia',
+    'Azerbaijan','Israel','Lebanon','Morocco','South Korea','Vietnam',
+    'Thailand','Singapore','New Zealand','Colombia','Chile','Bolivia',
+    'Guatemala','Ecuador','Uruguay','Philippines','Indonesia','Malaysia',
+    'Kazakhstan','Egypt','Nigeria','Kenya','Diğer'
+  ];
 
-  // Build message content
   const content = [];
 
-  // Add image if provided
   if (imageBase64) {
     content.push({
       type: 'image',
-      source: {
-        type: 'base64',
-        media_type: mediaType || 'image/jpeg',
-        data: imageBase64,
-      },
+      source: { type: 'base64', media_type: mediaType || 'image/jpeg', data: imageBase64 },
     });
   }
 
-  content.push({
-    type: 'text',
-    text: `Sen bir alkol uzmanı ve koleksiyoncu yazarısın. Aşağıdaki minyatür şişe için koleksiyon sitesine kısa, bilgilendirici açıklamalar yaz.
+  let prompt;
 
-Şişe Bilgileri:
-- Ad: ${name}
-- Ülke: ${country || 'bilinmiyor'}
-- Kategori: ${category || 'bilinmiyor'}
-- Alkol Oranı: ${abv || 'bilinmiyor'}
-- Yıl: ${year || ''}
-${imageBase64 ? '- Görselde şişenin fotoğrafı var, etiketi de dikkate al.' : ''}
+  if (mode === 'full') {
+    prompt = `You are a spirits expert and miniature bottle collector. Analyze this bottle ${imageBase64 ? 'image' : 'information'} and fill in ALL fields.
 
-Kurallar:
-- Her açıklama 2-3 cümle, max 60 kelime
-- Üretim bölgesi, damak notaları (tasting notes), karakter ve kısa tarihçe
-- Samimi ve tutkulı koleksiyoncu sesi, aşırı reklam dili kullanma
-- Türkçe açıklamada Türkçe damak notu terimlerini kullan
+${name ? `Current name hint: "${name}"` : 'No name provided — read label.'}
+${catList ? `Available categories: ${catList}` : ''}
+Available countries: ${COUNTRIES.join(', ')}
 
-SADECE aşağıdaki JSON formatında yanıt ver, başka hiçbir şey yazma:
-{"desc_tr": "...", "desc_en": "..."}`,
-  });
+Return ONLY this JSON, no other text:
+{
+  "name": "exact product name from label (brand + variant, e.g. Glenfiddich 12 Year Old)",
+  "country": "country of origin — must be one of the available countries listed above",
+  "category": "spirit category — pick the most appropriate from available categories, use English name",
+  "abv": "alcohol percentage as shown on label, e.g. 40% — estimate if not visible",
+  "desc_tr": "2-3 sentence Turkish description: origin region, production method, tasting notes, character. Warm collector's voice.",
+  "desc_en": "Same content in English, 2-3 sentences."
+}`;
+  } else {
+    // Legacy: descriptions only
+    prompt = `Spirits expert and collector writer. Write short descriptions for this miniature bottle.
+
+Bottle: ${name || 'unknown'}${country ? ` | ${country}` : ''}${category ? ` | ${category}` : ''}${abv ? ` | ${abv}` : ''}
+${imageBase64 ? 'Image provided — check label.' : ''}
+
+Return ONLY this JSON:
+{"desc_tr": "...", "desc_en": "..."}`;
+  }
+
+  content.push({ type: 'text', text: prompt });
 
   try {
     const response = await fetch('https://api.anthropic.com/v1/messages', {
@@ -75,34 +85,23 @@ SADECE aşağıdaki JSON formatında yanıt ver, başka hiçbir şey yazma:
       },
       body: JSON.stringify({
         model: 'claude-haiku-4-5',
-        max_tokens: 400,
+        max_tokens: 600,
         messages: [{ role: 'user', content }],
       }),
     });
 
     if (!response.ok) {
       const err = await response.text();
-      return { statusCode: 502, headers, body: JSON.stringify({ error: 'Anthropic API error: ' + err }) };
+      return { statusCode: 502, headers, body: JSON.stringify({ error: 'API error: ' + err }) };
     }
 
     const data = await response.json();
     const text = data.content?.[0]?.text || '';
-
-    // Parse JSON from response, handle possible markdown fences
     const clean = text.replace(/```json|```/g, '').trim();
     const result = JSON.parse(clean);
 
-    if (!result.desc_tr || !result.desc_en) {
-      throw new Error('Unexpected response format');
-    }
-
     return { statusCode: 200, headers, body: JSON.stringify(result) };
-
   } catch (err) {
-    return {
-      statusCode: 500,
-      headers,
-      body: JSON.stringify({ error: err.message }),
-    };
+    return { statusCode: 500, headers, body: JSON.stringify({ error: err.message }) };
   }
 };

@@ -225,7 +225,7 @@ function flag(country){ return ''; }
 
 const IG_DM = "https://ig.me/m/miniaturebottles_5cl";
 let bottles = [], cocktails = [];
-let state = { page:'collection', view:'grid', lang:'tr', search:'', cat:'', country:'', selBottle:null, selCocktail:null };
+let state = { page:'collection', view:'grid', lang:'tr', search:'', cat:'', country:'', sort:'name', selBottle:null, selCocktail:null };
 
 // ── HASH ROUTING ──────────────────────────────────────────────────────────
 function updateHash(){
@@ -285,6 +285,22 @@ function abvFmt(abv){
   abv = String(abv).trim();
   if(!abv.includes('%')) abv += '%';
   return abv;
+}
+
+function sortBottles(list, sortBy) {
+  const sorted = [...list];
+  if (sortBy === 'category') {
+    sorted.sort((a, b) => {
+      const ca = catName(a.category) || '';
+      const cb = catName(b.category) || '';
+      if (ca !== cb) return ca.localeCompare(cb, 'tr');
+      return (a.name || '').localeCompare(b.name || '', 'tr');
+    });
+  } else {
+    // default: name
+    sorted.sort((a, b) => (a.name || '').localeCompare(b.name || '', 'tr'));
+  }
+  return sorted;
 }
 
 function abvFmt(v){
@@ -398,20 +414,27 @@ function renderCollectionPage(extrasOnly){
     </div>`:''}
     <div style="display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap;align-items:center">
       ${renderSearchBar(t('İsim, ülke, kategori ara…','Search name, country, category…'))}
-      <div style="display:flex;gap:8px;flex-shrink:0">
+      <div style="display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap">
         <div style="position:relative">
           <select onchange="setCat(this.value)" style="padding:11px 36px 11px 14px;background:#091530;border:1px solid ${state.cat?'#d4a843':'#1a2e5a'};border-radius:12px;color:${state.cat?'#d4a843':'#8aaad8'};font-size:13px;font-family:inherit;appearance:none;cursor:pointer;min-width:140px">
             <option value="">${t('Tüm Kategoriler','All Categories')}</option>
-            ${[...new Set(bottles.map(b=>b.category).filter(Boolean))].map(c=>`<option value="${c}" ${state.cat===c?'selected':''}>${catName(c)}</option>`).join('')}
+            ${[...new Set(bottles.map(b=>b.category).filter(Boolean))].sort((a,b)=>catName(a).localeCompare(catName(b),'tr')).map(c=>`<option value="${c}" ${state.cat===c?'selected':''}>${catName(c)}</option>`).join('')}
           </select>
           <svg style="position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;color:${state.cat?'#d4a843':'#4a6490'}" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </div>
         <div style="position:relative">
           <select onchange="setCtr(this.value)" style="padding:11px 36px 11px 14px;background:#091530;border:1px solid ${state.country?'#5b8fff':'#1a2e5a'};border-radius:12px;color:${state.country?'#5b8fff':'#8aaad8'};font-size:13px;font-family:inherit;appearance:none;cursor:pointer;min-width:140px">
             <option value="">${t('Tüm Ülkeler','All Countries')}</option>
-            ${[...new Set(bottles.map(b=>b.country).filter(Boolean))].map(c=>`<option value="${c}" ${state.country===c?'selected':''}>${c}</option>`).join('')}
+            ${[...new Set(bottles.map(b=>b.country).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'tr')).map(c=>`<option value="${c}" ${state.country===c?'selected':''}>${c}</option>`).join('')}
           </select>
           <svg style="position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;color:${state.country?'#5b8fff':'#4a6490'}" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+        <div style="position:relative">
+          <select onchange="setState({sort:this.value})" style="padding:11px 36px 11px 14px;background:#091530;border:1px solid #1a2e5a;border-radius:12px;color:#8aaad8;font-size:13px;font-family:inherit;appearance:none;cursor:pointer;min-width:130px">
+            <option value="name" ${state.sort==='name'?'selected':''}>${t('İsme Göre','By Name')}</option>
+            <option value="category" ${state.sort==='category'?'selected':''}>${t('Kategoriye Göre','By Category')}</option>
+          </select>
+          <svg style="position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;color:#4a6490" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </div>
         ${(state.cat||state.country)?`<button onclick="setCat('');setCtr('')" style="padding:11px 14px;background:rgba(224,92,92,.12);border:1px solid rgba(224,92,92,.25);border-radius:12px;color:#e05c5c;font-size:12px;font-family:inherit;cursor:pointer;white-space:nowrap">${t('Temizle','Clear')}</button>`:''}
       </div>
@@ -527,7 +550,7 @@ function render(){
 
 function setView(v){setState({view:v});}
 function setLang(l){setState({lang:l});}
-function goPage(p){setState({page:p,selBottle:null,selCocktail:null,search:'',cat:'',country:''});window.scrollTo(0,0);}
+function goPage(p){setState({page:p,selBottle:null,selCocktail:null,search:'',cat:'',country:'',sort:'name'});window.scrollTo(0,0);}
 function setCat(c){setState({cat:c});}
 function setCtr(c){setState({country:c});}
 function onSearch(v){
