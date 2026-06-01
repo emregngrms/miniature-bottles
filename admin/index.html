@@ -126,8 +126,8 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
 .img-up-txt strong{color:var(--blue)}
 .confirm-box{background:var(--redd);border:1px solid rgba(224,92,92,.3);border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:13px;color:var(--red)}
 .section-ttl{font-size:11px;color:var(--sub);letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:8px;margin-top:4px}
-.bottle-check-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:200px;overflow-y:auto;padding:2px}
-.bottle-check{display:flex;align-items:center;gap:8px;padding:7px 10px;background:var(--surface);border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:all .15s}
+.bottle-check-grid{display:flex;flex-direction:column;gap:5px;max-height:240px;overflow-y:auto;padding:2px;min-width:0}
+.bottle-check{display:flex;align-items:center;gap:8px;padding:7px 10px;background:var(--surface);border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:all .15s;width:100%;box-sizing:border-box}
 .bottle-check:hover{border-color:var(--blue)}
 .bottle-check.selected{border-color:var(--gold);background:var(--goldd)}
 .bottle-check img{width:28px;height:28px;border-radius:5px;object-fit:cover;flex-shrink:0}
@@ -150,7 +150,6 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
   #hamburger{display:flex!important}
   .stats{grid-template-columns:1fr 1fr}
   .fg-grid{grid-template-columns:1fr}
-  .bottle-check-grid{grid-template-columns:1fr}
   .bottle-cols{grid-template-columns:40px 1fr 60px 80px}
   .cat-cols{grid-template-columns:1fr 1fr 80px}
   .cocktail-cols{grid-template-columns:40px 1fr 80px}
@@ -281,17 +280,18 @@ const COUNTRY_ISO = FLAG_EMOJI;
 const FLAGS = FLAG_EMOJI;
 function getFlagEmoji(c){ const iso=COUNTRY_ISO[c]; return iso?`🏳`:'🌍'; }
 const COUNTRIES = [
-  'Scotland','England','Wales','Ireland','USA','France','Mexico','Italy',
-  'Germany','Venezuela','Spain','Japan','Canada','Australia','Netherlands',
-  'Sweden','Russia','Turkey','Greece','Cuba','Jamaica','Barbados','Trinidad',
-  'Peru','Brazil','Argentina','South Africa','India','China','Taiwan',
-  'Czech Republic','Poland','Hungary','Austria','Switzerland','Belgium',
-  'Portugal','Albania','Denmark','Finland','Iceland','Serbia','Croatia',
-  'Slovenia','Bosnia','Bulgaria','Romania','Ukraine','Georgia','Armenia',
-  'Azerbaijan','Israel','Lebanon','Morocco','South Korea','Vietnam',
-  'Thailand','Singapore','New Zealand','Colombia','Chile','Bolivia',
-  'Guatemala','Ecuador','Uruguay','Philippines','Indonesia','Malaysia',
-  'Kazakhstan','Egypt','Nigeria','Kenya','Diğer'
+  'Albania','Argentina','Armenia','Australia','Austria','Azerbaijan',
+  'Barbados','Belgium','Bolivia','Bosnia','Brazil','Bulgaria',
+  'Canada','Chile','China','Colombia','Croatia','Cuba','Czech Republic',
+  'Denmark','Ecuador','Egypt','England','Ethiopia','Finland','France',
+  'Georgia','Germany','Greece','Guatemala','Hungary','Iceland','India',
+  'Indonesia','Ireland','Israel','Italy','Jamaica','Japan','Kazakhstan',
+  'Kenya','Latvia','Lebanon','Malaysia','Mexico','Morocco',
+  'Netherlands','New Zealand','Nigeria','Norway','Panama',
+  'Peru','Philippines','Poland','Portugal','Romania','Russia',
+  'Scotland','Serbia','Singapore','Slovenia','South Africa','South Korea',
+  'Spain','Sweden','Switzerland','Taiwan','Thailand','Trinidad',
+  'Turkey','Ukraine','Uruguay','USA','Venezuela','Vietnam','Wales','Diğer'
 ];
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
@@ -487,11 +487,18 @@ function openEditBottle(slug){openBottleModal(bottles.find(b=>b.slug===slug));}
 function openBottleModal(b){
   const isEdit=!!b;
   b=b||{id:0,slug:'',name:'',country:'Scotland',category:'',abv:'',year:new Date().getFullYear(),qty:1,image:'',desc_tr:'',desc_en:''};
-  const catOpts=categories.map(c=>`<option value="${esc(c.name_en)}" ${b.category===c.name_en?'selected':''}>${esc(c.name_tr)} / ${esc(c.name_en)}</option>`).join('');
-  const cntOpts=COUNTRIES.map(c=>`<option value="${esc(c)}" ${b.country===c?'selected':''}>${esc(c)}</option>`).join('');
+  const catOpts=[...categories].sort((a,b)=>a.name_tr.localeCompare(b.name_tr,'tr')).map(c=>`<option value="${esc(c.name_en)}" ${b.category===c.name_en?'selected':''}>${esc(c.name_tr)} / ${esc(c.name_en)}</option>`).join('');
+  const cntOpts=[...COUNTRIES].sort((a,b)=>a.localeCompare(b,'tr')).map(c=>`<option value="${esc(c)}" ${b.country===c?'selected':''}>${(FLAG_EMOJI[c]||'')+' '+esc(c)}</option>`).join('');
   document.getElementById('modal-ttl').textContent=isEdit?'Şişe Düzenle':'Yeni Şişe Ekle';
   document.getElementById('modal-bd').innerHTML=`
   <div class="fg-grid">
+    <div class="fg fg-full" style="margin-bottom:4px">
+      <button type="button" id="ai-btn" onclick="genAI()" style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:linear-gradient(135deg,rgba(91,143,255,.15),rgba(212,168,67,.12));border:1px solid rgba(91,143,255,.4);border-radius:10px;color:#8aaad8;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg>
+        ✨ Görselden Tüm Alanları AI ile Doldur
+      </button>
+      <div id="ai-status" style="display:none;font-size:12px;color:#8aaad8;margin-top:6px;align-items:center;gap:6px"></div>
+    </div>
     <div class="fg fg-full"><label>Şişe Adı *</label><input id="fn" value="${esc(b.name)}" placeholder="Glenfiddich 12" oninput="autoSlug()"/></div>
     <div class="fg"><label>Slug (URL) *</label><input id="fs" value="${esc(b.slug)}" placeholder="glenfiddich-12"/><div class="slug-pv" id="spv">${b.slug?'/'+esc(b.slug):''}</div></div>
     <div class="fg"><label>Ülke</label><select id="fc" onchange="updFlag()">${cntOpts}</select><div class="flag-pv" id="fpv">Bayrak: ${COUNTRY_ISO[b.country] ? '✓' : '?'} ${b.country||''}</div></div>
@@ -518,15 +525,8 @@ function openBottleModal(b){
       </div>
       <input id="fiu" type="text" placeholder="https://… ekle" style="margin-top:6px" oninput="addImgFromUrl(this.value)"/>
     </div>
-    <div class="fg fg-full" style="margin-bottom:4px">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-        <label>Açıklamalar</label>
-        <button type="button" id="ai-btn" onclick="genAI()" style="display:flex;align-items:center;gap:6px;padding:7px 14px;background:linear-gradient(135deg,rgba(91,143,255,.2),rgba(212,168,67,.15));border:1px solid rgba(91,143,255,.35);border-radius:9px;color:#8aaad8;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s" onmouseover="this.style.color='#c8d8f0'" onmouseout="this.style.color='#8aaad8'">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg>
-          AI ile Üret
-        </button>
-      </div>
-      <div id="ai-status" style="display:none;font-size:12px;color:#8aaad8;margin-bottom:8px;display:flex;align-items:center;gap:6px"></div>
+    <div class="fg fg-full" style="margin-bottom:2px">
+      <label>Açıklamalar</label>
     </div>
     <div class="fg fg-full"><label>Açıklama Türkçe</label><textarea id="fdt">${esc(b.desc_tr||'')}</textarea></div>
     <div class="fg fg-full"><label>Açıklama İngilizce</label><textarea id="fde">${esc(b.desc_en||'')}</textarea></div>
@@ -870,53 +870,116 @@ async function resizeImg(file, maxPx = 800) {
 }
 
 async function genAI() {
-  const name     = document.getElementById('fn')?.value?.trim();
-  const country  = document.getElementById('fc')?.value;
-  const category = document.getElementById('fcat')?.value;
-  const abv      = document.getElementById('fa')?.value?.trim();
-  const year     = document.getElementById('fy')?.value;
-
-  if (!name) { toast('Önce şişe adını gir', 'err'); return; }
-
   const btn    = document.getElementById('ai-btn');
   const status = document.getElementById('ai-status');
   btn.disabled = true;
-  btn.innerHTML = '<div class="spinner"></div> Üretiliyor…';
+  btn.innerHTML = '<div class="spinner"></div> Analiz ediliyor…';
   status.style.display = 'flex';
-  status.innerHTML = '✨ Claude şişeyi analiz ediyor…';
+  status.innerHTML = '🖼️ Görsel işleniyor…';
 
   try {
-    // Try to get image
+    // Get image — required for full mode, optional for desc-only
     let imageBase64 = null, mediaType = 'image/jpeg';
     const imgFile = document.getElementById('fif')?.files?.[0];
+
+    // Also try existing image URL if no file selected
+    const existingImgs = (window._editImages||[]).filter(u=>u&&!u.startsWith('blob:'));
+    
     if (imgFile) {
-      status.innerHTML = '🖼️ Görsel işleniyor…';
       imageBase64 = await resizeImg(imgFile);
       mediaType = imgFile.type || 'image/jpeg';
+    } else if (existingImgs.length) {
+      // Fetch existing image and convert to base64
+      status.innerHTML = '🖼️ Mevcut görsel yükleniyor…';
+      try {
+        const imgRes = await fetch(existingImgs[0]);
+        const blob = await imgRes.blob();
+        mediaType = blob.type || 'image/jpeg';
+        imageBase64 = await new Promise(res => {
+          const r = new FileReader();
+          r.onload = e => res(e.target.result.split(',')[1]);
+          r.readAsDataURL(blob);
+        });
+      } catch(e) { /* image fetch failed, continue without */ }
     }
 
-    status.innerHTML = '🤖 Açıklama yazılıyor…';
+    // No image is ok — AI will use any name/hints available
+
+    status.innerHTML = '🤖 Claude analiz ediyor…';
 
     const res = await fetch('/.netlify/functions/generate-description', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, country, category, abv, year, imageBase64, mediaType }),
+      body: JSON.stringify({
+        mode: 'full',
+        name: document.getElementById('fn')?.value?.trim() || '',
+        imageBase64,
+        mediaType,
+        categories, // pass category list for AI to pick from
+      }),
     });
 
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || 'API hatası');
 
-    document.getElementById('fdt').value = data.desc_tr;
-    document.getElementById('fde').value = data.desc_en;
+    // ── Fill ALL form fields ──────────────────────────────────────────────
+    // Name
+    if (data.name) {
+      document.getElementById('fn').value = data.name;
+      autoSlug(); // regenerate slug
+    }
+
+    // Country — set select + update flag
+    if (data.country) {
+      const fc = document.getElementById('fc');
+      if (fc) {
+        // Try exact match first
+        const opt = [...fc.options].find(o => o.value === data.country);
+        if (opt) fc.value = data.country;
+        else {
+          // Try case-insensitive
+          const opt2 = [...fc.options].find(o => o.value.toLowerCase() === data.country.toLowerCase());
+          if (opt2) fc.value = opt2.value;
+        }
+        updFlag();
+      }
+    }
+
+    // Category — match by English name
+    if (data.category) {
+      const fcat = document.getElementById('fcat');
+      if (fcat) {
+        const opt = [...fcat.options].find(o => o.value.toLowerCase() === data.category.toLowerCase());
+        if (opt) fcat.value = opt.value;
+      }
+    }
+
+    // ABV
+    if (data.abv) document.getElementById('fa').value = data.abv;
+
+    // Descriptions
+    if (data.desc_tr) document.getElementById('fdt').value = data.desc_tr;
+    if (data.desc_en) document.getElementById('fde').value = data.desc_en;
+
+    // Show what was filled
+    const filled = [
+      data.name && 'Ad',
+      data.country && 'Ülke',
+      data.category && 'Kategori',
+      data.abv && 'ABV',
+      data.desc_tr && 'TR Açıklama',
+      data.desc_en && 'EN Açıklama',
+    ].filter(Boolean).join(', ');
 
     status.style.display = 'none';
-    toast('Açıklamalar üretildi ✓');
+    toast('✓ Dolduruldu: ' + filled);
+
   } catch (e) {
-    status.innerHTML = '❌ ' + e.message;
-    toast('Hata: ' + e.message, 'err');
+    status.innerHTML = '❌ ' + esc(e.message);
+    toast('Hata: ' + esc(e.message), 'err');
   } finally {
     btn.disabled = false;
-    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg> AI ile Üret';
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg> ✨ AI ile Doldur';
   }
 }
 
