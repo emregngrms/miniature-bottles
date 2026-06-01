@@ -752,7 +752,7 @@ function openCocktailModal(c){
   const isEdit=!!c;
   c=c||{id:0,name:'',image:'',diff:'Kolay',diff_en:'Easy',time:'',slugs:[],ing_tr:[],ing_en:[],steps_tr:[],steps_en:[]};
   const selSlugs=c.slugs||[];
-  const bottleChecks=bottles.map(b=>`
+  const bottleChecks=[...bottles].filter(b=>b.status!=='draft').sort((a,b)=>(a.name||'').localeCompare(b.name||'','tr')).map(b=>`
     <div class="bottle-check ${selSlugs.includes(b.slug)?'selected':''}" id="bc-${esc(b.slug)}" onclick="toggleSlug('${esc(b.slug)}')">
       ${b.image?`<img src="${esc(b.image)}" onerror="this.style.display='none'"/>`:''}
       <span class="bottle-check-name">${esc(b.name)}</span>
