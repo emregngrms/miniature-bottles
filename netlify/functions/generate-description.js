@@ -14,9 +14,13 @@ exports.handler = async (event) => {
   const catList = (categories||[]).map(c=>`${c.name_en}/${c.name_tr}`).join(', ');
   const COUNTRIES = ['Scotland','England','Wales','Ireland','USA','France','Mexico','Italy','Germany','Venezuela','Spain','Japan','Canada','Australia','Netherlands','Sweden','Russia','Turkey','Greece','Cuba','Jamaica','Barbados','Trinidad','Peru','Brazil','Argentina','South Africa','India','China','Taiwan','Czech Republic','Poland','Hungary','Austria','Switzerland','Belgium','Portugal','Albania','Denmark','Finland','Iceland','Serbia','Croatia','Slovenia','Bosnia','Bulgaria','Romania','Ukraine','Georgia','Armenia','Azerbaijan','Israel','Lebanon','Morocco','South Korea','Vietnam','Thailand','Singapore','New Zealand','Colombia','Chile','Bolivia','Guatemala','Ecuador','Uruguay','Philippines','Indonesia','Malaysia','Kazakhstan','Egypt','Nigeria','Kenya','Diğer'];
 
+  // Normalize media_type — Claude only accepts jpeg/png/gif/webp
+  const ACCEPTED = ['image/jpeg','image/png','image/gif','image/webp'];
+  const safeType = ACCEPTED.includes(mediaType) ? mediaType : 'image/jpeg';
+
   const content = [];
   if (imageBase64) {
-    content.push({ type:'image', source:{ type:'base64', media_type: mediaType||'image/jpeg', data: imageBase64 }});
+    content.push({ type:'image', source:{ type:'base64', media_type: safeType, data: imageBase64 }});
   }
 
   let prompt;
