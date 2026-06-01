@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://identity.netlify.com https://netlify-identity-widget.netlify.com; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://netlify-identity-widget.netlify.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; connect-src 'self' https://*.netlify.com https://*.netlify.app;"/>
 <title>Admin — Miniature Bottles</title>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -166,7 +165,16 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
   <div class="login-card">
     <div class="login-logo">Miniature Bottles</div>
     <div class="login-sub">Admin Panel</div>
-    <button class="btn-login" onclick="netlifyIdentity.open()">Giriş Yap</button>
+    <div class="fg" style="margin-bottom:12px">
+      <label style="text-align:left">E-posta</label>
+      <input type="email" id="login-email" placeholder="e-posta" autocomplete="email" onkeydown="if(event.key==='Enter')doLogin()"/>
+    </div>
+    <div class="fg" style="margin-bottom:20px">
+      <label style="text-align:left">Şifre</label>
+      <input type="password" id="login-pass" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()"/>
+    </div>
+    <div id="login-err" style="display:none;color:#e05c5c;font-size:13px;margin-bottom:12px;text-align:center"></div>
+    <button class="btn-login" id="login-btn" onclick="doLogin()">Giriş Yap</button>
   </div>
 </div>
 
@@ -283,37 +291,52 @@ const COUNTRIES = [
 let token=null, bottles=[], categories=[], cocktails=[], shas={}, currentPage='dashboard', sq='';
 
 // ── AUTH ─────────────────────────────────────────────────────────────────────
-netlifyIdentity.on('init', u => { if(u) onLogin(u); });
-netlifyIdentity.on('login', u => { netlifyIdentity.close(); onLogin(u); });
-netlifyIdentity.on('logout', () => {
-  token = null;
-  document.body.classList.remove('admin-active');
-  document.getElementById('app').style.display = 'none';
-  document.getElementById('login-screen').style.display = 'flex';
-});
-
-async function onLogin(u) {
-  if(!u) return;
-  try {
-    token = u.token?.access_token || (await u.jwt());
-  } catch(e) {
-    await new Promise(r => setTimeout(r, 600));
-    try { token = await u.jwt(); } catch(e2) {}
+// ── CUSTOM AUTH ──────────────────────────────────────────────────────────────
+async function doLogin(){
+  const email = document.getElementById('login-email').value.trim();
+  const pass  = document.getElementById('login-pass').value;
+  const btn   = document.getElementById('login-btn');
+  const err   = document.getElementById('login-err');
+  if(!email||!pass){showErr('E-posta ve şifre gerekli');return;}
+  btn.disabled=true; btn.textContent='Giriş yapılıyor…'; err.style.display='none';
+  try{
+    const res = await fetch('/.netlify/identity/token',{
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:`grant_type=password&username=${encodeURIComponent(email)}&password=${encodeURIComponent(pass)}`
+    });
+    if(!res.ok){
+      const d=await res.json().catch(()=>({}));
+      throw new Error(d.error_description||d.msg||'Hatalı e-posta veya şifre');
+    }
+    const data=await res.json();
+    token=data.access_token;
+    sessionStorage.setItem('mb_token',token);
+    sessionStorage.setItem('mb_exp',Date.now()+(data.expires_in||3600)*1000);
+    showAdmin(); await loadAll();
+  }catch(e){
+    showErr(e.message);
+    btn.disabled=false; btn.textContent='Giriş Yap';
   }
-  if(!token) { toast('Giriş hatası', 'err'); return; }
-
-  document.getElementById('login-screen').style.display = 'none';
-  document.getElementById('app').style.display = 'flex';
-  document.body.classList.add('admin-active');
-
-  // Close widget — simple and direct
-  try { netlifyIdentity.close(); } catch(e){}
-  setTimeout(() => { try { netlifyIdentity.close(); } catch(e){} }, 300);
-
-  await loadAll();
 }
-
-function logout(){ netlifyIdentity.logout(); }
+function showErr(msg){const e=document.getElementById('login-err');if(e){e.textContent=msg;e.style.display='block';}}
+function showAdmin(){
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('app').style.display='flex';
+}
+function logout(){
+  token=null;
+  sessionStorage.removeItem('mb_token');sessionStorage.removeItem('mb_exp');
+  document.getElementById('app').style.display='none';
+  document.getElementById('login-screen').style.display='flex';
+  document.getElementById('login-pass').value='';
+}
+// Restore session on page load
+(function(){
+  const t=sessionStorage.getItem('mb_token');
+  const exp=parseInt(sessionStorage.getItem('mb_exp')||'0');
+  if(t&&exp>Date.now()){token=t;showAdmin();loadAll();}
+})();
 
 // ── GIT API ───────────────────────────────────────────────────────────────────
 function u2b(s){return btoa(unescape(encodeURIComponent(s)));}
