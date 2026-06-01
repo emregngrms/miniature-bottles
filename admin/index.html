@@ -79,7 +79,7 @@ main{flex:1;padding:28px 32px;min-width:0}
 .trow:hover:not(.thead){background:var(--cardho)}
 .thead{background:var(--surface);color:var(--sub);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
 .thead:hover{background:var(--surface)!important}
-.bottle-cols{grid-template-columns:48px 1fr 130px 60px 50px 100px}
+.bottle-cols{grid-template-columns:48px 1fr 110px 90px 50px 100px}
 .cat-cols{grid-template-columns:1fr 1fr 80px 90px}
 .cocktail-cols{grid-template-columns:48px 1fr 90px 70px 100px}
 .row-img{width:40px;height:40px;border-radius:8px;object-fit:cover;background:var(--surface)}
@@ -150,7 +150,7 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
   #hamburger{display:flex!important}
   .stats{grid-template-columns:1fr 1fr}
   .fg-grid{grid-template-columns:1fr}
-  .bottle-cols{grid-template-columns:40px 1fr 60px 80px}
+  .bottle-cols{grid-template-columns:40px 1fr 70px 60px}
   .cat-cols{grid-template-columns:1fr 1fr 80px}
   .cocktail-cols{grid-template-columns:40px 1fr 80px}
   main{padding:16px}
@@ -296,6 +296,7 @@ const COUNTRIES = [
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
 let token=null, bottles=[], categories=[], cocktails=[], shas={}, currentPage='dashboard', sq='';
+let state={igFilter:''};
 
 // ── AUTH ─────────────────────────────────────────────────────────────────────
 // ── CUSTOM AUTH ──────────────────────────────────────────────────────────────
@@ -445,11 +446,20 @@ function renderDashboard(){
 function renderBottles(){
   const q=sq.toLowerCase();
   const published=bottles.filter(b=>b.status!=='draft');
-  const list=q?published.filter(b=>[b.name,b.country,b.category].some(s=>s?.toLowerCase().includes(q))):published;
+  let list = q ? published.filter(b=>[b.name,b.country,b.category].some(s=>s?.toLowerCase().includes(q))) : published;
+  if(state.igFilter==='posted') list=list.filter(b=>b.ig_posted);
+  else if(state.igFilter==='unposted') list=list.filter(b=>!b.ig_posted);
   document.getElementById('page-content').innerHTML=`
   <div class="fade">
     <div class="page-header">
-      <div class="page-title">Şişeler <span>${esc(published.length)} şişe</span></div>
+      <div>
+        <div class="page-title">Şişeler <span>${esc(published.length)} şişe</span></div>
+        <div style="display:flex;gap:6px;margin-top:8px">
+          <button class="chip ${!state.igFilter?'active':''}" onclick="setState({igFilter:''})">Tümü</button>
+          <button class="chip ${state.igFilter==='unposted'?'active':''}" onclick="setState({igFilter:'unposted'})">📸 Paylaşılmadı <span style="background:rgba(224,92,92,.2);color:#e05c5c;padding:1px 6px;border-radius:10px;font-size:10px">${esc(published.filter(b=>!b.ig_posted).length)}</span></button>
+          <button class="chip ${state.igFilter==='posted'?'active':''}" onclick="setState({igFilter:'posted'})">✓ Paylaşıldı <span style="background:rgba(131,58,180,.15);color:#c77dff;padding:1px 6px;border-radius:10px;font-size:10px">${esc(published.filter(b=>b.ig_posted).length)}</span></button>
+        </div>
+      </div>
       <div class="header-actions">
         <div class="search-wrap">
           <svg class="search-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -459,7 +469,7 @@ function renderBottles(){
       </div>
     </div>
     <div class="table-wrap">
-      <div class="trow bottle-cols thead"><div></div><div>Şişe</div><div>Kategori</div><div>Adet</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
+      <div class="trow bottle-cols thead"><div></div><div>Şişe</div><div>Kategori</div><div>Instagram</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
       ${!list.length?`<div class="empty"><div class="empty-ico">🫗</div>Sonuç yok</div>`:''}
       ${list.map(b=>`<div class="trow bottle-cols">
         <div>${b.image?`<img class="row-img" src="${esc(b.image)}" loading="lazy" onerror="this.style.opacity='.3'"/>`:`<div class="row-ph">🥃</div>`}</div>
@@ -506,6 +516,16 @@ function openBottleModal(b){
     <div class="fg"><label>ABV</label><input id="fa" value="${esc(b.abv)}" placeholder="40%"/></div>
     <div class="fg"><label>Yıl</label><input id="fy" type="number" value="${esc(b.year)}" min="2000" max="2099"/></div>
     <div class="fg fg-full"><label>Adet <span style="color:var(--sub);font-weight:400">(1'den fazlaysa Fazlalıklar'da görünür)</span></label><input id="fq" type="number" value="${esc(b.qty)}" min="1" max="99"/></div>
+    <div class="fg fg-full">
+      <label>Hediye Eden <span style="color:var(--sub);font-weight:400">(isteğe bağlı)</span></label>
+      <input id="fgift" type="text" value="${esc(b.gift_from||'')}" placeholder="@instagram_kullanici_adi"/>
+      <div class="hint">Birileri hediye getirdiyse Instagram kullanıcı adını gir. Şişe sayfasında ve IG paylaşımında görünür.</div>
+    </div>
+    <div class="fg fg-full">
+      <label>Hashtag'ler <span style="color:var(--sub);font-weight:400">(AI üretir, düzenleyebilirsin)</span></label>
+      <input id="fhash" type="text" value="${esc((b.hashtags||[]).join(' '))}" placeholder="#minibottles #minibottlescollection …"/>
+      <div class="hint">Boşlukla ayır. AI ile Doldur butonu otomatik üretir.</div>
+    </div>
     <div class="fg fg-full">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
         <label>Fotoğraflar</label>
@@ -961,6 +981,12 @@ async function genAI() {
     if (data.desc_tr) document.getElementById('fdt').value = data.desc_tr;
     if (data.desc_en) document.getElementById('fde').value = data.desc_en;
 
+    // Hashtags
+    if (data.hashtags && data.hashtags.length) {
+      const fhash = document.getElementById('fhash');
+      if (fhash) fhash.value = data.hashtags.join(' ');
+    }
+
     // Show what was filled
     const filled = [
       data.name && 'Ad',
@@ -969,6 +995,7 @@ async function genAI() {
       data.abv && 'ABV',
       data.desc_tr && 'TR Açıklama',
       data.desc_en && 'EN Açıklama',
+      data.hashtags?.length && 'Hashtagler',
     ].filter(Boolean).join(', ');
 
     status.style.display = 'none';
@@ -1192,6 +1219,127 @@ async function analyzeAllDrafts(){
   
   if(batchBtn){ batchBtn.disabled=false; batchBtn.textContent='Tümünü Analiz Et'; }
   toast(`${done} taslak analiz edildi ✓`);
+}
+
+
+// ── INSTAGRAM SHARING ─────────────────────────────────────────────────────────
+const SITE_URL = 'https://miniaturebottles5cl.com';
+
+function buildCaption(b) {
+  const lines = [];
+  lines.push(b.name);
+  lines.push('');
+  if(b.desc_tr) lines.push(b.desc_tr);
+  if(b.desc_tr && b.desc_en) lines.push('\n---------\n');
+  if(b.desc_en) lines.push(b.desc_en);
+  lines.push('');
+  if(b.gift_from) lines.push(`🎁 @${b.gift_from.replace('@','')} teşekkürler`);
+  lines.push('');
+  if(b.hashtags && b.hashtags.length) lines.push(b.hashtags.join(' '));
+  return lines.join('\n').trim();
+}
+
+function openShareModal(slug) {
+  const b = bottles.find(x=>x.slug===slug);
+  if(!b) return;
+  const imageUrl = b.image ? (b.image.startsWith('http') ? b.image : SITE_URL + b.image) : '';
+  const caption = buildCaption(b);
+  
+  document.getElementById('modal-ttl').textContent = 'Instagram Paylasimi';
+  document.getElementById('modal-bd').innerHTML = `
+    <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:start">
+      ${imageUrl ? `<img src="${esc(imageUrl)}" style="width:120px;height:120px;object-fit:cover;border-radius:10px;border:1px solid var(--border)"/>` : '<div style="width:120px;height:120px;background:var(--surface);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:32px">📷</div>'}
+      <div>
+        <div style="font-weight:600;font-size:14px;margin-bottom:4px">${esc(b.name)}</div>
+        <div style="font-size:11px;color:var(--sub)">${esc(b.category)} · ${esc(b.country)}</div>
+        ${!imageUrl ? '<div style="margin-top:8px;padding:8px;background:var(--redd);border-radius:8px;font-size:12px;color:var(--red)">⚠️ Görsel yok — önce görsel ekle</div>' : ''}
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <label style="font-size:11px;color:var(--sub);letter-spacing:.06em;text-transform:uppercase;font-weight:600">Caption</label>
+      <textarea id="ig-caption" style="width:100%;margin-top:6px;padding:10px;background:var(--surface);border:1px solid var(--border);border-radius:9px;color:var(--text);font-family:inherit;font-size:13px;resize:vertical;min-height:160px">${esc(caption)}</textarea>
+    </div>
+    <div style="margin-top:8px;font-size:12px;color:var(--sub)">
+      Görsel URL: <span style="color:var(--blue)">${esc(imageUrl||'(yok)')}</span>
+    </div>`;
+  document.getElementById('modal-ft').innerHTML = `
+    <button class="btn btn-ghost" onclick="closeModal()">İptal</button>
+    <button class="btn btn-primary" id="ig-post-btn" onclick="doPostToInstagram('${esc(slug)}')" ${!imageUrl?'disabled':''}>
+      📸 Instagram'da Paylaş
+    </button>`;
+  openModal();
+}
+
+async function doPostToInstagram(slug) {
+  const b = bottles.find(x=>x.slug===slug);
+  if(!b) return;
+  const btn = document.getElementById('ig-post-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner"></div> Paylaşılıyor…';
+  
+  const imageUrl = b.image.startsWith('http') ? b.image : SITE_URL + b.image;
+  const caption = document.getElementById('ig-caption').value;
+
+  try {
+    const res = await fetch('/.netlify/functions/post-to-instagram', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ imageUrl, caption })
+    });
+    const data = await res.json();
+    if(!res.ok) throw new Error(data.error||'Paylaşım başarısız');
+    
+    // Update bottle with ig_posted status
+    const idx = bottles.findIndex(x=>x.slug===slug);
+    if(idx>=0){
+      bottles[idx].ig_posted = true;
+      bottles[idx].ig_posted_at = new Date().toISOString().split('T')[0];
+      bottles[idx].ig_post_id = data.ig_post_id||'';
+      await saveBottles('Instagram post: '+b.name);
+    }
+    
+    closeModal();
+    toast("Instagram'da paylasildi!");
+    renderBottles();
+    
+  } catch(e) {
+    btn.disabled = false;
+    btn.innerHTML = "Paylas";
+    toast('Hata: '+esc(e.message),'err');
+  }
+}
+
+function openIgPost(slug) {
+  const b = bottles.find(x=>x.slug===slug);
+  if(!b) return;
+  if(b.ig_post_id) {
+    window.open('https://www.instagram.com/p/'+b.ig_post_id+'/', '_blank');
+  } else {
+    // Show info modal
+    document.getElementById('modal-ttl').textContent = '✓ Instagram Paylaşımı';
+    document.getElementById('modal-bd').innerHTML = `
+      <div style="font-size:13px;color:var(--text)">
+        <div style="font-weight:600;margin-bottom:8px">${esc(b.name)}</div>
+        <div style="color:var(--sub)">Paylaşım tarihi: ${esc(b.ig_posted_at||'bilinmiyor')}</div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button class="btn btn-ghost btn-sm" onclick="resetIgPost('${esc(slug)}')">Paylaşılmadı olarak işaretle</button>
+        </div>
+      </div>`;
+    document.getElementById('modal-ft').innerHTML = `<button class="btn btn-ghost" onclick="closeModal()">Kapat</button>`;
+    openModal();
+  }
+}
+
+async function resetIgPost(slug) {
+  const idx = bottles.findIndex(b=>b.slug===slug);
+  if(idx<0) return;
+  bottles[idx].ig_posted = false;
+  bottles[idx].ig_posted_at = '';
+  bottles[idx].ig_post_id = '';
+  await saveBottles('Reset IG post: '+slug);
+  closeModal();
+  renderBottles();
+  toast("Paylasim durumu sifirland");
 }
 
 // ── ACTIVE TOGGLE ─────────────────────────────────────────────────────────────
