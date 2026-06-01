@@ -171,7 +171,15 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
     </div>
     <div class="fg" style="margin-bottom:20px">
       <label style="text-align:left">Şifre</label>
-      <input type="password" id="login-pass" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()"/>
+      <div style="position:relative">
+        <input type="password" id="login-pass" placeholder="••••••••" autocomplete="current-password"
+          onkeydown="if(event.key==='Enter')doLogin()"
+          style="padding-right:44px"/>
+        <button type="button" onclick="togglePass()" id="pass-eye"
+          style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#4a6490;cursor:pointer;font-size:16px;padding:0">
+          👁
+        </button>
+      </div>
     </div>
     <div id="login-err" style="display:none;color:#e05c5c;font-size:13px;margin-bottom:12px;text-align:center"></div>
     <button class="btn-login" id="login-btn" onclick="doLogin()">Giriş Yap</button>
@@ -271,7 +279,6 @@ const FLAG_EMOJI = {
 };
 const COUNTRY_ISO = FLAG_EMOJI;
 const FLAGS = FLAG_EMOJI;
-const FLAGS = COUNTRY_ISO;
 function getFlagEmoji(c){ const iso=COUNTRY_ISO[c]; return iso?`🏳`:'🌍'; }
 const COUNTRIES = [
   'Scotland','England','Wales','Ireland','USA','France','Mexico','Italy',
@@ -292,6 +299,11 @@ let token=null, bottles=[], categories=[], cocktails=[], shas={}, currentPage='d
 
 // ── AUTH ─────────────────────────────────────────────────────────────────────
 // ── CUSTOM AUTH ──────────────────────────────────────────────────────────────
+function togglePass(){
+  const inp = document.getElementById('login-pass');
+  inp.type = inp.type === 'password' ? 'text' : 'password';
+}
+
 async function doLogin(){
   const email = document.getElementById('login-email').value.trim();
   const pass  = document.getElementById('login-pass').value;
