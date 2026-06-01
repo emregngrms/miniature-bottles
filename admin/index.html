@@ -19,6 +19,16 @@
 }
 html,body{min-height:100vh;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+/* Force hide Netlify Identity widget when admin is active */
+body.admin-active [data-netlify-identity-widget],
+body.admin-active .netlify-identity-widget,
+body.admin-active iframe[src*="identity"],
+body.admin-active iframe[src*="netlify-identity"] {
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
 /* Hide signup in Netlify Identity widget */
 [data-netlify-identity-modal] .tabs .tab:last-child,
 [data-netlify-identity-modal] .btn-link,
@@ -276,19 +286,37 @@ let token=null, bottles=[], categories=[], cocktails=[], shas={}, currentPage='d
 netlifyIdentity.on('init',u=>{if(u)onLogin(u);});
 // Disable signup — hide the tab when widget opens
 netlifyIdentity.on('open', ()=>{
-  setTimeout(()=>{
-    // Hide signup links in the widget iframe
-    const iframes = document.querySelectorAll('iframe');
-    iframes.forEach(iframe => {
-      try {
-        const doc = iframe.contentDocument;
-        if(doc){
-          const signupLinks = doc.querySelectorAll('a[href*="signup"], .signup, [data-tab="signup"]');
-          signupLinks.forEach(el => el.style.display='none');
-        }
-      } catch(e){}
-    });
-  }, 300);
+  // Auto-switch to login tab if signup is shown
+  const tryClickLogin = (attempts) => {
+    if(attempts <= 0) return;
+    setTimeout(()=>{
+      const iframes = document.querySelectorAll('iframe');
+      let found = false;
+      iframes.forEach(iframe => {
+        try {
+          const doc = iframe.contentDocument || iframe.contentWindow?.document;
+          if(!doc) return;
+          // Click login tab if it exists
+          const tabs = doc.querySelectorAll('[data-tab], .tab, button');
+          tabs.forEach(tab => {
+            if(tab.textContent?.toLowerCase().includes('log in') ||
+               tab.textContent?.toLowerCase().includes('login')) {
+              tab.click(); found = true;
+            }
+          });
+          // Hide signup button/link
+          doc.querySelectorAll('a, button').forEach(el => {
+            if(el.textContent?.toLowerCase().includes('sign up') ||
+               el.textContent?.toLowerCase().includes('signup')) {
+              el.style.display = 'none';
+            }
+          });
+        } catch(e){}
+      });
+      if(!found) tryClickLogin(attempts - 1);
+    }, 300);
+  };
+  tryClickLogin(5);
 });
 netlifyIdentity.on('login',u=>{netlifyIdentity.close();onLogin(u);});
 netlifyIdentity.on('logout',()=>{token=null;document.getElementById('app').style.display='none';document.getElementById('login-screen').style.display='flex';});
