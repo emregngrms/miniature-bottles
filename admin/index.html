@@ -368,17 +368,38 @@ async function gitPut(p,data,msg){
   return false;
 }
 async function uploadImg(file){
+  // Always convert to JPEG via canvas (handles HEIC, BMP, TIFF etc.)
   return new Promise((res,rej)=>{
-    const fr=new FileReader();
-    fr.onload=async e=>{
-      const b64=e.target.result.split(',')[1];
-      const ext=file.name.split('.').pop().toLowerCase().replace(/[^a-z0-9]/g,'');
-      const fname=`images/uploads/${Date.now()}.${ext}`;
-      const r=await fetch(GIT+fname,{method:'PUT',headers:{'Authorization':'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({message:'Upload image',content:b64})});
-      if(r.ok){const d=await r.json();shas[fname]=d.content?.sha;res('/'+fname);}
-      else rej(new Error('Upload başarısız ('+r.status+')'));
+    const img = new Image();
+    const objUrl = URL.createObjectURL(file);
+    img.onload = async () => {
+      try {
+        // Resize if needed
+        let {width: w, height: h} = img;
+        const maxPx = 1200;
+        if(w > maxPx || h > maxPx){
+          if(w > h){ h = Math.round(h * maxPx / w); w = maxPx; }
+          else { w = Math.round(w * maxPx / h); h = maxPx; }
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        // Always output JPEG
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.88);
+        const b64 = dataUrl.split(',')[1];
+        const fname = `images/uploads/${Date.now()}.jpg`; // always .jpg
+        URL.revokeObjectURL(objUrl);
+        const r = await fetch(GIT+fname, {
+          method:'PUT',
+          headers:{'Authorization':'Bearer '+token,'Content-Type':'application/json'},
+          body: JSON.stringify({message:'Upload image', content: b64})
+        });
+        if(r.ok){ const d=await r.json(); shas[fname]=d.content?.sha; res('/'+fname); }
+        else rej(new Error('Upload başarısız ('+r.status+')'));
+      } catch(e){ URL.revokeObjectURL(objUrl); rej(e); }
     };
-    fr.readAsDataURL(file);
+    img.onerror = () => { URL.revokeObjectURL(objUrl); rej(new Error('Görsel yüklenemedi')); };
+    img.src = objUrl;
   });
 }
 
