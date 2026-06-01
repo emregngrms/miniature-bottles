@@ -370,21 +370,16 @@
     },
     {
       "id": 1757255674,
-      "slug": "bottle-22",
+      "slug": "jack-daniel-s-tennessee-honey",
       "name": "Jack Daniel's Tennessee Honey",
       "country": "USA",
       "category": "Liqueur",
       "abv": "35%",
       "year": 2025,
       "qty": 1,
-      "image": "/images/uploads/17858708643436660.jpg",
-      "images": [
-        "/images/uploads/17858708643436660.jpg"
-      ],
-      "desc_tr": "Jack Daniel's Tennessee Honey, ünlü Tennessee Whiskey üreticisi Jack Daniel's tarafından hazırlanan bal likörüdür. Tennessee whiskey'nin karakteristik yumuşaklığı ile doğal bal aromasının kombinasyonu, içimi oldukça yumuşak ve tatlı kılan bir içecek yaratır. Saf içim, kokteyllerde veya çeşitli tarif kombinasyonlarında tercih edilen popüler bir seçimdir.",
-      "desc_en": "Jack Daniel's Tennessee Honey is a honey liqueur crafted by the renowned Tennessee whiskey producer Jack Daniel's. The combination of Tennessee whiskey's characteristic smoothness with natural honey aromatics creates a notably soft and sweet drinking experience. It is a popular choice enjoyed neat, in cocktails, or as part of various recipe combinations.",
-      "status": "draft",
-      "active": false
+      "image": "",
+      "desc_tr": "Jack Daniel's'ın ikonik Tennessee Whiskey'sine bal ve doğal tatlandırıcılar eklenerek oluşturulan bu şık likör, koleksiyonunuza sıcak ve ağız tadı kalan bir parça katacaktır. 50ml'lik bu miniature şişe, American whiskey severler için vazgeçilmez bir clássik. Bardağa düşüncesi bile keyifli olan bu özel tarifin tadını çıkarın.",
+      "desc_en": "This refined liqueur combines Jack Daniel's iconic Tennessee Whiskey with honey and natural sweeteners, adding a warm and smooth piece to your collection. This 50ml miniature bottle is an indispensable classic for American whiskey enthusiasts. The very thought of pouring this special recipe into a glass is delightful."
     },
     {
       "id": 1757255652,
