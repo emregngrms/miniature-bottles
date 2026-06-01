@@ -10,7 +10,6 @@
 <meta property="og:description" content="Dünyanın dört bir yanından 5cl minyatür alkol şişeleri koleksiyonu, kokteyl tarifleri ve takas listesi."/>
 <meta property="og:image" content="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=600"/>
 <link rel="canonical" href="https://miniaturebottles5cl.com/"/>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -549,11 +548,7 @@ function goBack(){
 }
 
 // Netlify Identity redirect handler
-if(window.netlifyIdentity){
-  window.netlifyIdentity.on('init',user=>{
-    if(!user){window.netlifyIdentity.on('login',()=>{document.location.href='/admin/';})}
-  });
-}
+
 
 loadData();
 </script>
