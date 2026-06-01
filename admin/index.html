@@ -907,14 +907,14 @@ async function genAI() {
     
     if (imgFile) {
       imageBase64 = await resizeImg(imgFile);
-      mediaType = imgFile.type || 'image/jpeg';
+      mediaType = 'image/jpeg'; // resizeImg always converts to JPEG via canvas
     } else if (existingImgs.length) {
       // Fetch existing image and convert to base64
       status.innerHTML = '🖼️ Mevcut görsel yükleniyor…';
       try {
         const imgRes = await fetch(existingImgs[0]);
         const blob = await imgRes.blob();
-        mediaType = blob.type || 'image/jpeg';
+        mediaType = 'image/jpeg'; // normalize to JPEG
         imageBase64 = await new Promise(res => {
           const r = new FileReader();
           r.onload = e => res(e.target.result.split(',')[1]);
