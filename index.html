@@ -399,10 +399,10 @@ function renderSearchBar(ph){
 function renderCollectionPage(extrasOnly){
   const base=extrasOnly?bottles.filter(b=>b.qty>1):bottles;
   const q=state.search.toLowerCase();
-  const filtered=base.filter(b=>{
+  const filtered=sortBottles(base.filter(b=>{
     const m=!q||[b.name,b.country,b.category,b.desc_tr||'',b.desc_en||''].some(s=>s.toLowerCase().includes(q));
     return m&&(!state.cat||b.category===state.cat)&&(!state.country||b.country===state.country);
-  });
+  }),state.sort);
 
   return `
     ${extrasOnly?`<div class="extras-banner">
@@ -513,7 +513,9 @@ function renderCocktailDetail(c){
 
 function renderCocktailsPage(){
   const q=state.search.toLowerCase();
-  const filtered=cocktails.filter(c=>!q||c.name.toLowerCase().includes(q)||(c.ing_tr||[]).some(i=>i.toLowerCase().includes(q)));
+  const filtered=[...cocktails]
+    .filter(c=>!q||c.name.toLowerCase().includes(q)||(c.ing_tr||[]).some(i=>i.toLowerCase().includes(q)))
+    .sort((a,b)=>(a.name||'').localeCompare(b.name||'','tr'));
   return `<div class="fade">
     <div class="page-title">${t('Kokteyl Tarifleri','Cocktail Recipes')}</div>
     <div class="page-sub">${t('Koleksiyonumdaki şişelerle hazırlanan özel tarifler','Special recipes made with bottles from my collection')}</div>
