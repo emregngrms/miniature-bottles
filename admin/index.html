@@ -166,7 +166,7 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
   <div class="login-card">
     <div class="login-logo">Miniature Bottles</div>
     <div class="login-sub">Admin Panel</div>
-    <button class="btn-login" onclick="netlifyIdentity.open('login')">Giriş Yap</button>
+    <button class="btn-login" onclick="netlifyIdentity.open()">Giriş Yap</button>
   </div>
 </div>
 
@@ -283,50 +283,37 @@ const COUNTRIES = [
 let token=null, bottles=[], categories=[], cocktails=[], shas={}, currentPage='dashboard', sq='';
 
 // ── AUTH ─────────────────────────────────────────────────────────────────────
-netlifyIdentity.on('init',u=>{if(u)onLogin(u);});
-// Disable signup — hide the tab when widget opens
-netlifyIdentity.on('open', ()=>{
-  // Auto-switch to login tab if signup is shown
-  const tryClickLogin = (attempts) => {
-    if(attempts <= 0) return;
-    setTimeout(()=>{
-      const iframes = document.querySelectorAll('iframe');
-      let found = false;
-      iframes.forEach(iframe => {
-        try {
-          const doc = iframe.contentDocument || iframe.contentWindow?.document;
-          if(!doc) return;
-          // Click login tab if it exists
-          const tabs = doc.querySelectorAll('[data-tab], .tab, button');
-          tabs.forEach(tab => {
-            if(tab.textContent?.toLowerCase().includes('log in') ||
-               tab.textContent?.toLowerCase().includes('login')) {
-              tab.click(); found = true;
-            }
-          });
-          // Hide signup button/link
-          doc.querySelectorAll('a, button').forEach(el => {
-            if(el.textContent?.toLowerCase().includes('sign up') ||
-               el.textContent?.toLowerCase().includes('signup')) {
-              el.style.display = 'none';
-            }
-          });
-        } catch(e){}
-      });
-      if(!found) tryClickLogin(attempts - 1);
-    }, 300);
-  };
-  tryClickLogin(5);
+netlifyIdentity.on('init', u => { if(u) onLogin(u); });
+netlifyIdentity.on('login', u => { netlifyIdentity.close(); onLogin(u); });
+netlifyIdentity.on('logout', () => {
+  token = null;
+  document.body.classList.remove('admin-active');
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('login-screen').style.display = 'flex';
 });
-netlifyIdentity.on('login',u=>{netlifyIdentity.close();onLogin(u);});
-netlifyIdentity.on('logout',()=>{token=null;document.getElementById('app').style.display='none';document.getElementById('login-screen').style.display='flex';});
-async function onLogin(u){
-  token=u.token?.access_token||(await u.jwt());
-  document.getElementById('login-screen').style.display='none';
-  document.getElementById('app').style.display='flex';
+
+async function onLogin(u) {
+  if(!u) return;
+  try {
+    token = u.token?.access_token || (await u.jwt());
+  } catch(e) {
+    await new Promise(r => setTimeout(r, 600));
+    try { token = await u.jwt(); } catch(e2) {}
+  }
+  if(!token) { toast('Giriş hatası', 'err'); return; }
+
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'flex';
+  document.body.classList.add('admin-active');
+
+  // Close widget — simple and direct
+  try { netlifyIdentity.close(); } catch(e){}
+  setTimeout(() => { try { netlifyIdentity.close(); } catch(e){} }, 300);
+
   await loadAll();
 }
-function logout(){netlifyIdentity.logout();}
+
+function logout(){ netlifyIdentity.logout(); }
 
 // ── GIT API ───────────────────────────────────────────────────────────────────
 function u2b(s){return btoa(unescape(encodeURIComponent(s)));}
