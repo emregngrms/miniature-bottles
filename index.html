@@ -216,10 +216,17 @@ const COUNTRY_ISO = {
   Uruguay:'uy', Philippines:'ph', Indonesia:'id', Malaysia:'my',
   Kazakhstan:'kz', Egypt:'eg', Nigeria:'ng', Kenya:'ke', Ethiopia:'et',
 };
+function imgSrc(url) {
+  if(!url) return '';
+  // For HEIC files (not browser-renderable), we can't do much on the frontend
+  // The admin should re-upload them — show as-is, onerror will handle it
+  return url;
+}
+
 function flagImg(country){
   const iso = COUNTRY_ISO[country];
   if(!iso) return '';
-  return '<img src="https://flagcdn.com/w20/'+iso+'.png" width="20" height="15" style="border-radius:2px;display:inline-block;vertical-align:middle;margin-right:4px" alt="'+country+'" loading="lazy"/>';
+  return '<img src="https://flagcdn.com/w20/'+iso+'.png" width="20" height="15" style="border-radius:2px;display:inline-block;vertical-align:middle;margin-right:4px" alt="'+country+'" loading="lazy" onerror="this.style.opacity='0.2'"/';
 }
 function flag(country){ return ''; }
 
@@ -337,7 +344,7 @@ function renderBottleCard(b){
   const cc=cocktailsFor(b.slug).length;
   return `<div class="bcard" onclick="openBottle('${b.slug}')">
     <div class="bcard-img">
-      <img src="${b.image}" alt="${b.name}" loading="lazy"/>
+      <img src="${b.image}" alt="${b.name}" loading="lazy" onerror="this.style.opacity='0.2'"/
       <div class="overlay"></div>
       <div class="bcard-badges">
         <span class="badge-cat">${catName(b.category)}</span>
@@ -357,7 +364,7 @@ function renderBottleCard(b){
 function renderBottleRow(b){
   const cc=cocktailsFor(b.slug).length;
   return `<div class="brow" onclick="openBottle('${b.slug}')">
-    <div class="brow-img"><img src="${b.image}" alt="${b.name}" loading="lazy"/></div>
+    <div class="brow-img"><img src="${b.image}" alt="${b.name}" loading="lazy" onerror="this.style.opacity='0.2'"/</div>
     <div class="brow-body">
       <div class="brow-info">
         <div class="brow-tags">
@@ -377,7 +384,7 @@ function renderCocktailCard(c){
   const diff=state.lang==='tr'?c.diff:c.diff_en;
   return `<div class="ccard" onclick="openCocktail(${c.id})">
     <div class="ccard-img">
-      <img src="${c.image}" alt="${c.name}" loading="lazy"/>
+      <img src="${c.image}" alt="${c.name}" loading="lazy" onerror="this.style.opacity='0.2'"/
       <div class="overlay"></div>
       <span style="position:absolute;top:10px;left:10px;background:rgba(13,30,66,.9);font-size:10px;padding:3px 8px;border-radius:8px;backdrop-filter:blur(4px)" class="${c.diff==='Kolay'?'diff-easy':'diff-mid'}">${diff}</span>
       <span style="position:absolute;top:10px;right:10px;background:rgba(6,14,40,.85);color:#8aaad8;font-size:10px;padding:3px 8px;border-radius:8px;backdrop-filter:blur(4px)">${svgClock()} ${c.time}</span>
