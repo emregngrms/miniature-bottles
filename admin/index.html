@@ -600,7 +600,16 @@ function openBottleModal(b){
   </div>`;
   document.getElementById('modal-ft').innerHTML=`
     <button class="btn btn-ghost" onclick="closeModal()">İptal</button>
-    <button class="btn btn-primary" id="sbtn" onclick="saveBottle('${esc(b.slug)}','${isEdit}')">${isEdit?'Güncelle':'Ekle & Yayınla'}</button>`;
+    <button class="btn btn-ghost" id="sbtn-draft" onclick="saveBottle('${esc(b.slug)}','${isEdit}','draft')" style="border-color:var(--gold);color:var(--gold)">
+      Taslak Kaydet
+    </button>
+    <button class="btn btn-primary" id="sbtn" onclick="saveBottle('${esc(b.slug)}','${isEdit}','publish')">
+      ${isEdit?'Kaydet & Yayınla':'Ekle & Yayınla'}
+    </button>
+    <button class="btn" id="sbtn-ig" disabled title="Instagram entegrasyonu yakında"
+      style="background:rgba(131,58,180,.12);border:1px solid rgba(131,58,180,.25);color:rgba(131,58,180,.4);cursor:not-allowed;gap:6px">
+      📸 IG Yayınla
+    </button>`;
   // Init image list state BEFORE rendering (modal HTML uses b.images directly)
   // Init image list — exclude blobs, fallback to b.image if needed
   const allImgs = b.images?.length ? b.images : (b.image ? [b.image] : []);
@@ -685,9 +694,13 @@ function updImgUrl(url){
   if(el.tagName==='IMG'){el.src=url;}else{el.outerHTML=`<img class="img-pv" id="ipv" src="${url}"/>`;}
 }
 
-async function saveBottle(oldSlug, isEdit) {
+async function saveBottle(oldSlug, isEdit, saveMode) {
   const btn = document.getElementById('sbtn');
-  btn.disabled = true; btn.innerHTML = '<div class="spinner"></div>';
+  const btnDraft = document.getElementById('sbtn-draft');
+  const btnIg = document.getElementById('sbtn-ig');
+  if(btn) { btn.disabled = true; btn.innerHTML = '<div class="spinner"></div>'; }
+  if(btnDraft) btnDraft.disabled = true;
+  if(btnIg) btnIg.disabled = true;
 
   const name     = document.getElementById('fn')?.value?.trim();
   const slug     = document.getElementById('fs')?.value?.trim();
@@ -759,8 +772,8 @@ async function saveBottle(oldSlug, isEdit) {
     desc_en,
     gift_from,
     hashtags,
-    status:    existing?.status || 'published',
-    active:    existing?.active !== undefined ? existing.active : true,
+    status:    saveMode === 'draft' ? 'draft' : 'published',
+    active:    saveMode !== 'draft',
   };
 
   if (isEdit === 'true') {
@@ -775,7 +788,10 @@ async function saveBottle(oldSlug, isEdit) {
 
   const ok = await saveBottles(isEdit === 'true' ? `Edit: ${name}` : `Add: ${name}`);
   if (ok) { closeModal(); renderBottles(); }
-  else { btn.disabled = false; btn.textContent = 'Tekrar'; }
+  else {
+    if(btn){ btn.disabled=false; btn.innerHTML = saveMode==='draft'?'Taslak Kaydet':'Kaydet & Yayınla'; }
+    if(btnDraft) btnDraft.disabled=false;
+  }
 }
 
 function confirmDelBottle(slug){
