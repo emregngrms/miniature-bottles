@@ -255,10 +255,10 @@
     },
     {
       "id": 1762693233,
-      "slug": "makers-mark-kentucky-straight-bourbon-whisky",
+      "slug": "maker-s-mark-kentucky-straight-bourbon-whisky",
       "name": "Maker's Mark Kentucky Straight Bourbon Whisky",
       "country": "USA",
-      "category": "Bourbon Whisky",
+      "category": "Bourbon",
       "abv": "45%",
       "year": 2025,
       "qty": 1,
@@ -266,10 +266,21 @@
       "images": [
         "/images/uploads/17982560195765304.jpg"
       ],
-      "desc_tr": "Maker's Mark, 1953'ten beri el yapımı olarak üretilen ünlü Kentucky bourbon whisky'sidir. Karakteristik kırmızı mum mühürü ve yumuşak, dengeli profiliyle tanınan bu işletme, tatlı ve pürüzsüz tadı ile bourbon kategorisinde önemli bir yere sahiptir. Vanilya, buğday ve hafif meyveli notaları içeren bu whisky, saf içilmek veya kokteyllerde kullanılmak için idealdir.",
-      "desc_en": "Maker's Mark is a renowned Kentucky straight bourbon whisky handcrafted since 1953, identifiable by its distinctive red wax seal. Known for its smooth, well-balanced profile with notes of vanilla, wheat, and subtle fruit, it represents a cornerstone of American bourbon craftsmanship. This whisky is equally suited for neat enjoyment or as a versatile component in classic cocktails.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "1953 yılından beri el yapımı olan Maker's Mark, Amerikan bourbon whiskey'sinin en ikonik markalarından biridir. Bu miniature şişe, kırmızı mum mühürü ve karakteristik şekli ile koleksiyonerlerin vazgeçilmez bir parçasıdır. Yumuşak ve dengeli tadıyla whiskey severler tarafından çok sevilen bu bourbon, 45% alkol oranında sunulmaktadır.",
+      "desc_en": "Maker's Mark, handcrafted since 1953, stands as one of America's most iconic bourbon whiskey brands. This miniature bottle, with its distinctive red wax seal and characteristic shape, is a must-have for collectors. Known for its smooth and balanced profile, this bourbon at 45% ABV is beloved by whiskey enthusiasts worldwide.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#bourbon",
+        "#makersmark",
+        "#kentuckywhiskey",
+        "#americanwhiskey",
+        "#whiskeyminiatures"
+      ]
     },
     {
       "id": 1762693218,
