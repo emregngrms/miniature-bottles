@@ -75,9 +75,9 @@
     {
       "id": 1762693358,
       "slug": "hakkaisan-special-honjozo-select-seimaibuai-55",
-      "name": "Hakkaisan Special Honjozo Select Seimaibuai 55%",
+      "name": "Hakkaisan (八海山) - Tokubetsu Honjozo (Special Honjozo)",
       "country": "Japan",
-      "category": "",
+      "category": "Sake",
       "abv": "55%",
       "year": 2025,
       "qty": 1,
@@ -85,8 +85,8 @@
       "images": [
         "/images/uploads/1780416018362.jpg"
       ],
-      "desc_tr": "Niigata bölgesinin ünlü Hakkaisan markasının özel seçimi olan bu sake, %55 oranında cilalı pirinci ile üretilmiştir. Temiz, keskin aromaları ve dengeli yapısı ile Japon saké üretim sanatının mükemmel bir örneğidir. Sofistike içiciler tarafından değerlendirilen bu özel baskı, geleneksel Japon alkol kültürünün kaliteli bir temsilcisidir.",
-      "desc_en": "This special selection from the renowned Hakkaisan brand of Niigata Prefecture is crafted with 55% polished rice, representing a premium honjozo sake. It exemplifies the refined artistry of Japanese sake production with its clean, crisp aromatics and well-balanced structure. This special release is highly valued by connoisseurs as a quality representation of traditional Japanese sake culture.",
+      "desc_tr": "Niigata Prefecture'ten gelen Hakkaisan, Japonya'nın en prestijli sake üreticilerinden biridir. Bu özel honjozo türü, %55 oranında pirinç parlatılması ile üretilmiş, hafif ve temiz bir profil sunmaktadır. Tipik Niigata sake karakteri ile su gibi temiz, çiçekli aromalar ve zarif bir tadı ile bilinir.",
+      "desc_en": "Hakkaisan from Niigata Prefecture is one of Japan's most prestigious sake producers. This special honjozo variety is produced with 55% rice polishing, offering a light and clean profile. Known for its typical Niigata sake character with water-like clarity, floral aromas, and an elegant palate.",
       "status": "draft",
       "active": false,
       "gift_from": "",
