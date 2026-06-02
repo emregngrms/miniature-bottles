@@ -75,9 +75,9 @@
     {
       "id": 1762693358,
       "slug": "hakkaisan-55-special-honkaku-shochu",
-      "name": "Hakkaisan 55 - Special Honkaku Shochu",
+      "name": "Hakkaisan 55 (Special Honkaku Shochu)",
       "country": "Japan",
-      "category": "",
+      "category": "Shochu",
       "abv": "55%",
       "year": 2025,
       "qty": 1,
@@ -85,8 +85,8 @@
       "images": [
         "/images/uploads/18509207965070550.jpg"
       ],
-      "desc_tr": "Hakkaisan, Japonya'nın ünlü shochu üreticilerinden gelen bu özel honkaku shochu, 55 derecelik gücüyle hakikaten etkileyicidir. Geleneksel yöntemlerle üretilen bu spiritüöz içecek, keskin ve aromatik karakteriyle sevenleri için bir hazinedir. Koleksiyonunuzda bu nadir miniaturü bulundurmak, Japon spirits dünyasının kalitesini temsil etmek anlamına gelir.",
-      "desc_en": "Hakkaisan, from one of Japan's renowned shochu producers, presents this special honkaku shochu with an impressive 55% ABV. Crafted using traditional methods, this spirituous beverage boasts a sharp and aromatic character that delights enthusiasts. Owning this rare miniature in your collection represents a true appreciation for premium Japanese spirits.",
+      "desc_tr": "Niigata Prefecture'ten gelen bu özel shochu, 55 gibi yüksek alkol derecesiyle güçlü ve karakteristik bir profil sunmaktadır. Geleneksel Japon damıtma sanatının mükemmel örneği olan Hakkaisan, dağ kaynaklı saf sular kullanılarak üretilmektedir. Cesur ve ateşli bir içki olarak, saf içilmesi ya da suyla seyreltilerek yönetilmesi önerilir.",
+      "desc_en": "This special shochu from Niigata Prefecture presents a bold and characteristic profile with its high alcohol strength of 55%. Hakkaisan exemplifies traditional Japanese distillation craftsmanship, produced using pristine mountain spring water. As a robust and fiery spirit, it is best enjoyed neat or diluted with water to manage its intensity.",
       "status": "draft",
       "active": false,
       "gift_from": "",
