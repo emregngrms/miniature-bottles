@@ -220,12 +220,20 @@
       "images": [
         "/images/uploads/1780414452551.jpg"
       ],
-      "desc_tr": "Asahi Super Dry, Japonya'nın en prestijli bira üreticilerinden biri tarafından üretilen bir pilsner tipi lagerdir. Yüksek kalite standartlarıyla ve Japon ustalık teknikleriyle özel olarak hazırlanan bu bira, kuru ve temiz aromasıyla bilinir. Hafif gövdesi ve hızlı finişiyle, içicilerine ferah ve lezzetli bir deneyim sunar.",
-      "desc_en": "Asahi Super Dry is a pilsner-style lager produced by one of Japan's most prestigious breweries with high quality standards. Specially crafted using advanced Japanese brewing techniques, this beer is known for its dry and crisp character with a clean finish. Its light body and quick aftertaste provide drinkers with a refreshing and satisfying experience.",
-      "status": "draft",
-      "active": false,
+      "desc_tr": "Asahi Super Dry, Japon'un en meşhur bira markalarından biridir ve bu mini şişe koleksiyonunuz için harika bir ekleme. Özel teknikleri kullanılarak üretilen bu bira, kuru ve temiz tadı ile bilinir. Japon ustalığının ve kalite standartlarının mükemmel bir örneğidir.",
+      "desc_en": "Asahi Super Dry is one of Japan's most renowned beer brands and makes an excellent addition to any miniature bottle collection. Brewed with precision techniques, this beer is known for its dry, crisp taste and clean finish. A perfect example of Japanese craftsmanship and quality standards.",
+      "status": "published",
+      "active": true,
       "gift_from": "",
-      "hashtags": []
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#asahi",
+        "#beer",
+        "#japaneerbeer",
+        "#asahisuperdry"
+      ]
     },
     {
       "id": 1762693252,
