@@ -77,7 +77,7 @@
       "slug": "hakkaisan-55-special-honkaku-shochu",
       "name": "Hakkaisan 55 - Special Honkaku Shochu",
       "country": "Japan",
-      "category": "Shochu",
+      "category": "",
       "abv": "55%",
       "year": 2025,
       "qty": 1,
@@ -85,10 +85,21 @@
       "images": [
         "/images/uploads/18509207965070550.jpg"
       ],
-      "desc_tr": "Niigata bölgesinden gelen bu özel shochu, 55 derecelik yüksek alkol oranıyla güçlü bir karakter sunar. Geleneksel Japonya distilasyon sanatının mükemmel örneği olan Hakkaisan, aromatik ve keskin bir profil sunarak koleksiyoncuların tercih ettiği bir şarap türüdür.",
-      "desc_en": "This special shochu from Niigata prefecture presents a powerful character with its impressive 55% alcohol content. Hakkaisan represents a perfect example of traditional Japanese distillation craftsmanship, offering an aromatic and crisp profile that makes it a preferred choice among collectors.",
+      "desc_tr": "Hakkaisan, Japonya'nın ünlü shochu üreticilerinden gelen bu özel honkaku shochu, 55 derecelik gücüyle hakikaten etkileyicidir. Geleneksel yöntemlerle üretilen bu spiritüöz içecek, keskin ve aromatik karakteriyle sevenleri için bir hazinedir. Koleksiyonunuzda bu nadir miniaturü bulundurmak, Japon spirits dünyasının kalitesini temsil etmek anlamına gelir.",
+      "desc_en": "Hakkaisan, from one of Japan's renowned shochu producers, presents this special honkaku shochu with an impressive 55% ABV. Crafted using traditional methods, this spirituous beverage boasts a sharp and aromatic character that delights enthusiasts. Owning this rare miniature in your collection represents a true appreciation for premium Japanese spirits.",
       "status": "draft",
-      "active": false
+      "active": false,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#shochu",
+        "#japaneseshochu",
+        "#honkakushochu",
+        "#hakkaisan",
+        "#japanspiritscollector"
+      ]
     },
     {
       "id": 1762693321,
