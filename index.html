@@ -469,8 +469,8 @@ function renderBottleDetail(b){
         </div>
         <h1 class="detail-title">${b.name}</h1>
         <div class="detail-sub">${flagImg(b.country)} ${b.country} · ${b.year}</div>
+       <p class="detail-desc">${desc||''}</p>
         ${b.gift_from ? `<div style="margin-top:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,.07);font-size:13px;color:#8aaad8">🎁 <a href="https://instagram.com/${b.gift_from.replace('@','')}" target="_blank" rel="noopener noreferrer" style="color:#c77dff;text-decoration:none;font-weight:500">@${b.gift_from.replace('@','')}</a> hediyesi</div>` : ''}
-        <p class="detail-desc">${desc||''}</p>
         ${b.qty>1?`<a href="${IG_DM}" target="_blank" rel="noopener noreferrer" class="dm-btn">${svgDM()} ${t('Takas için DM at','DM to Trade')}</a>`:''}
         ${related.length>0?`
           <div class="section-label">${t('Bu şişeyle yapılan kokteyller','Cocktails with this bottle')}</div>
