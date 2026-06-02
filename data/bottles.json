@@ -33,16 +33,33 @@
     },
     {
       "id": 1762693380,
-      "slug": "viljamovka-rakija-od-voca",
-      "name": "Viljamovka Rakija od Voca",
+      "slug": "viljamovka-rakija-od-vo-a",
+      "name": "Viljamovka Rakija od Voća",
       "country": "Serbia",
       "category": "Rakı",
       "abv": "84%",
       "year": 2025,
       "qty": 1,
-      "image": "",
-      "desc_tr": "Viljamovka, Sırbistan'dan gelen geleneksel bir meyve rakısıdır ve armut aroması ile ünlüdür. Yüksek alkol derecesi ve saf tat profili ile bu özel damıtılmış içki, Balkan bölgesinin içki kültürünün güzel bir temsilcisidir. Koleksiyonunuza eklemek için değerli ve nadir bir şişe.",
-      "desc_en": "Viljamovka is a traditional fruit rakija from Serbia, renowned for its distinctive pear aroma and flavor profile. With its high alcohol content and pure taste, this exceptional spirit represents the rich drinking culture of the Balkan region. A rare and valuable addition to any serious miniature collection."
+      "image": "/images/uploads/1780414688701.jpg",
+      "desc_tr": "Viljamovka, Balkan bölgesinin en ünlü meyve rakısıdır ve özellikle şeftali meyvesinden üretilir. Bu yüksek alkollü damıtık, geleneksel üretim yöntemleriyle hazırlanır ve sıcak, yoğun aromasuyla tanınır. Koleksiyonunuza bu otantik Balkan klasiğini eklemek, uluslararası rakı çeşitliliğinizi zenginleştirecektir.",
+      "desc_en": "Viljamovka is the Balkans' most famous fruit rakija, specifically distilled from plums and traditional fruits. This high-proof spirit is produced using time-honored methods and is recognized for its intense, warming character and complex fruit flavors. Adding this authentic Balkan classic to your collection enriches your international rakija diversity.",
+      "images": [
+        "/images/uploads/1780414688701.jpg"
+      ],
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#rakija",
+        "#fruitspirits",
+        "#balkans",
+        "#viljamovka",
+        "#serbianrakija",
+        "#craftspirits"
+      ],
+      "status": "published",
+      "active": true
     },
     {
       "id": 1762693358,
