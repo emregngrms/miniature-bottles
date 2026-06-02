@@ -472,7 +472,7 @@
     },
     {
       "id": 1757255689,
-      "slug": "jgermeister",
+      "slug": "j-germeister",
       "name": "Jägermeister",
       "country": "Germany",
       "category": "Liqueur",
@@ -483,10 +483,20 @@
       "images": [
         "/images/uploads/18137594449442172.jpg"
       ],
-      "desc_tr": "Almanya'nın Wolfenbüttel şehrinden gelen efsanevi yeşil likör, 56 farklı ottan hazırlanmıştır. Karakteristik acı-tatlı profili ve yoğun otsu aromalarıyla, geleneksel olarak soğuk servis edilen bir digestif olarak bilinir. Koleksiyonerlerin aradığı ikonik şişe tasarımı ile 1878'den beri üretilmektedir.",
-      "desc_en": "The legendary green liqueur from Wolfenbüttel, Germany, crafted from 56 different herbs and botanicals. Known for its distinctive bitter-sweet profile and intense herbal aromatics, traditionally served ice-cold as a digestif. An iconic collector's spirit with its recognizable bottle design produced since 1878.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Wolfenbüttel'den gelen efsanevi yeşil likör, 56 tıbbi bitki ve meyvenin sırrı taşıyor. O karakteristik keskin tada ve ikonik geyik logosuna sahip, kendine özgü bir koleksiyoncu parçasıdır.",
+      "desc_en": "The legendary green liqueur from Wolfenbüttel, Germany, crafted with the secret blend of 56 medicinal herbs and fruits. With its distinctive sharp taste and iconic stag logo, it's a unique addition to any collector's shelf.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#jägermeister",
+        "#liqueur",
+        "#germanspirits",
+        "#herballikeur"
+      ]
     },
     {
       "id": 1757255652,
