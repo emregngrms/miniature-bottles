@@ -284,21 +284,31 @@
     },
     {
       "id": 1762693218,
-      "slug": "cocalero-clsico",
+      "slug": "cocalero-cl-sico",
       "name": "Cocalero Clásico",
       "country": "Peru",
       "category": "Liqueur",
-      "abv": "34%",
+      "abv": "30%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/17978496347941722.jpg",
       "images": [
         "/images/uploads/17978496347941722.jpg"
       ],
-      "desc_tr": "Peru kökenli bu bitki likörü, coca yaprağı ve diğer Andean botanikleri kullanarak hazırlanmıştır. Cocalero Clásico, tropikal meyve notaları ve hafif bitki aromaları ile karakteristik bir içim sunmaktadır. Koleksiyonerlara yönelik bu miniatur şişe, Güney Amerika'nın eşsiz spirit kültürünü temsil eden ilginç bir örneğidir.",
-      "desc_en": "This Peruvian herbal liqueur is crafted from coca leaves and other Andean botanicals, representing the region's unique spirit-making tradition. Cocalero Clásico offers a distinctive palate with tropical fruit notes and subtle herbal aromatics characteristic of South American liqueurs. This miniature bottle is a fascinating collectible that captures the essence of Andean botanical spirits.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Cocalero Clásico, Güney Amerika'nın efsanevi bitkilerinden yapılan özgün bir bitki spiritüsüdür. Kokainin karakteristik aromasıyla harmanlanmış bu likör, Andean kültürünün zengin mirasını her damakta taşır. Koleksiyonunuza eklemeniz gereken, türünün nadir örneği bir içkidir.",
+      "desc_en": "Cocalero Clásico is an authentic herbal spirit crafted from South America's legendary botanicals with exceptional care. This distinctive liqueur carries the characteristic aroma of coca leaf harmoniously blended into a smooth spirit. A rare and unique addition to any serious spirits collection, embodying the rich heritage of Andean culture.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#cocalero",
+        "#peruanspirits",
+        "#herbalspirit",
+        "#rarespirits"
+      ]
     },
     {
       "id": 1762693190,
