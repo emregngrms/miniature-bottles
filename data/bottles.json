@@ -103,21 +103,32 @@
     },
     {
       "id": 1762693321,
-      "slug": "hakkaisan",
-      "name": "Hakkaisan",
+      "slug": "hakkaisan-sake-seishu",
+      "name": "Hakkaisan Saké, Seishu",
       "country": "Japan",
       "category": "Sake",
-      "abv": "15.6%",
+      "abv": "45%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18433084849109930.jpg",
       "images": [
         "/images/uploads/18433084849109930.jpg"
       ],
-      "desc_tr": "Niigata bölgesinden gelen bu premium sake, Hakkai dağının eteklerinde üretilmektedir. Temiz ve zarif tadı, hafif meyve aromaları ve dengeli yapısıyla Japon sake koleksiyoncularının favorisidir. Geleneksel tekniklerle yapılan bu örnek, Japon alkol sanatının inceliğini yansıtır.",
-      "desc_en": "This premium sake hails from the Niigata region, produced at the foothills of Mount Hakkai. Distinguished by its clean and elegant taste, subtle fruit aromatics, and well-balanced structure, it remains a favorite among Japanese sake collectors. This traditionally crafted example exemplifies the refinement of Japanese alcoholic artistry.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Hakkaisan, Niigata bölgesinin ünlü bir içkisidir ve geleneksel Japon ruh yapımının güzel bir örneğidir. Bu miniature şişe, koleksiyonerlerin çok sevdiği bir hazinesinin küçük ama değerli bir temsilidir. Dağ ve doğa temasıyla süslenmiş etiketleriyle Japonya'nın yüksek kalitesini taşır.",
+      "desc_en": "Hakkaisan is a renowned spirit from Japan's Niigata region, representing a fine example of traditional Japanese distillation. This miniature bottle is a treasured piece that collectors highly appreciate for its authentic character. The label, decorated with mountain and nature themes, carries the mark of Japan's superior craftsmanship and heritage.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#hakkaisan",
+        "#japanspirits",
+        "#japanesespirits",
+        "#niigata",
+        "#collectoritem"
+      ]
     },
     {
       "id": 1762693305,
