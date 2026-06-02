@@ -685,27 +685,97 @@ function updImgUrl(url){
   if(el.tagName==='IMG'){el.src=url;}else{el.outerHTML=`<img class="img-pv" id="ipv" src="${url}"/>`;}
 }
 
-async function saveBottle(oldSlug,isEdit){
-  const btn=document.getElementById('sbtn');
-  btn.disabled=true;btn.innerHTML='<div class="spinner"></div>';
-  const name=document.getElementById('fn').value.trim();
-  const slug=document.getElementById('fs').value.trim();
-  const country=document.getElementById('fc').value;
-  const category=document.getElementById('fcat').value;
-  const abv=document.getElementById('fa').value.trim();
-  const year=parseInt(document.getElementById('fy').value)||new Date().getFullYear();
-  const qty=parseInt(document.getElementById('fq').value)||1;
-  const desc_tr=document.getElementById('fdt').value.trim();
-  const desc_en=document.getElementById('fde').value.trim();
-  const imgFile=document.getElementById('fif').files[0];
-  let image=document.getElementById('fiu').value.trim();
-  if(!name||!slug){toast('Ad ve slug gerekli','err');btn.disabled=false;btn.textContent='Tekrar';return;}
-  if(imgFile){try{image=await uploadImg(imgFile);}catch(e){toast(esc(e.message),'err');btn.disabled=false;btn.textContent='Tekrar';return;}}
-  const entry={id:isEdit==='true'?(bottles.find(b=>b.slug===oldSlug)?.id||Date.now()):Date.now(),slug,name,country,category,abv,year,qty,image,desc_tr,desc_en};
-  if(isEdit==='true'){const i=bottles.findIndex(b=>b.slug===oldSlug);if(i>=0)bottles[i]=entry;else bottles.push(entry);}
-  else{if(bottles.find(b=>b.slug===slug)){toast('Bu slug zaten var','err');btn.disabled=false;btn.textContent='Tekrar';return;}bottles.push(entry);}
-  const ok=await saveBottles(isEdit==='true'?`Edit: ${name}`:`Add: ${name}`);
-  if(ok){closeModal();renderBottles();}else{btn.disabled=false;btn.textContent='Tekrar';}
+async function saveBottle(oldSlug, isEdit) {
+  const btn = document.getElementById('sbtn');
+  btn.disabled = true; btn.innerHTML = '<div class="spinner"></div>';
+
+  const name     = document.getElementById('fn')?.value?.trim();
+  const slug     = document.getElementById('fs')?.value?.trim();
+  const country  = document.getElementById('fc')?.value;
+  const category = document.getElementById('fcat')?.value;
+  const abv      = document.getElementById('fa')?.value?.trim();
+  const year     = parseInt(document.getElementById('fy')?.value) || new Date().getFullYear();
+  const qty      = parseInt(document.getElementById('fq')?.value) || 1;
+  const desc_tr  = document.getElementById('fdt')?.value?.trim() || '';
+  const desc_en  = document.getElementById('fde')?.value?.trim() || '';
+  const giftRaw  = document.getElementById('fgift')?.value?.trim() || '';
+  const gift_from = giftRaw.replace(/^@+/, '');
+  const hashRaw  = document.getElementById('fhash')?.value?.trim() || '';
+  const hashtags = hashRaw ? hashRaw.split(/\s+/).filter(h => h.startsWith('#')) : [];
+  const manualUrl = document.getElementById('fiu')?.value?.trim() || '';
+
+  if (!name || !slug) {
+    toast('Ad ve slug gerekli', 'err');
+    btn.disabled = false; btn.textContent = 'Tekrar'; return;
+  }
+
+  // Get existing bottle to preserve all fields
+  const existing = isEdit === 'true' ? bottles.find(b => b.slug === oldSlug) : null;
+
+  // Build image list:
+  // Start with non-blob URLs already in _editImages (shown in gallery)
+  let imgList = (window._editImages || []).filter(u => u && u.trim() && !u.startsWith('blob:'));
+
+  // Upload any new files
+  const files = document.getElementById('fif')?.files || [];
+  for (const file of files) {
+    btn.innerHTML = '<div class="spinner"></div> Yükleniyor…';
+    try {
+      const url = await uploadImg(file);
+      if (!imgList.includes(url)) imgList.push(url);
+    } catch (e) {
+      toast('Görsel yüklenemedi: ' + esc(e.message), 'err');
+      btn.disabled = false; btn.textContent = 'Tekrar'; return;
+    }
+  }
+
+  // Add manual URL if provided
+  if (manualUrl && manualUrl.startsWith('http') && !imgList.includes(manualUrl)) {
+    imgList.push(manualUrl);
+  }
+
+  // CRITICAL: if still no images, preserve existing image
+  if (imgList.length === 0) {
+    const exImgs = (existing?.images || []).filter(u => u && !u.startsWith('blob:'));
+    if (exImgs.length) imgList = exImgs;
+    else if (existing?.image && !existing.image.startsWith('blob:')) imgList = [existing.image];
+  }
+
+  const image = imgList[0] || '';
+
+  const entry = {
+    ...(existing || {}),          // preserve ALL existing fields (ig_posted, etc.)
+    id:        existing?.id || Date.now(),
+    slug,
+    name,
+    country,
+    category,
+    abv,
+    year,
+    qty,
+    image,
+    images:    imgList,
+    desc_tr,
+    desc_en,
+    gift_from,
+    hashtags,
+    status:    existing?.status || 'published',
+    active:    existing?.active !== undefined ? existing.active : true,
+  };
+
+  if (isEdit === 'true') {
+    const i = bottles.findIndex(b => b.slug === oldSlug);
+    if (i >= 0) bottles[i] = entry; else bottles.push(entry);
+  } else {
+    if (bottles.find(b => b.slug === slug)) {
+      toast('Bu slug zaten var', 'err'); btn.disabled = false; btn.textContent = 'Tekrar'; return;
+    }
+    bottles.push(entry);
+  }
+
+  const ok = await saveBottles(isEdit === 'true' ? `Edit: ${name}` : `Add: ${name}`);
+  if (ok) { closeModal(); renderBottles(); }
+  else { btn.disabled = false; btn.textContent = 'Tekrar'; }
 }
 
 function confirmDelBottle(slug){
