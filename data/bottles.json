@@ -15,21 +15,32 @@
     },
     {
       "id": 1768055776,
-      "slug": "freihof-1885-marille-kayisi",
+      "slug": "freihof-1885-marille",
       "name": "Freihof 1885 Marille",
       "country": "Austria",
       "category": "Fruit Spirits",
       "abv": "40%",
       "year": 2026,
       "qty": 1,
-      "image": "/images/uploads/18252289501293500.jpg",
+      "image": "/images/uploads/1780414807323.jpg",
       "images": [
-        "/images/uploads/18252289501293500.jpg"
+        "/images/uploads/1780414807323.jpg"
       ],
-      "desc_tr": "Freihof 1885 serisinden muhteşem bir kayısı schnapps'ı. Mütevazı kayısının çoğu zaman göz ardı edildiğini düşünüyoruz, oysa ne kadar lezzetli olduğu düşünüldüğünde bu üzücü bir durum. Eğer sizi rahatsız eden şey dışındaki tüylü kabuk ise, endişelenmeyin, bu lezzetli içkide böyle bir kabuk yok. Bu meyveli küçük lezzet, bazı burbon kokteyllerine çok iyi eşlik edecektir.",
-      "desc_en": "",
+      "desc_tr": "Freihof 1885 Marille, Avusturya'nın ünlü kayısı likörüdür. 1885'ten beri geleneksel yöntemlerle üretilen bu zarif meyve damıtması, tatlı ve aromalı kayısı notalarıyla damağı okşar. Koleksiyonunuza klasik bir Avusturya hazinesini ekliyorsunuz.",
+      "desc_en": "Freihof 1885 Marille is Austria's renowned apricot liqueur. Crafted since 1885 using traditional methods, this elegant fruit spirit delights the palate with sweet and aromatic apricot notes. A classic Austrian treasure for your collection.",
       "status": "published",
-      "active": true
+      "active": true,
+      "gift_from": "themistelkhin",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#fruitspirits",
+        "#apricotliqueur",
+        "#freihof",
+        "#austrianspirits",
+        "#classicliqueur"
+      ]
     },
     {
       "id": 1762693380,
