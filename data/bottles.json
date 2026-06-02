@@ -390,7 +390,7 @@
     {
       "id": 1762693093,
       "slug": "hypnotiq-liqueur",
-      "name": "HYPNOTIQ Liqueur",
+      "name": "Hypnotiq Liqueur",
       "country": "France",
       "category": "Liqueur",
       "abv": "17%",
@@ -400,10 +400,21 @@
       "images": [
         "/images/uploads/18062250428185633.jpg"
       ],
-      "desc_tr": "Fransa'da üretilen Hypnotiq, premium votka, Cognac ve doğal tropikal meyve suları ile hazırlanmış zarif bir likördür. Parlak turkuaz rengine sahip bu likör, tropikal meyveler ve Cognac'ın zengin aromatlarını uyumlu bir şekilde birleştirerek sofistike bir içki deneyimi sunmaktadır.",
-      "desc_en": "Produced in France, Hypnotiq is an elegant liqueur crafted with premium vodka, Cognac, and natural tropical fruit juices. Distinguished by its vibrant turquoise color, this sophisticated spirit harmoniously blends tropical fruit aromatics with the richness of Cognac, offering a refined drinking experience.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Hypnotiq, Fransa'da üretilen ve premium votka, konyak ile tropikal meyve sularının zarif karışımından oluşan göz alıcı bir likördür. Turkuaz renginin yanı sıra lezzetli tadıyla koleksiyonunuza renkli bir dokunuş katacak bu miniature şişe, 2000'lerin başında popülerleşen bir içkinin mükemmel örneğidir.",
+      "desc_en": "Hypnotiq is a captivating French liqueur made with premium vodka, cognac, and natural tropical fruit juices. This striking turquoise-colored miniature bottle is a perfect example of early 2000s spirit culture, adding vibrant charm to any collection with its unique color and exotic flavor profile.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#liqueur",
+        "#hypnotiq",
+        "#tropicalspirits",
+        "#frenchliqueur",
+        "#premiumvodka"
+      ]
     },
     {
       "id": 1757255789,
