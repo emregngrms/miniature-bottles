@@ -143,10 +143,22 @@
       "images": [
         "/images/uploads/18118060648477045.jpg"
       ],
-      "desc_tr": "Japonya'nın prestijli sake üreticilerinden gelen bu Junmai Daiginjo, sofistike içki tutkunları için özel olarak hazırlanmıştır. Yumuşak ve zarif aromaları, çiçeksi notaları ve temiz yudumlama profili ile karakterizedir. Geleneksel Japon saké yapımının mükemmel bir örneğidir.",
-      "desc_en": "This Junmai Daiginjo from one of Japan's prestigious sake producers is specially crafted for sophisticated spirit enthusiasts. Characterized by delicate and elegant aromas, floral notes, and a clean, refined drinking profile. A perfect example of traditional Japanese sake craftsmanship.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Kaikai Junmai Daiginjo, Japonya'nın en seçkin sake üreticilerinden biri tarafından yapılan muhteşem bir örnek. Bu premium sake, özel olarak tasarlanmış şişesinde ve geleneksel sarma tekniğiyle sunulan, gerçek bir koleksiyoncu parçası. Yüksek kaliteli pirinç ve temiz su kullanılarak yapılan bu sake, ince aromaları ve zarif tadıyla bilinir.",
+      "desc_en": "Kaikai Junmai Daiginjo is an exceptional premium sake from one of Japan's finest sake breweries. Presented in its specially designed bottle with traditional wrapping technique, this is a true collector's piece. Crafted with premium rice and pristine water, this sake is known for its delicate aromas and elegant palate.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#sake",
+        "#japanesessake",
+        "#junmaidaiginjo",
+        "#premiumsake",
+        "#kaikai",
+        "#sakecollector"
+      ]
     },
     {
       "id": 1762693290,
