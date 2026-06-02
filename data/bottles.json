@@ -2427,7 +2427,7 @@
     },
     {
       "id": 1720382518,
-      "slug": "jack-daniels-old-no-7-tennessee-whiskey",
+      "slug": "jack-daniel-s-old-no-7-tennessee-whiskey",
       "name": "Jack Daniel's Old No. 7 Tennessee Whiskey",
       "country": "USA",
       "category": "Tennessee Whiskey",
@@ -2438,10 +2438,21 @@
       "images": [
         "/images/uploads/18055186876714394.jpg"
       ],
-      "desc_tr": "Jack Daniel's Old No. 7, Lynchburg, Tennessee'den gelen efsanevi Tennessee Whiskey'sidir. Sour mash yöntemiyle üretilen bu whiskey, yumuşak, pürüzsüz bir içim sunarak vanilya, karamel ve hafif tütün notaları içerir. Dünya çapında en tanınmış whiskey markalarından biri olarak koleksiyoncuların vazgeçilmezidir.",
-      "desc_en": "Jack Daniel's Old No. 7 is the legendary Tennessee Whiskey from Lynchburg, Tennessee. Produced using the sour mash method, this whiskey delivers a smooth, refined drinking experience with notes of vanilla, caramel, and subtle tobacco undertones. It stands as one of the world's most recognized whiskey brands and a staple for collectors worldwide.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Jack Daniel's Old No. 7, Tennessee'nin efsanevi distillerysinden gelen ve dünyaca ünlü bir klasiktir. Sour mash yöntemiyle üretilen bu whiskey, karakteristik tatlı ve pürüzsüz tadıyla koleksiyonunuzun şerefli bir yeridir. Mini şişle bile bu ikonik aromaları ve geleneksel lezzeti deneyimleyebilirsiniz.",
+      "desc_en": "Jack Daniel's Old No. 7 is a legendary Tennessee whiskey from the world-famous distillery in Lynchburg. Crafted using the traditional sour mash process, this iconic spirit delivers its characteristic smooth and slightly sweet profile. Even in miniature form, this bottle captures the authentic heritage and exceptional taste that has made Jack Daniel's a global symbol of American whiskey excellence.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#jackdaniels",
+        "#tennessewhiskey",
+        "#whiskey",
+        "#americanwhiskey",
+        "#collectibles"
+      ]
     },
     {
       "id": 1720382439,
