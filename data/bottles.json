@@ -162,21 +162,32 @@
     },
     {
       "id": 1762693290,
-      "slug": "daiginjo",
-      "name": "Daiginjo (大吟醸)",
+      "slug": "kizakura-daiginjo",
+      "name": "Kizakura Daiginjo",
       "country": "Japan",
       "category": "Sake",
-      "abv": "15-16%",
+      "abv": "15.6%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18096318670750490.jpg",
       "images": [
         "/images/uploads/18096318670750490.jpg"
       ],
-      "desc_tr": "Japonya'nın en saygın sake kategorilerinden biri olan Daiginjo, pirinç tanelerinin %50 veya daha fazlasının cilalı halidir. Zarif, çiçeksi ve meyve notaları ile karakterize edilen bu premium sake, sofistike içiciler için ideal bir tercih sunmaktadır.",
-      "desc_en": "Daiginjo is one of Japan's most prestigious sake categories, made from rice grains polished by at least 50%. Characterized by elegant, floral, and fruity notes, this premium sake represents the pinnacle of sake craftsmanship and is ideal for discerning drinkers seeking sophistication.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Kizakura'nın Daiginjo sınıfı, geleneksel Japon saké yapımının en rafine örneklerinden biridir. Verimli maya ve arındırılmış pirinç kullanılarak üretilen bu saké, zarif aromaları ve pürüzsüz tadı ile bilinir. Koleksiyonunuza eklemek için harika bir japon saké temsili.",
+      "desc_en": "Kizakura's Daiginjo represents one of the finest examples of traditional Japanese sake craftsmanship. Produced with premium yeast and highly polished rice, this sake is known for its elegant aromatics and smooth finish. A wonderful representation of premium Japanese sake for any collection.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#sake",
+        "#japanesesake",
+        "#daiginjo",
+        "#kizakura",
+        "#premiumsake"
+      ]
     },
     {
       "id": 1762693276,
