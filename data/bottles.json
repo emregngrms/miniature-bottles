@@ -143,14 +143,16 @@
       "abv": "5.0%",
       "year": 2025,
       "qty": 1,
-      "image": "/images/uploads/17914473471217697.jpg",
+      "image": "/images/uploads/1780414452551.jpg",
       "images": [
-        "/images/uploads/17914473471217697.jpg"
+        "/images/uploads/1780414452551.jpg"
       ],
       "desc_tr": "Asahi Super Dry, Japonya'nın en prestijli bira üreticilerinden biri tarafından üretilen bir pilsner tipi lagerdir. Yüksek kalite standartlarıyla ve Japon ustalık teknikleriyle özel olarak hazırlanan bu bira, kuru ve temiz aromasıyla bilinir. Hafif gövdesi ve hızlı finişiyle, içicilerine ferah ve lezzetli bir deneyim sunar.",
       "desc_en": "Asahi Super Dry is a pilsner-style lager produced by one of Japan's most prestigious breweries with high quality standards. Specially crafted using advanced Japanese brewing techniques, this beer is known for its dry and crisp character with a clean finish. Its light body and quick aftertaste provide drinkers with a refreshing and satisfying experience.",
       "status": "draft",
-      "active": false
+      "active": false,
+      "gift_from": "",
+      "hashtags": []
     },
     {
       "id": 1762693252,
