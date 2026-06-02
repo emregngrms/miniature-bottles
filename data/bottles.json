@@ -75,18 +75,18 @@
     {
       "id": 1762693358,
       "slug": "hakkaisan-55-special-honkaku-shochu",
-      "name": "Hakkaisan 55 (Special Honkaku Shochu)",
+      "name": "Hakkaisan 55 Special Honkaku Shochu",
       "country": "Japan",
       "category": "",
       "abv": "55%",
       "year": 2025,
       "qty": 1,
-      "image": "/images/uploads/18509207965070550.jpg",
+      "image": "/images/uploads/1780416018362.jpg",
       "images": [
-        "/images/uploads/18509207965070550.jpg"
+        "/images/uploads/1780416018362.jpg"
       ],
-      "desc_tr": "Niigata Prefecture'ten gelen bu özel shochu, 55 gibi yüksek alkol derecesiyle güçlü ve karakteristik bir profil sunmaktadır. Geleneksel Japon damıtma sanatının mükemmel örneği olan Hakkaisan, dağ kaynaklı saf sular kullanılarak üretilmektedir. Cesur ve ateşli bir içki olarak, saf içilmesi ya da suyla seyreltilerek yönetilmesi önerilir.",
-      "desc_en": "This special shochu from Niigata Prefecture presents a bold and characteristic profile with its high alcohol strength of 55%. Hakkaisan exemplifies traditional Japanese distillation craftsmanship, produced using pristine mountain spring water. As a robust and fiery spirit, it is best enjoyed neat or diluted with water to manage its intensity.",
+      "desc_tr": "Hakkaisan, Japonya'nın ünlü shochu üreticilerinden gelen bu özel 55 proof versiyonu, geleneksel honkaku shochu yapım yöntemleriyle üretilmiştir. Yüksek alkol derecesiyle karakteristik ve kuvvetli aromaları barındıran bu mini şişe, koleksiyonunuza Japon spiritleri koleksiyonunun değerli bir örneğini katacaktır.",
+      "desc_en": "Hakkaisan's special 55 proof edition represents traditional honkaku shochu craftsmanship from one of Japan's renowned producers. With its higher alcohol content, this miniature bottle delivers characteristic bold flavors and aromas, making it a valuable addition to any Japanese spirits collection.",
       "status": "draft",
       "active": false,
       "gift_from": "",
@@ -95,10 +95,10 @@
         "#minibottlescollection",
         "#miniaturebottles",
         "#shochu",
-        "#japaneseshochu",
-        "#honkakushochu",
+        "#japanesewhiskey",
         "#hakkaisan",
-        "#japanspiritscollector"
+        "#honkakushochu",
+        "#spiritsofJapan"
       ]
     },
     {
