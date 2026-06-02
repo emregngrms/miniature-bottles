@@ -2054,7 +2054,7 @@
     },
     {
       "id": 1720386501,
-      "slug": "nemrut-raki",
+      "slug": "nemrut-rak",
       "name": "Nemrut Rakı",
       "country": "Turkey",
       "category": "Rakı",
@@ -2065,10 +2065,21 @@
       "images": [
         "/images/uploads/18003703187352206.jpg"
       ],
-      "desc_tr": "Nemrut Rakı, Türkiye'nin köklü rakı geleneğini temsil eden çift distile bir üründür. Anis aromasının baskın olduğu bu rakı, yumuşak ve zarif yapısıyla Türk kültürünün vazgeçilmez içeceğidir. Yüksek kaliteli üretim süreci ve üstün işçiliğiyle dikkat çeken bu rakı, koleksiyonerlerin tercih ettiği seçkin bir markadır.",
-      "desc_en": "Nemrut Rakı is a double distilled product that represents Turkey's deep-rooted rakı tradition. This spirit is characterized by its dominant anise aroma and soft, elegant profile, making it an indispensable beverage in Turkish culture. Distinguished by its superior production process and craftsmanship, this rakı is a distinguished choice among collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Nemrut Rakı, Türk rakısının geleneksel üretim yöntemleriyle yapılan kaliteli bir örneğidir. Çift distile ve üstün kalitesiyle bilinen bu rakı, anason aromasıyla damağınızda hoş bir tat bırakır. Koleksiyonunuzda yerini almayı bekleyen otantik bir Türk spiriti.",
+      "desc_en": "Nemrut Rakı is a quality example of traditional Turkish rakı production crafted using time-honored methods. Double distilled and known for its superior quality, this spirit delivers a pleasant anise flavor that lingers on the palate. An authentic Turkish spirit worthy of a place in any collector's collection.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#rakı",
+        "#türkiçkisi",
+        "#nemrutrakı",
+        "#turkishspirits",
+        "#anis"
+      ]
     },
     {
       "id": 1720386476,
