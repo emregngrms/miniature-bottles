@@ -248,10 +248,20 @@
       "images": [
         "/images/uploads/18025989302573931.jpg"
       ],
-      "desc_tr": "Kirin Brewery tarafından üretilen Japonya'nın en meşhur bira markalarından biri olan Prime Brew, ilk sıkma malt özünden yapılmış lüks bir pilsner birasidir. Sadece en iyi maltan damıtılan bu bira, çok ince ve temiz bir tat profili sunarken, klasik pilsner karakterinin hafif ve ferah bir versiyonunu yeğlenmiş tüketicilere sunmaktadır.",
-      "desc_en": "Kirin Prime Brew, produced by Kirin Brewery, is one of Japan's most renowned beer brands and a luxury pilsner crafted from the first press of premium malt. Brewed exclusively from the finest malt for a crisp, delicate taste, this beer offers a refined and refreshing interpretation of classic pilsner character for discerning consumers.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Kirin Prime Brew, Japonya'nın önde gelen bira markalarından biri tarafından üretilen premium bir bira deneyimidir. Sadece en iyi mallardan ilk sıkıştırmayla yapılan bu bira, çıtır ve lezzetli bir profil sunmaktadır. Koleksiyonunuza eklemek için harika bir Japon bira örneğidir.",
+      "desc_en": "Kirin Prime Brew is a premium beer experience from one of Japan's leading beer manufacturers. Brewed from only the finest malt using first press extraction, this beer delivers a crisp and delicious flavor profile. An excellent example of Japanese beer to add to your collection.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#beer",
+        "#kirinbeer",
+        "#japanbeer",
+        "#premiumbeers"
+      ]
     },
     {
       "id": 1762693233,
