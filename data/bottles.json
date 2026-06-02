@@ -528,7 +528,7 @@
     },
     {
       "id": 1757255628,
-      "slug": "hendricks-gin",
+      "slug": "hendrick-s-gin",
       "name": "Hendrick's Gin",
       "country": "Scotland",
       "category": "Gin",
@@ -539,10 +539,21 @@
       "images": [
         "/images/uploads/18072348251122497.jpg"
       ],
-      "desc_tr": "İskoçya'da üretilen Hendrick's, klasik botaniklerin yanı sıra salatalık ve gül suyu ile aromatize edilen benzersiz birgin'dir. Hafif, ferahlatıcı ve zarif profili ile premium gin severlerin favorisidir. Tonic su ile servis edildiğinde taze salatalık notaları ön plana çıkan sofistike bir içecektir.",
-      "desc_en": "Produced in Scotland, Hendrick's is a distinctive gin infused with cucumber and rose water alongside classic botanicals. With its light, refreshing and elegant profile, it is a favorite among premium gin enthusiasts. When served with tonic water, the fresh cucumber notes come to the forefront, creating a sophisticated beverage.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "İskoçya'da üretilen ve dünyaca ünlü Hendrick's Gin'in bu zarif miniature şişesi, koleksiyonunuza eklemek için mükemmel bir seçim. Salatalık ve gül özünün karakteristik aroması ile tanınan bu premium cin, her bir damla saf lezzet ve kaliteyi temsil eder.",
+      "desc_en": "This elegant miniature bottle of Hendrick's Gin, produced in Scotland and renowned worldwide, is a perfect addition to your collection. Famous for its distinctive cucumber and rose petal character, this premium gin represents pure flavor and quality in every drop.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#gin",
+        "#hendricks",
+        "#scotlandgin",
+        "#premiumgin",
+        "#cucumbergin"
+      ]
     },
     {
       "id": 1757255613,
