@@ -75,9 +75,9 @@
     {
       "id": 1762693358,
       "slug": "hakkaisan-55-special-honkaku-shochu",
-      "name": "Hakkaisan 55 Special Honkaku Shochu",
+      "name": "Hakkaisan (八海山) Special Honjozo Select Seimaibuai 55%",
       "country": "Japan",
-      "category": "",
+      "category": "Sake",
       "abv": "55%",
       "year": 2025,
       "qty": 1,
@@ -85,8 +85,8 @@
       "images": [
         "/images/uploads/1780416018362.jpg"
       ],
-      "desc_tr": "Hakkaisan, Japonya'nın ünlü shochu üreticilerinden gelen bu özel 55 proof versiyonu, geleneksel honkaku shochu yapım yöntemleriyle üretilmiştir. Yüksek alkol derecesiyle karakteristik ve kuvvetli aromaları barındıran bu mini şişe, koleksiyonunuza Japon spiritleri koleksiyonunun değerli bir örneğini katacaktır.",
-      "desc_en": "Hakkaisan's special 55 proof edition represents traditional honkaku shochu craftsmanship from one of Japan's renowned producers. With its higher alcohol content, this miniature bottle delivers characteristic bold flavors and aromas, making it a valuable addition to any Japanese spirits collection.",
+      "desc_tr": "Niigata bölgesinin ünlü Hakkaisan markasının özel seçimi olan bu sake, %55 oranında cilalı pirinci ile üretilmiştir. Temiz, keskin aromaları ve dengeli yapısı ile Japon saké üretim sanatının mükemmel bir örneğidir. Sofistike içiciler tarafından değerlendirilen bu özel baskı, geleneksel Japon alkol kültürünün kaliteli bir temsilcisidir.",
+      "desc_en": "This special selection from the renowned Hakkaisan brand of Niigata Prefecture is crafted with 55% polished rice, representing a premium honjozo sake. It exemplifies the refined artistry of Japanese sake production with its clean, crisp aromatics and well-balanced structure. This special release is highly valued by connoisseurs as a quality representation of traditional Japanese sake culture.",
       "status": "draft",
       "active": false,
       "gift_from": "",
