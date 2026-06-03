@@ -1205,7 +1205,7 @@
       "slug": "the-antiquary-de-luxe-old-scotch-whisky",
       "name": "The Antiquary De Luxe Old Scotch Whisky",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
+      "category": "Blended Whisky",
       "abv": "43%",
       "year": 2024,
       "qty": 1,
@@ -1213,10 +1213,21 @@
       "images": [
         "/images/uploads/18045167278919458.jpg"
       ],
-      "desc_tr": "The Antiquary, İskoçya'nın prestijli blended whisky markalarından biri olup, Tempa tarafından dağıtılmıştır. Bu klasik İskoç viskisi, dengeli bir profil sunarak zengin malt karakteri ve yumuşak finişiyle bilinir. Koleksiyonerlerin aradığı vintage bir örnek olan bu şişe, 20. yüzyıl ortalarının otantik tadını yansıtır.",
-      "desc_en": "The Antiquary is a prestigious blended Scotch whisky brand distributed by Tempa, known for its balanced and refined character. This classic Scottish whisky features a rich malt profile with a smooth, elegant finish that appeals to discerning palates. A vintage collector's item reflecting the authentic taste of mid-20th century Scotch whisky tradition.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "The Antiquary, klasik İskoç blended whisky'lerinden biri olarak koleksiyonculara sunulan bu miniatur şişe, zarif ve deneyimli bir içkiye duyulan özlemi yansıtır. De Luxe versiyonu, sofistike tatları ve yumuşak karakteriyle tanınır. Vintage bir şişe olarak koleksiyon değeri oldukça yüksektir.",
+      "desc_en": "The Antiquary De Luxe is a distinguished Scottish blended whisky presented in this charming miniature bottle, reflecting the refined taste of experienced collectors. Known for its elegant flavors and smooth character, this vintage bottling represents a classic era of Scotch whisky craftsmanship. A wonderful addition to any miniature spirits collection.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#theantiquary",
+        "#vintagewhisky",
+        "#whiskylovers"
+      ]
     },
     {
       "id": 1723998221,
