@@ -984,17 +984,27 @@
       "name": "Marken Boonekamp Cuter Stern",
       "country": "Germany",
       "category": "Liqueur",
-      "abv": "30%",
+      "abv": "20%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18058931071594356.jpg",
       "images": [
         "/images/uploads/18058931071594356.jpg"
       ],
-      "desc_tr": "Almanya kökenli bu klasik likör, geleneksel bitki ve baharat karışımı ile hazırlanmıştır. Boonekamp türü likörler, keskin ve aromatik karakterleriyle bilinir ve genellikle digestif olarak tüketilir. Vintage koleksiyoncu şişeleriyle tarihi bir öneme sahiptir.",
-      "desc_en": "This classic German liqueur is crafted with a traditional blend of herbs and spices characteristic of the Boonekamp style. Known for its sharp and aromatic character, this type of liqueur is traditionally enjoyed as a digestif. The vintage miniature represents an important piece of spirits collecting history.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Marken Boonekamp Cuter Stern, Almanya'nın klasik likör geleneğini temsil eden zarif bir miniatur şişe. Karakteristik acı ve aromatik profiliyle, bu efsanevi Alman likörü koleksiyonunuza değerli bir katkı sağlayacaktır.",
+      "desc_en": "Marken Boonekamp Cuter Stern represents a classic German liqueur tradition in this elegant miniature bottle. With its characteristic bitter and aromatic profile, this legendary German liqueur makes a valuable addition to any collector's collection.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#liqueur",
+        "#germanspirits",
+        "#boonekamp",
+        "#classiclikör"
+      ]
     },
     {
       "id": 1723998413,
