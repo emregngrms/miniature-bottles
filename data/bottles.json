@@ -1320,7 +1320,7 @@
       "slug": "the-black-magic-finest-blended-scotch-whisky",
       "name": "The Black Magic Finest Blended Scotch Whisky",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
+      "category": "Blended Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1328,10 +1328,20 @@
       "images": [
         "/images/uploads/18041324626950842.jpg"
       ],
-      "desc_tr": "Glasgow ve Londra'daki damıtımevleri tarafından üretilen bu klasik blended Scotch whisky, İskoçya'nın zengin viski mirasının bir parçasıdır. The Black Magic, yumuşak ve dengeli bir profil sunarak, günlük içim için ideal bir seçimdir. Vintage miniature şişeleri, koleksiyoncular için tarihsel değer taşımaktadır.",
-      "desc_en": "Produced by distilleries in Glasgow and London, this classic blended Scotch whisky represents a piece of Scotland's rich whisky heritage. The Black Magic offers a smooth and balanced profile, making it an ideal choice for everyday drinking. Vintage miniature bottles hold significant collector's value for enthusiasts.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "The Black Magic, Glasgow ve Londra'daki damıtımevleri tarafından üretilen klasik bir İskoç blended whiskidir. Bu zarif miniature şişe, vintage koleksiyonlarının değerli bir parçası olup, geleneksel İskoç viski yapıcılığının güzel bir örneğidir.",
+      "desc_en": "The Black Magic is a classic blended Scotch whisky produced by distillers in Glasgow and London. This elegant miniature bottle represents a valuable piece of vintage collections and exemplifies traditional Scottish whisky craftsmanship.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#vintagewhisky",
+        "#theblackmagic"
+      ]
     },
     {
       "id": 1723998136,
