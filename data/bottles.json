@@ -771,10 +771,21 @@
       "images": [
         "/images/uploads/18056300344829929.jpg"
       ],
-      "desc_tr": "Avusturya'nın ünlü Mozart Chocolate Cream likörü, başkentte Salzburg'da üretilen zarif bir likördür. Belgili çikolata ve krema notalarıyla zenginleştirilmiş bu ürün, soğuk içildiğinde veya tatlı olarak kullanıldığında melezyen bir deneyim sunmaktadır. Karakteristik altın ambalajı koleksiyonerlerin arasında oldukça değerli bir ürün haline gelmiştir.",
-      "desc_en": "Mozart Chocolate Cream is an elegant Austrian liqueur produced in Salzburg, Austria's capital city. Enriched with rich chocolate and cream notes, this product delivers a delightful experience when served cold or used as a dessert liqueur. Its signature golden packaging has made it a highly valued item among collectors and spirits enthusiasts.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Mozart Chocolate Cream, Avusturya'nın ünlü çikolata likörü olarak koleksiyoncuların gözdesi. Altın sarısı şişesi içinde saklı bu lezzet, premium kalitesi ve doğal malzemeleriyle özel anlarınızı tatlandıracak. Miniature şişesi, koleksiyonunuzda musikal bir not gibi yer alacak.",
+      "desc_en": "Mozart Chocolate Cream is Austria's renowned chocolate liqueur and a collector's favorite. Hidden within its golden bottle, this delightful spirit boasts premium quality and natural ingredients, perfect for sweetening special moments. This miniature bottle will add a musical note to your collection.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#mozart",
+        "#chocolatelikeur",
+        "#austrianspirits",
+        "#liqueur",
+        "#premiumcollection"
+      ]
     },
     {
       "id": 1737893720,
