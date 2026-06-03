@@ -734,7 +734,7 @@
       "id": 1737893896,
       "slug": "zlata-zitnia",
       "name": "Zlata Zitnia",
-      "country": "Poland",
+      "country": "Ukraine",
       "category": "Liqueur",
       "abv": "40%",
       "year": 2025,
@@ -743,10 +743,20 @@
       "images": [
         "/images/uploads/17943899534949767.jpg"
       ],
-      "desc_tr": "Polonya'dan gelen bu ünlü tahıl likörü, geleneksel üretim yöntemleri ile hazırlanmıştır. Altın sarısı rengi ve zengin, yumuşak karakteri ile koleksiyonerlerin vazgeçilmez bir parçasıdır. Tahıl özlü aromaları ve hafif tatlı profili soğuk içilmeyi tercih eder.",
-      "desc_en": "This renowned grain liqueur from Poland is crafted using traditional production methods. With its golden hue and rich, smooth character, it's an essential piece for collectors. Its grain-forward aromas and gently sweet profile make it ideal for sipping chilled.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Zlata Zitnia, Ukrayna'nın köklü bir ruhu olarak, geleneksel distilasyon yöntemleriyle hazırlanmıştır. Bu miniature şişe, Doğu Avrupa'nın zengin spiritusculuk mirasını koleksiyonunuza katacak değerli bir parçadır.",
+      "desc_en": "Zlata Zitnia is a traditional Ukrainian spirit crafted using time-honored distillation methods. This miniature bottle represents an important part of Eastern European spirits heritage and makes an excellent addition to any collector's showcase.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#ukrainianspirits",
+        "#zlatazitniya",
+        "#easterneuropean",
+        "#spiritscollector"
+      ]
     },
     {
       "id": 1737893756,
