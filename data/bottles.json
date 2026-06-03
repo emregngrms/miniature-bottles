@@ -1377,7 +1377,7 @@
       "slug": "colour-dream-deluxe-scotch-whisky",
       "name": "Colour Dream Deluxe Scotch Whisky",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
+      "category": "Blended Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1385,10 +1385,20 @@
       "images": [
         "/images/uploads/17875674792133933.jpg"
       ],
-      "desc_tr": "Aberdeen, İskoçya'da üretilen ve Joseph E. Seegram and Sons Ltd. tarafından şişelenen bu blend, klasik İskoç viski karakterini yansıtır. Hafif ve denli yapısıyla günlük içim için uygun olan Colour Dream, geleneksel blend viski deneyimi sunar.",
-      "desc_en": "Produced in Aberdeen, Scotland and bottled by Joseph E. Seegram and Sons Ltd., this blended Scotch whisky exemplifies classic Scottish character. With its light and balanced profile, Colour Dream offers an approachable everyday drinking experience that reflects traditional blended Scotch whisky craftsmanship.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Colour Dream, Aberdeen kökenli bu lezzetli blended Scotch whisky mini şişesi, klasik İskoç viski geleneğinin güzel bir örneğidir. Joseph E. Seegram and Sons tarafından üretilen bu deluxe blend, koleksiyonunuza tarihsel bir değer katacaktır.",
+      "desc_en": "Colour Dream is a classic blended Scotch whisky from Aberdeen, Scotland, representing the finest traditions of Scottish whisky craftsmanship. This deluxe blend, produced by Joseph E. Seegram and Sons, makes a wonderful addition to any miniature spirits collection.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#colordream",
+        "#aberdeenwhisky"
+      ]
     },
     {
       "id": 1723998096,
