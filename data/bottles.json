@@ -636,7 +636,7 @@
     },
     {
       "id": 1757255550,
-      "slug": "ddr-kruterlikor",
+      "slug": "ddr-kr-uterlik-r",
       "name": "DDR Kräuterlikör",
       "country": "Germany",
       "category": "Liqueur",
@@ -647,10 +647,23 @@
       "images": [
         "/images/uploads/18069949145167042.jpg"
       ],
-      "desc_tr": "Doğu Almanya'nın ikonik likörü DDR Kräuterlikör, tatlı ve aromatik bitki özleriyle zenginleştirilmiş şarap tabanı likörüdür. \"Vorwärts immer, rückwärts nimmer\" sloganıyla bilinen bu nostaljik içki, Alman tarihinin bir parçasıdır ve koleksiyonerlerin değerli bir buluntusu olarak kabul edilir.",
-      "desc_en": "The iconic liqueur of East Germany, DDR Kräuterlikör is a wine-based spirit enriched with sweet and aromatic herbal essences. Known by its legendary slogan \"Vorwärts immer, rückwärts nimmer\" (Always forward, never backward), this nostalgic beverage represents a piece of German history and is a treasured collectible for enthusiasts.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "DDR Kräuterlikör, Doğu Almanya'nın efsanevi likörlerinden biridir. Zengin bitki aromaları ve otlar ile hazırlanan bu likör, geleneksel Alman lezzet profilini yansıtır. Koleksiyonunuzda tarihi bir parça olacak bu miniature şişe, DDR döneminin kültürel mirasını temsil eder.",
+      "desc_en": "DDR Kräuterlikör is a legendary herbal liqueur from East Germany, representing the classic taste of German tradition. Crafted with rich herbal and botanical infusions, this spirit captures the authentic flavor profile of its era. This miniature bottle is a treasured piece for collectors interested in Cold War memorabilia and vintage German spirits.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#likör",
+        "#kräuterlikör",
+        "#ddr",
+        "#eastgermany",
+        "#germanspirits",
+        "#coldwarmemorabilia",
+        "#vintagespirits"
+      ]
     },
     {
       "id": 1757255526,
