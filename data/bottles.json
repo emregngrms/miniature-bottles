@@ -609,7 +609,7 @@
       "id": 1757255573,
       "slug": "the-kraken-black-spiced-rum",
       "name": "The Kraken Black Spiced Rum",
-      "country": "Trinidad and Tobago",
+      "country": "Trinidad",
       "category": "Rum",
       "abv": "40%",
       "year": 2025,
@@ -618,10 +618,21 @@
       "images": [
         "/images/uploads/18062024867075943.jpg"
       ],
-      "desc_tr": "Karayip'in en meşhur karanlık rumlarından biri olan The Kraken, Trinidad ve Tobago'da üretilen ve dünyanın en ikonik rum markalarından sayılır. Siyah rengi, baharatlandırılmış profili ve derin melaslar aromatik yapısıyla tanınan bu premium rum, koleksiyonculuk dünyasında oldukça değerlidir. Kokteyller ve içkiye bireysel olarak tüketilmesine uygun, gücü ve karakteriyle bilinir.",
-      "desc_en": "The Kraken is one of the most celebrated dark rums from the Caribbean, produced in Trinidad and Tobago and considered one of the world's most iconic rum brands. Distinguished by its dark color, spiced profile, and deep molasses-driven aromatics, this premium rum holds significant value in the collector's market. Known for its strength and character, it's suitable for cocktails and neat consumption alike.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "The Kraken Black Spiced Rum, Karayipler'in efsanevi siyah rumlarından biri. Derin ve karmaşık baharat notaları ile zenginleştirilmiş bu premium rom, koleksiyonunuza harika bir katkı sağlayacaktır. Miniatur şişesi ile Karayip ruh kültürünün özünü taşıyor.",
+      "desc_en": "The Kraken Black Spiced Rum, one of the legendary dark rums from the Caribbean. Enriched with deep and complex spice notes, this premium rum makes a wonderful addition to any collection. Its miniature bottle carries the essence of Caribbean rum culture.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#rum",
+        "#blackspicedrum",
+        "#thekraken",
+        "#caribbeanrum",
+        "#miniaturespirits"
+      ]
     },
     {
       "id": 1757255550,
