@@ -1459,21 +1459,32 @@
     },
     {
       "id": 1723998002,
-      "slug": "ainslies-kings-legend-finest-scotch-whisky",
+      "slug": "ainslie-s-king-s-legend-finest-scotch-whisky",
       "name": "Ainslie's King's Legend Finest Scotch Whisky",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
-      "abv": "40%",
+      "category": "Blended Whisky",
+      "abv": "Unknown",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18039235442072992.jpg",
       "images": [
         "/images/uploads/18039235442072992.jpg"
       ],
-      "desc_tr": "Glasgow'da Ainslie & Heilbron tarafından üretilen bu klasik İskoç blended whiskyi, 19. ve 20. yüzyıl boyunca prestijli bir marka olarak bilinmektedir. King's Legend, geleneksel İskoç whisky karakteri ile hafif, dengeli bir profil sunarak, dönemin tipik blended whiskilerinin özellikleri taşır.",
-      "desc_en": "Produced by Ainslie & Heilbron in Glasgow, this classic Scottish blended whisky was a prestigious brand throughout the 19th and 20th centuries. King's Legend offers traditional Scottish whisky character with a light, balanced profile, representing the typical blended whisky style of its era.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Ainslie & Heilbron tarafından Glasgow'da üretilen bu klasik İskoç blended whiskyi, vintage miniature koleksiyonunuzun önemli bir parçasıdır. King's Legend, İngiltere'nin hükümet denetimi altında damıtılmış ve şişelenmiş otantik bir İskoç viskisi olarak tanımlanmaktadır. Tarihi etiket tasarımı ve saf garantili formülasyonu bu şişeyi kolektörler için değerli kılmaktadır.",
+      "desc_en": "This classic Scottish blended whisky produced by Ainslie & Heilbron in Glasgow is an important addition to any vintage miniature collection. King's Legend is presented as an authentic Scottish whisky distilled and bottled in Scotland under British Government supervision. The historic label design and guaranteed pure formula make this bottle a treasured piece for collectors.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#ainslie",
+        "#vintagewhisky",
+        "#glasgowwhisky"
+      ]
     },
     {
       "id": 1723997960,
