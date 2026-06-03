@@ -1614,21 +1614,34 @@
     },
     {
       "id": 1723997759,
-      "slug": "mampe-luft-hansa-cocktail",
-      "name": "Mampe Luft Hansa Cocktail",
+      "slug": "mampe-lufthansa-cocktail",
+      "name": "Mampe Lufthansa Cocktail",
       "country": "Germany",
       "category": "Liqueur",
-      "abv": "35%",
+      "abv": "Unknown",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18042678844798370.jpg",
       "images": [
         "/images/uploads/18042678844798370.jpg"
       ],
-      "desc_tr": "Berlin'de Carl Mampe tarafından üretilen klasik Alman likörü, havacılık tarihi ile bağlantılı nostaljik bir ürün. Soğuk servise uygun, hafif ve aromatik profili ile kokteyl tabanı olarak kullanılan, vintage koleksiyoncu tarafından değer gören bir şişedir.",
-      "desc_en": "A classic German liqueur produced by Carl Mampe in Berlin, with nostalgic connections to aviation history. Designed for chilled serving, it features a light and aromatic profile, making it suitable as a cocktail base and a highly valued vintage collector's item.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Mampe Lufthansa Cocktail, Lufthansa havayollarının ikonik kokteyl likörüdür ve vintage miniature koleksiyonlarında özel bir yere sahiptir. Berlin'de üretilen bu likör, retro tasarımı ve tarihsel önemiyle koleksiyoncuların göz bebeğidir. Eiskalt servieren (soğuk servis) önerisiyle buzlu bir deneyim sunan bu dönem ürünü, havacılık tarihi ve spirits severler için müthiş bir parçadır.",
+      "desc_en": "Mampe Lufthansa Cocktail is the iconic cocktail liqueur of Lufthansa airlines and holds a special place in vintage miniature collections. Produced in Berlin, this liqueur captivates collectors with its retro design and historical significance. With the recommendation to serve eiskalt (ice-cold), this period piece offers a chilled experience that appeals to both aviation history enthusiasts and spirits collectors.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#liqueur",
+        "#germanspirits",
+        "#vintage",
+        "#lufthansa",
+        "#mampe",
+        "#aviation",
+        "#collectible"
+      ]
     },
     {
       "id": 1723717602,
