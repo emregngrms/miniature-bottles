@@ -1299,10 +1299,21 @@
       "images": [
         "/images/uploads/18022630250109286.jpg"
       ],
-      "desc_tr": "Glen Moray, İskoçya'nın Speyside bölgesinden gelen klasik bir single malt whiskidir. Hafif ve dengeli profiliyle bilinen bu içki, meyvemsi notalar ve nazik vanilya tonlarıyla karakterizedir. Koleksiyonerlerin değer verdiği bu vintage miniature, İskoç viski geleneğinin erişilebilir bir örneğidir.",
-      "desc_en": "Glen Moray is a classic single malt whisky from Scotland's Speyside region, distilled by The Glen Moray Distillery. Known for its light and balanced profile, this whisky showcases fruity notes with delicate vanilla undertones. This vintage miniature is a fine example of Scottish whisky heritage, cherished by collectors worldwide.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Glen Moray, İskoçya'nın ünlü Speyside bölgesinden gelen bu zarif single malt, klasik bir İskoç viskisinin tüm özelliklerini taşır. Koleksiyonunuza eklemek için mükemmel bir miniature şişe.",
+      "desc_en": "Glen Moray, a distinguished single malt from Scotland's renowned Speyside region, embodies the classic characteristics of fine Scottish whisky. A splendid miniature addition to any collector's display.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#glenmory",
+        "#scotchwhisky",
+        "#singlemalts",
+        "#speyside",
+        "#Scotland"
+      ]
     },
     {
       "id": 1723998156,
