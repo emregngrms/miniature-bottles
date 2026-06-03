@@ -954,21 +954,29 @@
       "slug": "johnnie-walker-old-scotch-whisky",
       "name": "Johnnie Walker Old Scotch Whisky",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
-      "abv": "40%",
+      "category": "Blended Whisky",
+      "abv": "43.2%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17898460155029149.jpg",
       "images": [
-        "/images/uploads/17898460155029149.jpg",
-        "/images/uploads/18284700955225537.jpg",
-        "/images/uploads/18023534669110822.jpg",
-        "/images/uploads/18012826598618852.jpg"
+        "/images/uploads/17898460155029149.jpg"
       ],
-      "desc_tr": "İskoçya'nın efsanevi blended whisky markası Johnnie Walker'ın klasik ürünü, zengin ve dengeli bir profil sunar. Tarihsel önemi ve ödül kazanmış formülasyonu ile koleksiyoncular tarafından değerli bir miniaturedir.",
-      "desc_en": "A classic offering from Scotland's legendary Johnnie Walker blended whisky brand, presenting a rich and balanced profile. Its historical significance and award-winning formulation make it a treasured piece for collectors of vintage spirits.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Johnnie Walker Old Scotch Whisky, İskoçya'nın klasik blend viski geleneğinin muhteşem bir örneğidir. Bu tarihi şişe, koleksiyoncuların kalbinde özel bir yere sahip olup, eski dönem Johnnie Walker ürünlerinin kalitesini ve prestijini yansıtır. Kırmızı etiketiyle tanınan bu viski, İskoçya'nın finest malts ve grain whisky'lerinin mükemmel harmonyasıdır.",
+      "desc_en": "Johnnie Walker Old Scotch Whisky stands as a magnificent example of Scotland's classic blended whisky tradition. This historical bottle holds a special place in collectors' hearts, reflecting the quality and prestige of vintage Johnnie Walker products. Characterized by its distinctive red label, this whisky represents the perfect harmony of Scotland's finest malts and grain whiskies.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#johnniewalker",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#vintagewhisky",
+        "#whiskyhistory"
+      ]
     },
     {
       "id": 1723998455,
