@@ -1019,10 +1019,23 @@
       "images": [
         "/images/uploads/17952695015818310.jpg"
       ],
-      "desc_tr": "Amsterdam'ın ünlü Bols distillerisi tarafından üretilen bu klasik muz likörü, 1664 yılından beri yapılmaktadır. Tropikal muz aroması ve hafif tatlılığı ile aperitif veya kokteyl yapımında kullanılan zarif bir likördür. Koleksiyonerlerin değer verdiği vintage etiketli bu şişe, geçmiş dönemlerin üstün kalitesini yansıtır.",
-      "desc_en": "This classic banana liqueur produced by Amsterdam's renowned Bols distillery has been crafted since 1664. With its tropical banana aroma and subtle sweetness, it serves elegantly as an aperitif or cocktail ingredient. This vintage-labeled bottle reflects the superior quality of a bygone era that collectors cherish.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Bols Banane, Hollanda'nın ünlü Bols distillerisi tarafından üretilen klasik muz likörüdür. Tropikal muz aroması ve yumuşak tatısıyla, bu vintage şişe koleksiyoncuların ve likör meraklılarının değerli bir parçasıdır. Deutsches Erzeugnis etiketi ile tarihsel önemini taşıyan bu mini şişe, 20. yüzyılın başlarından gelme otantik bir hazinedir.",
+      "desc_en": "Bols Banane is a classic banana liqueur produced by the renowned Bols distillery from the Netherlands. With its tropical banana aroma and smooth sweetness, this vintage bottle is a treasured piece for collectors and liqueur enthusiasts. Bearing the 'Deutsches Erzeugnis' label, this miniature represents an authentic treasure from the early 20th century.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#bols",
+        "#bananelikeur",
+        "#liqueur",
+        "#netherlands",
+        "#vintage",
+        "#classicspirits",
+        "#collectiblespirits"
+      ]
     },
     {
       "id": 1723998391,
