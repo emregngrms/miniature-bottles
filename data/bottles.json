@@ -1491,7 +1491,7 @@
       "slug": "zinn-40-klarer-aus-wein",
       "name": "Zinn 40 Klarer aus Wein",
       "country": "Germany",
-      "category": "Brandy",
+      "category": "",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1499,10 +1499,20 @@
       "images": [
         "/images/uploads/18237859501277585.jpg"
       ],
-      "desc_tr": "Alman yapımı bu klasik brandi, 1857'den beri Peter Eckes tarafından üretilmektedir. Mild ve ince aromalı yapısıyla karakterize edilen Zinn 40, şarap kaynaklı saflığı ve yumuşak içim profiliyle koleksiyoncuların beğenisini kazanmıştır.",
-      "desc_en": "This classic German brandy has been produced by Peter Eckes since 1857. Characterized by its mild and refined aromatics, Zinn 40 is distinguished by its wine-based purity and smooth drinking profile that appeals to discerning collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Peter Eckes'in 1857 yılından beri ürettiği bu özel Alman spiriti, şaraplı bir Klarer olarak bilinir. Hafif ve zarif tadı ile Alman içki kültürünün güzel bir örneğidir. Koleksiyonunuzda Alman spiritinosu barındırmak için harika bir seçim.",
+      "desc_en": "This special German spirit produced by Peter Eckes since 1857 is known as a wine-based Klarer with a mild and fine flavor profile. The gentle and refined taste represents a beautiful example of German drinking culture. An excellent choice to have a German spirit miniature in your collection.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#germanspirits",
+        "#klarer",
+        "#petereckes",
+        "#spiritscollector"
+      ]
     },
     {
       "id": 1723997939,
