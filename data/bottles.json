@@ -1070,7 +1070,7 @@
       "slug": "grand-old-parr-de-luxe-scotch-whisky",
       "name": "Grand Old Parr De Luxe Scotch Whisky",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
+      "category": "Blended Whisky",
       "abv": "43%",
       "year": 2024,
       "qty": 1,
@@ -1078,10 +1078,21 @@
       "images": [
         "/images/uploads/18035047853113482.jpg"
       ],
-      "desc_tr": "MacDonald Greenlees Ltd. tarafından Edinburgh'da üretilen Grand Old Parr, eski ve nadir blended Scotch whiskilerinden biridir. Bu miniature şişe, vintage dönemin karakteristik tasarımı ve kalitesini yansıtır. Yumuşak, dengeli profili ile koleksiyonerlerin ilgisini çeken bir içkidir.",
-      "desc_en": "Grand Old Parr is a rare blended Scotch whisky produced by MacDonald Greenlees Ltd. in Edinburgh, representing a distinguished vintage expression. This miniature bottle showcases the characteristic design and quality of its era. With its smooth and balanced profile, it remains a prized addition to any collector's cabinet.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Grand Old Parr De Luxe, İskoçya'nın efsanevi blended whiskylerinden biridir. 5cl'lik bu miniatur şişe, gerçek antika ve nadir bir eski viski olarak tanıtılmaktadır. Zengin ve tam gövdeli karakteriyle koleksiyonunuza değer katacak bir hazinedir.",
+      "desc_en": "Grand Old Parr De Luxe is one of Scotland's legendary blended whiskies. This 5cl miniature bottle is presented as a real antique and rare old whisky. With its rich and full-bodied character, it's a treasure that will enhance your collection.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#grandoldparr",
+        "#vintagespirits",
+        "#scotlandwhisky"
+      ]
     },
     {
       "id": 1723998338,
