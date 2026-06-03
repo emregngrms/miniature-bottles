@@ -1174,7 +1174,7 @@
     },
     {
       "id": 1723998280,
-      "slug": "bottle-50",
+      "slug": "cointreau",
       "name": "Cointreau",
       "country": "France",
       "category": "Liqueur",
@@ -1185,10 +1185,20 @@
       "images": [
         "/images/uploads/18308414149091579.jpg"
       ],
-      "desc_tr": "Fransa'nın Angers şehrinde 1849 yılından beri üretilen Cointreau, portakal likörü kategorisinin en prestijli örneğidir. Tatlı ve ekzotik portakal aromaları ile hafif bir acılık dengesinin mükemmel kombinasyonunu sunarak, içki ve kokteyl dünyasında bir klasik haline gelmiştir. Kristal berraklığı ve sofistike karakteriyle koleksiyonerlerin ve spirits meraklılarının tercih ettiği bir şaheseridir.",
-      "desc_en": "Produced in Angers, France since 1849, Cointreau is the most prestigious example in the orange liqueur category. It offers a perfect balance of sweet and exotic orange aromas with a subtle bitterness, making it a classic in the world of spirits and cocktails. With its crystal clarity and sophisticated character, it remains a preferred choice for collectors and spirits enthusiasts.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Cointreau, 1849 yılından beri Fransa'da üretilen efsanevi bir likördür. Portakal kabuklarından elde edilen zarif ve kristal berraklığındaki bu içki, kokteyllerin kraliçesi olarak bilinir. Koleksiyonunuzda bu klasik şişe, likör tutkunlarının vazgeçilmez bir parçasıdır.",
+      "desc_en": "Cointreau is a legendary French liqueur crafted since 1849. This elegant and crystal-clear spirit, derived from orange peels, is renowned as the queen of cocktails. This classic bottle is an indispensable treasure for any liqueur collector.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#cointreau",
+        "#liqueur",
+        "#frenchliqueur",
+        "#cocktailclassic"
+      ]
     },
     {
       "id": 1723998253,
