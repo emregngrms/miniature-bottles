@@ -670,7 +670,7 @@
       "slug": "hennessy-vsop-cognac",
       "name": "Hennessy VSOP Cognac",
       "country": "France",
-      "category": "Cognac",
+      "category": "",
       "abv": "40%",
       "year": 2025,
       "qty": 1,
@@ -678,10 +678,21 @@
       "images": [
         "/images/uploads/18062415143075628.jpg"
       ],
-      "desc_tr": "Fransa'nın prestijli Cognac bölgesinden gelen Hennessy VSOP, dünya çapında tanınan bir konjak markasıdır. Zengin, yumuşak ve dengeli damak yapısı ile meşe fıçılarda olgunlaştırılmış bu seçkin içki, meyve ve baharatlı notaları barındırır. Koleksiyonerlerin değer verdiği bu miniyatür şişe, markanın karakteristiğini mükemmel şekilde yansıtır.",
-      "desc_en": "Hennessy VSOP is a prestigious cognac from France's renowned Cognac region, recognized worldwide as a symbol of excellence. This distinguished spirit, aged in oak casks, offers a rich, smooth, and well-balanced palate with fruity and spicy notes. This miniature bottle perfectly captures the character and quality that collectors appreciate from this iconic brand.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Hennessy VSOP Cognac, dünya's en prestijli konyak markalarından biri olan bu miniatür şişe, zarif ve dengeli bir tadım deneyimi sunuyor. Uzun yıllar fıçılarda olgunlaştırılan bu konyak, meyvemsi notalar ve yumuşak bir yapısıyla koleksiyonunuzun değerli bir parçası olacak. Berlin temalı güzel şişe tasarımıyla hem estetik hem de içeriği açısından özel bir şişe.",
+      "desc_en": "Hennessy VSOP Cognac, one of the world's most prestigious cognac brands, offers an elegant and well-balanced tasting experience in this miniature format. Aged for years in oak barrels, this cognac showcases fruity notes and a smooth character that makes it a valuable addition to any collection. The charming Berlin-themed bottle design enhances its appeal both aesthetically and in terms of content.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#hennessy",
+        "#cognac",
+        "#brandy",
+        "#konyak",
+        "#premiumspirits"
+      ]
     },
     {
       "id": 1756034592,
