@@ -575,7 +575,7 @@
     },
     {
       "id": 1757255592,
-      "slug": "ossi-100-kruterlikor",
+      "slug": "ossi-100-kr-uterlik-r",
       "name": "Ossi 100% Kräuterlikör",
       "country": "Germany",
       "category": "Liqueur",
@@ -586,10 +586,24 @@
       "images": [
         "/images/uploads/17908602291217764.jpg"
       ],
-      "desc_tr": "Doğu Almanya'nın efsanevi likörü Ossi, 100 çeşit ottan yapılan karakteristik bir Kräuterlikör'dür. Yoğun bitki aromaları ve hafif acılığıyla tanınan bu likör, geleneksel Alman tarifi ile üretilmektedir. Koleksiyoncular için tarihsel değeri ve nadir miniature formatı bu şişeyi özel kılmaktadır.",
-      "desc_en": "Ossi is an iconic herbal liqueur from East Germany, crafted from 100 different herbs using traditional recipes. Known for its intense botanical aromas and subtle bitterness, this Kräuterlikör represents classic German spirit-making heritage. For collectors, its historical significance and rare miniature format make this bottle particularly valuable.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Ossi 100%, Doğu Almanya'nın efsanevi kräuterlikörü. Bu miniatura şişe, GDR döneminin otantik aromasını taşıyor ve koleksiyonerlerin değerli bir bulunuşu. Yoğun bitki ve ot notaları içeren bu likör, tarihin tadını çıkarmayı sevenlerin vazgeçilmezi.",
+      "desc_en": "Ossi 100% is the legendary herbal liqueur from East Germany. This miniature bottle carries the authentic flavor of the GDR era and is a treasured find for collectors. With intense herbal and botanical notes, this liqueur is a must-have for those who appreciate the taste of history.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#likör",
+        "#kräuterlikör",
+        "#germany",
+        "#ossi",
+        "#eastgermany",
+        "#gdr",
+        "#herbilliqueur",
+        "#spiritcollector"
+      ]
     },
     {
       "id": 1757255573,
