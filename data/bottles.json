@@ -1263,18 +1263,28 @@
       "slug": "partners-finest-old-port",
       "name": "Partners Finest Old Port",
       "country": "Portugal",
-      "category": "Port Wine",
-      "abv": "19%",
+      "category": "Aperitif",
+      "abv": "19.9%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18025118261087511.jpg",
       "images": [
         "/images/uploads/18025118261087511.jpg"
       ],
-      "desc_tr": "Sandeman tarafından üretilen Partners Finest Old Port, Douro Vadisi'nin ünlü şaraplarından biridir. Zengin, kompleks aromaları ve kadife gibi yumuşak yapısıyla karakterize edilen bu port şarabı, uzun yaşlanmasının sonucunda derinlemesine bir karakter kazanmıştır. Klasik bir koleksiyoncu şarabı olarak bilinir.",
-      "desc_en": "Partners Finest Old Port, produced by Sandeman, is one of the renowned wines from the Douro Valley. Characterized by its rich, complex aromas and smooth, velvety structure, this port wine has developed a profound character as a result of extended aging. Known as a classic collector's wine.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Sandeman tarafından üretilen bu zarif Port şarabı, klasik Portekiz şarap yapım geleneğinin güzel bir örneğidir. Vintage koleksiyonunuzda önemli bir yer alacak bu mini şişe, soğuk ve ışıktan uzakta saklandığında uzun yıllar boyunca değerini koruyacaktır.",
+      "desc_en": "This elegant Port wine produced by Sandeman represents a beautiful example of classic Portuguese winemaking tradition. This mini bottle will hold an important place in your vintage collection and will maintain its value for many years when stored in cool conditions away from light.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#portwine",
+        "#sandeman",
+        "#portugueseport",
+        "#vintagecollection"
+      ]
     },
     {
       "id": 1723998180,
