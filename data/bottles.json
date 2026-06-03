@@ -821,7 +821,7 @@
       "slug": "linie-aquavit",
       "name": "Linie Aquavit",
       "country": "Norway",
-      "category": "Aquavit",
+      "category": "",
       "abv": "41.5%",
       "year": 2025,
       "qty": 1,
@@ -829,10 +829,21 @@
       "images": [
         "/images/uploads/17882577225211740.jpg"
       ],
-      "desc_tr": "Norveç'in efsanevi akavit markası Linie, geleneksel tahıl ve caraway tohumlarından üretilir. Ekvator çizgisini iki kez geçen deniz yolculuğu sırasında fıçılarda olgunlaşan bu ruh, benzersiz bir yumuşaklık ve derinlik kazanır. Baharatlandırılmış profili ve ince karakteri ile Skandinav mutfağının vazgeçilmez bir parçasıdır.",
-      "desc_en": "Norway's legendary Linie Aquavit is crafted from traditional grain and caraway seeds, presenting a distinctly Scandinavian spirit. Aged in oak casks during a sea voyage that crosses the equator twice, it develops an exceptional smoothness and complexity. Its spiced profile and refined character make it an essential companion to Nordic cuisine and celebrations.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Norveç'in efsanevi akaviti, Linie, geleneksel tarifi ve deniz yolculuğu mirasıyla ünlüdür. Bu miniatur şişe, kümmel ve anason notalarıyla yapılan zarif spiritini içerir ve koleksiyonunuza nordik karakter katacaktır.",
+      "desc_en": "Norway's legendary Linie Aquavit, renowned for its traditional recipe and maritime heritage of sea voyage maturation. This miniature bottle contains the elegant spirit with caraway and anise notes, adding authentic Nordic character to any collection.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#aquavit",
+        "#linie",
+        "#norway",
+        "#norwegianspirits",
+        "#scandinavianspirits"
+      ]
     },
     {
       "id": 1737893683,
