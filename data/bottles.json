@@ -1405,7 +1405,7 @@
       "slug": "the-love-story-fine-old-scotch-whisky",
       "name": "The Love Story Fine Old Scotch Whisky",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
+      "category": "Blended Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1413,10 +1413,20 @@
       "images": [
         "/images/uploads/17937177035886049.jpg"
       ],
-      "desc_tr": "İskoçya'da üretilen bu klasik blend viski, retro etiketiyle koleksiyonerlerin ilgisini çeken nostaljik bir şişedir. Hafif ve dengeli profili ile günlük içim için ideal olan The Love Story, geleneksel İskoç viski karakterini yansıtır.",
-      "desc_en": "Produced in Scotland, this classic blended whisky attracts collectors with its charming retro label design from a bygone era. The Love Story offers a light and balanced profile, making it an ideal everyday dram that reflects traditional Scottish whisky character.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "The Love Story, İskoçya'nın klasik blended whisky'lerinden biri olarak, nostaljik bir şarma sahip mini şişede sunuluyor. 4,7 santilikteki bu küçük şaheser, kaliteli İskoç viski yapma geleneğinin güzel bir örneği ve koleksiyonunuzun romantik bir parçası olacak.",
+      "desc_en": "The Love Story is a classic blended Scotch whisky presented in this charming 4.7 centilitre miniature bottle. This fine old expression represents the traditional Scottish whisky-making heritage and makes a romantic addition to any spirits collection with its beautifully designed vintage label.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#thelovestory",
+        "#vintage"
+      ]
     },
     {
       "id": 1723998053,
