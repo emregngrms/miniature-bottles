@@ -1430,21 +1430,32 @@
     },
     {
       "id": 1723998053,
-      "slug": "gold-crow",
-      "name": "Gold Crow",
+      "slug": "gold-crow-bourbon",
+      "name": "Gold Crow Bourbon",
       "country": "USA",
       "category": "Bourbon",
-      "abv": "86 proof (43%)",
+      "abv": "86 Proof (43%)",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17943563690854536.jpg",
       "images": [
         "/images/uploads/17943563690854536.jpg"
       ],
-      "desc_tr": "The Old Craus Company tarafından Frankfort, Kentucky'de üretilen Gold Crow, Amerika'nın klasik bourbon whiskilerinden biridir. Hükümet denetimi altında bond'da şişelenen bu whiskey, export için özel olarak hazırlanmış ve National Distillers tarafından dağıtılmıştır. Tarihi bir ürün olarak koleksiyonerlerin ilgisini çekmektedir.",
-      "desc_en": "Gold Crow, produced by The Old Craus Company in Frankfort, Kentucky, is a classic American bourbon whiskey. Bottled in bond under government supervision specifically for export, this whiskey was distributed by National Distillers. As a historical product, it holds significant appeal for collectors of vintage spirits.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "The Old Craus Company tarafından Frankfort, Kentucky'de üretilen Gold Crow Bourbon, vintage koleksiyonun değerli bir parçasıdır. Hükümet denetimi altında üretilen ve ihraç için şişelenen bu nadir bourbon, spiritler tarihinin bir döneminin tanığıdır. Klasik Amerikan viski geleneğinin nostalji dolu bir örneğidir.",
+      "desc_en": "Gold Crow Bourbon, produced by The Old Craus Company in Frankfort, Kentucky, is a treasured piece of any vintage collection. Distilled under government supervision and bottled for export, this rare bourbon captures a moment in spirits history. A nostalgic example of classic American whiskey tradition.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#bourbon",
+        "#kentuckywhiskey",
+        "#vintagespirits",
+        "#goldcrow",
+        "#classicbourbon"
+      ]
     },
     {
       "id": 1723998002,
