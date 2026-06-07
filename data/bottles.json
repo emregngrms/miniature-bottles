@@ -3246,6 +3246,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780839175127,
+      "slug": "drumshando-with-california-orange-citrus-gunpowder-irish-gin",
+      "name": "Drumshando with California Orange Citrus Gunpowder Irish Gin",
+      "country": "Ireland",
+      "category": "Gin",
+      "abv": "43%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780839173995.jpg",
+      "images": [
+        "/images/uploads/1780839173995.jpg"
+      ],
+      "desc_tr": "Drumshando Gunpowder Irish Gin, California portakalı ve narenciye notaları ile zenginleştirilmiş, taze ve canlı bir gin deneyimi sunar. Burun üzerinde narenciye ve bitki aromaları baskın gelirken, damakta yumuşak bir baharatlanma ve turunçgil tatlılığı hissedilir. Orta uzunlukta, temiz bir bitiş ile karakteristik bir İrlanda gini.",
+      "desc_en": "Drumshando Gunpowder Irish Gin, infused with California orange citrus, delivers a vibrant and fresh gin experience. The nose presents bright citrus and herbal aromatics, while the palate reveals a soft spice character balanced with citrus sweetness. Medium-length finish with a clean, characteristic Irish gin profile.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#irishgin",
+        "#drumshando",
+        "#gin",
+        "#ireland"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
