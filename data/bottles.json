@@ -4599,6 +4599,34 @@
       "ig_posted": true,
       "ig_posted_at": "2026-06-07",
       "ig_post_id": "17925921696127133"
+    },
+    {
+      "id": 1780846679428,
+      "slug": "johnnie-walker-red-label",
+      "name": "Johnnie Walker Red Label",
+      "country": "Scotland",
+      "category": "Blended Whisky",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 2,
+      "image": "/images/uploads/1780846677922.jpg",
+      "images": [
+        "/images/uploads/1780846677922.jpg"
+      ],
+      "desc_tr": "Johnnie Walker Red Label, klasik bir İskoç karışık viskisidir ve hafif, erişilebilir bir profil sunmaktadır. Burun üzerinde malt ve tütün notaları ile ılık baharat ve hafif meyvemsi tonlar yer alırken, damakta yumuşak tatılık ve hafif duman karakteri hissedilir. Temiz, orta uzunlukta bitiş ve dengeli yapısı onu her gün içilebilecek bir viski yapmaktadır.",
+      "desc_en": "Johnnie Walker Red Label is a classic Scottish blended whisky offering an approachable and light profile. The nose presents warm spice and malty sweetness with subtle fruity notes, while the palate delivers soft, accessible flavors balanced by gentle smoke character. The clean, medium-length finish and balanced composition make it a versatile everyday dram.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#johnniewalker",
+        "#blendedwhisky",
+        "#scotchwhisky"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
