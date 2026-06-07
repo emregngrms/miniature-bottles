@@ -3332,6 +3332,34 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780839457571,
+      "slug": "j-germeister-orange",
+      "name": "Jägermeister Orange",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "35%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780839456499.jpg",
+      "images": [
+        "/images/uploads/1780839456499.jpg"
+      ],
+      "desc_tr": "Jägermeister Orange, klasik Jägermeister likörünün turuncu aromalarıyla zenginleştirilmiş bir varyasyonudur. Burununda tatlı turuncu ve baharatların harmoniası, damakta ise yumuşak, meyveli ve hafif acı notalar hissedilir. Soğuk içildiğinde erfrişan bir finish sunar.",
+      "desc_en": "Jägermeister Orange is an orange-flavored variation of the classic German digestif liqueur. On the nose, you'll find sweet orange aromatics combined with herbal spice notes. The palate delivers smooth, fruity sweetness with subtle bitter herbal undertones, finishing refreshingly crisp when served ice-cold.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#jägermeister",
+        "#liqueur",
+        "#germany"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
