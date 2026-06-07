@@ -3483,6 +3483,35 @@
       "ig_posted": true,
       "ig_posted_at": "2026-06-07",
       "ig_post_id": "18131972017597447"
+    },
+    {
+      "id": 1780840367694,
+      "slug": "vana-tallinn",
+      "name": "Vana Tallinn",
+      "country": "Diğer",
+      "category": "Liqueur",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780840366016.jpg",
+      "images": [
+        "/images/uploads/1780840366016.jpg"
+      ],
+      "desc_tr": "Vana Tallinn, Estonya'nın klasik likörü, rum bazlı yapısıyla başlayan içecekte vanilya, karamel ve baharat notaları ön plana çıkar. Yumuşak ve kremsı bir ağız duyuşu sunarak, finalde sıcak baharat ve ılımlı bir tatlılık bırakır. Geleneksel Baltık tarifi ile üretilen bu likör, sade içilmesi kadar kahve veya çikolata tabanlı kokteyllerde de başarılı bir rol oynar.",
+      "desc_en": "Vana Tallinn, Estonia's iconic liqueur, blends rum with notes of vanilla, caramel, and warm spices. The palate delivers a smooth, creamy mouthfeel with subtle citrus undertones, finishing with gentle spice warmth and subtle sweetness. Crafted using traditional Baltic methods, this spirit works beautifully served neat over ice or mixed into dessert-inspired cocktails.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#vanatallinn",
+        "#liqueur",
+        "#estonia",
+        "#rum"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
