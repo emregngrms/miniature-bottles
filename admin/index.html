@@ -81,7 +81,7 @@ main{flex:1;padding:28px 32px;min-width:0}
 .thead:hover{background:var(--surface)!important}
 .bottle-cols{grid-template-columns:48px 1fr 110px 90px 50px 100px}
 .cat-cols{grid-template-columns:1fr 1fr 80px 90px}
-.cocktail-cols{grid-template-columns:48px 1fr 90px 70px 100px}
+.cocktail-cols{grid-template-columns:48px 1fr 80px 90px 50px 100px}
 .row-img{width:40px;height:40px;border-radius:8px;object-fit:cover;background:var(--surface)}
 .row-ph{width:40px;height:40px;border-radius:8px;background:var(--surface);display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:18px}
 .rname{font-weight:600;color:var(--text);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -141,6 +141,9 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
 .spinner{width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .6s linear infinite;display:inline-block;flex-shrink:0}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loading-full{display:flex;align-items:center;justify-content:center;padding:60px;gap:12px;color:var(--sub)}
+.chip{padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--sub);font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;transition:all .15s;display:inline-flex;align-items:center;gap:6px}
+.chip:hover{border-color:var(--blue);color:var(--blue)}
+.chip.active{border-color:var(--gold);background:var(--goldd);color:var(--gold)}
 .security-badge{display:flex;align-items:center;gap:6px;padding:6px 12px;background:var(--greend);border:1px solid rgba(82,201,122,.2);border-radius:8px;font-size:11px;color:var(--green)}
 #sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:49;backdrop-filter:blur(2px)}
 @media(max-width:768px){
@@ -152,7 +155,7 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
   .fg-grid{grid-template-columns:1fr}
   .bottle-cols{grid-template-columns:40px 1fr 70px 60px}
   .cat-cols{grid-template-columns:1fr 1fr 80px}
-  .cocktail-cols{grid-template-columns:40px 1fr 80px}
+  .cocktail-cols{grid-template-columns:40px 1fr 70px 60px}
   main{padding:16px}
   .search-wrap input{width:160px}
 }
@@ -606,8 +609,8 @@ function openBottleModal(b){
     <button class="btn btn-primary" id="sbtn" onclick="saveBottle('${esc(b.slug)}','${isEdit}','publish')">
       ${isEdit?'Kaydet & Yayınla':'Ekle & Yayınla'}
     </button>
-    <button class="btn" id="sbtn-ig" disabled title="Instagram entegrasyonu yakında"
-      style="background:rgba(131,58,180,.12);border:1px solid rgba(131,58,180,.25);color:rgba(131,58,180,.4);cursor:not-allowed;gap:6px">
+    <button class="btn" id="sbtn-ig" onclick="saveBottle('${esc(b.slug)}','${isEdit}','instagram')"
+      style="background:linear-gradient(135deg,rgba(131,58,180,.25),rgba(193,53,132,.2));border:1px solid rgba(131,58,180,.5);color:#c77dff;gap:6px">
       📸 IG Yayınla
     </button>`;
   // Init image list state BEFORE rendering (modal HTML uses b.images directly)
@@ -758,6 +761,7 @@ async function saveBottle(oldSlug, isEdit, saveMode) {
 
   const entry = {
     ...(existing || {}),          // preserve ALL existing fields (ig_posted, etc.)
+    _postToIG: undefined,         // remove temp flag
     id:        existing?.id || Date.now(),
     slug,
     name,
@@ -774,6 +778,7 @@ async function saveBottle(oldSlug, isEdit, saveMode) {
     hashtags,
     status:    saveMode === 'draft' ? 'draft' : 'published',
     active:    saveMode !== 'draft',
+    _postToIG: saveMode === 'instagram',
   };
 
   if (isEdit === 'true') {
@@ -787,7 +792,14 @@ async function saveBottle(oldSlug, isEdit, saveMode) {
   }
 
   const ok = await saveBottles(isEdit === 'true' ? `Edit: ${name}` : `Add: ${name}`);
-  if (ok) { closeModal(); renderBottles(); }
+  if (ok) {
+    closeModal();
+    renderBottles();
+    // If instagram mode, open share modal after save
+    if (saveMode === 'instagram') {
+      setTimeout(() => openShareModal(slug), 300);
+    }
+  }
   else {
     if(btn){ btn.disabled=false; btn.innerHTML = saveMode==='draft'?'Taslak Kaydet':'Kaydet & Yayınla'; }
     if(btnDraft) btnDraft.disabled=false;
@@ -880,12 +892,18 @@ function renderCocktails(){
       </div>
     </div>
     <div class="table-wrap">
-      <div class="trow cocktail-cols thead"><div></div><div>Kokteyl</div><div>Zorluk</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
+      <div class="trow cocktail-cols thead"><div></div><div>Kokteyl</div><div>Zorluk</div><div>Instagram</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
       ${!list.length?`<div class="empty"><div class="empty-ico">🍹</div>Kokteyl yok</div>`:''}
       ${list.map(c=>`<div class="trow cocktail-cols">
         <div>${c.image?`<img class="row-img" src="${esc(c.image)}" loading="lazy" onerror="this.style.opacity='.3'"/>`:`<div class="row-ph">🍹</div>`}</div>
         <div><div class="rname">${esc(c.name)}</div><div class="rmeta">${esc((c.slugs||[]).length)} şişe</div></div>
         <div><span class="tag ${c.diff==='Kolay'?'tag-gr':'tag-g'}">${esc(c.diff||'')}</span></div>
+        <div>
+          ${c.ig_posted
+            ? `<button onclick="openCocktailIgPost(${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(131,58,180,.4);background:rgba(131,58,180,.15);color:#c77dff;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap" title="${c.ig_posted_at||''}">✓ Paylaşıldı</button>`
+            : `<button onclick="openCocktailShareModal(${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--sub);font-size:11px;cursor:pointer;font-family:inherit;white-space:nowrap">📸 Paylaş</button>`
+          }
+        </div>
         <div>${c.active===false
           ? `<button onclick="toggleActive('cocktail',${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(224,92,92,.3);background:rgba(224,92,92,.1);color:#e05c5c;font-size:11px;font-weight:600;cursor:pointer">Pasif</button>`
           : `<button onclick="toggleActive('cocktail',${c.id})" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(82,201,122,.3);background:rgba(82,201,122,.1);color:#52c97a;font-size:11px;font-weight:600;cursor:pointer">Aktif</button>`
@@ -1474,6 +1492,108 @@ async function resetIgPost(slug) {
   closeModal();
   renderBottles();
   toast("Paylasim durumu sifirland");
+}
+
+
+// ── COCKTAIL INSTAGRAM SHARING ────────────────────────────────────────────────
+function buildCocktailCaption(c) {
+  const lines = [];
+  lines.push(c.name);
+  lines.push('');
+  if(c.desc_tr) lines.push(c.desc_tr);
+  if(c.desc_tr && c.desc_en) lines.push('\n---------\n');
+  if(c.desc_en) lines.push(c.desc_en);
+  lines.push('');
+  // Add linked bottles
+  const bottleNames = (c.slugs||[]).map(slug => {
+    const b = bottles.find(x=>x.slug===slug);
+    return b ? '#'+b.name.toLowerCase().replace(/[^a-z0-9]/g,'') : null;
+  }).filter(Boolean);
+  if(bottleNames.length) lines.push(bottleNames.join(' '));
+  lines.push('');
+  lines.push('#minibottles #minibottlescollection #miniaturebottles #cocktail #kokteyl');
+  return lines.join('\n').trim();
+}
+
+function openCocktailShareModal(id) {
+  const c = cocktails.find(x=>x.id===id);
+  if(!c) return;
+  const imageUrl = c.image ? (c.image.startsWith('http') ? c.image : SITE_URL + c.image) : '';
+  const caption = buildCocktailCaption(c);
+  document.getElementById('modal-ttl').textContent = 'Instagram Paylasim';
+  document.getElementById('modal-bd').innerHTML = `
+    <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:start">
+      ${imageUrl ? `<img src="${esc(imageUrl)}" style="width:120px;height:120px;object-fit:cover;border-radius:10px;border:1px solid var(--border)"/>` : `<div style="width:120px;height:120px;background:var(--surface);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:32px">🍹</div>`}
+      <div>
+        <div style="font-weight:600;font-size:14px;margin-bottom:4px">${esc(c.name)}</div>
+        <div style="font-size:11px;color:var(--sub)">${esc(c.diff||'')} · ${esc(c.time||'')}</div>
+        ${!imageUrl ? '<div style="margin-top:8px;padding:8px;background:var(--redd);border-radius:8px;font-size:12px;color:var(--red)">Gorsel yok</div>' : ''}
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <label style="font-size:11px;color:var(--sub);letter-spacing:.06em;text-transform:uppercase;font-weight:600">Caption</label>
+      <textarea id="ig-caption" style="width:100%;margin-top:6px;padding:10px;background:var(--surface);border:1px solid var(--border);border-radius:9px;color:var(--text);font-family:inherit;font-size:13px;resize:vertical;min-height:140px">${esc(caption)}</textarea>
+    </div>`;
+  document.getElementById('modal-ft').innerHTML = `
+    <button class="btn btn-ghost" onclick="closeModal()">Iptal</button>
+    <button class="btn btn-primary" id="ig-post-btn" ${!imageUrl ? 'disabled' : ''} onclick="doPostCocktailToInstagram(${id})">
+      Paylas
+    </button>`;
+  openModal();
+}
+
+async function doPostCocktailToInstagram(id) {
+  const c = cocktails.find(x=>x.id===id);
+  if(!c) return;
+  const btn = document.getElementById('ig-post-btn');
+  btn.disabled = true; btn.innerHTML = '<div class="spinner"></div>';
+  const imageUrl = c.image.startsWith('http') ? c.image : SITE_URL + c.image;
+  const caption = document.getElementById('ig-caption').value;
+  try {
+    const res = await fetch('/.netlify/functions/post-to-instagram', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ imageUrl, caption })
+    });
+    const data = await res.json();
+    if(!res.ok) throw new Error(data.error||'Paylasim basarisiz');
+    const idx = cocktails.findIndex(x=>x.id===id);
+    if(idx>=0){
+      cocktails[idx].ig_posted = true;
+      cocktails[idx].ig_posted_at = new Date().toISOString().split('T')[0];
+      cocktails[idx].ig_post_id = data.ig_post_id||'';
+      await saveCocktails('Instagram post: '+c.name);
+    }
+    closeModal(); toast("Instagram'da paylasild!"); renderCocktails();
+  } catch(e) {
+    btn.disabled=false; btn.innerHTML='Paylas';
+    toast('Hata: '+esc(e.message),'err');
+  }
+}
+
+function openCocktailIgPost(id) {
+  const c = cocktails.find(x=>x.id===id);
+  if(!c) return;
+  document.getElementById('modal-ttl').textContent = 'Instagram Paylasimi';
+  document.getElementById('modal-bd').innerHTML = `
+    <div style="font-size:13px">
+      <div style="font-weight:600;margin-bottom:8px">${esc(c.name)}</div>
+      <div style="color:var(--sub)">Tarih: ${esc(c.ig_posted_at||'bilinmiyor')}</div>
+      <div style="margin-top:12px">
+        <button class="btn btn-ghost btn-sm" onclick="resetCocktailIgPost(${id})">Paylasılmadı olarak isaretle</button>
+      </div>
+    </div>`;
+  document.getElementById('modal-ft').innerHTML = `<button class="btn btn-ghost" onclick="closeModal()">Kapat</button>`;
+  openModal();
+}
+
+async function resetCocktailIgPost(id) {
+  const idx = cocktails.findIndex(x=>x.id===id);
+  if(idx<0) return;
+  cocktails[idx].ig_posted = false;
+  cocktails[idx].ig_posted_at = '';
+  cocktails[idx].ig_post_id = '';
+  await saveCocktails('Reset IG: '+cocktails[idx].name);
+  closeModal(); renderCocktails(); toast('Sifirlandi');
 }
 
 // ── ACTIVE TOGGLE ─────────────────────────────────────────────────────────────
