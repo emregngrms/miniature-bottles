@@ -1626,17 +1626,28 @@
       "name": "Ouzo Metaxa",
       "country": "Greece",
       "category": "Liqueur",
-      "abv": "40%",
+      "abv": "Not clearly visible on label",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17855043645201848.jpg",
       "images": [
         "/images/uploads/17855043645201848.jpg"
       ],
-      "desc_tr": "Yunan geleneğinin en ünlü temsilcisi olan Metaxa, 1888'den beri üretilen bir anason likörüdür. Yıldız rozeti ile damgalanan şişesi, Akdeniz'in sıcak rüzgarını ve Yunan mitosolojisini içinde taşır. Şeker ve meyveler ile dengeli aroması, sofralarının ve meyhane kültürünün vazgeçilmez parçasıdır.",
-      "desc_en": "Metaxa, the most renowned Greek spirit since 1888, is an anise-based liqueur representing Hellenic tradition. The iconic star-marked bottle carries the warmth of Mediterranean winds and Greek mythology. Its balanced flavor profile of anise, spices, and subtle sweetness makes it an indispensable part of Greek social culture and hospitality.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Yunan arak geleneğinin klasik örneği olan bu spiritüs anisi ve diğer bitkilerin aromasıyla karakterize edilir. Ağız tat olarak tatlı ve herbal notalar sunmakla birlikte, sonuç temiz ve serinleticidir. Su eklenmesiyle süt gibi beyazlayan bu içecek, Akdeniz'in tipik aperitif kültürünün özüdür.",
+      "desc_en": "A classic example of Greek arak tradition, this spirit is characterized by the prominent aroma of anise and other botanicals. On the palate, it offers sweet and herbal notes with a clean, refreshing finish. When water is added, it turns milky white—a signature characteristic. An essential part of Mediterranean aperitif culture with a distinctive licorice-forward profile.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#ouzo",
+        "#metaxa",
+        "#greekspirits",
+        "#arak"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1723997788,
