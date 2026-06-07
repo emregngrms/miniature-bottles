@@ -3769,6 +3769,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780842444043,
+      "slug": "sierra-tequila-reposado",
+      "name": "Sierra Tequila Reposado",
+      "country": "Mexico",
+      "category": "Tequila",
+      "abv": "38%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780842442251.jpg",
+      "images": [
+        "/images/uploads/1780842442251.jpg"
+      ],
+      "desc_tr": "Meksika kökenli, meşe fıçılarda dinlendirilmiş reposado tip tekila. Agave bazlıdır, hafif odunsu ve vanilyamsı tatlar içerir. Genellikle kokteyl ve shot olarak tüketilir.",
+      "desc_en": "A Mexican oak-aged reposado tequila made from blue agave. It has mild woody and vanilla notes with a smooth finish. Commonly used for shots and cocktails.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#tequila",
+        "#sierratequila",
+        "#mexico",
+        "#agavespirit"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
