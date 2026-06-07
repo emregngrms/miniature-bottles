@@ -2532,8 +2532,8 @@
     },
     {
       "id": 1720386340,
-      "slug": "beefeater-london-dry-gin",
-      "name": "Beefeater London Dry Gin",
+      "slug": "bombay-sapphire",
+      "name": "Bombay Sapphire",
       "country": "England",
       "category": "Gin",
       "abv": "47%",
@@ -2543,10 +2543,21 @@
       "images": [
         "/images/uploads/18003395519379638.jpg"
       ],
-      "desc_tr": "1761 yılından beri İngiltere'de üretilen efsanevi Beefeater London Dry Gin, el seçimi yapılmış botaniklerle yapılan klasik bir cin deneyimi sunar. Juniper, limon ve baharat notaları ile berrak, keskin ve zarif bir profil sergiler. Geleneksel London Dry stili ile seçkin bir şekilde hazırlanan bu ikon, koleksiyoncuların ve cin severlerinin vazgeçilmez bir parçasıdır.",
-      "desc_en": "The legendary Beefeater London Dry Gin, produced in England since 1761, offers a classic gin experience crafted with hand-selected botanicals. It displays a crisp, sharp, and elegant profile with juniper, lemon, and spice notes. Expertly crafted in the traditional London Dry style, this iconic gin is an indispensable piece for collectors and gin enthusiasts.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "İngiltere kökenli, 10 farklı botanikle aromalandırılan premium London Dry Gin’dir. Hafif ardıç baskın, narenciye ve çiçeksi notalar içerir. Genellikle tonik ile servis edilir.",
+      "desc_en": "Premium British London Dry Gin infused with 10 botanicals. It has a light juniper base with citrus and floral notes, and is commonly served with tonic.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#bombay",
+        "#londondrygin",
+        "#gin",
+        "#england"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386326,
