@@ -1651,10 +1651,22 @@
       "images": [
         "/images/uploads/18018665822437737.jpg"
       ],
-      "desc_tr": "Berentzen Appel, Almanya'nın ünlü likör üreticisi tarafından yapılan elma aromalı bir içkidir. Taze elma notaları ve hafif tatılığı ile karakteristik bir liköördür. Geleneksel Alman yapımı bu ürün, içinde kullanılan elma ve tarçın karışımıyla ayırt edici bir lezzete sahiptir.",
-      "desc_en": "Berentzen Appel is an apple-flavored liqueur produced by Germany's renowned liqueur manufacturer. Characterized by fresh apple notes and gentle sweetness, it offers a distinctive taste profile. This traditional German-made spirit features a notable blend of apples and spices, creating its signature flavor.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Berentzen Appel, Almanya'nın geleneksel elma likörüdür ve taze, olgun elmaların doğal tatlarını yansıtır. Burun açısından meyveli ve hafif aromatik notalar sunurken, damakta yumuşak, tatı ve hoş bir elma özü hissedilir. Düşük alkol derecesi sayesinde içimi kolay olan bu likör, hafif ve ferah bir bitiş sunar.",
+      "desc_en": "Berentzen Appel is a traditional German apple liqueur that captures the natural flavors of ripe apples. On the nose, it presents fruity and lightly aromatic notes, while the palate delivers a soft, sweet apple essence with a smooth character. With its lower alcohol content, this liqueur offers an easy-drinking experience and provides a light, refreshing finish.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#berentzen",
+        "#appel",
+        "#germany",
+        "#fruitspirit",
+        "#applelier"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1723997759,
