@@ -3512,6 +3512,34 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780840755564,
+      "slug": "the-irishman",
+      "name": "The Irishman",
+      "country": "Ireland",
+      "category": "Single Malt Whisky",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780840754000.jpg",
+      "images": [
+        "/images/uploads/1780840754000.jpg"
+      ],
+      "desc_tr": "The Irishman, İrlanda'nın geleneksel tek malt viskisinden yapılan yumuşak ve dengeli bir viski. Burun da elma, armut ve hafif vanilya notaları ile karşılanırken, damakta meyvemsi ve hafif tatlı bir profil sunmaktadır. Temiz ve orta uzunlukta bir son ile karakterize edilen bu viski, İrlanda viskisinin tipik yumuşaklığını ve inceliğini yansıtır.",
+      "desc_en": "The Irishman is a smooth and balanced Irish whiskey crafted from traditional single malt. The nose presents with notes of apple, pear, and subtle vanilla, while the palate offers a fruity and gently sweet profile. Characterized by a clean, medium-length finish, this whiskey reflects the typical softness and elegance of Irish whiskey.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#irishwhiskey",
+        "#theirishman",
+        "#ireland"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
