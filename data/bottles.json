@@ -2000,10 +2000,10 @@
     },
     {
       "id": 1721163804,
-      "slug": "uzo-marou-ouzo-paomariou-1894",
-      "name": " Οuzo Παοmarιou (Ouzo Paomariou) 1894",
+      "slug": "ouzo-paomariou-1894",
+      "name": "Ouzo Paomariou 1894",
       "country": "Greece",
-      "category": "Ouzo",
+      "category": "Spirits",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2011,10 +2011,21 @@
       "images": [
         "/images/uploads/18033960293025489.jpg"
       ],
-      "desc_tr": "Yunan Lesbos adasından kökenli, 1894 yılından beri üretilen bu ouzo, geleneksel anisli rakının klasik temsilcidir. Kristal berraklığı ve yumuşak anisin karakteristik aroması ile, Akdeniz'in ruhunu bardağa taşır.",
-      "desc_en": "Originating from the island of Lesbos in Greece, this ouzo has been produced since 1894 and represents the classical expression of traditional anise-flavored spirit. With its crystal clarity and the characteristic aroma of soft anise, it captures the essence of the Mediterranean in every glass.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Yunan ouzo geleneğinin klasik örneği olan bu spirit, aniseed'in dominant aroması ile başlar ve damakta sıcak, baharatlandırılmış bir karakter gösterir. Kristal berraklığı ve 40° alkolü ile, ağız ve boğazda yalıcı bir hisliyete neden olan güçlü, karakteristik anisin tadını sunar. Geleneksel Yunan yöntemiyle üretilen bu ouzo, su ile seyreltildiğinde südlü, yumuşak bir dokuya dönüşerek aperitif olarak ideal bir seçimdir.",
+      "desc_en": "A classic expression of Greek ouzo tradition, this spirit opens with dominant aniseed aromatics and displays a warm, spicy character on the palate. With its crystal clarity and 40% alcohol content, it delivers the characteristic assertive anise flavor with a warming sensation across the mouth and throat. Produced using traditional Greek methods, this ouzo transforms into a creamy, smooth texture when diluted with water, making it an ideal aperitif choice.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#ouzo",
+        "#greekspirits",
+        "#ouzopaomariou",
+        "#greece"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1721163765,
