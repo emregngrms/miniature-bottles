@@ -2413,7 +2413,7 @@
       "slug": "lajita-mezcal-reposado",
       "name": "Lajita Mezcal Reposado",
       "country": "Mexico",
-      "category": "Mezcal",
+      "category": "Spirits",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2421,10 +2421,21 @@
       "images": [
         "/images/uploads/18009725150570176.jpg"
       ],
-      "desc_tr": "Oaxaca'dan gelen bu Mezcal Reposado, 100% agave kullanılarak üretilmiştir. Ahşap fıçılarda olgunlaştırılan bu mezcal, yumuşak ve dengeli bir profil sunarken, geleneksel agave karakterini modern işçilikle birleştirir. Koleksiyonerlerin değer verdiği, autentik Meksika mezcal deneyiminin kısaltılmış versiyonudur.",
-      "desc_en": "This Mezcal Reposado from Oaxaca is crafted from 100% agave with traditional expertise. Aged in oak barrels, it presents a smooth and balanced profile while maintaining the characteristic earthiness of agave with a refined touch. A prized miniature for collectors seeking an authentic Mexican mezcal experience.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Lajita Mezcal Reposado, Oaxaca bölgesinden gelen geleneksel bir mezcal içkisidir. Agave bitkisinden üretilen bu mezcal, reposado kategorisinde olup kısmi ahşap yaşlandırmasından dolayı yumuşak ve dengeli bir profil sunar. Buğday, meyve ve hafif tütün notaları ile karakteristik mezcal aromasını sergiler, orta ağızda yapısı ve temiz finişi ile tüketilir.",
+      "desc_en": "Lajita Mezcal Reposado is a traditional mezcal spirit from the Oaxaca region of Mexico. Crafted from agave, this reposado expression develops a smooth and balanced character through partial wood aging. The nose reveals earthy, fruity, and subtle tobacco notes characteristic of quality mezcal, while the palate offers a medium-bodied structure with a clean, dry finish.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#mezcal",
+        "#lajita",
+        "#mexico",
+        "#reposado"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386465,
