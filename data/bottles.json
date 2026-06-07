@@ -2272,21 +2272,32 @@
     },
     {
       "id": 1720386768,
-      "slug": "black-white-special-blend",
-      "name": "Black & White Special Blend",
+      "slug": "black-white",
+      "name": "Black & White",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
-      "abv": "40%",
+      "category": "Tennessee Whiskey",
+      "abv": "Not clearly visible on label",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18060978886532396.jpg",
       "images": [
         "/images/uploads/18060978886532396.jpg"
       ],
-      "desc_tr": "James Buchanan & Co. Ltd tarafından Glasgow ve Londra'da üretilen bu klasik Scotch whisky, Kraliyet Ailesi'ne atanmış prestijli bir markanın ürünüdür. Black & White, Buchanan's seçkin eski Scotch whiskylerinin özel bir karışımı olarak, dengeli ve yumuşak karakteriyle tanınır. Bu ikonik yeşil şişe, 20. yüzyıl whisky tarihinin önemli bir parçasıdır.",
-      "desc_en": "This classic Scotch whisky by James Buchanan & Co. Ltd, produced in Glasgow and London, is a prestigious brand appointed to the Royal Household. Black & White represents a special blend of Buchanan's choice old Scotch whiskies, known for its balanced and smooth character. This iconic green bottle represents an important piece of 20th century whisky heritage.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Black & White, James Buchanan & Co tarafından üretilen klasik İskoç blended whiskisidir. Glasgow ve London'da distile edilen bu blend, yumuşak ve dengeli bir profil sunarak, hafif malt karakteri ve hafif tatlılıkla bilinir. Geleneksel İskoç whisky karakterini accessible bir şekilde yansıtan, uyumlu ve içimi kolay bir blenddir.",
+      "desc_en": "Black & White is a classic Scottish blended whisky produced by James Buchanan & Co, distilled and blended in Glasgow and London. This blend offers a smooth and well-balanced profile with subtle malt character and gentle sweetness, making it an approachable expression of traditional Scotch whisky. The blend presents a harmonious combination that is easy-drinking and reflects the heritage of classic Scottish whisky craftsmanship.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blackandwhite",
+        "#blendedwhisky",
+        "#scotlandwhisky"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386734,
