@@ -3304,6 +3304,34 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780839329358,
+      "slug": "rossi-limoncello",
+      "name": "Rossi Limoncello",
+      "country": "Italy",
+      "category": "Liqueur",
+      "abv": "32%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780839327651.jpg",
+      "images": [
+        "/images/uploads/1780839327651.jpg"
+      ],
+      "desc_tr": "İtalyan limoncellosunun klasik tarzını sunan, taze ve canlı bir likör. Burun yakında yoğun limon aroması hâkim olup, damakta tatlı ve asitli dengesi mükemmel şekilde kurulmuştur. Soğuk servis edildiğinde hafif, ferahlatıcı bir bitiş sunarak aperitif olarak veya tatlı sonrası içecek olarak ideal bir seçimdir.",
+      "desc_en": "A vibrant Italian liqueur showcasing the classic style of limoncello with fresh, zesty character. The nose is dominated by intense lemon aroma, while the palate delivers a perfect balance of sweetness and acidity typical of this Sicilian tradition. Best served chilled, it offers a refreshing, clean finish, making it ideal as an aperitif or digestif.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#limoncello",
+        "#italianspirits",
+        "#liqueur"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
