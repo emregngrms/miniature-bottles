@@ -3654,6 +3654,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780841892660,
+      "slug": "fireball-cinnamon-whisky-liqueur",
+      "name": "Fireball Cinnamon Whisky Liqueur",
+      "country": "Canada",
+      "category": "Liqueur",
+      "abv": "33%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780841890502.jpg",
+      "images": [
+        "/images/uploads/1780841890502.jpg"
+      ],
+      "desc_tr": "Fireball Cinnamon Whisky, yoğun tarçın aroması ve hafif tatlı karakteriyle tanınan Kanada kökenli bir viski likörüdür. Baharatlı ve sıcak içimi sayesinde dünya genelinde popülerlik kazanmış olup, tek başına soğuk servis edilebildiği gibi çeşitli shot ve kokteyllerde de kullanılır.",
+      "desc_en": "Fireball Cinnamon Whisky is a Canadian whisky liqueur known for its intense cinnamon flavor and slightly sweet character. Its spicy and warming profile has made it popular worldwide, whether enjoyed chilled on its own or used in a variety of shots and cocktails. 🥃🔥",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#fireball",
+        "#liqueur",
+        "#cinnamon",
+        "#whiskeyliqueur"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
