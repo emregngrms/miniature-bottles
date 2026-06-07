@@ -1718,10 +1718,21 @@
       "images": [
         "/images/uploads/18034981795926131.jpg"
       ],
-      "desc_tr": "Sovyet döneminden günümüze uzanan köklü geçmişe sahip Stolichnaya, Rusya'nın en ünlü vodka markalarından biridir. Buğday ve çavdardan üretilen bu premium vodka, kristal berraklığı, yumuşak ağız duyuşu ve temiz bitiş ile karakterizedir. Saf ve nötr profiliyle kokteyllerde ve sade içilişte eşit derecede başarılıdır.",
-      "desc_en": "Stolichnaya is one of Russia's most prestigious vodka brands with a heritage extending from the Soviet era to present day. Produced from wheat and rye, this premium vodka is characterized by its crystal clarity, smooth palate, and clean finish. With its pure and neutral profile, it excels equally in cocktails and neat consumption.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Stolichnaya, Rusya'nın klasik premium vodkası, kristal berraklığı ve saf tadıyla bilinir. Buğday ve çavdar karışımından üretilen bu vodka, yumuşak ve soğuk bir içime sunan nötr aromaya sahiptir. Temiz, ılık ve uzun finişle karakterize edilen bu vodka, kokteyllerde veya saf olarak tüketilmek üzere tasarlanmıştır.",
+      "desc_en": "Stolichnaya is Russia's classic premium vodka, known for its crystal clarity and pure taste profile. Produced from a blend of wheat and rye, this vodka offers a neutral aroma with a smooth, cold drinking experience. Characterized by a clean palate, warm mouthfeel, and lingering finish, it's designed for enjoyment in cocktails or served neat.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#stolichnaya",
+        "#vodka",
+        "#premiumvodka",
+        "#russianvodka"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1721416045,
