@@ -3388,6 +3388,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780839615466,
+      "slug": "meukow-vs-cognac",
+      "name": "Meukow vs Cognac",
+      "country": "France",
+      "category": "Cognac & Brandy",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780839613378.jpg",
+      "images": [
+        "/images/uploads/1780839613378.jpg"
+      ],
+      "desc_tr": "Meukow VS Cognac, Fransız Konyak bölgesinde üretilen bir blend konyaktır. Burun üzerinde meyve ve hafif karamel notaları ile açılır, ardından damakta vanilya, badem ve meyveli karışım gelir. Yumuşak ve dengeli bir yapısı vardır, temiz bir bitiş ile sonlanır.",
+      "desc_en": "Meukow VS Cognac is a blended cognac produced in France's Cognac region. It opens with fruity and light caramel notes on the nose, followed by vanilla, almond, and fruit blend on the palate. It has a soft and balanced structure with a clean finish.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#cognac",
+        "#meukow",
+        "#france",
+        "#brandy"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
