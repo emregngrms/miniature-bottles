@@ -79,7 +79,7 @@ main{flex:1;padding:28px 32px;min-width:0}
 .trow:hover:not(.thead){background:var(--cardho)}
 .thead{background:var(--surface);color:var(--sub);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
 .thead:hover{background:var(--surface)!important}
-.bottle-cols{grid-template-columns:48px 1fr 110px 90px 50px 100px}
+.bottle-cols{grid-template-columns:48px 1fr 100px 90px 90px 50px 100px}
 .cat-cols{grid-template-columns:1fr 1fr 80px 90px}
 .cocktail-cols{grid-template-columns:48px 1fr 80px 90px 50px 100px}
 .row-img{width:40px;height:40px;border-radius:8px;object-fit:cover;background:var(--surface)}
@@ -153,7 +153,7 @@ textarea{resize:vertical;min-height:72px;line-height:1.5}
   #hamburger{display:flex!important}
   .stats{grid-template-columns:1fr 1fr}
   .fg-grid{grid-template-columns:1fr}
-  .bottle-cols{grid-template-columns:40px 1fr 70px 60px}
+  .bottle-cols{grid-template-columns:40px 1fr 70px 60px 50px}
   .cat-cols{grid-template-columns:1fr 1fr 80px}
   .cocktail-cols{grid-template-columns:40px 1fr 70px 60px}
   main{padding:16px}
@@ -309,6 +309,31 @@ function onAdminSearch(input, renderFn){
   if(el){ el.focus(); try{ el.setSelectionRange(pos,pos); }catch(e){} }
 }
 function setState(patch){ Object.assign(state, patch); renderBottles(); }
+
+// Countdown ticker — refreshes IG buttons while CDN is warming up
+let _cdTick = null;
+function startCountdownTick(){
+  if(_cdTick) return;
+  _cdTick = setInterval(()=>{
+    // Check if any countdown buttons exist
+    const cdBtns = document.querySelectorAll('[id^="ig-cd-"]');
+    if(!cdBtns.length){ clearInterval(_cdTick); _cdTick=null; return; }
+    let anyActive = false;
+    cdBtns.forEach(btn=>{
+      const slug = btn.id.replace('ig-cd-','');
+      const readyAt = parseInt(sessionStorage.getItem('ig_ready_'+slug)||'0');
+      const remaining = readyAt - Date.now();
+      if(remaining > 0){
+        anyActive = true;
+        btn.textContent = '⏳ '+Math.ceil(remaining/1000)+'s';
+      } else {
+        // Time's up — re-render to show active button
+        renderBottles();
+      }
+    });
+    if(!anyActive){ clearInterval(_cdTick); _cdTick=null; }
+  }, 1000);
+}
 
 // ── AUTH ─────────────────────────────────────────────────────────────────────
 // ── CUSTOM AUTH ──────────────────────────────────────────────────────────────
@@ -527,12 +552,17 @@ function renderBottles(){
       </div>
     </div>
     <div class="table-wrap">
-      <div class="trow bottle-cols thead"><div></div><div>Şişe</div><div>Kategori</div><div>Instagram</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
+      <div class="trow bottle-cols thead"><div></div><div>Şişe</div><div>Kategori</div><div>Eklenme</div><div>Instagram</div><div>Durum</div><div style="text-align:right">İşlem</div></div>
       ${!list.length?`<div class="empty"><div class="empty-ico">🫗</div>Sonuç yok</div>`:''}
       ${list.map(b=>`<div class="trow bottle-cols">
         <div>${b.image?`<img class="row-img" src="${esc(b.image)}" loading="lazy" onerror="this.style.opacity='.3'"/>`:`<div class="row-ph">🥃</div>`}</div>
         <div><div class="rname">${esc(b.name)}</div><div class="rmeta">${FLAG_EMOJI[b.country]||""} ${esc(b.country)} · ${esc(b.year)}</div></div>
         <div><span class="tag tag-b">${esc(b.category)}</span></div>
+        <div style="font-size:11px;color:var(--sub);line-height:1.4">${(()=>{
+          if(!b.id||b.id<1000000000000) return '-';
+          const d=new Date(b.id);
+          return d.getDate().toString().padStart(2,'0')+'.'+(d.getMonth()+1).toString().padStart(2,'0')+'.'+d.getFullYear();
+        })()}</div>
         <div>${b.qty>1?`<span class="qty-b">×${esc(b.qty)}</span>`:`<span style="color:var(--sub)">1</span>`}</div>
         <div>${b.active===false
           ? `<button onclick="toggleActive('bottle','${esc(b.slug)}')" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(224,92,92,.3);background:rgba(224,92,92,.1);color:#e05c5c;font-size:11px;font-weight:600;cursor:pointer">Pasif</button>`
@@ -802,8 +832,12 @@ async function saveBottle(oldSlug, isEdit, saveMode) {
   const ok = await saveBottles(isEdit === 'true' ? `Edit: ${name}` : `Add: ${name}`);
   if (ok) {
     closeModal();
+    // Mark this bottle as "CDN warming up" for 90 seconds
+    if (saveMode === 'publish' || saveMode === 'instagram') {
+      sessionStorage.setItem('ig_ready_' + slug, Date.now() + 90000);
+    }
     renderBottles();
-    // If instagram mode, open share modal after save
+    // If instagram mode, open share modal after save (with delay warning)
     if (saveMode === 'instagram') {
       setTimeout(() => openShareModal(slug), 300);
     }
