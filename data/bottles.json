@@ -811,10 +811,20 @@
       "images": [
         "/images/uploads/18170872375317036.jpg"
       ],
-      "desc_tr": "Meksika'nın ikonik tequila markası KAH, özgün tasarımı ve kaliteli içeriği ile koleksiyoncuların favorisidir. Skull şeklindeki şişesi, Día de Muertos kültürünü yansıtırken, içindeki tequila yumuşak ve dengeli bir tadım profili sunmaktadır. Agave bitkisinden üretilen bu ruh, hem saf içilişte hem de kokteyllerde başarılı bir seçimdir.",
-      "desc_en": "KAH Tequila, Mexico's iconic brand, is a favorite among collectors for its distinctive design and quality spirit. Its skull-shaped bottle reflects the Día de Muertos culture, while the tequila inside offers a smooth and balanced flavor profile. Produced from the agave plant, this spirit is an excellent choice both neat and in cocktails.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "KAH Tequila, Meksika'nın geleneksel tequila üretim bölgesinden gelen bir agarve spiritidir. Burun üzerinde agave tatının yanında hafif baharatlandırma ve mineral notaları hissedilir. Damakta yumuşak ve dengeli bir tat sunarak, agave sıcaklığı ve kuru bitişle karakteristik bir deneyim sağlar.",
+      "desc_en": "KAH Tequila is an agave spirit from Mexico's traditional tequila-producing region. The nose presents classic agave character with subtle spice and mineral notes. On the palate, it delivers a smooth, balanced taste with warm agave flavors and a dry, clean finish that showcases the spirit's authentic character.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#tequila",
+        "#kah",
+        "#mexico"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1737893703,
