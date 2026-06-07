@@ -3540,6 +3540,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780840835130,
+      "slug": "the-irishman-american-european-oak",
+      "name": "The Irishman American & European OAK",
+      "country": "Ireland",
+      "category": "Single Malt Whisky",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780840833032.jpg",
+      "images": [
+        "/images/uploads/1780840833032.jpg"
+      ],
+      "desc_tr": "The Irishman, İrlanda'nın klasik blend whiskey'lerinden biridir ve yumuşak, erişilebilir bir profil sunar. Burundan hafif meyvemsi notalar ve hafif balımsı tatlar gelirken, damakta krem şekeri, vanilin ve hafif tahıl tatlılığı deneyimlenir. Orta uzunlukta, temiz ve pürüzsüz bir bitişi vardır.",
+      "desc_en": "The Irishman is a classic Irish blended whiskey that offers a smooth and approachable profile. The nose reveals subtle fruity notes and honeyed undertones, while the palate displays creamy caramel, vanilla, and gentle cereal sweetness. It finishes clean and rounded with medium length.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#irishwhiskey",
+        "#theirishman",
+        "#irishblend",
+        "#whiskey"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
