@@ -2675,8 +2675,8 @@
     },
     {
       "id": 1720383094,
-      "slug": "yeni-raki",
-      "name": "Yeni Rakı",
+      "slug": "yeni-raki-eski-sise",
+      "name": "Yeni Rakı (Eski Şişe)",
       "country": "Turkey",
       "category": "Rakı",
       "abv": "45%",
@@ -2686,10 +2686,20 @@
       "images": [
         "/images/uploads/17929781789902842.jpg"
       ],
-      "desc_tr": "Türkiye'nin en ünlü rakı markalarından biri olan Yeni Rakı, anisli bir ruh içeceğidir ve geleneksel Türk kültürünün ayrılmaz parçasıdır. Su ile karıştırıldığında beyaza dönen bu rakı, yoğun anise aroması ve pürüzsüz içim karakteri ile ünlüdür. Koleksiyoncular için bu miniature şişe, klasik Türk spiritinin nostalojik bir parçasıdır.",
-      "desc_en": "Yeni Rakı is one of Turkey's most iconic spirit brands, a traditional anise-flavored spirit that is deeply rooted in Turkish culture. When mixed with water, it turns milky white and is celebrated for its pronounced anise aroma and smooth, balanced character. This miniature bottle represents a nostalgic piece of classic Turkish distilling heritage for collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Yeni Rakı, Türkiye'nin en ünlü anise-aromalı spirits'idir. Anasondan yapılan bu içki, suda karıştırıldığında karakteristik beyaz rengi alır (louche etkisi). Ağızda baharatlı, anisli notalar ile sıcak bir finish sunar ve geleneksel olarak soğuk su ile karıştırılarak servise edilir.",
+      "desc_en": "Yeni Rakı is Turkey's most celebrated anise-flavored spirit. Distilled from aniseed, this drink develops a characteristic cloudy white appearance when mixed with water (the louche effect). The palate offers distinctive anise and spice notes with a warm, lingering finish, traditionally enjoyed mixed with cold water as a social drink.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#raki",
+        "#turkcispirits",
+        "#yenirakı"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720383067,
