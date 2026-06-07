@@ -340,21 +340,31 @@
     },
     {
       "id": 1762693174,
-      "slug": "bottle-14",
-      "name": "Şişe #14",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "kikkoman-sets-non-alchohol",
+      "name": "Kikkoman Sets (Non Alchohol)",
+      "country": "Japan",
+      "category": "Spirits",
+      "abv": "0",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18397565314193663.jpg",
       "images": [
         "/images/uploads/18397565314193663.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Kikkoman, Japonya'nın ikonik marka olmakla birlikte, bu miniature ürün sıklıkla soya sosu için tanınır. Eğer sake ürünü ise, hafif, temiz ve denge alkohlü bir içecek olması beklenir. Tipik Japon sake karakteri, delikat bulaşık notaları ve yumuşak bitişi gösterir.",
+      "desc_en": "Kikkoman is Japan's iconic brand, though primarily known for soy sauce; if this is a sake product, expect a light, clean spirit with balanced alcohol content. Typical Japanese sake character features delicate floral notes and a soft finish with subtle umami undertones.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#sake",
+        "#japanesesake",
+        "#kikkoman"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1762693154,
