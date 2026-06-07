@@ -2157,7 +2157,7 @@
       "slug": "croatian-rose-special-reserve-finest-whisky",
       "name": "Croatian Rose Special Reserve Finest Whisky",
       "country": "Croatia",
-      "category": "Whisky",
+      "category": "Tennessee Whiskey",
       "abv": "43%",
       "year": 2024,
       "qty": 1,
@@ -2165,10 +2165,20 @@
       "images": [
         "/images/uploads/17984078201535066.jpg"
       ],
-      "desc_tr": "Hırvatistan'ın prestijli üreticisi tarafından hazırlanan bu özel rezerv viski, geleneksel tekniklerle distile edilmiştir. Tam olgunlaştırılmış kalitesiyle bilinen ürün, karakteristik yumuşak tadı ve zarif aromasıyla dikkat çeker. Koleksiyonculara sunulan bu miniatur şişe, Adriyatik bölgesinin viski geleneğinin çarpıcı bir örneğidir.",
-      "desc_en": "Produced by Croatia's prestigious distillery, this special reserve whisky is crafted using traditional distillation techniques. Known for its fully matured quality, the spirit stands out with its characteristically smooth palate and elegant aroma. This miniature bottle represents a striking example of the Adriatic region's whisky heritage for collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Hırvatistan'dan gelen bu blend viski, özel rezerv olarak hazırlanmıştır. Uyumlu bir yapıya sahip olup, hafif meyvemsi notalar ve yumuşak karakteri ile tanımlanır. Orta uzunlukta bir bitiş sunarak, gündelik içimlere uygun bir seçim olarak öne çıkar.",
+      "desc_en": "This blended whisky from Croatia is prepared as a special reserve expression. It showcases a harmonious character with delicate fruity notes and a soft, approachable profile. The medium-length finish makes it suitable for everyday enjoyment, offering a smooth drinking experience.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#blendedwhisky",
+        "#croatianwhisky",
+        "#croatia"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386879,
