@@ -3860,6 +3860,35 @@
       "ig_posted": true,
       "ig_posted_at": "2026-06-07",
       "ig_post_id": "18132683554605093"
+    },
+    {
+      "id": 1780843067643,
+      "slug": "martini-rosso",
+      "name": "Martini Rosso",
+      "country": "Italy",
+      "category": "Wine",
+      "abv": "15%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780843065715.jpg",
+      "images": [
+        "/images/uploads/1780843065715.jpg"
+      ],
+      "desc_tr": "Martini Rosso, İtalya'nın klasik vermouth'u olup, aromatik otlar ve baharat karışımıyla zenginleştirilmiş şarap bazlı bir aperitiftir. Burun üzerinde tatlı ve baharat notaları, damakta ise dengeli bir acılık ve karmaşık botanik profili sunmaktadır. Soğuk olarak içildiğinde veya klasik kokteyllerde kullanıldığında, hafif ve serinletici bir deneyim sağlar.",
+      "desc_en": "Martini Rosso is Italy's classic vermouth, a wine-based aperitif enriched with a blend of aromatic herbs and spices. The nose presents sweet and spicy notes, while the palate offers a balanced bitterness with a complex botanical profile. When served cold or in classic cocktails, it delivers a light and refreshing experience.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#martini",
+        "#vermouth",
+        "#italyspirits",
+        "#aperitif"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
