@@ -3039,6 +3039,34 @@
       "ig_posted": true,
       "ig_posted_at": "2026-06-07",
       "ig_post_id": "18022564262834374"
+    },
+    {
+      "id": 1780837496555,
+      "slug": "schartzhog",
+      "name": "Schartzhog",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "38%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780837494616.jpg",
+      "images": [
+        "/images/uploads/1780837494616.jpg"
+      ],
+      "desc_tr": "Alman geleneksel bir likörü olan Schartzhog, otlar ve bitki özütlerinden yapılmıştır. Burun da karmaşık bitki ve ruh aromanları hissedilirken, damakta sıcak ve baharatlandırılmış bir profil ortaya çıkar. Uzun ve sıcak bir bitiş ile karakteristik bir Alman digestif deneyimi sunar.",
+      "desc_en": "Schartzhog is a traditional German herbal liqueur crafted from a blend of botanicals and plant extracts. The nose reveals complex herbal and spice aromatics, while the palate presents a warm, peppery profile with subtle sweetness. The finish is lingering and warming, characteristic of classic German digestif-style liqueurs.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#schartzhog",
+        "#germanliqueur",
+        "#herballiqueur"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
