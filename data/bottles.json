@@ -859,10 +859,21 @@
       "images": [
         "/images/uploads/18053339962894289.jpg"
       ],
-      "desc_tr": "Polonya'nın efsanevi şehri Kraków'dan gelen bu premium vodka, kristal berraklığı ve saf içimi ile bilinir. Geleneksel distilasyon yöntemleriyle üretilen bu vodka, hafif çiçeksi notalar ve pürüzsüz bir bitişe sahiptir. Koleksiyonerlerin ve vodka severlerinin tercih ettiği bu miniature, Doğu Avrupa'nın sofistike ruhunu temsil eder.",
-      "desc_en": "Hailing from the legendary Polish city of Kraków, this premium vodka is known for its crystal clarity and pure character. Produced using traditional distillation methods, this vodka features subtle floral notes and a smooth finish. This miniature represents the sophisticated spirit of Eastern Europe, favored by collectors and vodka enthusiasts alike.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Polonya'nın klasik votka geleneğini temsil eden kristal berraklığında bir spirit. Temiz ve hafif aroması, ağızda yumuşak bir doku sunarak, nötr ve zarif bir karaktere sahiptir. Soğuk servis edildiğinde çok iyi bir içecek, kokteyllerde veya saf olarak tüketilmek üzere tercih edilir.",
+      "desc_en": "A crystal-clear Polish vodka representing the classic tradition of Eastern European spirits. Clean and subtle on the nose with a smooth, refined palate that showcases the purity of grain distillation. Best enjoyed chilled, it works equally well neat or as a versatile base for cocktails.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#vodka",
+        "#polishvodka",
+        "#krakowvodka",
+        "#poland"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1737893537,
