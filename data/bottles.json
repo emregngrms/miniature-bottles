@@ -3622,6 +3622,38 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780841697439,
+      "slug": "campari-bitter",
+      "name": "Campari Bitter",
+      "country": "Italy",
+      "category": "Aperitif",
+      "abv": "28%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780841695353.jpg",
+      "images": [
+        "/images/uploads/1780841695353.jpg"
+      ],
+      "desc_tr": "Campari Bitter, 1860 yılından bu yana üretilen ikonik bir İtalyan aperitifidir. Kendine özgü kırmızı rengi, acı-tatlı karakteri ve narenciye, bitki ile baharat notalarının dengeli birleşimiyle tanınır. Özellikle Negroni ve Americano gibi klasik kokteyllerin vazgeçilmez bileşenlerinden biridir.",
+      "desc_en": "Campari Bitter is an iconic Italian aperitif that has been produced since 1860. It is renowned for its distinctive red color and its bittersweet profile, combining citrus, herbal, and spice notes in a balanced way. It is best known as a key ingredient in classic cocktails such as the Negroni and Americano.",
+      "gift_from": "",
+      "hashtags": [
+        "#campari",
+        "#bitter",
+        "#aperitif",
+        "#miniaturebottle",
+        "#minibottle",
+        "#bottlecollection",
+        "#miniaturebottles",
+        "#camparibitter",
+        "#italianspirits",
+        "#5clcollection"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
