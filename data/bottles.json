@@ -3102,6 +3102,34 @@
       "ig_posted": true,
       "ig_posted_at": "2026-06-07",
       "ig_post_id": "18080444807353725"
+    },
+    {
+      "id": 1780838336876,
+      "slug": "yeni-rak",
+      "name": "Yeni Rakı",
+      "country": "Turkey",
+      "category": "Rakı",
+      "abv": "45%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780838335693.jpg",
+      "images": [
+        "/images/uploads/1780838335693.jpg"
+      ],
+      "desc_tr": "Yeni Rakı, Türkiye'nin en klasik anisli rakısıdır. Anason ve diğer botaniklerin baskın olduğu bu rakı, suda karıştırıldığında karakteristik beyaz rengi ile ünlüdür. Hafif tatlı ve aromatik başlangıcın ardından keskin, baharatlı bir damak hissi ve uzun, sıcak bir bitiş ile tanımlanır.",
+      "desc_en": "Yeni Rakı is Turkey's most iconic anise-based spirit. Dominated by aniseed and other botanicals, this rakı is famous for its characteristic white color when diluted with water. It opens with a light, aromatic sweetness followed by a sharp, spicy palate and a long, warming finish.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#raki",
+        "#turkishspirits",
+        "#yenirakı"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
