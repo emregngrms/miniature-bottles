@@ -3034,7 +3034,7 @@
       ],
       "status": "published",
       "active": true,
-      "_postToIG": false
+      "_postToIG": true
     }
   ]
 }
