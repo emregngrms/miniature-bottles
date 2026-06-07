@@ -2380,7 +2380,7 @@
       "id": 1720386605,
       "slug": "gorlkovka-vodka",
       "name": "Gorlkovka Vodka",
-      "country": "Russia",
+      "country": "Poland",
       "category": "Vodka",
       "abv": "40%",
       "year": 2024,
@@ -2389,10 +2389,20 @@
       "images": [
         "/images/uploads/18313479547195807.jpg"
       ],
-      "desc_tr": "Rusya'dan gelen Gorlkovka Vodka, 1975 yılından beri üretilen klasik bir vodka markasıdır. Selim & Son Company tarafından üretilen bu içki, saf ve kristal berraklığıyla dikkat çeker. Geleneksel Rus vodka üslubunun karakteristik özellikleri taşıyan, temiz ve net bir tat profili sunmaktadır.",
-      "desc_en": "Gorlkovka Vodka is a classic Russian vodka produced since 1975 by Selim & Son Company. This spirit stands out for its pure and crystal clarity, embodying traditional Russian vodka characteristics. It presents a clean and neutral taste profile typical of authentic Russian vodkas.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Gorlkovka, Polonyalı geleneksel bir votka olup, kristal berraklığı ve arı tadıyla bilinir. Buğday ve diğer tahıllardan üretilen bu votka, yumuşak ve pürüzsüz bir içim sunarak, hafif çiçeksi aromalar içerir. Temiz ve uzun süren bir finişe sahip olup, karışık içkilerde ve saf olarak içilebilir.",
+      "desc_en": "Gorlkovka is a traditional Polish vodka known for its crystal clarity and pure taste profile. Produced from grain and refined through careful distillation, this vodka presents a smooth and clean palate with subtle floral notes on the nose. The finish is crisp and lingering, making it versatile for both neat sipping and mixed drinks.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#vodka",
+        "#polishvodka",
+        "#gorlkovka"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386537,
