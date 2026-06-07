@@ -2353,9 +2353,9 @@
     },
     {
       "id": 1720386537,
-      "slug": "holloways-dry-gin",
+      "slug": "holloway-s-dry-gin",
       "name": "Holloway's Dry Gin",
-      "country": "Cyprus",
+      "country": "Diğer",
       "category": "Gin",
       "abv": "40%",
       "year": 2024,
@@ -2364,10 +2364,20 @@
       "images": [
         "/images/uploads/18406519171077032.jpg"
       ],
-      "desc_tr": "Kıbrıs'ta üretilen bu klasik dry gin, 1975'ten beri damıtılmakta ve Selim & Son Co. Ltd. tarafından şişelenmektedir. Geleneksel botaniklerle yapılan bu ürün, saf ve kurumaş bir profil sunarak klasik gin kokteyllerine mükemmel uyum sağlar.",
-      "desc_en": "This classic dry gin from Cyprus has been distilled since 1975 and bottled by Selim & Son Co. Ltd. Crafted with traditional botanicals, it offers a clean and dry profile that pairs perfectly with classic gin cocktails and serves as an excellent base spirit.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Holloway's Dry Gin, Kıbrıs'ın klasik bir ürünü olarak temiz ve ardıç odaklı bir profil sunmaktadır. Burnunda parlak ardıç notaları, zarif sitrus ve bitkisel aromatiklerle tamamlanır. Damakta ise saf ve kuru bir karakter, dengeli baharat ve botanik sıcaklığı hissettir. Bitişi temiz ve orta uzunluktadır, ardıç notalarının devam ettiği ve hafif bir sıcaklık hissi ile tamamlanır.",
+      "desc_en": "Holloway's Dry Gin is a classic Cypriot gin offering a clean, juniper-forward profile with botanical complexity. The nose presents bright juniper notes complemented by subtle citrus and herbal aromatics, while the palate delivers a crisp, dry character with balanced spice and botanical warmth. The finish is clean and medium-length with lingering juniper and a touch of warmth.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#drygin",
+        "#hollowaysgin",
+        "#cyprus"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386501,
