@@ -3005,10 +3005,21 @@
       "images": [
         "/images/uploads/18021157673340253.jpg"
       ],
-      "desc_tr": "İrlanda'nın en ünlü krem likörü olan Baileys, 1974 yılından beri dünyanın her yerinde severler tarafından bilinir. Zengin çikolata, kahve ve krema notalarıyla oluşan dengeli tadı, soğuk içildiğinde veya çeşitli kokteyllerde kullanılmak üzere mükemmeldir. Koleksiyonerlerin vazgeçilmez bir ürünü olan bu miniature şişe, klasik Irish cream likörünün ikonik temsilcisidir.",
-      "desc_en": "Baileys, Ireland's most iconic cream liqueur known worldwide since 1974, combines rich notes of chocolate, coffee, and cream in a perfectly balanced taste. Best enjoyed chilled or mixed into various cocktails, this elegant spirit represents the pinnacle of Irish cream liqueurs. This miniature bottle is a cherished collector's item representing a timeless classic.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Baileys The Original Irish Cream, İrlanda'nın klasik krem likörüdür. Zengin kakao, vanilya ve tatlı krema aromalarıyla açılır, damakta yumuşak, kremsi ve hafif çikolatalı tatlar sunarak hoş bir balans yakalanır. Pürüzsüz, kaymak gibi bir doku ve hafif tatatlı bitişle karakterize edilir.",
+      "desc_en": "Baileys The Original Irish Cream is Ireland's classic cream liqueur. It opens with rich cocoa, vanilla, and sweet cream aromas, offering a smooth, creamy palate with subtle chocolate notes and pleasant sweetness. Characterized by a velvety, creamy texture and a gentle, smooth finish.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#baileys",
+        "#irishcream",
+        "#liqueur",
+        "#ireland"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720380324,
