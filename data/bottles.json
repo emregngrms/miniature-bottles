@@ -3569,6 +3569,34 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780841238101,
+      "slug": "beylerbeyi-gobek-raki",
+      "name": "Beylerbeyi Göbek Rakı",
+      "country": "Turkey",
+      "category": "Rakı",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780841236199.jpg",
+      "images": [
+        "/images/uploads/1780841236199.jpg"
+      ],
+      "desc_tr": "Beylerbeyi Göbek Rakı Türkiye'de premium segmentte yer alan bir rakıdır. \"Göbek\" adı, damıtımın en saf ve kaliteli kısmı olan kalp kesiminden (heart cut) gelir. Üretiminde Ege bölgesinden seçilmiş üzümler ve Kalınkoz anasonu kullanılır; üç kez damıtıldığı ve ilave şeker içermediği belirtilmektedir.",
+      "desc_en": "Beylerbeyi Göbek Rakı is a premium rakı produced in Turkey. The name \"Göbek\" refers to the heart cut of the distillation process, which is considered the purest and highest-quality portion of the distillate. It is made from carefully selected grapes from the Aegean region and Kalınkoz aniseed. The spirit is distilled three times and is reported to contain no added sugar.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#vodka",
+        "#polishvodka",
+        "#gorbek"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
