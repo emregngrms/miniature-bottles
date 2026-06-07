@@ -2606,8 +2606,11 @@
       ],
       "desc_tr": "İrlanda'nın en ünlü viski markalarından biri olan Jameson, 1780'den beri üretilmektedir. Üç kez distile edilerek yumuşak ve dengeli bir profil elde eden bu whiskey, karamel, meyvemsi notalar ve hafif çiçeksi aromaları ile karakterizedir. Saf içilişte ya da karışık içkilerde kullanılan bu ikonik viski, koleksiyonerlerin vazgeçilmez seçimidir.",
       "desc_en": "One of Ireland's most renowned whiskey brands, Jameson has been produced since 1780. Triple distilled to achieve a smooth and balanced profile, this whiskey is characterized by notes of caramel, fruit, and subtle floral aromas. This iconic spirit is a must-have for collectors, equally suited to neat sipping or cocktail preparation.",
-      "status": "draft",
-      "active": false
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [],
+      "_postToIG": false
     },
     {
       "id": 1720383146,
