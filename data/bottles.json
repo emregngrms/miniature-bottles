@@ -2147,7 +2147,7 @@
     },
     {
       "id": 1720386905,
-      "slug": "wodka-kirsch-likor",
+      "slug": "wodka-kirsch-lik-r",
       "name": "Wodka-Kirsch-Likör",
       "country": "Germany",
       "category": "Liqueur",
@@ -2158,10 +2158,21 @@
       "images": [
         "/images/uploads/18013618064423000.jpg"
       ],
-      "desc_tr": "Almanya'nın Kapselrodeck bölgesindeki Brennerei Weisenbach tarafından üretilen bu likör, vodka ve kiraz aromasının zarif bir kombinasyonudur. İnce kiraz aromatiği ve yumuşak karakteriyle, klasik Alman likörü koleksiyonlarının sevilen bir parçasıdır.",
-      "desc_en": "Produced by Brennerei Weisenbach in Kapselrodeck, Germany, this liqueur is an elegant combination of vodka and cherry aroma. With its delicate cherry character and smooth profile, it remains a cherished piece of classic German liqueur collections.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Vodka ve kiraz likörü karışımından oluşan bu içecek, ince kiraz aroması sunmaktadır. Hafif ve tatlı profili ile aperitif olarak veya kokteyl tabanı olarak kullanılabilir. Brennerei Weisenbach tarafından üretilen bu Alman likörü, kiraz meyvesinin yumuşak karakterini vodkanın temizliği ile birleştirir.",
+      "desc_en": "This German liqueur blends vodka with cherry flavor, offering a delicate cherry aroma on the nose. The palate presents a light, slightly sweet character with smooth cherry notes balanced by the clean base of vodka. Produced by Brennerei Weisenbach, this liqueur combines the soft fruit character of cherry with crisp spirit clarity, making it suitable for sipping as an aperitif or mixing into cocktails.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#liqueur",
+        "#kirsch",
+        "#germanspirit",
+        "#wodka"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386893,
