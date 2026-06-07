@@ -563,7 +563,18 @@ function renderBottles(){
           const d=new Date(b.id);
           return d.getDate().toString().padStart(2,'0')+'.'+(d.getMonth()+1).toString().padStart(2,'0')+'.'+d.getFullYear();
         })()}</div>
-        <div>${b.qty>1?`<span class="qty-b">×${esc(b.qty)}</span>`:`<span style="color:var(--sub)">1</span>`}</div>
+        <div>
+          ${(()=>{
+            if(b.ig_posted) return `<button onclick="openIgPost('${esc(b.slug)}')" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(131,58,180,.4);background:rgba(131,58,180,.15);color:#c77dff;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap">✓ Paylaşıldı</button>`;
+            const readyAt = parseInt(sessionStorage.getItem('ig_ready_${esc(b.slug)}')||'0');
+            const remaining = readyAt - Date.now();
+            if(remaining > 0){
+              const secs = Math.ceil(remaining/1000);
+              return `<button disabled style="padding:4px 10px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--sub);font-size:11px;font-family:inherit;white-space:nowrap;cursor:not-allowed" id="ig-cd-${esc(b.slug)}">⏳ \${secs}s</button>`;
+            }
+            return `<button onclick="openShareModal('${esc(b.slug)}')" style="padding:4px 10px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--sub);font-size:11px;cursor:pointer;font-family:inherit;white-space:nowrap">📸 Paylaş</button>`;
+          })()}
+        </div>
         <div>${b.active===false
           ? `<button onclick="toggleActive('bottle','${esc(b.slug)}')" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(224,92,92,.3);background:rgba(224,92,92,.1);color:#e05c5c;font-size:11px;font-weight:600;cursor:pointer">Pasif</button>`
           : `<button onclick="toggleActive('bottle','${esc(b.slug)}')" style="padding:4px 10px;border-radius:20px;border:1px solid rgba(82,201,122,.3);background:rgba(82,201,122,.1);color:#52c97a;font-size:11px;font-weight:600;cursor:pointer">Aktif</button>`
