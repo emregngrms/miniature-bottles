@@ -2112,10 +2112,21 @@
       "images": [
         "/images/uploads/17914341758867485.jpg"
       ],
-      "desc_tr": "Almanya'nın Niederberg şehrinden gelen bu efsanevi bitki liköründe 43 farklı bitkisel malzeme kullanılmaktadır. Keskin ve aromatik bir tadı olan Underberg, mide rahatsızlıklarını gidermek için tradisyonel bir çözüm olarak bilinir ve dünya çapında içilmektedir. Küçük şişeleriyle ünlü olan bu ürün, özellikle yemekten sonra içilen bir digestif olarak tercih edilmektedir.",
-      "desc_en": "This legendary herbal liqueur from Niederberg, Germany, is crafted using 43 different botanical ingredients. Known for its sharp and aromatic taste, Underberg is a traditional digestive aid recognized worldwide for soothing digestive discomfort. Famous for its distinctive small bottles, this product is particularly enjoyed as an after-dinner digestif to settle the stomach.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Underberg, Almanya'nın meşhur bitki çıkartması likörüdür ve 43 farklı baharattan yapılmıştır. Keskin, aromatik bir aromaya sahip olup, ağızda yoğun ve sıcak bir deneyim sunar; acı ve tatlı notalar ile karakteristik bir bitki-baharat profili vardır. Hazımsızlık giderici özellikleriyle tanınan, tipik olarak ayakkabı bardağında soğuk olarak içilen geleneksel Alman pehlivanidir.",
+      "desc_en": "Underberg is Germany's renowned herbal digestif liqueur crafted from 43 different botanicals and spices. It presents a sharp, aromatic nose with an intense and warming palate; bitter and subtle sweet notes create its characteristic herbal-spice profile. Known for its digestive properties, this traditional German spirit is typically enjoyed ice-cold in a small glass as an after-dinner digestif.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#underberg",
+        "#liqueur",
+        "#germany",
+        "#herbaldigestif"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386921,
