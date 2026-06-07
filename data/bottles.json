@@ -500,21 +500,31 @@
     },
     {
       "id": 1757255719,
-      "slug": "kodor-liqueur",
-      "name": "Ködör Liqueur",
+      "slug": "kopfler-liqueur",
+      "name": "Köpfler Liqueur",
       "country": "Germany",
       "category": "Liqueur",
-      "abv": "20%",
+      "abv": "15",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/18123702481471517.jpg",
       "images": [
         "/images/uploads/18123702481471517.jpg"
       ],
-      "desc_tr": "Berlin'den gelen bu renkli likör koleksiyonu, Alman içki kültürünün eğlenceli ve canlı yüzünü temsil eder. Farklı aromaları ile çeşitlilik sunan bu likörler, klasik Alman tatlı likör geleneğini modern bir şekilde yorumlar. Koleksiyoncu için değerli bir Berlin hatırası.",
-      "desc_en": "This colorful liqueur collection from Berlin represents the playful and vibrant side of German drinking culture. Offering various flavors and aromas, these liqueurs provide a modern interpretation of the classic German sweet liqueur tradition. A valuable Berlin souvenir for collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Köpfler marka meyve/bitkisel likör. Tatlı, aromatik, kokteyl ve shot için kullanılan bir mini şişe ürünüdür.",
+      "desc_en": "Likely “Köpfler” fruit/herbal liqueur, a sweet aromatic mini bottle used for cocktails or shots.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#liqueur",
+        "#türkiye",
+        "#kodor"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1757255689,
