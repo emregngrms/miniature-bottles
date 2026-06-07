@@ -1518,8 +1518,8 @@
     },
     {
       "id": 1723997939,
-      "slug": "pippermint-get",
-      "name": "Pippermint Get",
+      "slug": "peppermint-get",
+      "name": "Peppermint Get",
       "country": "France",
       "category": "Liqueur",
       "abv": "31%",
@@ -1529,10 +1529,21 @@
       "images": [
         "/images/uploads/18055501081706216.jpg"
       ],
-      "desc_tr": "Fransa kökenli bu mintolu likör, klasik Avrupa likör geleneğinin güzel bir örneğidir. Peppermint Get, ferah nane aromasıyla serinletici içecek olarak bilinir ve koleksiyon değeri taşıyan vintage miniatur şişleleriyle aranan bir üründür. Soğuk servis edildiğinde ya da karışık içeceklerde kullanıldığında en iyi karakterini gösterir.",
-      "desc_en": "This French-origin peppermint liqueur represents a fine example of classic European liqueur tradition. Peppermint Get is known for its refreshing mint aroma and is sought after in collecting circles for its vintage miniature bottles. It displays its best character when served chilled or used in mixed drinks.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Peppermint Get, Fransa'dan gelen bir nane likörüdür. Taze ve soğuk nane aromalarıyla burun dikkatini çeker, damakta keskin bir nane tadı sunmakta ancak likörün doğal tatlılığı bunu dengelemektedir. Hafif ve ferahlatıcı bir bitiş karakterine sahip olup, desertlerin yanı sıra kokteillerde de kullanılabilecek nitelikte bir içkidir.",
+      "desc_en": "Peppermint Get is a peppermint liqueur from France. It presents fresh and cool mint aromas on the nose, delivering a sharp peppermint flavor on the palate while the liqueur's natural sweetness provides balance. It offers a light and refreshing finish, making it versatile for use alongside desserts or in cocktails.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#peppermintlikeur",
+        "#frenchlikeur",
+        "#france",
+        "#liqueur"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1723997881,
