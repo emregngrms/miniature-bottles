@@ -3590,9 +3590,9 @@
         "#minibottles",
         "#minibottlescollection",
         "#miniaturebottles",
-        "#vodka",
-        "#polishvodka",
-        "#gorbek"
+        "#raki",
+        "#turkishraki",
+        "#gobek"
       ],
       "status": "published",
       "active": true,
