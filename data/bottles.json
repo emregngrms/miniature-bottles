@@ -1755,10 +1755,21 @@
       "images": [
         "/images/uploads/18037379600007507.jpg"
       ],
-      "desc_tr": "Midilli adasından gelen bu ünlü Ouzo, Yunan içkilerinin en ikonik örneklerinden biridir. Anise ve drog bitkilerinin hassas karışımıyla hazırlanan bu likör, sofusu suyla seyreltildiğinde meşhur \"louche\" etkisini gösterir. Geleneksel Yunan kültürünün ve Akdeniz tatlarının mükemmel temsilcisidir.",
-      "desc_en": "This renowned Ouzo from Mytilene is one of the most iconic examples of Greek spirits. Crafted with a delicate blend of anise and aromatic herbs, this liqueur exhibits the famous louche effect when diluted with water. A perfect representation of traditional Greek culture and Mediterranean flavors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Yunan Mitilini bölgesinden gelen bu arak, anisfrenkpostası aromalarıyla karakterizedir. Ağız içinde sıcak ve baharatlı bir his bırakırken, yoğun anason notaları ve hafif bitki aromaları belirgindir. Suyla karıştırıldığında süt benzeri bir görünüme dönüşen bu spiriti, Akdeniz bölgesinin otantik tatları yansıtır.",
+      "desc_en": "This Greek ouzo from Mitilini is characterized by its distinctive anise-forward aromatics with subtle herbal notes. The palate delivers warming spice and bold aniseed flavors, with a peppery finish typical of traditional Greek spirits. When diluted with water, it transforms into a milky-white aperitif, reflecting the authentic character of Aegean distillation traditions.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#ouzo",
+        "#mitilini",
+        "#greece",
+        "#spirits"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1723717582,
