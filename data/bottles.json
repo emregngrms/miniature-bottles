@@ -3740,6 +3740,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780842284770,
+      "slug": "label-5-classic-black",
+      "name": "Label 5 Classic Black",
+      "country": "Scotland",
+      "category": "Blended Whisky",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780842282983.jpg",
+      "images": [
+        "/images/uploads/1780842282983.jpg"
+      ],
+      "desc_tr": "Label 5, İskoçya'nın klasik harman viskilerinden biri olarak, bal ve vanilya notalarıyla başlayan yumuşak bir burun sunmaktadır. Damakta hafif tatlılık ve çam reçinesi aromatizasyonu ile dengeli bir yapı gösterir, sonrası ise temiz ve orta uzunlukta bir bitişle kapanır.",
+      "desc_en": "Label 5 Classic Black is a Scottish blended whisky that opens with a soft, approachable nose featuring notes of honey and vanilla. The palate delivers a balanced character with gentle sweetness and subtle pine resin notes, finishing with a clean, medium-length closure that demonstrates the well-integrated blending of malt and grain whiskies.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#blendedwhisky",
+        "#scotchwhisky",
+        "#label5",
+        "#scotland"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
