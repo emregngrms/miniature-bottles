@@ -2575,21 +2575,32 @@
     },
     {
       "id": 1720383182,
-      "slug": "bottle-119",
+      "slug": "j-germeister",
       "name": "Jägermeister",
       "country": "Germany",
       "category": "Liqueur",
       "abv": "35%",
       "year": 2024,
-      "qty": 1,
+      "qty": 3,
       "image": "/images/uploads/17866732026154770.jpg",
       "images": [
         "/images/uploads/17866732026154770.jpg"
       ],
-      "desc_tr": "Wolfenbüttel, Almanya'da 1878 yılından beri üretilen bu efsanevi bitki likörü, 56 farklı botanik malzemenin soğuk maceration yöntemiyle elde edilen özünden yapılmaktadır. Koyu yeşil rengindeki bu içecek, meyveli ve otlu notalarla beraber karakteristik tat profiline sahip olup, geleneksel Alman içki kültürünün simgesi haline gelmiştir.",
-      "desc_en": "This legendary herbal liqueur, produced since 1878 in Wolfenbüttel, Germany, is crafted from a macerated essence of 56 different botanical ingredients using the cold maceration method. With its distinctive dark green color and characteristic flavor profile featuring fruity and herbal notes, Jägermeister has become an iconic symbol of traditional German drinking culture.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Jägermeister, Almanya'nın ünlü bitki likörü, 56 farklı baharat, meyve ve ottan oluşan karmaşık bir reçeteyle üretilir. Soğuk macere ve meyveli aromalarla başlayan bu likör, damakta tatlı ve baharat notalarıyla beraber belirgin bir bitkisel karakter gösterir. Meşe ağacında olgunlaştırılan bu likör, uzun ve temiz bir bitiş sunar.",
+      "desc_en": "Jägermeister is Germany's iconic herbal liqueur crafted from a complex blend of 56 different spices, fruits, and herbs. The nose reveals cold macerated and fruity aromas, while the palate presents a sweet character balanced with spice and distinctive herbal notes. Matured in oak, this liqueur delivers a clean, lingering finish with characteristic bittersweet botanical depth.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#jägermeister",
+        "#liqueur",
+        "#germany",
+        "#herballikeur"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720383163,
