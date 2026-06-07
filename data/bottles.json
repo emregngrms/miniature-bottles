@@ -2972,6 +2972,36 @@
       "ig_posted": true,
       "ig_posted_at": "2026-06-07",
       "ig_post_id": "18085443518110390"
+    },
+    {
+      "id": 1780835357445,
+      "slug": "au-79-vodka",
+      "name": "Au 79 Vodka",
+      "country": "Russia",
+      "category": "Vodka",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780835356208.jpg",
+      "images": [
+        "/images/uploads/1780835356208.jpg"
+      ],
+      "desc_tr": "AU 79 Vodka, Rus vodka koleksiyonunun parlak bir örneğidir. Altın renkli şık şişesiyle, premium bir içkinin işaretini taşır. Miniatur koleksiyonunuzda bu zarafet dolu parçası mutlaka yer almalıdır.",
+      "desc_en": "AU 79 Vodka represents a shining example of Russian vodka craftsmanship. With its elegant golden-colored bottle, it carries the hallmark of a premium spirit. This graceful piece deserves a prominent place in any miniature collector's collection.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#vodka",
+        "#premiumvodka",
+        "#russianvodka",
+        "#au79",
+        "#spiritscollector"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": true
     }
   ]
 }
