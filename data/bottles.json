@@ -3275,6 +3275,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780839285300,
+      "slug": "antica-sambuca",
+      "name": "Antica Sambuca",
+      "country": "Italy",
+      "category": "Liqueur",
+      "abv": "42%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780839283419.jpg",
+      "images": [
+        "/images/uploads/1780839283419.jpg"
+      ],
+      "desc_tr": "İtalyan geleneksel anason likörü olan Antica Sambuca, anason ve diğer botaniklerin zarif karışımıyla karakterize edilir. Burun üzerinde güçlü anason aromatiği ve hafif herbel notalarıyla açılır, damakta ise tatlı ve yumuşak bir doku sunarak anisin tipik rahat sıcaklığını gösterir. Temiz ve uzun bir bitiş ile canlı, kristal açıklığı ile bitirilir.",
+      "desc_en": "Antica Sambuca is a classic Italian anise-based liqueur that showcases the elegant blend of aniseed and complementary botanicals. The nose presents a pronounced anise aroma with subtle herbal notes, while the palate offers a sweet and smooth texture with the characteristic warmth of anise. It finishes clean and bright with a lingering, refreshing conclusion.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#sambuca",
+        "#italianspirits",
+        "#liqueur",
+        "#anise"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
