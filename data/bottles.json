@@ -1536,21 +1536,32 @@
     },
     {
       "id": 1723997881,
-      "slug": "dewars-white-label-fine-scotch-whisky",
-      "name": "Dewar's White Label Fine Scotch Whisky",
+      "slug": "dewar-s-white-label",
+      "name": "Dewar's White Label",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
-      "abv": "40%",
+      "category": "",
+      "abv": "Not clearly visible",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18065981896599780.jpg",
       "images": [
         "/images/uploads/18065981896599780.jpg"
       ],
-      "desc_tr": "Perth, İskoçya'da John Dewar & Sons tarafından üretilen bu klasik blended scotch whisky, 50 Gold ve Prize Medals ödülüyle tanınır. Hafif, dengeli ve yumuşak karakteri ile günlük içim için ideal olan bu whisky, geleneksel İskoçya whisky yapım sanatının başarılı bir örneğidir.",
-      "desc_en": "Produced by John Dewar & Sons in Perth, Scotland, this classic blended Scotch whisky is distinguished by its 50 Gold and Prize Medals awards. With its light, balanced, and smooth character, this whisky is an exemplary representation of traditional Scottish whisky-making craftsmanship, ideal for everyday enjoyment.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Dewar's White Label, İskoçya'nın klasik harman viskilerinden biridir. Nazik ve dengeli bir profil sunarak, başta malt ve tahıl notaları ile açılır. Yumuşak damak hissi ve temiz bitişi ile günlük içim için ideal bir seçimdir.",
+      "desc_en": "Dewar's White Label is a classic Scottish blended whisky offering a gentle and well-balanced profile. The nose reveals notes of malt and grain with subtle fruity undertones, while the palate delivers a smooth, approachable character with light spice and vanilla notes. The finish is clean and medium-length, making it an excellent everyday dram.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#dewars",
+        "#blendedwhisky",
+        "#scotland"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1723997862,
