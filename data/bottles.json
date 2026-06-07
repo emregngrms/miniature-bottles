@@ -1985,10 +1985,21 @@
       "images": [
         "/images/uploads/18011465903285729.jpg"
       ],
-      "desc_tr": "Barbados kökenli Malibu, beyaz rum ve hindistan cevizi aromasıyla yapılan klasik bir likördür. Tropikal ve tatlı profiliyle, saf içildiği gibi kokteyllerin de vazgeçilmez bileşenidir. Hafif ve erişilebilir yapısıyla başta içki sevenleri ve koleksiyonculuları çeken bir seçimdir.",
-      "desc_en": "Malibu Original is a classic liqueur from Barbados made with white rum and coconut flavour. With its tropical and sweet profile, it works equally well enjoyed straight or as an essential component in cocktails. Its light and approachable character makes it a popular choice among spirit enthusiasts and collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Malibu, hindistan cevizi aroması ile yapılandırılmış beyaz rumdan üretilen tropikal bir likördür. Burun da tatlı hindistan cevizi ve hafif vanilya notaları algılanırken, damakta kremsi hindistan cevizi tadı baskındır. Hafif, yumuşak içim hissi ve kısa, tatlı bir bitiş sunarak kokteyllerde sıkça kullanılan erişilebilir bir likördür.",
+      "desc_en": "Malibu is a tropical liqueur made from white rum infused with coconut flavor, originating from Barbados. The nose presents sweet coconut and subtle vanilla notes, while the palate delivers a creamy coconut flavor that is immediately approachable. It offers a smooth, light mouthfeel with a short, sweet finish, making it a popular choice for tropical cocktails and mixed drinks.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#maliburum",
+        "#liqueur",
+        "#barbados",
+        "#coconutrum"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1721415500,
