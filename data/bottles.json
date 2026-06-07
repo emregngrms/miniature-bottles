@@ -2617,21 +2617,31 @@
     },
     {
       "id": 1720386450,
-      "slug": "osa-fine-spirits-blended-malt-scotch-whisky-collec",
-      "name": "OSA Fine Spirits Blended Malt Scotch Whisky Collection (Aged 12 Years, Aged 10 Years Twilight, Cluetthouse)",
+      "slug": "osa-fine-spirits-blended-malt-scotch-whisky-collection",
+      "name": "OSA Fine Spirits Blended Malt Scotch Whisky Collection",
       "country": "Scotland",
-      "category": "Blended Malt Whisky",
-      "abv": "40%",
+      "category": "Blended Whisky",
+      "abv": "Not clearly visible on labels",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17845923429253188.jpg",
       "images": [
         "/images/uploads/17845923429253188.jpg"
       ],
-      "desc_tr": "OSA Fine Spirits tarafından üretilen bu blended malt Scotch whisky koleksiyonu, İskoçya'nın zengin whisky mirasını temsil eder. Sol başta Aged 12 Years (sigara ve ısıtma notaları), orta kısımda Aged 10 Years Twilight (hafif ve delikat), sağda ise Cluetthouse (zengin ve meyveli) bulunmaktadır. Her bir ifade, farklı yaşlanma ve karıştırma profilleriyle koleksiyoncuların beğenisini kazanır.",
-      "desc_en": "This blended malt Scotch whisky collection by OSA Fine Spirits represents Scotland's rich whisky heritage. The left features Aged 12 Years with smoky and warming notes, the center offers Aged 10 Years Twilight with a fresh and delicate profile, and the right showcases Cluetthouse with rich and fruity characteristics. Each expression captures distinct aging and blending profiles that appeal to discerning collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "OSA Fine Spirits koleksiyonu, İskoç blended malt whiskilerinin çeşitli karakterlerini sunmaktadır. Aged 12 Years smoky ve warming blend karakteri, Aged 10 Years Twilight ise fresh ve delicate profili ile seçkin damaklar için hazırlanmıştır. Cluetthouse ise rich ve fruity blend olarak, karmaşık aromalar ve dengeli tatlılık sunan bir seçenektir.",
+      "desc_en": "The OSA Fine Spirits collection showcases diverse Scottish blended malt whiskies with distinct character profiles. The Aged 12 Years presents a smoky and warming blend, while the Aged 10 Years Twilight offers a fresh and delicate profile for discerning palates. The Cluetthouse variant delivers a rich and fruity blend with complex aromas and balanced sweetness throughout the tasting experience.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#blendedwhisky",
+        "#scotchwhisky",
+        "#scotland"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386410,
