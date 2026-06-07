@@ -3360,6 +3360,34 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780839501755,
+      "slug": "william-peel",
+      "name": "William Peel",
+      "country": "Scotland",
+      "category": "Blended Whisky",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780839500136.jpg",
+      "images": [
+        "/images/uploads/1780839500136.jpg"
+      ],
+      "desc_tr": "William Peel, İskoç blend viski geleneğinin klasik bir örneğidir. Burun da maltlı ve hafif tatlı notalar ile karşılanırken, damakta dengeli bir profil sunmaktadır. Yumuşak dokulu ve erişilir karakteri ile aperitif olarak veya basit mixerlerle keyifle içilebilir.",
+      "desc_en": "William Peel is a classic example of Scottish blended whisky tradition. On the nose, it presents malty and gently sweet notes, while the palate offers a well-balanced profile. With its soft texture and approachable character, it can be enjoyed as an aperitif or pleasantly with simple mixers.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#williampeel"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
