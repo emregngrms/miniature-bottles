@@ -2667,8 +2667,11 @@
       ],
       "desc_tr": "İsveç'in güney bölgelerinde yetiştirilen tahıllardan üretilen Absolut Citron, doğal limon aromaları ile zenginleştirilmiş premium bir votkadır. 1879'dan beri Absolut markası altında satılan bu ürün, İsveç'in yüz yılı aşkın votka damıtma geleneğini modern tasarımla yansıtmaktadır. Hafif sitrus notaları ve temiz yapısıyla kokteyl ve içeceklerde ideal bir seçimdir.",
       "desc_en": "Absolut Citron is a premium vodka crafted from grain grown in southern Sweden's rich fields, infused with natural citrus flavors. Part of the Absolut range sold since 1879, this vodka represents Sweden's age-old distilling tradition dating back over 100 years. With its fresh citrus notes and clean profile, it serves as an excellent base for cocktails and mixed drinks.",
-      "status": "draft",
-      "active": false
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [],
+      "_postToIG": false
     },
     {
       "id": 1720383094,
