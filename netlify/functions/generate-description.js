@@ -80,8 +80,27 @@ Return ONLY: {"desc_tr":"...","desc_en":"...","hashtags":["#minibottles","#minib
     }
     const data = await response.json();
     const text = data.content?.[0]?.text||'';
-    const clean = text.replace(/```json|```/g,'').trim();
-    const result = JSON.parse(clean);
+    
+    // Robust JSON extraction — handles conversational prefixes
+    let result;
+    try {
+      // Try 1: clean markdown fences and parse directly
+      const clean = text.replace(/```json|```/g,'').trim();
+      result = JSON.parse(clean);
+    } catch(e1) {
+      try {
+        // Try 2: extract first {...} block from the response
+        const match = text.match(/\{[\s\S]*\}/);
+        if (!match) throw new Error('No JSON found in response');
+        result = JSON.parse(match[0]);
+      } catch(e2) {
+        return { 
+          statusCode: 502, headers,
+          body: JSON.stringify({ error: 'AI yanıtı JSON formatında değil. Tekrar deneyin.', raw: text.substring(0, 200) })
+        };
+      }
+    }
+    
     return { statusCode:200, headers, body: JSON.stringify(result) };
   } catch(err) {
     return { statusCode:500, headers, body: JSON.stringify({ error: err.message }) };
