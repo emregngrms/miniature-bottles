@@ -1625,8 +1625,8 @@
     },
     {
       "id": 1723997836,
-      "slug": "beefeater-london-distilled-dry-gin",
-      "name": "Beefeater London Distilled Dry Gin",
+      "slug": "beefeater-london-distilled-dry-gin-old-bottle",
+      "name": "Beefeater London Distilled Dry Gin (Old Bottle)",
       "country": "England",
       "category": "Gin",
       "abv": "47%",
@@ -1636,10 +1636,21 @@
       "images": [
         "/images/uploads/18245357257258176.jpg"
       ],
-      "desc_tr": "James Burrough tarafından Londra'da üretilen bu klasik dry gin, 1863 yılından beri gin dünyasının simgelerinden biridir. Juniper ve botaniklerin mükemmel dengesini sunarak, keskin ve temiz bir karaktere sahiptir. Koleksiyonerlerin değer verdiği bu vintage miniatur, gin tarihinin önemli bir parçasıdır.",
-      "desc_en": "Produced in London by James Burrough, this classic dry gin has been an icon of the gin world since 1863. It offers a perfect balance of juniper and botanicals with a sharp and clean character. This vintage miniature is an important piece of gin history treasured by collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Beefeater, Londra'nın klasik kuru jini, bal, sitrus ve çiçeksi notalarıyla karakterizedir. Botanikleri arasında gülkurusu, kadife çiçeği ve almond bulunur ve bunlar yumuşak, dengeli bir içim deneyimi sağlar. Saf ve temiz bir finişe sahip olup, klasik gin kokteyllerine ideal bir temeldir.",
+      "desc_en": "Beefeater is a classic London Dry Gin characterized by notes of honey, citrus, and floral aromatics. With botanicals including rose, juniper, and almond, it delivers a smooth and well-balanced taste. The spirit finishes clean and crisp, making it an ideal base for classic gin cocktails.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#gin",
+        "#beefeater",
+        "#londondrygin",
+        "#england"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1723997811,
