@@ -3892,6 +3892,35 @@
       "ig_posted": true,
       "ig_posted_at": "2026-06-07",
       "ig_post_id": "18121553542665874"
+    },
+    {
+      "id": 1780843178810,
+      "slug": "martini-rosso-old-bottle",
+      "name": "Martini Rosso (Old Bottle)",
+      "country": "Italy",
+      "category": "Aperitif",
+      "abv": "15%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780843177864.jpg",
+      "images": [
+        "/images/uploads/1780843177864.jpg"
+      ],
+      "desc_tr": "Martini Rosso, İtalya'nın klasik vermut stilinin güzel bir örneğidir. Kırmızı şarap, bitki ve baharat karışımından oluşan bu aperitif, tatlı ve aromatik profiliyle bilinir. Burun üzerinde vanilya, çiçek ve baharatlar, damakta ise yumuşak ve dengeli bir tatılık sunan bu vermut, uzun ve hoş bir bitişle sonlanır.",
+      "desc_en": "Martini Rosso is a classic Italian vermouth that exemplifies the red vermouth style. This aperitif is crafted from a blend of red wine, botanicals, and spices, offering a sweet and aromatic profile. The nose reveals notes of vanilla, floral elements, and warming spices, while the palate delivers smooth sweetness with balanced complexity and a lingering pleasant finish.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#martini",
+        "#vermout",
+        "#italianspirits",
+        "#aperitif"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
