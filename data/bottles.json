@@ -3067,6 +3067,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780837755608,
+      "slug": "gibson-s-pink",
+      "name": "Gibson's Pink",
+      "country": "England",
+      "category": "Gin",
+      "abv": "37.5%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780837754464.jpg",
+      "images": [
+        "/images/uploads/1780837754464.jpg"
+      ],
+      "desc_tr": "Gibson's Pink, İngilizgin geleneğini modern bir yaklaşımla sunarak, pembe rengi ile dikkat çeken hafif ve çiçeksi bir profil sunar. Juniper ve botaniklerin dengeli karışımı, kırmızı meyve notaları ile yumuşatılmış; damakta tatlı ve ferah bir deneyim yaratır. Temiz bitişi ve hafif yapısı ile aperitif olarak veya klasik gin kokteyllerinde başarılı bir seçimdir.",
+      "desc_en": "Gibson's Pink presents English gin tradition with a modern twist, distinguished by its pink hue and a light, floral profile. The balanced blend of juniper and botanicals is softened by red fruit notes, creating a gentle and refreshing palate experience. With a clean finish and lighter body, it works well as an aperitif or in classic gin cocktails.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#gin",
+        "#gibsons",
+        "#englishgin",
+        "#pinkgin"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": true
     }
   ]
 }
