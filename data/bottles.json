@@ -2613,7 +2613,7 @@
       "id": 1720383146,
       "slug": "bacardi-carta-blanca",
       "name": "Bacardi Carta Blanca",
-      "country": "Puerto Rico",
+      "country": "Cuba",
       "category": "Rum",
       "abv": "40%",
       "year": 2024,
@@ -2622,10 +2622,21 @@
       "images": [
         "/images/uploads/18008951585310535.jpg"
       ],
-      "desc_tr": "Bacardi Carta Blanca, 1862'den beri Puerto Rico'da üretilen dünyaca ünlü beyaz rumudur. Hafif, kristal berraklığında ve nazik aromaları ile kokteyl yapımında vazgeçilmez bir klasiktir. Tropik meyve notaları ve yumuşak damağı onu en ikonik spritlerden birisi yapmıştır.",
-      "desc_en": "Bacardi Carta Blanca is the world-renowned white rum produced in Puerto Rico since 1862. Crystal clear and light-bodied with delicate aromas, it is an indispensable classic in cocktail making. Its tropical fruit notes and smooth finish have made it one of the most iconic spirits.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Bacardi Carta Blanca, Cuba'nın en ünlü rom markasından gelen açık ve temiz bir beyaz rumdur. Hafif ve latif aromatiği ile başlayan içecek, damakta tropik meyveler ve hafif vanilya notaları sunarken, düşük tannin içeriği sayesinde pürüzsüz bir içim deneyimi sağlar. Hızlı ve temiz bitiş, kokteyllerde veya on the rocks olarak servis edilmesine uygun klasik bir profili gösterir.",
+      "desc_en": "Bacardi Carta Blanca is a light and pristine white rum from Cuba's most iconic rum producer. Opening with delicate aromatics of tropical fruits and subtle vanilla notes, it delivers a smooth, clean palate with minimal oak influence. The crisp, quick finish makes it exceptionally versatile, equally suited to cocktails, mixed drinks, or sipped neat over ice.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#bacardi",
+        "#whitertum",
+        "#cubantum",
+        "#rom"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720383128,
