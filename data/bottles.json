@@ -2472,8 +2472,8 @@
     },
     {
       "id": 1720386393,
-      "slug": "kuemmerling",
-      "name": "Kuemmerling",
+      "slug": "k-mmerling",
+      "name": "Kümmerling",
       "country": "Germany",
       "category": "Liqueur",
       "abv": "35%",
@@ -2483,10 +2483,21 @@
       "images": [
         "/images/uploads/17929860929791772.jpg"
       ],
-      "desc_tr": "Almanya'nın Bodenheim bölgesinden gelen Kuemmerling, aromatik otlar ve bitkilerin karışımıyla hazırlanan geleneksel bir likördür. Yoğun ve kompleks tat profiliyle, soğuk içildiğinde veya digestif olarak tercih edilen bu ürün, Alman likör kültürünün önemli bir temsilcisidir.",
-      "desc_en": "Originating from Bodenheim, Germany, Kuemmerling is a traditional herbal liqueur crafted from a blend of aromatic herbs and botanicals. With its rich and complex flavor profile, this spirit is best enjoyed chilled or as a digestif, representing an important part of German liqueur heritage.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Kümmerling, Almanya'nın Bodenheim bölgesinden gelen geleneksel bir bitki likörüdür. Karışık otlar ve baharat notalarıyla açılan bu likör, hafif tatlı ve aromatik bir damak hissi sunar. Keskin ve temiz bir bitiş yapan Kümmerling, soğuk servis edildiğinde aperitif olarak ideal bir içecektir.",
+      "desc_en": "Kümmerling is a traditional herbal liqueur from Bodenheim, Germany, crafted with a blend of botanicals and spices. On the palate, it offers a light sweetness balanced by herbal and spicy notes, with a crisp, clean finish. Best enjoyed chilled as an aperitif, this German liqueur delivers an aromatic and refreshing character.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#kummerling",
+        "#herballiqueur",
+        "#germany",
+        "#likör"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386368,
