@@ -3862,6 +3862,35 @@
       "ig_posted": true,
       "ig_posted_at": "2026-06-07",
       "ig_post_id": "17854537491675379"
+    },
+    {
+      "id": 1780842861980,
+      "slug": "martini-bianco",
+      "name": "Martini Bianco",
+      "country": "Italy",
+      "category": "Wine",
+      "abv": "16%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780842860186.jpg",
+      "images": [
+        "/images/uploads/1780842860186.jpg"
+      ],
+      "desc_tr": "Martini Bianco, İtalyan aperitif geleneğinin klasik örneğidir. Hafif ve çiçeksi aromalarıyla başlayan burun, paladda vanilya, kinin ve otsu notaları sunar. Tatlı ve hafif kıvamıyla, soğuk olarak içildiğinde ferahlatıcı bir deneyim sağlar.",
+      "desc_en": "Martini Bianco is a classic Italian aperitif with a light, floral bouquet. The palate reveals delicate notes of vanilla, quinine, and herbs, offering a gently sweet character with a crisp, refreshing finish. Best enjoyed chilled as an aperitif or as a component in classic cocktails.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#martini",
+        "#aperitif",
+        "#italianspirits",
+        "#vermouth"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
