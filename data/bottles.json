@@ -2097,10 +2097,21 @@
       "images": [
         "/images/uploads/17913086270974765.jpg"
       ],
-      "desc_tr": "Macaristan'ın efsanevi bitki likörü Unicum, 1790'dan beri Budapest'te üretilmektedir. Gizli formülüyle hazırlanan bu ikonik içecek, 40 çeşit otun karışımından oluşan kompleks ve hafif acı tadı ile dikkat çeker. Keskin ve aromatik karakteri, hem neat içilmeye hem de kokteylerde kullanılmaya uygundur.",
-      "desc_en": "Hungary's legendary herbal liqueur Unicum has been produced in Budapest since 1790. Crafted with a secret formula, this iconic spirit features a complex and subtly bitter taste from a blend of 40 different herbs. Its sharp and aromatic character makes it suitable for enjoying neat or in cocktails.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Unicum, Macaristan'ın ikonik tat bitkisel likörü, 40 bitki ve baharat karışımından yapılmaktadır. Ağır ve karmaşık aroması ile başlayan içecek, damakta acı ve tatlı notaları dengeleyen derinlikli bir lezzet sunmaktadır. Uzun finish'i ile mideyi rahatlatıcı ve sindirim özelliğine sahiptir.",
+      "desc_en": "Unicum is Hungary's iconic herbal liqueur crafted from a complex blend of 40 herbs and spices. Opening with a deep, complex aroma, it delivers a bold palate balancing bitter and sweet notes with remarkable depth. The extended finish leaves a warming, digestive quality characteristic of this distinctive Central European spirit.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#unicum",
+        "#herballikeur",
+        "#hungary",
+        "#likör"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386946,
