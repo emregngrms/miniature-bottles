@@ -2939,6 +2939,36 @@
       "desc_en": "Soft, fruity and well-rounded. A subtle sweetness with a curl of smoke. Full, balanced and satisfying,  Dewar’s White Label Blended Scotch Whisky.",
       "status": "published",
       "active": true
+    },
+    {
+      "id": 1780834082741,
+      "slug": "monkey-shoulder-blended-malt-scotch-whisky",
+      "name": "Monkey Shoulder Blended Malt Scotch Whisky",
+      "country": "Scotland",
+      "category": "Blended Whisky",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780834081384.jpg",
+      "images": [
+        "/images/uploads/1780834081384.jpg"
+      ],
+      "desc_tr": "Monkey Shoulder, üç ünlü Speyside single malt'ının harmonik karışımıyla oluşturulmuş zarif bir blended malt viskisidir. Meyvemsi ve bal notalarıyla dengeli tadı, bu miniature koleksiyonunuzda şık bir yer edinecektir. Modern tasarımı ve erişilebilir profiliyle, Scotch whisky severlerin kütüphanesinde olmazsa olmaz bir şişedir.",
+      "desc_en": "Monkey Shoulder is an elegant blended malt Scotch whisky crafted from the harmonious combination of three renowned Speyside single malts. With its balanced flavor profile of fruity and honey notes, this miniature will be a sophisticated addition to your collection. Its modern design and approachable character make it an essential bottle for Scotch whisky enthusiasts.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedmalt",
+        "#monkeyshoulder",
+        "#speyside",
+        "#whisky"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
