@@ -3597,6 +3597,31 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780841503204,
+      "slug": "berentzen-apple",
+      "name": "Berentzen Apple",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "37.5%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780841501246.jpg",
+      "images": [
+        "/images/uploads/1780841501246.jpg"
+      ],
+      "desc_tr": "Berentzen Apple, doğal elma aromasıyla öne çıkan, meyvemsi ve ferah içimli bir Alman likörüdür. Tatlı ve dengeli karakteri sayesinde tek başına soğuk servis edilebildiği gibi kokteyllerde de tercih edilir. Elmanın canlı aroması ve yumuşak yapısıyla keyifli bir içim deneyimi sunar.",
+      "desc_en": "Berentzen Apple is a German liqueur distinguished by its natural apple flavor, offering a fruity and refreshing drinking experience. Its sweet and well-balanced character makes it enjoyable served chilled on its own, while also being a popular choice in cocktails. With its vibrant apple aroma and smooth texture, it delivers a pleasant and approachable taste experience. 🍏🥃",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
