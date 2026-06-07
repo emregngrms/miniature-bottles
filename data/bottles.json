@@ -2842,7 +2842,7 @@
     },
     {
       "id": 1720380324,
-      "slug": "gordons-london-dry-gin",
+      "slug": "gordon-s-london-dry-gin",
       "name": "Gordon's London Dry Gin",
       "country": "England",
       "category": "Gin",
@@ -2853,10 +2853,23 @@
       "images": [
         "/images/uploads/18030586010498887.jpg"
       ],
-      "desc_tr": "1769'den beri yapılan Gordon's, dünyanın en ikonik London Dry Ginlerinden biridir. Botaniklerinin özellikle jüniper ağırlıklı profili, klasik ve kuruluğu ile tanınır. Bu miniatur şişe, koleksiyonculuğun ve gin sanatının en temsilci örneğidir.",
-      "desc_en": "Gordon's, produced since 1769, is one of the world's most iconic London Dry Gins. Known for its juniper-forward botanical profile and classic dry character, it remains a benchmark spirit. This miniature bottle represents both the collector's gem and the embodiment of gin-making tradition.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "1769'dan beri üretilen efsanevi Gordon's London Dry Gin'in bu mini şişesi, klasik bir cin koleksiyonunun vazgeçilmez parçasıdır. Alexander Gordon tarafından distile edilen bu gin, dünyaca ünlü botaniklerle hazırlanmış ve keskin, aromatik karakteriyle tanınır. Collector'lar için gerçek bir hazine olan bu küçük şişe, gin tarihi ve İngiliz spritler dünyasının en ikonik maralarından birini temsil eder.",
+      "desc_en": "This miniature bottle of the legendary Gordon's London Dry Gin, produced since 1769, is an essential piece of any classic gin collection. Distilled by Alexander Gordon, this gin is crafted with world-renowned botanicals and is recognized for its sharp, aromatic character. A true treasure for collectors, this small bottle represents one of the most iconic brands in gin history and the world of English spirits.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#gin",
+        "#gordons",
+        "#londondrygin",
+        "#gincollector",
+        "#classicspirits",
+        "#england"
+      ],
+      "_postToIG": true
     },
     {
       "id": 1720380159,
