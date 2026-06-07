@@ -300,6 +300,14 @@ const COUNTRIES = [
 // ── STATE ─────────────────────────────────────────────────────────────────────
 let token=null, bottles=[], categories=[], cocktails=[], shas={}, currentPage='dashboard', sq='';
 let state={igFilter:''};
+function onAdminSearch(input, renderFn){
+  sq = input.value;
+  const pos = input.selectionStart;
+  window[renderFn]();
+  // Restore focus after re-render
+  const el = document.getElementById('admin-search');
+  if(el){ el.focus(); try{ el.setSelectionRange(pos,pos); }catch(e){} }
+}
 function setState(patch){ Object.assign(state, patch); renderBottles(); }
 
 // ── AUTH ─────────────────────────────────────────────────────────────────────
@@ -513,7 +521,7 @@ function renderBottles(){
       <div class="header-actions">
         <div class="search-wrap">
           <svg class="search-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          <input type="text" placeholder="Ara…" value="${esc(sq)}" oninput="sq=this.value;renderBottles()"/>
+          <input type="text" placeholder="Ara…" value="${esc(sq)}" id="admin-search" oninput="onAdminSearch(this,'renderBottles')"/>
         </div>
         <button class="btn btn-primary" onclick="openAddBottle()">+ Şişe Ekle</button>
       </div>
@@ -886,7 +894,7 @@ function renderCocktails(){
       <div class="header-actions">
         <div class="search-wrap">
           <svg class="search-icon" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          <input type="text" placeholder="Ara…" value="${esc(sq)}" oninput="sq=this.value;renderCocktails()"/>
+          <input type="text" placeholder="Ara…" value="${esc(sq)}" id="admin-search" oninput="onAdminSearch(this,'renderCocktails')"/>
         </div>
         <button class="btn btn-primary" onclick="openAddCocktail()">+ Kokteyl Ekle</button>
       </div>
