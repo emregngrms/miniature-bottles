@@ -2079,10 +2079,21 @@
       "images": [
         "/images/uploads/18410568487076573.jpg"
       ],
-      "desc_tr": "Küba'nın en ünlü rom markası Bacardi'nin klassik beyaz rumudur. Hafif, temiz ve nötr karakteri ile kokteyl hazırlamada tercih edilen ideal bir temeldir. Tropikal meyveler ve vanilya notaları ile dengeli ve yumuşak bir damak hissi sunar.",
-      "desc_en": "Bacardi's iconic white rum from Cuba, a classic in the spirits world. Light, clean, and neutral in character, it serves as the ideal base for cocktails. It offers balanced and smooth palate notes with hints of tropical fruits and vanilla.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Bacardi Superior, açık ve temiz bir profil sunan hafif bir beyaz romtur. Burun üzerinde hafif meyvemsi ve çiçeksi notalar ile hafif vanilya ve tarçın ipuçları bulunur. Damakta yumuşak ve pürüzsüz bir doku sunarak, hafif tatlı ve baharatlı karakteri içerir; bitiş temiz ve kısa ile ferahlatıcıdır.",
+      "desc_en": "Bacardi Superior is a light white rum offering a clean and crisp profile. The nose reveals subtle fruity and floral notes with hints of vanilla and cinnamon. On the palate, it presents a smooth and mellow character with delicate sweetness and light spice, finishing with a clean, refreshing conclusion that makes it ideal for cocktails and mixing.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#rum",
+        "#bacardi",
+        "#cuba",
+        "#whitrum"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1721163664,
