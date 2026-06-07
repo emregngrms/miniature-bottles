@@ -1565,8 +1565,8 @@
     },
     {
       "id": 1723997862,
-      "slug": "campari",
-      "name": "Campari",
+      "slug": "campari-old-bottle",
+      "name": "Campari (Old Bottle)",
       "country": "Italy",
       "category": "Liqueur",
       "abv": "28.5%",
@@ -1576,10 +1576,20 @@
       "images": [
         "/images/uploads/18308446339094487.jpg"
       ],
-      "desc_tr": "İtalya'nın Milanı'nda 1860 yılından beri üretilen Campari, kırmızı rengi ve karakteristik acı-tatlı tadıyla dünya çapında tanınan bir aperitif likörüdür. Bitki ekstraktları ve baharatlardan yapılan bu ikonik içecek, Negroni ve Americano gibi klasik kokteyllerin vazgeçilmez bileşenidir.",
-      "desc_en": "Produced in Milan, Italy since 1860, Campari is a world-renowned aperitif liqueur celebrated for its distinctive red color and characteristic bitter-sweet taste. Made from herbal extracts and spices, this iconic spirit is an essential ingredient in classic cocktails such as the Negroni and Americano.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Campari, İtalya'nın ikonik aperitif likörüdür ve karmaşık bir bitki ve meyve karışımından yapılmıştır. Burun üzerinde canlı kırmızı rengi kadar dikkat çeken acı ve tatlı notalarla kendini gösterir, damakta ise intens bir bitterlik ve hafif meyvemsi tatlılık dengelenir. Soda veya prosecco ile karıştırılarak servis edilen bu canlı içecek, aperitif saatinin vazgeçilmez parçasıdır.",
+      "desc_en": "Campari is Italy's iconic aperitif liqueur crafted from a complex blend of herbs and fruits, delivering a striking balance of bitter and sweet notes. On the palate, intense bitterness combines with subtle fruity sweetness and a crisp, dry finish that lingers pleasantly. Best enjoyed mixed with soda or prosecco, this vibrant spirit is the quintessential pre-dinner drink.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#campari",
+        "#aperitif",
+        "#italianspirits"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1723997836,
