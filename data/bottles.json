@@ -3217,6 +3217,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780839093925,
+      "slug": "drumshanbo-slow-distilles-gunpowder-irish-gin",
+      "name": "Drumshanbo Slow Distilles Gunpowder Irish Gin",
+      "country": "Ireland",
+      "category": "Gin",
+      "abv": "43%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780839092940.jpg",
+      "images": [
+        "/images/uploads/1780839092940.jpg"
+      ],
+      "desc_tr": "İrlanda'nın Leitrim bölgesinden gelen bu gin, taze ve bitki yönü ağır olan aromatiğiyle dikkat çeker. Tat profilinde yeşil çay, nane ve narenciye notaları yanında kara biber ve irisinin keskin karakteri yer alır. Orta-uzun finişinde ısıtıcı bir baharat ve çiçeksi bitki esintileri kalır.",
+      "desc_en": "Hailing from County Leitrim in Ireland, this gin presents a vibrant botanical character with prominent herbal and green tea aromatics. The palate delivers crisp citrus notes alongside black pepper and iris spice, with a warming, floral-driven finish that extends gracefully. The 43% ABV provides excellent structure for the complex botanicals, creating a distinctive Irish gin with character and depth.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#irishgin",
+        "#gunpowdergin",
+        "#drumshanbo",
+        "#ireland"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
