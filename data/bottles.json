@@ -2518,7 +2518,7 @@
     },
     {
       "id": 1720386410,
-      "slug": "whisky-pche-yachting",
+      "slug": "whisky-p-che-yachting",
       "name": "Whisky Pêche Yachting",
       "country": "France",
       "category": "Liqueur",
@@ -2529,10 +2529,20 @@
       "images": [
         "/images/uploads/17896314387017788.jpg"
       ],
-      "desc_tr": "Le Havre, Fransa'dan gelen bu peşe likörü, viski ve şeftali aromasının zarif bir birleşimidir. Yachting teması ile tasarlanan şişesi, klasik Fransız likör üretiminin güzel bir örneğidir. Tatlı ve yumuşak karakteri ile aperitif veya kokteyl içeriği olarak tercih edilir.",
-      "desc_en": "This peach liqueur from Le Havre, France, is an elegant blend of whisky and peach aromatics. Its yachting-themed bottle represents a fine example of classic French liqueur production. With its sweet and smooth character, it is preferred as an aperitif or cocktail ingredient.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Whisky Pêche Yachting, Fransa'da üretilen bir likör olup, şeftali aromasıyla zenginleştirilmiş whisky bazlı bir içecektir. Burun üzerinde tatlı şeftali notaları ve hafif whisky karakteri belirgindir. Damakta yumuşak, tatlı ve meyveli bir profil sunarak, hafif bir bitiş sağlar.",
+      "desc_en": "Whisky Pêche Yachting is a French liqueur with a whisky base enhanced with peach flavoring. The nose reveals sweet peach notes combined with gentle whisky character. The palate offers a smooth, sweet, and fruity profile with a light finish, making it an approachable and dessert-like spirit.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#whiskyliqueur",
+        "#frenchspirits",
+        "#peach"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386393,
