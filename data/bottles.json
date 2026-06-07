@@ -3683,6 +3683,34 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780842150631,
+      "slug": "hubertus",
+      "name": "Hubertus",
+      "country": "Germany",
+      "category": "Liqueur",
+      "abv": "30%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780842148648.jpg",
+      "images": [
+        "/images/uploads/1780842148648.jpg"
+      ],
+      "desc_tr": "Hubertus, Almanya'nın klasik av temalı likörüdür ve çeşitli bitkisel malzemelerin zarif bir karışımını sunar. Burun üzerinde meyveli ve bitkisel aromalar, ağızda ise hafif tatlılık ve herbal notalar ön plana çıkar. Pürüzsüz bir finali ve orta yapısıyla, şurup gibi içilen veya aperitif olarak sunulan geleneksel bir içecektir.",
+      "desc_en": "Hubertus is a classic German herbal liqueur with hunting heritage, blending various botanicals into an elegant composition. The nose reveals fruity and herbal aromas, while the palate offers gentle sweetness balanced with herbaceous notes. It delivers a smooth, medium-bodied finish and is traditionally enjoyed as a digestif or mixed in cocktails.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#liqueur",
+        "#germanspirits",
+        "#herballiqueur"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
