@@ -601,6 +601,25 @@ function openBottleModal(b){
   document.getElementById('modal-ttl').textContent=isEdit?'Şişe Düzenle':'Yeni Şişe Ekle';
   document.getElementById('modal-bd').innerHTML=`
   <div class="fg-grid">
+    <div class="fg fg-full">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+        <label>Fotoğraflar</label>
+        <button type="button" onclick="addMoreImg()" style="font-size:11px;padding:4px 10px;background:var(--blued);border:1px solid var(--blue);color:var(--blue);border-radius:7px;cursor:pointer">+ Görsel Ekle</button>
+      </div>
+      <div id="img-gallery" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+        ${(b.images&&b.images.length?b.images:[b.image]).filter(Boolean).map((img,idx)=>`
+          <div style="position:relative;width:80px;height:80px;flex-shrink:0" id="img-item-${idx}">
+            <img src="${esc(img)}" style="width:80px;height:80px;object-fit:cover;border-radius:8px;border:${idx===0?'2px solid var(--gold)':'1px solid var(--border)'}"/>
+            ${idx===0?'<span style="position:absolute;bottom:2px;left:2px;background:rgba(212,168,67,.9);color:#000;font-size:9px;padding:1px 4px;border-radius:4px;font-weight:700">ANA</span>':''}
+            <button onclick="removeImg(${idx})" style="position:absolute;top:-5px;right:-5px;width:18px;height:18px;border-radius:50%;background:var(--red);border:none;color:#fff;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1">×</button>
+          </div>`).join('')}
+      </div>
+      <div class="img-up" onclick="document.getElementById('fif').click()" id="iub">
+        <div class="img-up-txt"><strong>Tıkla</strong> veya URL gir</div>
+        <input type="file" id="fif" accept="image/*" multiple onchange="prevImgMulti(this)"/>
+      </div>
+      <input id="fiu" type="text" placeholder="https://… ekle" style="margin-top:6px" oninput="addImgFromUrl(this.value)"/>
+    </div>
     <div class="fg fg-full" style="margin-bottom:4px">
       <button type="button" id="ai-btn" onclick="genAI()" style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:linear-gradient(135deg,rgba(91,143,255,.15),rgba(212,168,67,.12));border:1px solid rgba(91,143,255,.4);border-radius:10px;color:#8aaad8;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg>
@@ -624,25 +643,6 @@ function openBottleModal(b){
       <label>Hashtag'ler <span style="color:var(--sub);font-weight:400">(AI üretir, düzenleyebilirsin)</span></label>
       <input id="fhash" type="text" value="${esc((b.hashtags||[]).join(' '))}" placeholder="#minibottles #minibottlescollection …"/>
       <div class="hint">Boşlukla ayır. AI ile Doldur butonu otomatik üretir.</div>
-    </div>
-    <div class="fg fg-full">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-        <label>Fotoğraflar</label>
-        <button type="button" onclick="addMoreImg()" style="font-size:11px;padding:4px 10px;background:var(--blued);border:1px solid var(--blue);color:var(--blue);border-radius:7px;cursor:pointer">+ Görsel Ekle</button>
-      </div>
-      <div id="img-gallery" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
-        ${(b.images&&b.images.length?b.images:[b.image]).filter(Boolean).map((img,idx)=>`
-          <div style="position:relative;width:80px;height:80px;flex-shrink:0" id="img-item-${idx}">
-            <img src="${esc(img)}" style="width:80px;height:80px;object-fit:cover;border-radius:8px;border:${idx===0?'2px solid var(--gold)':'1px solid var(--border)'}"/>
-            ${idx===0?'<span style="position:absolute;bottom:2px;left:2px;background:rgba(212,168,67,.9);color:#000;font-size:9px;padding:1px 4px;border-radius:4px;font-weight:700">ANA</span>':''}
-            <button onclick="removeImg(${idx})" style="position:absolute;top:-5px;right:-5px;width:18px;height:18px;border-radius:50%;background:var(--red);border:none;color:#fff;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1">×</button>
-          </div>`).join('')}
-      </div>
-      <div class="img-up" onclick="document.getElementById('fif').click()" id="iub">
-        <div class="img-up-txt"><strong>Tıkla</strong> veya URL gir</div>
-        <input type="file" id="fif" accept="image/*" multiple onchange="prevImgMulti(this)"/>
-      </div>
-      <input id="fiu" type="text" placeholder="https://… ekle" style="margin-top:6px" oninput="addImgFromUrl(this.value)"/>
     </div>
     <div class="fg fg-full" style="margin-bottom:2px">
       <label>Açıklamalar</label>
