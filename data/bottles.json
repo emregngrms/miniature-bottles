@@ -2875,10 +2875,10 @@
     },
     {
       "id": 1720382676,
-      "slug": "grants-triple-wood-blended-scotch-whisky",
-      "name": "Grant's Triple Wood Blended Scotch Whisky",
+      "slug": "grant-s-triple-wood",
+      "name": "Grant's Triple Wood",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
+      "category": "Single Malt Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2886,10 +2886,21 @@
       "images": [
         "/images/uploads/18328021801193585.jpg"
       ],
-      "desc_tr": "Grant's Triple Wood, İskoçya'nın prestijli blended whisky markasının üç farklı ahşap türünde olgunlaştırılmış özel bir ifadesidir. Pürüzsüz, zengin ve yumuşak damak yapısıyla karakterize edilen bu whisky, koleksiyonerlerin tercih ettiği klasik bir örnektir. İskoçya'da damıtılmış ve harmanlanmış bu ürün, geleneksel İskoç whisky sanatının mükemmel bir temsilidir.",
-      "desc_en": "Grant's Triple Wood is a special expression of Scotland's prestigious blended whisky brand, matured in three different types of wood. Characterized by its smooth, rich, and mellow palate structure, this whisky represents a classic choice for collectors. Distilled and blended in Scotland, this product exemplifies the perfect tradition of Scottish whisky craftsmanship.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Grant's Triple Wood, üç farklı ahşap türünde olgunlaştırılarak yapılan bir İskoç blend viskisidir. Burun üzerinde meyve notaları ve hafif tatlılık sunarlken, damakta pürüzsüz ve zengin karakteri hissettirecektir. Ağaç baharatları ve orta uzunlukta, dengeli bir bitiş ile karakteristik bir İskoç blend deneyimi sunar.",
+      "desc_en": "Grant's Triple Wood is a Scottish blended whisky matured in three different types of wood, creating a smooth and well-balanced spirit. The nose displays fruity notes with subtle sweetness, while the palate reveals a rich character with hints of wood spice and honey. The finish is clean and moderately long, offering a mellow and approachable whisky experience characteristic of well-crafted Scottish blends.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#grants",
+        "#scotland"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720382603,
