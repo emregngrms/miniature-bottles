@@ -3159,6 +3159,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780838896218,
+      "slug": "whitley-neill-gin-distiller-s-cut",
+      "name": "Whitley Neill Gin Distiller's Cut",
+      "country": "England",
+      "category": "Gin",
+      "abv": "42%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780838894383.jpg",
+      "images": [
+        "/images/uploads/1780838894383.jpg"
+      ],
+      "desc_tr": "Whitley Neill Distiller's Cut, İngiltere'nin klasik dry gin tarzında hazırlanan, botaniklerle zenginleştirilmiş bir spirtüdür. Burun da juniper ve narenciye notaları öne çıkarken, damakta kuru ve aromatik bir profil sunmaktadır. Uzun ve temiz bir bitiş ile karakterize olan bu gin, klasik kokteyllerden sofistike long drink'lere kadar çeşitli kullanımlara uygundur.",
+      "desc_en": "Whitley Neill Distiller's Cut is an English dry gin crafted with a refined botanical blend. The nose presents prominent juniper and citrus notes, while the palate delivers a dry, aromatic character with good botanical complexity. A clean, lingering finish makes this gin versatile for both classic cocktails and contemporary mixed drinks.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#gin",
+        "#whitleyneill",
+        "#englishgin",
+        "#drygin"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
