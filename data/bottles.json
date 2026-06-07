@@ -379,21 +379,32 @@
     },
     {
       "id": 1762693154,
-      "slug": "fegling",
-      "name": "Fegling",
-      "country": "Japan",
+      "slug": "fegling-sets",
+      "name": "Fegling Sets",
+      "country": "Germany",
       "category": "Liqueur",
-      "abv": "20%",
+      "abv": "Not clearly visible",
       "year": 2025,
-      "qty": 1,
+      "qty": 2,
       "image": "/images/uploads/17870590632463330.jpg",
       "images": [
         "/images/uploads/17870590632463330.jpg"
       ],
-      "desc_tr": "Tokyo Banana ile işbirliği yapılan Fegling, Japonya'nın ünlü muz-tabanlı likörüdür. Tatlı muz aroması, kokos bisküvi notaları ve meyveli damak hissi ile karakterizedir. Miniatur koleksiyonluk bu sürüm, Tokyo'nun ikonik tatlısının özünü sıvı formda sunmaktadır.",
-      "desc_en": "Fegling, a Japanese liqueur in collaboration with Tokyo Banana, represents Japan's famous banana-based spirit. Characterized by sweet banana aroma, coconut biscuit notes, and fruity palate impressions. This miniature collector's edition encapsulates the essence of Tokyo's iconic confection in liquid form.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Fegling, Almanya'nın efsanevi likörü olarak bilinir ve çeşitli aromalarında sunulur. Her şişe, kahveli, çikolatalı, meyveli veya bitki aromaları gibi farklı tatlar içerir. Likörlü karakteri sayesinde aperitif olarak veya kokteyllerde kullanılmaya uygun, yumuşak ve tatlı bir içkidir.",
+      "desc_en": "Fegling is a renowned German liqueur known for its diverse flavor profiles presented in this collection. Each bottle offers different tasting experiences ranging from coffee and chocolate to fruity and herbal notes. With its liqueur-based character, it serves well as an aperitif or cocktail ingredient, delivering soft and sweet drinking experiences with distinctive aromatic qualities.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#fegling",
+        "#germanliquer",
+        "#liqueur",
+        "#germany"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1762693119,
