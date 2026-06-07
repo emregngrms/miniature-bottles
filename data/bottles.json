@@ -1838,7 +1838,7 @@
       "slug": "the-famous-grouse",
       "name": "The Famous Grouse",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
+      "category": "Blended Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1846,10 +1846,22 @@
       "images": [
         "/images/uploads/18032543524927095.jpg"
       ],
-      "desc_tr": "İskoçya'nın en ikonik blend whiskylerinden biri olan The Famous Grouse, yumuşak ve dengeli bir profil sunmaktadır. Bal, vanilya ve hafif tütün notaları ile karakterize edilen bu whisky, günlük içim için ideal bir seçimdir. Hafif ve erişilebilir yapısı ile whisky severler arasında büyük bir beğeni kazanmıştır.",
-      "desc_en": "The Famous Grouse is one of Scotland's most iconic blended whiskies, offering a smooth and well-balanced profile. Characterized by notes of honey, vanilla, and subtle tobacco, this whisky is an ideal choice for everyday enjoyment. Its light and approachable nature has made it a favorite among whisky enthusiasts worldwide.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "İskoçya'nın en ikonik blended whiskylerinden biri olan The Famous Grouse, yumuşak ve dengeli bir profiliyle whisky severler tarafından yıllardır tercih edilmektedir. Bu miniature şişe, koleksiyonunuza klasik İskoç viskisinin özünü ekleyecek muhteşem bir parçadır. Kırmızı renkli gözü olan ünlü grouse kuşu logosu, kaliteyi ve geleneği sembolize eder.",
+      "desc_en": "The Famous Grouse is one of Scotland's most iconic blended whiskies, beloved by whisky enthusiasts for its smooth and well-balanced character. This miniature bottle is a wonderful addition to any collection, capturing the essence of classic Scottish whisky. The distinctive red grouse on the label symbolizes quality and tradition that spans generations.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#whisky",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#thefamousgrouse",
+        "#scotland"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1721415660,
