@@ -3188,6 +3188,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780839053868,
+      "slug": "drumshanb-with-sardinian-citrus-gunpowder-irish-gin",
+      "name": "Drumshanbо with Sardinian Citrus Gunpowder Irish Gin",
+      "country": "Ireland",
+      "category": "Gin",
+      "abv": "43%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780839052009.jpg",
+      "images": [
+        "/images/uploads/1780839052009.jpg"
+      ],
+      "desc_tr": "İrlanda'nın Sligo bölgesinden gelen bu gin, doğal bitkileri ve barut çiçeğiyle karakteristik bir profil sunuyor. Burnunda narenciye ve bitkisel notalar, damakta keskin bir ardıç tuzu ve baharatlandırılmış bir finali var. Geleneksel şekilde üretilen bu içki, canlı ve aromalarıyla dikkat çeker.",
+      "desc_en": "This Irish gin from Sligo delivers a distinctive profile with natural botanicals and gunpowder tea. The nose presents citrus and herbal notes, while the palate offers sharp juniper with spiced warmth and a dry finish. Traditionally crafted, it captures vibrant character with aromatic complexity that defines Irish gin-making tradition.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#irishgin",
+        "#drumshanbо",
+        "#gin",
+        "#ireland"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
