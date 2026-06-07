@@ -2893,10 +2893,10 @@
     },
     {
       "id": 1720382603,
-      "slug": "ballantines-finest-scotch-whisky",
-      "name": "Ballantine's Finest Scotch Whisky",
+      "slug": "ballantine-s-finest",
+      "name": "Ballantine's Finest",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
+      "category": "Single Malt Whisky",
       "abv": "43%",
       "year": 2024,
       "qty": 1,
@@ -2904,10 +2904,21 @@
       "images": [
         "/images/uploads/18025085822471358.jpg"
       ],
-      "desc_tr": "Ballantine's Finest, İskoçya'nın prestijli blend whiskylerinden biri olarak 1827'den beri üretilmektedir. Dumbarton'daki damıtımevinde hassasiyetle karıştırılan bu whisky, yumuşak, dengeli ve erişilebilir karakteri ile ünlüdür. Hafif malt notaları ve tatlı vanilya tonlarıyla klasik İskoç blend whisky deneyimi sunar.",
-      "desc_en": "Ballantine's Finest is a prestigious blended Scotch whisky that has been produced since 1827 with meticulous care at the Dumbarton distillery. Known for its smooth, well-balanced, and accessible character, this whisky delivers a classic Scottish blend experience. It features subtle malt notes and sweet vanilla undertones that define its refined profile.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Ballantine's Finest, İskoçya'nın klasik harmanlanmış viskilerinden biridir. Burun hafif malt ve tahıl karakteri ile karşılık verir, ardından ağız damağında meyvemsi ve hafif tatlı notalar ortaya çıkar. Dengeli yapısı, lisse dokusuz finişi ve erişilebilir karakteri ile günlük içimine uygun bir viskidir.",
+      "desc_en": "Ballantine's Finest is a classic Scottish blended whisky with a light, approachable character. The nose reveals delicate malt and grain notes, while the palate presents fruity and mildly sweet flavors with a balanced profile. The smooth mouthfeel and clean finish make it an accessible whisky suitable for everyday enjoyment.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#ballantines",
+        "#scotland"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720382518,
