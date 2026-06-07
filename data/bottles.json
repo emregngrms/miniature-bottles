@@ -2664,21 +2664,31 @@
     },
     {
       "id": 1720383193,
-      "slug": "absolut-vodka-swedish-vodka",
-      "name": "Absolut Vodka Swedish Vodka",
+      "slug": "absolut-vodka",
+      "name": "Absolut Vodka",
       "country": "Sweden",
       "category": "Vodka",
       "abv": "40%",
       "year": 2024,
-      "qty": 1,
+      "qty": 2,
       "image": "/images/uploads/17915460989955250.jpg",
       "images": [
         "/images/uploads/17915460989955250.jpg"
       ],
-      "desc_tr": "İsveç'in Ahus köyünde üretilen Absolut Vodka, İsveç suyu ve kış buğdayından yapılmış premium bir vodonadır. Kristal berraklığı ve yumuşak, temiz karakteriyle tanınan bu ikon içki, klasik kokteyllerden saf içime kadar pek çok kullanımda mükemmel bir seçimdir.",
-      "desc_en": "Produced in the village of Ahus, Sweden, Absolut Vodka is a premium spirit crafted from Swedish water and winter wheat. Known for its crystal clarity and smooth, clean character, this iconic spirit is a perfect choice for classic cocktails or enjoyed neat by collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Absolut, İsveç'in Ahus köyünde üretilen klasik bir vodkadır. İsveç suyu ve kış buğdayından yapılan bu içki, kristal berraklığı ve temiz tadı ile karakterizedir. Hafif, nötr bir profil sunarak, kokteyllerde veya saf olarak servis edilebilir.",
+      "desc_en": "Absolut is a classic Swedish vodka produced in the village of Ahus using Swedish water and winter wheat. It offers crystal clarity and a clean, smooth taste with a neutral grain character. The spirit presents a light and crisp profile, making it versatile for cocktails or enjoyed neat, with a dry, clean finish.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#absolut",
+        "#vodka",
+        "#swedishvodka"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720383182,
