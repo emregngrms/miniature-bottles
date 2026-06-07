@@ -2029,10 +2029,10 @@
     },
     {
       "id": 1721163765,
-      "slug": "remy-martin-vsop-cognac",
-      "name": "Remy Martin V.S.O.P. Cognac",
+      "slug": "remy-martin",
+      "name": "Remy Martin",
       "country": "France",
-      "category": "Cognac",
+      "category": "Cognac & Brandy",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2040,10 +2040,21 @@
       "images": [
         "/images/uploads/17937489959764614.jpg"
       ],
-      "desc_tr": "Rémy Martin tarafından Fransa'nın Cognac bölgesinde üretilen bu prestijli konak, V.S.O.P. (Very Superior Old Pale) standartını karşılar. Mükemmel dengelenmesi, meyvemsi notaları ve yumuşak yapısıyla, konak severler tarafından tercih edilen klasik bir üretimdir.",
-      "desc_en": "Produced by Rémy Martin in the Cognac region of France, this prestigious cognac meets the V.S.O.P. (Very Superior Old Pale) standard. With its perfect balance, fruity notes, and smooth character, it is a classic production favored by cognac enthusiasts worldwide.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Remy Martin V.S.O.P., Cognac bölgesinin en prestijli üreticilerinden biri tarafından üretilen, dengeli ve yumuşak bir brendi. Burun üzerinde kayısı, kuru meyveler ve hafif vanilya notaları hissedilirken, damakta bal, badem ve meyvemsi karakterler ortaya çıkar. Uzun ve nazik bir bitiş, hafif tarçın ve ısıtıcı spice notalarıyla sonlanır.",
+      "desc_en": "Remy Martin V.S.O.P. is a balanced and smooth cognac from one of the Cognac region's most prestigious producers. The nose reveals notes of apricot, dried fruits, and subtle vanilla, while the palate presents honey, almond, and fruity character. The finish is long and elegant, concluding with gentle spice and warming notes.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#cognac",
+        "#remymartin",
+        "#france",
+        "#brandy"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1721163723,
