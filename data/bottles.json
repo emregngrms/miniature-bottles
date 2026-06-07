@@ -3130,6 +3130,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780838869905,
+      "slug": "whitley-neill-rhubarb-ginger-gin",
+      "name": "Whitley Neill Rhubarb & Ginger Gin",
+      "country": "England",
+      "category": "Gin",
+      "abv": "43%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780838868797.jpg",
+      "images": [
+        "/images/uploads/1780838868797.jpg"
+      ],
+      "desc_tr": "Whitley Neill Rhubarb & Ginger Gin, İngiltere'nin ünlü distillerisi tarafından üretilen bu cin, taze rabarba ve keskin zencefil notalarıyla karakteristiktir. Burun üzerinde meyvemsi ve baharatlı aromalar belirgindir; damakta tatlı rabarba asitliği, sıcak zencefil baharat ve klasik botanikallerin dengeli kombinasyonu hissedilir. Temiz ve orta uzunlukta bitiş, uzun süren baharatlandırılmış aftertaste ile karakterlidir.",
+      "desc_en": "Whitley Neill Rhubarb & Ginger Gin is crafted by this renowned English distillery, showcasing vibrant rhubarb and spicy ginger notes. On the nose, fruity and warm spice aromatics are prominent; the palate delivers tart rhubarb sweetness balanced with zesty ginger heat and classic botanicals in harmony. The finish is clean and medium-length, with a lingering spiced warmth.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#gin",
+        "#whitleyneill",
+        "#englishgin",
+        "#rhubarbandzinger"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
