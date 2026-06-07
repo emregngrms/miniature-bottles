@@ -2211,10 +2211,20 @@
       "images": [
         "/images/uploads/18305086657085799.jpg"
       ],
-      "desc_tr": "Berlin'in efsanevi Mampe distillerisi tarafından üretilen bu klasik Alman likörü, geleneksel formülasyonuyla tanınır. Aromatik bitki ve baharatlarla hazırlanan Halb und Halb, hafif tatlı ve kompleks aromaları ile aperitif olarak ya da karışık içkilerde kullanılır.",
-      "desc_en": "This classic German liqueur produced by Berlin's legendary Mampe distillery is known for its traditional formulation. Prepared with aromatic herbs and spices, Halb und Halb features subtle sweetness and complex aromas, making it suitable as an aperitif or in mixed drinks.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Alman içkisi geleneğinden gelen bu likör, \"Halb und Halb\" (yarı yarıya) konseptiyle hazırlanmıştır. Meyvemsi ve aromatik notalarıyla karakterize olan bu içecek, soğuk içildiğinde ferahlatıcı bir deneyim sunmakta olup, dengeli tatılığı ve yumuşak bitiş profili ile öne çıkmaktadır.",
+      "desc_en": "This German liqueur follows the traditional 'Halb und Halb' (half and half) concept with a balanced blend. The spirit presents fruity and aromatic notes with a pleasant sweetness, offering a refreshing drinking experience when served chilled. The smooth finish and approachable palate make it an accessible choice for casual enjoyment.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#germanliquer",
+        "#mampe",
+        "#berlin"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386848,
