@@ -2943,7 +2943,7 @@
       "slug": "johnnie-walker-black-label",
       "name": "Johnnie Walker Black Label",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
+      "category": "Tennessee Whiskey",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2951,10 +2951,21 @@
       "images": [
         "/images/uploads/17890355508049140.jpg"
       ],
-      "desc_tr": "İkonik Johnnie Walker Black Label, İskoçya'nın en tanınmış blended whiskylerinden biridir. 12 yıl yaşlandırılmış bu spirits, zengin ve kompleks tatı profiliyle karakterize edilir; tütün, bal ve hafif çiçek notaları içerir. Dünyada milyonlarca coleksiyon ve içkiye tutkunun tercih ettiği premium bir blend.",
-      "desc_en": "The iconic Johnnie Walker Black Label is one of Scotland's most recognized blended whiskies. Aged 12 years, this spirit is characterized by its rich and complex flavor profile featuring notes of tobacco, honey, and subtle floral hints. A premium blend preferred by millions of collectors and spirit enthusiasts worldwide.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Johnnie Walker Black Label, İskoçya'nın en ikonik karışım viskilerinden biridir. Burun üzerinde tatlı malt, tütsü ve hafif çiçeksi notalar ile açılan bu viski, damakta daha yoğun tütsü karakteri, bal ve meyvemsi tonlar sunmaktadır. Düşük yanma hissi ve uzun, ılımlı bitiş ile karakteristik bir profil sergiler.",
+      "desc_en": "Johnnie Walker Black Label is one of Scotland's most iconic blended whiskies. The nose opens with sweet malt, smoke, and subtle floral notes, while the palate reveals deeper smoky character balanced with honey and fruity tones. A gentle warmth leads to a medium-length, satisfying finish with lingering smoke and oak spice.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#johnniewalker",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#scotland"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720382399,
