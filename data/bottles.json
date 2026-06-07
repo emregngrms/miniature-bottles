@@ -2369,7 +2369,7 @@
       "slug": "langs-supreme-scotch-whisky",
       "name": "Langs Supreme Scotch Whisky",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
+      "category": "Single Malt Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2377,10 +2377,21 @@
       "images": [
         "/images/uploads/18109237990402537.jpg"
       ],
-      "desc_tr": "1861 yılından beri üretilen Langs Supreme, İskoçya'nın Glengoyne bölgesinden gelen prestijli bir blend whiskidir. Dengeli ve yumuşak karakteri, vanilya, malt ve hafif tatlı notalarıyla tanınır. Koleksiyonerlerin değer verdiği klasik bir İskoç whiskisidir.",
-      "desc_en": "Langs Supreme, produced since 1861, is a prestigious blended Scotch whisky from Scotland's Glengoyne region. Known for its balanced and smooth character, it features notes of vanilla, malt, and subtle sweetness. A classic Scottish whisky cherished by collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Langs Supreme, Glengoyne Distillery tarafından üretilen ve karıştırılan bu İskoç viskisi, dengeli ve yumuşak bir profil sunmaktadır. Burnu bal ve hafif malt tatlılığı ile karşılayan bu viski, damakta meyvemsi notalar ve ılık bir bitişi sunarken, geleneksel İskoç viski karakterini yansıtır.",
+      "desc_en": "Langs Supreme is a blended Scotch whisky crafted by the Glengoyne Distillery, offering a smooth and approachable character. The nose presents notes of honey and subtle malt sweetness, while the palate delivers fruity undertones with a warm, medium-length finish that reflects classic Scottish whisky tradition.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#glengoyne",
+        "#scotland"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386691,
