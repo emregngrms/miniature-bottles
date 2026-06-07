@@ -1492,7 +1492,7 @@
       "slug": "zinn-40-klarer-aus-wein",
       "name": "Zinn 40 Klarer aus Wein",
       "country": "Germany",
-      "category": "",
+      "category": "Spirits",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1513,7 +1513,8 @@
         "#klarer",
         "#petereckes",
         "#spiritscollector"
-      ]
+      ],
+      "_postToIG": false
     },
     {
       "id": 1723997939,
