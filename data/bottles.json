@@ -1990,10 +1990,20 @@
       "images": [
         "/images/uploads/17867264568157801.jpg"
       ],
-      "desc_tr": "Jamaica kökenli Tia Maria, soğuk kahve likörünün yenilikçi bir yorumudur. Vanilya ve 100% Arabica kahvesinin hassas karışımı ile zengin, kremsi bir profil sunmakta; modern içecek kültürüne saygı duyan koleksiyoncular için ideal bir seçimdir.",
-      "desc_en": "Tia Maria Cold Brew Coffee Liqueur is Jamaica's innovative take on classic coffee liqueur. This expression combines vanilla with 100% Arabica coffee for a rich, creamy profile that appeals to collectors who appreciate contemporary spirit culture and refined taste.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Tia Maria, soğuk demlenmiş kahve likiörü, 100% Arabika kahvesi ve vanilla notalarıyla hazırlanmıştır. Burun üzerinde zengin kahve aromalarının yanında vanilya ve çikolata ipuçları ön plana çıkar. Damakta yumuşak, tatlı ve kremsi bir yapı sunarken, kahvenin acılığı ve derinliği ile mükemmel bir denge sağlar; uzun ve rahat bir bitiş bırakır.",
+      "desc_en": "Tia Maria Cold Brew Coffee Liqueur is crafted with 100% Arabica cold brew coffee and vanilla notes, creating a sophisticated coffee experience. The nose reveals rich coffee aromas with hints of vanilla and chocolate undertones. On the palate, it delivers a smooth, sweet, and creamy character with the coffee's natural bitterness and depth in perfect harmony, finishing with a long and satisfying aftertaste.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#tiamaria",
+        "#coffeeliqueur",
+        "#jamaica"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1721415557,
