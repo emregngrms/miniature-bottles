@@ -2314,8 +2314,11 @@
       ],
       "desc_tr": "Friesland bölgesinden gelen bu Alman likörü, geleneksel tarife göre hazırlanmış eşsiz bir içecektir. Yoğun ve karakteristik aromasıyla bilinen Original Fissessenz, klasik bir Avrupa likörü olarak koleksiyoncuların beğendiği nadir ürünlerdendir.",
       "desc_en": "This German liqueur hailing from the Friesland region is a unique beverage prepared according to traditional recipes. Original Fissessenz, known for its intense and distinctive aroma, is among the rare products appreciated by collectors as a classic European liqueur.",
-      "status": "draft",
-      "active": false
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [],
+      "_postToIG": false
     },
     {
       "id": 1720386723,
