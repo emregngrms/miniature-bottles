@@ -3,38 +3,43 @@
     {
       "id": 101,
       "name": "Old Fashioned",
-      "slugs": [
-        "bulleit",
-        "glenfiddich-12",
-        "jack-daniels"
-      ],
       "image": "https://images.unsplash.com/photo-1470338745628-171cf53de3a8?w=500&q=80",
       "diff": "Kolay",
       "diff_en": "Easy",
       "time": "3 dk",
+      "slugs": [
+        "jack-daniel-s-old-no-7-tennessee-whiskey",
+        "jack-daniels-tennessee-honey"
+      ],
       "ing_tr": [
-        "60ml Bourbon veya Rye Whisky",
-        "1 küp şeker",
-        "2 dash Angostura bitter",
-        "Portakal kabuğu",
-        "Buz"
+        "Jack Daniel’s Old No.7 Tennessee Whiskey",
+        "Campari Bitter (birkaç damla / dash yerine)",
+        "Şeker küpü (veya 1 bar kaşığı şeker)",
+        "Biraz su (opsiyonel)",
+        "Portakal kabuğu (varsa garnish)"
       ],
       "ing_en": [
-        "60ml Bourbon or Rye Whisky",
-        "1 sugar cube",
-        "2 dashes Angostura bitters",
-        "Orange peel",
-        "Ice"
+        "Jack Daniel’s Old No.7 Tennessee Whiskey",
+        "Campari Bitter (as substitute for bitters, a few dashes)",
+        "Sugar cube (or bar spoon of sugar)",
+        "A few drops of water (optional)",
+        "Orange peel (for garnish)"
       ],
       "steps_tr": [
         "Bardağa şekeri koy, biteri döküp şekeri ez.",
         "Buz ekle, viski ile karıştır.",
-        "Portakal kabuğunu sıkıp bardağa ekle."
+        "Portakal kabuğunu sıkıp bardağa ekle.Bardakta şeker küpünü koy ve üzerine birkaç damla Campari ekle.",
+        "Biraz su ekleyip şekeri ezin (erit).",
+        "Büyük buz ekleyin.",
+        "Jack Daniel’s Old No.7 ekleyin.",
+        "Karıştırın ve portakal kabuğu ile aromalandırın."
       ],
       "steps_en": [
-        "Place sugar in glass, add bitters and muddle.",
-        "Add ice and whisky, stir well.",
-        "Squeeze orange peel over glass and add."
+        "Place a sugar cube in a glass and add a few dashes of Campari.",
+        "Add a splash of water and muddle until dissolved.",
+        "Add large ice cubes.",
+        "Pour in Jack Daniel’s Old No.7.",
+        "Stir and express orange peel over the drink."
       ]
     },
     {
