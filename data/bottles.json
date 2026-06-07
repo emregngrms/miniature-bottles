@@ -821,7 +821,7 @@
       "slug": "linie-aquavit",
       "name": "Linie Aquavit",
       "country": "Norway",
-      "category": "",
+      "category": "Spirits",
       "abv": "41.5%",
       "year": 2025,
       "qty": 1,
@@ -843,7 +843,8 @@
         "#norway",
         "#norwegianspirits",
         "#scandinavianspirits"
-      ]
+      ],
+      "_postToIG": false
     },
     {
       "id": 1737893683,
