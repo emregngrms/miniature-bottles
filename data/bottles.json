@@ -449,7 +449,7 @@
       "slug": "bln-gin-and-bln-rum",
       "name": "BLN Gin and BLN Rum",
       "country": "Germany",
-      "category": "Gin and Rum",
+      "category": "Rum",
       "abv": "40%",
       "year": 2025,
       "qty": 1,
@@ -459,8 +459,11 @@
       ],
       "desc_tr": "Berlin'in ünlü BLN distillerysinden gelen bu miniatur koleksiyonu, Alman craft spirits geleneğinin modern yorumudur. Gin, botaniklerle zenginleştirilmiş hafif ve aromalarıyken, Rum ise tropik karakteri ve yumuşak tadıyla dikkat çeker. Her ikisi de premium kalitesi ve Berlin'in harita tasarımı etiketiyle koleksiyonculara hitap eder.",
       "desc_en": "This miniature collection from Berlin's renowned BLN distillery represents a modern interpretation of German craft spirits tradition. The Gin is enriched with botanicals, offering a light and aromatic profile, while the Rum showcases tropical character with a smooth finish. Both spirits appeal to collectors with their premium quality and distinctive Berlin map-design labels.",
-      "status": "draft",
-      "active": false
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [],
+      "_postToIG": false
     },
     {
       "id": 1757255719,
