@@ -2393,8 +2393,8 @@
       "id": 1720386631,
       "slug": "cyprus-bitter",
       "name": "Cyprus Bitter",
-      "country": "Cyprus",
-      "category": "Liqueur",
+      "country": "Diğer",
+      "category": "Aperitif",
       "abv": "32%",
       "year": 2024,
       "qty": 1,
@@ -2402,10 +2402,20 @@
       "images": [
         "/images/uploads/18030650254942244.jpg"
       ],
-      "desc_tr": "Kıbrıs'ın Jamagusta şehrinde üretilen, Aphrodite Denizi'nden ilham alan bu bitter likörü, geleneksel formülasyonuyla bilinir. Yoğun ve karmaşık aroması ile kokteyllerde veya saf olarak içilebilen, Kıbrıs'ın otantik tatlarını yansıtan bir içkidir.",
-      "desc_en": "Produced in Famagusta, Cyprus, this bitter liqueur draws inspiration from the Aphrodite Sea and is known for its traditional formulation. With its intense and complex aroma, it can be enjoyed in cocktails or neat, reflecting the authentic flavors of Cyprus.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Kıbrıs'ın geleneksel aperitif içeceği olan bu bitter, güçlü bitki ve baharat notalarıyla karakterize edilir. Burnu keskin ve aromatik, damağında ise yoğun bitki özleri ile dengeli bir acılık sunmaktadır. Soğuk olarak ya da kokteyllerin içinde kullanılan bu içecek, Akdeniz tatlarının tipik örneğidir.",
+      "desc_en": "This traditional Cypriot aperitif is characterized by bold herbal and spice notes with a sharp, aromatic nose. The palate presents intense herbal essences balanced by a pronounced bitterness, creating a distinctly Mediterranean profile. Best enjoyed chilled or as a cocktail component, it exemplifies classic Eastern Mediterranean bitters.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#cyprusbitter",
+        "#aperitif",
+        "#cyprus"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386605,
