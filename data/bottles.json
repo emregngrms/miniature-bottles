@@ -191,8 +191,8 @@
     },
     {
       "id": 1762693276,
-      "slug": "umeshu-plum-liqueur-tokyo-brand",
-      "name": "Umeshu (Plum Liqueur) - Tokyo Brand",
+      "slug": "umeshu",
+      "name": "Umeshu",
       "country": "Japan",
       "category": "Liqueur",
       "abv": "14%",
@@ -202,10 +202,21 @@
       "images": [
         "/images/uploads/17849282598594423.jpg"
       ],
-      "desc_tr": "Japonya'nın ünlü şehri Tokyo'dan gelen bu şeftali likörü, geleneksel Japon üretim yöntemleriyle hazırlanmıştır. Tatlı ve hafif asidik profiliyle, armut ve bahar notaları barındıran bu likör, buz üzerinde veya kokteyllerde servis edilir. Koleksiyoncuların değer verdiği bu miniatur şişe, Japon kültürünün kesintisiz bir temsilidir.",
-      "desc_en": "This plum liqueur from Tokyo, Japan's renowned city, is crafted using traditional Japanese production methods. With its sweet and mildly acidic profile, it features pear and spice notes and is best served over ice or in cocktails. This miniature bottle represents an authentic piece of Japanese culture, treasured by collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Tokyo'dan gelen bu ume (japon eriği) likörü, tatlı ve hafif asitli bir profil sunar. Burun da ve damakta erişi, çiçek ve hafif baharatlı notalar ile beraber, yumuşak ve yuvarlatılmış bir tat deneyimi yaratır. Soğuk servis edildiğinde ferah ve kısa bir bitiş ile karakteristik bir Japon içkisidir.",
+      "desc_en": "This Tokyo-produced plum liqueur presents a sweet and gently tart profile with delicate notes of apricot, floral undertones, and subtle spice. The palate is smooth and rounded, offering the characteristic softness of ume-based spirits, with a refreshing and clean finish that shines when served chilled. A classic Japanese liqueur balancing natural fruit sweetness with subtle complexity.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#umeshu",
+        "#plumliqueur",
+        "#japaneseliqueur",
+        "#tokyo"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1762693264,
