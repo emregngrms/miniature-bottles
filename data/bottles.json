@@ -2072,8 +2072,8 @@
     },
     {
       "id": 1720386946,
-      "slug": "zelenaya-marka-kedrovaya-vodka",
-      "name": "Zelenaya Marka Kedrovaya Vodka",
+      "slug": "zelenaya-marka-kedrovaya",
+      "name": "Zelenaya Marka Kedrovaya",
       "country": "Russia",
       "category": "Vodka",
       "abv": "40%",
@@ -2083,10 +2083,21 @@
       "images": [
         "/images/uploads/18321000856177228.jpg"
       ],
-      "desc_tr": "Rusya'nın ünlü Zelenaya Marka markasının özel bir ürünü olan bu vodka, Sibirya çam ağaçlarından elde edilen doğal özlerin kullanılmasıyla karakteristik bir profil kazanmıştır. İçinde yer alan tarçın ve ceviz notaları, geleneksel Rus tarifi takip edilerek hazırlanan bu vodkanın sofistike tarafını ortaya koymaktadır.",
-      "desc_en": "A distinctive offering from Russia's renowned Zelenaya Marka brand, this vodka gains its characteristic profile through the use of natural essences derived from Siberian pine trees. The hints of cinnamon and walnut present in the spirit showcase its sophisticated character, prepared following traditional Russian recipe techniques.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Sibirya'nın çam ağaçlarından elde edilen cedar (katran) aroması ile karakterize edilen bir vodka. Burun hafif ağaçsı ve bitkisel notalar ile hoş, damakta temiz ve yumuşak bir profil sunuyor. Geleneksel Rus tarifi izleyerek doğal bileşenlerle hazırlanan bu vodka, kuru ve uzun sürüşlü bir finish ile sonlanır.",
+      "desc_en": "A vodka characterized by cedar wood aromas derived from Siberian pine trees, presenting a distinctive herbal and woody character. The nose reveals subtle botanical notes, while the palate delivers a clean and smooth profile with natural ingredients following traditional Russian methodology. It finishes dry with a lingering wood spice complexity.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#vodka",
+        "#russianbotanicals",
+        "#cedarvodka",
+        "#russia"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386936,
