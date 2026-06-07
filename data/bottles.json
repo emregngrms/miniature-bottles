@@ -2198,21 +2198,31 @@
     },
     {
       "id": 1720386848,
-      "slug": "gordons-vodka",
+      "slug": "gordon-s-vodka",
       "name": "Gordon's Vodka",
       "country": "USA",
       "category": "Vodka",
-      "abv": "80 proof (40%)",
+      "abv": "40",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/17864846706159782.jpg",
       "images": [
         "/images/uploads/17864846706159782.jpg"
       ],
-      "desc_tr": "Gordon's Vodka, 1769 yılından beri üretilen ünlü İngiliz markasının Amerikan üretimi olan bu viski alternatifidir. \"Smoothest Most Mixable\" (En Pürüzsüz En Karışabilir) sloganıyla pazarlanan bu vodka, klasik kokteyllerde kullanım için tasarlanmıştır. Koleksiyonerlerin önemsediği vintage etiket tasarımı ve eski üretim tarihi, bu şişeyi tarihi bir değer taşır.",
-      "desc_en": "Gordon's Vodka, an American-produced version of the renowned British brand established in 1769. Marketed as the \"Smoothest Most Mixable\" vodka, it was specifically designed for use in classic cocktails. The vintage label design and production history make this miniature a notable collector's item with historical significance.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Gordon's Vodka, Amerika'da üretilen klasik bir votka, yumuşak ve pürüzsüz içim deneyimi sunmaktadır. Arındırılmış tahıllardan yapılan bu votka, nötr bir profil ile temiz bir tadı ve hafif bir bitişi karakterize edilir. Kokteyllerde veya saf olarak içilen bu votka, basit ve doğrudan bir içim deneyimi sağlar.",
+      "desc_en": "Gordon's Vodka is a classic American-produced vodka offering a smooth and refined drinking experience. Distilled from refined grains, this vodka is characterized by a neutral profile with a clean taste and subtle finish. Whether enjoyed in cocktails or neat, this vodka provides a straightforward and accessible drinking experience.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#vodka",
+        "#gordons",
+        "#americanvodka"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386838,
