@@ -3711,6 +3711,35 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780842219181,
+      "slug": "beluga-noble-vodka",
+      "name": "Beluga Noble Vodka",
+      "country": "Russia",
+      "category": "Vodka",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780842218121.jpg",
+      "images": [
+        "/images/uploads/1780842218121.jpg"
+      ],
+      "desc_tr": "Beluga, Rusya'nın ünlü vodkalarından biri olarak, kristal berraklığı ve yumuşak karakteriyle tanınır. Buğday ve çavdar kullanılarak üretilen bu vodka, hafif ve temiz bir damak izlenimini sunarak, içinde saflık ve dengeli bir yapı hissettiriyor. Soğuk içildiğinde en iyi şekilde deneyimlenebilen, klasik vodka karakterini yansıtan bir spirittir.",
+      "desc_en": "Beluga is one of Russia's renowned vodkas, recognized for its crystal clarity and smooth character. Produced from wheat and rye, this vodka delivers a light and clean palate impression with a sense of purity and balanced structure. Best experienced when served ice-cold, it exemplifies the classic vodka profile with a crisp, refined finish.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#vodka",
+        "#belugavodka",
+        "#russianvodka",
+        "#spiritsoftiktok"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
