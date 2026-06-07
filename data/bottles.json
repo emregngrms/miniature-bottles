@@ -2969,10 +2969,20 @@
       "images": [
         "/images/uploads/18018110264138766.jpg"
       ],
-      "desc_tr": "Smirnoff, dünyaca ünlü Rus votka markası olup, No21 formülü ile üretilen en klasik versiyonudur. Saf tahıl damıtılmasından elde edilen bu votka, kristal berraklığı ve temiz, nötr karakteri ile tanınır. Kokteyllerin vazgeçilmez bileşeni olarak, bartenders tarafından tercih edilen bu efsanevi markanın milyonlarca koleksiyoncunun favorisidir.",
-      "desc_en": "Smirnoff is the world-renowned Russian vodka brand, and Recipe No21 represents its most classic formulation. Produced from pure grain distillate, this vodka is recognized for its crystal clarity and clean, neutral character. As an indispensable component of cocktails, this legendary brand preferred by bartenders worldwide remains a favorite among millions of collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Smirnoff No21, dünyanın en tanınmış votka markalarından biri olup, kristal berraklığı ve temiz içimi ile bilinir. Buğday bazlı bu votka, hafif bir tatılılık ve pürüzsüz bir dokuda sunulur; burnunda zarif ve nötr karakteri, damakta ise yumuşak ve temiz bir bitişi vardır. Saf ve çok yönlü bir içki olarak, kokteyllerde ya da saf olarak içilmeye uygundur.",
+      "desc_en": "Smirnoff No21, one of the world's most recognized vodka brands, is known for its crystal clarity and clean character. This grain-based vodka offers a subtle sweetness and smooth mouthfeel, with an elegant and neutral nose and a crisp, clean finish on the palate. It serves as a versatile spirit equally suited to cocktails or neat consumption.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#smirnoff",
+        "#vodka",
+        "#russia"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720382369,
