@@ -3416,7 +3416,10 @@
       ],
       "status": "published",
       "active": true,
-      "_postToIG": false
+      "_postToIG": false,
+      "ig_posted": true,
+      "ig_posted_at": "2026-06-07",
+      "ig_post_id": "18106115828074924"
     },
     {
       "id": 1780839615466,
