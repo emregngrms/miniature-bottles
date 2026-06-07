@@ -2111,18 +2111,28 @@
       "slug": "fauchon-whisky",
       "name": "Fauchon Whisky",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
-      "abv": "40%",
+      "category": "Single Malt Whisky",
+      "abv": "45%",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18046727836841989.jpg",
       "images": [
         "/images/uploads/18046727836841989.jpg"
       ],
-      "desc_tr": "İskoçya'nın klasik blend whiskylerinden biri olan Fauchon, geleneksel Scotch whisky yapımının güzel bir örneğidir. Hafif ve dengeli profiliyle, malt ve tahıl whiskylerinin uyumlu birleşimini sunarak içiciyi yumuşak bir deneyime davet eder. Koleksiyoncular için tarihsel değeri yüksek olan bu miniature şişe, eski dönem İskoçya whisky endüstrisinin tanığıdır.",
-      "desc_en": "Fauchon Whisky is a classic example of Scottish blended whisky that represents the traditional art of Scotch whisky making. With its light and balanced profile, it presents a harmonious blend of malt and grain whiskies, offering a smooth tasting experience. This miniature bottle holds historical significance for collectors as a testament to Scotland's whisky industry heritage from a bygone era.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Fauchon, bir İskoç harman viskisidir ve dengeli bir profil sunar. Burun üzerinde hafif malt tatlılığı ve ince tahıl notaları ortaya çıkar. Damakta yuvarlak bir doku ile orta cisimli bir içim deneyimi yaşanır, tatlı ve hafif baharatlandırılmış notaların uyumlu bir karışımı ile sonlandırılır.",
+      "desc_en": "Fauchon is a Scottish blended whisky offering a well-balanced profile. The nose presents subtle malt sweetness with gentle grain notes. On the palate, it delivers a smooth, medium-bodied experience with a harmonious blend of sweet and lightly spiced notes, finishing with a clean, gentle warmth.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#blendedwhisky",
+        "#fauchon"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720386905,
