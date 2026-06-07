@@ -1051,13 +1051,13 @@
     },
     {
       "id": 1723998735,
-      "slug": "johnnie-walker-old-scotch-whisky",
-      "name": "Johnnie Walker Old Scotch Whisky",
+      "slug": "johnnie-walker-red-label-old-bottle",
+      "name": "Johnnie Walker Red Label (Old Bottle)",
       "country": "Scotland",
       "category": "Blended Whisky",
       "abv": "43.2%",
       "year": 2024,
-      "qty": 1,
+      "qty": 2,
       "image": "/images/uploads/17898460155029149.jpg",
       "images": [
         "/images/uploads/17898460155029149.jpg"
@@ -1076,7 +1076,8 @@
         "#blendedwhisky",
         "#vintagewhisky",
         "#whiskyhistory"
-      ]
+      ],
+      "_postToIG": false
     },
     {
       "id": 1723998455,
