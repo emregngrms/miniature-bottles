@@ -3046,10 +3046,10 @@
     },
     {
       "id": 1720380159,
-      "slug": "gaston-de-lagrange-cognac-fine-champagne-vsop",
+      "slug": "gaston-de-lagrange-cognac-fine-champagne-v-s-o-p",
       "name": "Gaston de Lagrange Cognac Fine Champagne V.S.O.P.",
       "country": "France",
-      "category": "Cognac",
+      "category": "Cognac & Brandy",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -3057,10 +3057,21 @@
       "images": [
         "/images/uploads/17911861604967406.jpg"
       ],
-      "desc_tr": "Fransa'nın prestijli Cognac bölgesinden gelen bu V.S.O.P. kalitesinde bir konak, zarif ve dengeli bir profil sunmaktadır. Fine Champagne unvanıyla bilinen bu özel blend, meyvemsi aromalar ve ince ahşap notalarıyla tanınmaktadır. Koleksiyoncular için değerli olan bu vintage miniature şişe, klasik Cognac üretim geleneğinin güzel bir örneğidir.",
-      "desc_en": "This V.S.O.P. quality cognac from France's prestigious Cognac region presents an elegant and well-balanced profile. Known as Fine Champagne, this special blend is characterized by fruity aromas and subtle oak notes. This vintage miniature bottle is a fine example of classic Cognac production tradition, highly valued by collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Bu Fine Champagne Cognac, Fransız brandy geleneğinin klasik örneklerinden biridir. Burun üzerinde meyvemsi ve hafif çiçeksi notalar ile başlayan bu spiritüs, damakta bal, kayısı ve ince meşe baharatı sunmaktadır. Yumuşak ve dengeli bir yapısı ile orta uzunlukta bir finişle sona eriyor.",
+      "desc_en": "This Fine Champagne Cognac exemplifies the classic French brandy tradition. The nose reveals fruity and delicately floral notes, while the palate offers honey, apricot, and subtle oak spice. With a smooth, well-balanced structure, it finishes with a medium-length fade of warming oak and dried fruit.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#cognac",
+        "#brandy",
+        "#finechampagne",
+        "#france"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720380020,
