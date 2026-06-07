@@ -333,21 +333,32 @@
     },
     {
       "id": 1762693190,
-      "slug": "bottle-13",
-      "name": "Şişe #13",
-      "country": "Diğer",
-      "category": "Diğer",
-      "abv": "40%",
+      "slug": "the-choya-golden-ume-fruit-liqueur",
+      "name": "The Choya Golden Ume Fruit Liqueur",
+      "country": "Japan",
+      "category": "Liqueur",
+      "abv": "14%",
       "year": 2025,
       "qty": 1,
       "image": "/images/uploads/17860273683536484.jpg",
       "images": [
         "/images/uploads/17860273683536484.jpg"
       ],
-      "desc_tr": "",
-      "desc_en": "",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Japon ume (kayısı) meyvesinden üretilen altın renkli likör, tatlı ve yumuşak bir içim sunar. Burun da meyve aroması ve hafif çiçeksi notalar hissedilir, damakta ince meyve tatı ve dengeli tatlılık baskındır. Temiz ve hoş bir bitiş ile karakteristik Choya ürünüdür.",
+      "desc_en": "A golden-hued liqueur crafted from Japanese ume (Japanese apricot) fruit, offering a smooth and mellow drinking experience. The nose reveals fruity aromas with delicate floral notes, while the palate presents refined fruit sweetness with balanced sugar content. Clean and pleasant finish characteristic of Choya's signature style.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#choya",
+        "#umeliqueur",
+        "#japanliqueur",
+        "#fruitspirit"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1762693174,
