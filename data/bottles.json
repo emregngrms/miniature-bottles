@@ -2976,10 +2976,10 @@
     },
     {
       "id": 1720382369,
-      "slug": "chivas-regal-aged-12-years-blended-scotch-whisky",
-      "name": "Chivas Regal Aged 12 Years Blended Scotch Whisky",
+      "slug": "chivas-regal-aged-12-years",
+      "name": "Chivas Regal Aged 12 Years",
       "country": "Scotland",
-      "category": "Blended Scotch Whisky",
+      "category": "Single Malt Whisky",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -2987,10 +2987,21 @@
       "images": [
         "/images/uploads/17956726598672837.jpg"
       ],
-      "desc_tr": "İskoçya'nın en prestijli blend whiskylerinden biri olan Chivas Regal 12 Yaş, 1801'den beri üretilen bir mirası temsil eder. Dengeli ve yumuşak karakteri, tatlı buğday, malt ve hafif meyvemsi notalarıyla koleksiyonerlerin vazgeçilmez seçimidir.",
-      "desc_en": "One of Scotland's most prestigious blended whiskies, Chivas Regal 12 Years represents a heritage dating back to 1801. Its balanced and smooth character, featuring notes of sweet grain, malt, and subtle fruit, makes it an indispensable choice for collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Chivas Regal 12 Years, İskoçya'nın ünlü bir harman viskisidir. Burun üzerinde malt ve hafif meyvemsi notalar ile başlar, damakta bal, karamelize şeker ve ek ağacı başlığıyla devam eden dengeli ve yumuşak bir içimdir. Orta uzunlukta bir bitiş ile karakterize edilir ve günlük içim için uygun erişilebilir bir viskidir.",
+      "desc_en": "Chivas Regal 12 Years is a renowned Scottish blended whisky crafted from a selection of malt and grain whiskies. On the nose, expect subtle fruity and malty aromas with honey notes, while the palate reveals a smooth, balanced character with hints of caramel, oak spice, and a touch of sweetness. The finish is clean and medium-length, making this an approachable and versatile whisky suitable for both sipping and mixing.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#scotchwhisky",
+        "#chivasregal",
+        "#blendedwhisky",
+        "#scotland"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720382285,
