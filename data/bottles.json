@@ -3798,6 +3798,34 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780842532897,
+      "slug": "sierra-tequila-blanco",
+      "name": "Sierra Tequila Blanco",
+      "country": "Mexico",
+      "category": "Tequila",
+      "abv": "38%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780842531027.jpg",
+      "images": [
+        "/images/uploads/1780842531027.jpg"
+      ],
+      "desc_tr": "Meksika kökenli, Jalisco bölgesinde üretilen blanco (beyaz) tekiladır. Genç ve dinlendirilmemiştir, mavi agave bazlıdır. Narenciye, yeşil elma ve hafif biberimsi notalar içerir. Kokteyl ve shot için yaygın kullanılır.",
+      "desc_en": "Mexican blanco tequila from Jalisco made with blue agave. It is unaged, offering fresh citrus, green apple, light agave sweetness and mild spice. Commonly used for cocktails and shots.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#tequila",
+        "#sierratequila",
+        "#mexico"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
