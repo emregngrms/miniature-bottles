@@ -3417,6 +3417,34 @@
       "status": "published",
       "active": true,
       "_postToIG": false
+    },
+    {
+      "id": 1780839684450,
+      "slug": "ballantine-s-10-years",
+      "name": "Ballantine's 10 Years",
+      "country": "Scotland",
+      "category": "Single Malt Whisky",
+      "abv": "40%",
+      "year": 2026,
+      "qty": 1,
+      "image": "/images/uploads/1780839682654.jpg",
+      "images": [
+        "/images/uploads/1780839682654.jpg"
+      ],
+      "desc_tr": "Ballantine's 10, İskoçya'nın klasik harman viskisinin 10 yıllık versiyonudur. Burun üzerinde hafif malt tatlılığı, bal ve vanilya notaları sunmaktadır. Damakta yumuşak ve dengeli, tatlı tahıl karakteri ile hafif meyveli notalar ve rokluk baharat kombinasyonu, temiz ve orta uzunlukta bir son bırakır.",
+      "desc_en": "Ballantine's 10 is a 10-year-old blended Scotch whisky known for its smooth and approachable character. The nose reveals subtle malt sweetness with notes of honey and vanilla, while the palate delivers a gentle, well-balanced profile with cereal grain sweetness, light fruity undertones, and a touch of oak spice, finishing clean with medium length.",
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#ballantines",
+        "#blendedscotch",
+        "#scotchwhisky"
+      ],
+      "status": "published",
+      "active": true,
+      "_postToIG": false
     }
   ]
 }
