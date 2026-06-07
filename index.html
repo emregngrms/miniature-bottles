@@ -457,9 +457,20 @@ function renderBottleDetail(b){
   return `<div class="detail">
     <button class="back-btn" onclick="goBack()">${svgChevLeft()} ${t('Koleksiyona Dön','Back to Collection')}</button>
     <div class="detail-grid">
-      <div class="detail-img">
-        <img src="${b.image}" alt="${b.name}"/>
-        ${b.qty>1?`<div style="position:absolute;top:14px;right:14px;background:rgba(6,14,40,.9);color:#d4a843;font-size:13px;padding:5px 12px;border-radius:10px;font-weight:700;backdrop-filter:blur(4px)">×${b.qty} adet</div>`:''}
+      <div>
+        <div class="detail-img">
+          <img id="detail-main-img" src="${b.image}" alt="${b.name}" onerror="this.style.opacity='.4'"/>
+          ${b.qty>1?`<div style="position:absolute;top:14px;right:14px;background:rgba(6,14,40,.9);color:#d4a843;font-size:13px;padding:5px 12px;border-radius:10px;font-weight:700;backdrop-filter:blur(4px)">×${b.qty} adet</div>`:''}
+        </div>
+        ${(b.images||[]).filter(u=>u&&!u.startsWith('blob:')).length > 1 ? `
+        <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+          ${(b.images||[]).filter(u=>u&&!u.startsWith('blob:')).map((img,i)=>`
+            <img src="${img}" loading="lazy"
+              onclick="document.getElementById('detail-main-img').src='${img}';[...this.parentElement.querySelectorAll('img')].forEach(x=>x.style.borderColor='rgba(255,255,255,.15)');this.style.borderColor='#d4a843'"
+              style="width:58px;height:58px;object-fit:cover;border-radius:8px;cursor:pointer;border:${i===0?'2px solid #d4a843':'1px solid rgba(255,255,255,.15)'};transition:border-color .15s"
+              onerror="this.style.display='none'"
+            />`).join('')}
+        </div>` : ''}
       </div>
       <div>
         <div class="detail-badges">
@@ -469,8 +480,8 @@ function renderBottleDetail(b){
         </div>
         <h1 class="detail-title">${b.name}</h1>
         <div class="detail-sub">${flagImg(b.country)} ${b.country} · ${b.year}</div>
-       <p class="detail-desc">${desc||''}</p>
-      ${b.gift_from ? `<div style="margin-top:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,.07);font-size:13px;color:#8aaad8;font-style:italic">🎁 ${state.lang==='en' ? 'This bottle was gifted by' : 'Bu şişe'} <a href="https://instagram.com/${b.gift_from.replace('@','')}" target="_blank" rel="noopener noreferrer" style="color:#c77dff;text-decoration:none;font-weight:500;font-style:normal">@${b.gift_from.replace('@','')}</a> ${state.lang==='en' ? '' : 'tarafından hediye edilmiştir.'}</div>` : ''}
+        ${b.gift_from ? `<div style="margin-top:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,.07);font-size:13px;color:#8aaad8;font-style:italic">🎁 ${state.lang==='en' ? 'This bottle was gifted by' : 'Bu şişe'} <a href="https://instagram.com/${b.gift_from.replace('@','')}" target="_blank" rel="noopener noreferrer" style="color:#c77dff;text-decoration:none;font-weight:500;font-style:normal">@${b.gift_from.replace('@','')}</a> ${state.lang==='en' ? '' : 'tarafından hediye edilmiştir.'}</div>` : ''}
+        <p class="detail-desc">${desc||''}</p>
         ${b.qty>1?`<a href="${IG_DM}" target="_blank" rel="noopener noreferrer" class="dm-btn">${svgDM()} ${t('Takas için DM at','DM to Trade')}</a>`:''}
         ${related.length>0?`
           <div class="section-label">${t('Bu şişeyle yapılan kokteyller','Cocktails with this bottle')}</div>
