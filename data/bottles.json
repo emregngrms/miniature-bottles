@@ -2746,7 +2746,7 @@
     },
     {
       "id": 1720383067,
-      "slug": "bottle-124",
+      "slug": "beefeater-london-dry-gin",
       "name": "Beefeater London Dry Gin",
       "country": "England",
       "category": "Gin",
@@ -2757,10 +2757,21 @@
       "images": [
         "/images/uploads/18050553295688071.jpg"
       ],
-      "desc_tr": "Londra'da üretilen ve dünyanın en ödüllü gini unvanına sahip Beefeater, klasik London Dry Gin stilinin mükemmel bir örneğidir. Juniper'ın egemenliğinde, hassas bitki aromaları ve hafif narenciye notalarıyla dengelenmiş, temiz ve keskin bir profil sunmaktadır. Kokteyl yapımında endüstri standardı olarak kabul edilen bu ürün, hafifliği ve versatilliğiyle koleksiyoncuların tercih ettiği bir essansiyaldir.",
-      "desc_en": "Produced in London and holding the title of the world's most awarded gin, Beefeater is a quintessential example of classic London Dry Gin style. Dominated by juniper with carefully balanced botanical aromatics and subtle citrus notes, it delivers a clean, crisp profile. Regarded as an industry standard for cocktail creation, this spirit is a collector's essential thanks to its versatility and refined character.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Beefeater London Dry Gin, klasik botaniklerle yapılan çok yönlü bir cinin güzel bir örneğidir. Burun üzerinde cjuniper'ın hakimiyeti altında limon kabuğu, iris kökü ve hafif baharatlı notalar ortaya çıkar. Damakta, kuru ve keskin bir profil sunan cinin botanikleri dengeli bir şekilde birleşerek, temiz bir bitiş ile sonlanır.",
+      "desc_en": "Beefeater London Dry Gin is a fine example of a versatile gin crafted with classic botanicals. On the nose, juniper dominates with notes of lemon zest, iris root, and subtle spice. The palate delivers a dry, crisp profile with well-balanced botanicals that create a clean and straightforward finish.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#gin",
+        "#beefeater",
+        "#londondrygin",
+        "#england"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720383051,
