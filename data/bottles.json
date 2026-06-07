@@ -2839,21 +2839,30 @@
     },
     {
       "id": 1720383051,
-      "slug": "royal-the-finest-alcoholic-drink",
-      "name": "Royal The Finest Alcoholic Drink",
-      "country": "Cyprus",
-      "category": "Brandy",
-      "abv": "40%",
+      "slug": "royal",
+      "name": "Royal",
+      "country": "Diğer",
+      "category": "Spirits",
+      "abv": "Not clearly visible",
       "year": 2024,
       "qty": 1,
       "image": "/images/uploads/18026383607269988.jpg",
       "images": [
         "/images/uploads/18026383607269988.jpg"
       ],
-      "desc_tr": "Kıbrıs'ın Famagusta bölgesinden gelen Royal, geleneksel brandy yapım sanatının başarılı bir örneğidir. Selim & Son Collier tarafından üretilen bu içki, zengin ve sıcak aromalı yapısıyla dikkat çeker. Koleksiyonerlerin değer verdiği klasik Kıbrıs brандisi, sofistike ve dengeli damak özelliği ile öne çıkmaktadır.",
-      "desc_en": "Royal, originating from Famagusta, Cyprus, represents a successful example of traditional brandy craftsmanship. Produced by Selim & Son Collier, this spirit stands out with its rich and warm aromatic structure. This classic Cypriot brandy is prized by collectors for its sophisticated and balanced palate characteristics.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Royal, Kıbrıs'ta üretilen ve Selim & Son Coller tarafından şişelenen geleneksel bir spiritüöz içkidir. Altın-amber rengindeki sıvı, sıcak ve aromatik bir profil sunarak, Akdeniz bölgesinin karakteristik damıtma geleneğini yansıtır. Yoğun ve karmaşık yapısıyla, saf içimden ziyade kokteyllerde veya aperitif olarak tercih edilir.",
+      "desc_en": "Royal is a traditional spirit produced in Cyprus and bottled by Selim & Son Coller. The golden-amber liquid presents a warm and aromatic profile, reflecting the characteristic distillation traditions of the Mediterranean region. With its complex and robust character, it is best enjoyed in cocktails or as an aperitif rather than neat.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#cyprussspirit",
+        "#royalspirit"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1720382848,
