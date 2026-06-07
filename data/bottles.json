@@ -1921,10 +1921,20 @@
       "images": [
         "/images/uploads/17872774116112612.jpg"
       ],
-      "desc_tr": "İtalya'nın Saronno şehrinden gelen bu efsanevi likör, 1525 yılından beri üretilmektedir. Tatlı badem ve kahveye benzeyen aromaları ile karakteristik bir profil sunan Disaronno, smooth ve yumuşak içimi ile koleksiyoncuların favorisidir. Saf olarak servis edilebileceği gibi kokteyllerin de vazgeçilmez bileşenidir.",
-      "desc_en": "This legendary liqueur hailing from Saronno, Italy, has been produced since 1525. Disaronno presents a characteristic profile with sweet almond and coffee-like aromas, offering a smooth and mellow drinking experience cherished by collectors. It can be enjoyed neat or as an essential ingredient in classic cocktails.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "İtalyan Disaronno, badem ve otuz küçük bitkisel ingredientten oluşan yoğun ve karmakomplex aromaya sahiptir. Damakta tatı ve yumuşak mouthfeel ile beraber badem, aprikot ve vanilyanın notaları hissedilir, sıcak ve uzun bir finish ile sonlanır. Saronno bölgesindeki tarihsel reçetesi ve hassas ekstraksiyon yöntemi ile bu benzersiz liköründe mütevazı karmaşıklık ve ince denge sağlanır.",
+      "desc_en": "Disaronno Originale from Italy boasts a rich and complex aroma derived from almonds and thirty select botanical ingredients. On the palate, smooth sweetness and gentle mouthfeel reveal notes of almond, apricot, and vanilla, concluding with a warm and lingering finish. The historic recipe from the Saronno region and careful extraction method create a distinctive liqueur with subtle complexity and refined balance.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#disaronno",
+        "#italianlikeur",
+        "#amaro"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1721415628,
