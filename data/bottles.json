@@ -1941,7 +1941,7 @@
       "slug": "marquis-cognac-fine-champagne",
       "name": "Marquis Cognac Fine Champagne",
       "country": "France",
-      "category": "Cognac",
+      "category": "Champagne & Sparkling",
       "abv": "40%",
       "year": 2024,
       "qty": 1,
@@ -1949,10 +1949,21 @@
       "images": [
         "/images/uploads/18075668329464542.jpg"
       ],
-      "desc_tr": "Zahlam, Hollanda'da üretilen bu Cognac, Fransa'nın prestijli Cognac bölgesinden gelmektedir. Fine Champagne sınıflandırması ile bilinen Marquis, klasik ve zarif bir karaktere sahip olup, malt ve meyvemsi notalar sunan geleneksel bir içkidir. Koleksiyonerlerin değer verdiği bu miniature şişe, başlıca şarap rotalarında bulunabilir.",
-      "desc_en": "Produced by Zahlam in the Netherlands, this Cognac originates from France's prestigious Cognac region. Known for its Fine Champagne classification, Marquis presents a classic and elegant character with malty and fruity notes, representing a traditional spirit. This collectible miniature bottle can be found along major wine routes and is valued by collectors.",
-      "status": "draft",
-      "active": false
+      "desc_tr": "Marquis Fine Champagne Cognac, Cognac bölgesinin en prestijli terroir'larından üretilen klasik bir brandy'dir. Burun üzerinde meyvemsi notalar, vanilya ve hafif meşe tınları ile açılır; damakta yumuşak ve dengeli bir yapı sunar. Uzun ve zarif bir finish ile kapanan bu cognac, saf içim veya aperitif olarak keyfini çıkarmaya davetiye çıkarır.",
+      "desc_en": "Marquis Fine Champagne Cognac is a classic brandy crafted from one of the Cognac region's most prestigious terroirs. The nose opens with fruity notes, vanilla, and subtle oak spice; the palate reveals a soft and well-balanced structure with elegant depth. It finishes long and graceful, inviting slow sipping either neat or as an aperitif.",
+      "status": "published",
+      "active": true,
+      "gift_from": "",
+      "hashtags": [
+        "#minibottles",
+        "#minibottlescollection",
+        "#miniaturebottles",
+        "#cognac",
+        "#finechampagne",
+        "#brandy",
+        "#france"
+      ],
+      "_postToIG": false
     },
     {
       "id": 1721415679,
