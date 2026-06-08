@@ -1,5 +1,11 @@
+# miniaturebottles5cl.com - robots.txt
+# Bu site alkollü içki koleksiyonunu belgeleyen kişisel bir hobi arşividir.
+# 4250 Sayılı Kanun kapsamında reklam veya tanıtım niteliği taşımamaktadır.
+
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /data/
 
+# Sitemap
 Sitemap: https://miniaturebottles5cl.com/sitemap.xml
