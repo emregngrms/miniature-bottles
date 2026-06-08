@@ -397,11 +397,50 @@ async function gitGet(p){
   const d=await r.json(); shas[p]=d.sha;
   return JSON.parse(b2u(d.content));
 }
-async function gitPut(p,data,msg){
-  const body={message:msg,content:u2b(JSON.stringify(data,null,2))};
-  if(shas[p])body.sha=shas[p];
-  const r=await fetch(GIT+p,{method:'PUT',headers:{'Authorization':'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify(body)});
-  if(r.ok){const d=await r.json();shas[p]=d.content?.sha;return true;}
+async function refreshToken(){
+  // Try to get a fresh token from sessionStorage backup
+  const saved = sessionStorage.getItem('mb_token');
+  const exp = parseInt(sessionStorage.getItem('mb_exp')||'0');
+  if(saved && exp > Date.now()){
+    token = saved;
+    return true;
+  }
+  // Token truly expired - force re-login
+  toast('Oturum süresi doldu. Lütfen tekrar giriş yapın.', 'err');
+  setTimeout(() => {
+    sessionStorage.clear();
+    location.reload();
+  }, 2000);
+  return false;
+}
+
+async function gitPut(p, data, msg){
+  const body = {message: msg, content: u2b(JSON.stringify(data, null, 2))};
+  if(shas[p]) body.sha = shas[p];
+  
+  let r = await fetch(GIT+p, {
+    method: 'PUT',
+    headers: {'Authorization': 'Bearer '+token, 'Content-Type': 'application/json'},
+    body: JSON.stringify(body)
+  });
+  
+  // 401 = token expired, try refresh once
+  if(r.status === 401 || r.status === 400) {
+    const errData = await r.json().catch(()=>({}));
+    const msg_ = errData.message || errData.msg || '';
+    if(msg_.includes('header') || r.status === 401) {
+      const refreshed = await refreshToken();
+      if(!refreshed) return false;
+      // Retry with new token
+      r = await fetch(GIT+p, {
+        method: 'PUT',
+        headers: {'Authorization': 'Bearer '+token, 'Content-Type': 'application/json'},
+        body: JSON.stringify(body)
+      });
+    }
+  }
+  
+  if(r.ok){ const d = await r.json(); shas[p] = d.content?.sha; return true; }
   return false;
 }
 async function uploadImg(file){
@@ -1438,9 +1477,11 @@ function buildCaption(b) {
   if(b.desc_tr && b.desc_en) lines.push('\n---------\n');
   if(b.desc_en) lines.push(b.desc_en);
   lines.push('');
-  if(b.gift_from) lines.push(`🎁 @${b.gift_from.replace('@','')} teşekkürler`);
+  if(b.gift_from) lines.push('🎁 @' + b.gift_from.replace('@','') + ' teşekkürler');
   lines.push('');
   if(b.hashtags && b.hashtags.length) lines.push(b.hashtags.join(' '));
+  lines.push('');
+  lines.push('⚠️ Bu paylaşım kişisel hobi arşivi niteliğinde olup 4250 Sayılı Kanun kapsamında ticari tanıtım niteliği taşımamaktadır. +18');
   return lines.join('\n').trim();
 }
 
@@ -1557,7 +1598,6 @@ function buildCocktailCaption(c) {
   if(c.desc_tr && c.desc_en) lines.push('\n---------\n');
   if(c.desc_en) lines.push(c.desc_en);
   lines.push('');
-  // Add linked bottles
   const bottleNames = (c.slugs||[]).map(slug => {
     const b = bottles.find(x=>x.slug===slug);
     return b ? '#'+b.name.toLowerCase().replace(/[^a-z0-9]/g,'') : null;
@@ -1565,6 +1605,8 @@ function buildCocktailCaption(c) {
   if(bottleNames.length) lines.push(bottleNames.join(' '));
   lines.push('');
   lines.push('#minibottles #minibottlescollection #miniaturebottles #cocktail #kokteyl');
+  lines.push('');
+  lines.push('⚠️ Bu paylaşım bilgi amaçlı kişisel bir hobi arşivi niteliğinde olup 4250 Sayılı Kanun kapsamında ticari tanıtım niteliği taşımamaktadır. +18');
   return lines.join('\n').trim();
 }
 
