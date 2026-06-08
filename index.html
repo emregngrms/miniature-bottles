@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Miniature Bottles 5cl — Minyatür Alkol Şişeleri Koleksiyonu</title>
-<meta name="description" content="Dünyanın dört bir yanından toplanan 5cl minyatür alkol şişeleri koleksiyonu. Whisky, gin, rum, tequila ve daha fazlası. Takas için Instagram'dan DM."/>
+<meta name="description" content="Dünyanın dört bir yanından toplanan 5cl minyatür alkol şişeleri koleksiyonu. Whisky, gin, rum, tequila ve daha fazlası. Kişisel hobi koleksiyonu."/>
 <meta name="keywords" content="minyatür şişe koleksiyonu, miniature bottle collection, 5cl, minyatür viski, takas, miniature spirits collector, kokteyl tarifleri"/>
 <meta property="og:title" content="Miniature Bottles 5cl Collection"/>
 <meta property="og:description" content="Dünyanın dört bir yanından 5cl minyatür alkol şişeleri koleksiyonu, kokteyl tarifleri ve takas listesi."/>
@@ -135,6 +135,29 @@ footer{background:#0a1838;border-top:1px solid #1a2e5a;padding:28px 20px}
   .header-top{padding:0 12px}
   main{padding:20px 12px 60px}
 }
+
+
+
+/* ── AGE GATE & TERMS ─────────────────────────────────────────────────── */
+#ag{position:fixed;inset:0;background:rgba(4,10,28,.97);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(12px)}
+#ag.gone{display:none}
+.ag-card{max-width:480px;width:100%;background:rgba(10,18,45,.95);border:1px solid rgba(91,143,255,.2);border-radius:20px;padding:36px 32px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.ag-logo{font-family:Georgia,serif;font-style:italic;color:#d4a843;font-size:18px;text-align:center;margin-bottom:6px}
+.ag-badge{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:rgba(212,168,67,.1);border:2px solid rgba(212,168,67,.3);font-size:28px;margin:0 auto 16px}
+.ag-title{font-size:22px;font-weight:700;color:#e8f0fb;text-align:center;margin-bottom:6px}
+.ag-sub{font-size:13px;color:#4a6490;text-align:center;margin-bottom:24px;line-height:1.6}
+.ag-terms{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px;margin-bottom:20px;max-height:160px;overflow-y:auto;font-size:11px;color:#2a4060;line-height:1.8}
+.ag-terms p{margin-bottom:6px}
+.ag-terms strong{color:#3a5070}
+.ag-check{display:flex;align-items:flex-start;gap:10px;margin-bottom:20px;cursor:pointer}
+.ag-check input{margin-top:2px;width:16px;height:16px;accent-color:#d4a843;flex-shrink:0;cursor:pointer}
+.ag-check span{font-size:12px;color:#4a6490;line-height:1.5}
+.ag-btns{display:flex;gap:10px}
+.ag-yes{flex:1;padding:13px;background:linear-gradient(135deg,#1a3a6b,#0d2147);border:1px solid rgba(91,143,255,.35);border-radius:10px;color:#8aaad8;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s}
+.ag-yes:hover:not(:disabled){background:linear-gradient(135deg,#1e4480,#102850);color:#c8d8f0}
+.ag-yes:disabled{opacity:.4;cursor:not-allowed}
+.ag-no{padding:13px 20px;background:transparent;border:1px solid rgba(255,255,255,.08);border-radius:10px;color:#2a4060;font-size:13px;cursor:pointer;font-family:inherit}
+.ag-warn{font-size:10px;color:#1e3050;text-align:center;margin-top:14px;line-height:1.6}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGZFCHB17F"></script>
@@ -157,6 +180,32 @@ footer{background:#0a1838;border-top:1px solid #1a2e5a;padding:28px 20px}
 </script>
 </head>
 <body>
+<div id="ag">
+  <div class="ag-card">
+    <div class="ag-logo">Miniature Bottles 5cl</div>
+    <div class="ag-badge">🔞</div>
+    <div class="ag-title">Bu siteye giriş için onayınız gerekiyor</div>
+    <div class="ag-sub">Bu site alkollü içki koleksiyonunu belgeleyen kişisel bir hobi arşividir.<br>Devam edebilmek için lütfen aşağıdaki koşulları okuyup onaylayın.</div>
+    <div class="ag-terms">
+      <p><strong>Sitenin Niteliği:</strong> Bu site, 4250 Sayılı İspirto ve İspirtolu İçkiler İnhisarı Kanunu kapsamında ticari tanıtım veya reklam niteliği taşımamaktadır. Kişisel bir hobi koleksiyonunun belgelenmesine yönelik bireysel bir arşivdir.</p>
+      <p><strong>Ticari Amaç Yoktur:</strong> Bu sitede alkollü içki satışı, pazarlaması veya ticari amaçlı tanıtımı yapılmamaktadır. İçerikler tüketiciyi özendirme veya teşvik etme amacı taşımamaktadır.</p>
+      <p><strong>Kokteyl Tarifleri:</strong> Sitedeki kokteyl tarifleri yalnızca bilgi amaçlıdır; tüketimi teşvik niteliği taşımamaktadır.</p>
+      <p><strong>Yaş Sınırı:</strong> Türkiye'de 18 yaşından küçüklerin alkollü içki tüketimi yasal olarak yasaktır. Bu siteyi ziyaret ederek 18 yaşında veya daha büyük olduğunuzu beyan etmiş olursunuz.</p>
+      <p><strong>Sağlık Uyarısı:</strong> Alkol sağlığa zararlıdır. Aşırı alkol tüketiminden kaçınınız.</p>
+    </div>
+    <label class="ag-check">
+      <input type="checkbox" id="ag-cb" onchange="document.getElementById('ag-btn').disabled=!this.checked"/>
+      <span>Yukarıdaki koşulları okudum ve kabul ediyorum. 18 yaşında veya daha büyük olduğumu beyan ederim.</span>
+    </label>
+    <div class="ag-btns">
+      <button class="ag-no" onclick="agNo()">Kabul Etmiyorum</button>
+      <button class="ag-yes" id="ag-btn" disabled onclick="agYes()">Kabul Ediyorum, Siteye Gir</button>
+    </div>
+    <div class="ag-warn">⚠️ Alkol sağlığa zararlıdır · 18 yaşından küçüklere satılamaz · Bu site ticari amaç taşımamaktadır</div>
+  </div>
+</div>
+
+
 <header>
   <div class="header-top">
     <div class="toggle-group">
@@ -179,8 +228,7 @@ footer{background:#0a1838;border-top:1px solid #1a2e5a;padding:28px 20px}
   <div class="header-nav">
     <button class="nav-btn active" id="nav-collection" onclick="goPage('collection')" data-tr="Koleksiyon" data-en="Collection">Koleksiyon</button>
     <button class="nav-btn" id="nav-cocktails" onclick="goPage('cocktails')" data-tr="Kokteyller" data-en="Cocktails">Kokteyller</button>
-    <button class="nav-btn" id="nav-extras" onclick="goPage('extras')" data-tr="Fazlalıklar" data-en="Extras">Fazlalıklar</button>
-  </div>
+    </div>
 </header>
 <main id="main-content"><div class="loading">Yükleniyor…</div></main>
 <footer>
@@ -414,7 +462,7 @@ function renderCollectionPage(extrasOnly){
   return `
     ${extrasOnly?`<div class="extras-banner">
       <div>
-        <div class="extras-title">${t('Takas & Fazlalıklar','For Trade & Extras')}</div>
+        <div class="extras-title"></div>
         <div class="extras-sub">${t('Koleksiyonumda birden fazla bulunan şişeler. Takas için Instagram\'dan DM atabilirsiniz.','Bottles I have more than one of. DM me on Instagram to discuss trades.')}</div>
       </div>
       <a href="${IG_DM}" target="_blank" rel="noopener noreferrer" class="extras-dm">${svgDM()} ${t('DM Gönder','Send DM')}</a>
@@ -550,8 +598,7 @@ function render(){
   if(state.selBottle) title = state.selBottle.name + ' — ' + title;
   else if(state.selCocktail) title = state.selCocktail.name + ' — ' + title;
   else if(state.page==='cocktails') title = 'Kokteyller — ' + title;
-  else if(state.page==='extras') title = 'Fazlalıklar — ' + title;
-  document.title = title;
+  else document.title = title;
   ['collection','cocktails','extras'].forEach(p=>{
     const el=document.getElementById('nav-'+p);
     if(el){el.classList.toggle('active',state.page===p);el.textContent=el.dataset[state.lang];}
@@ -595,6 +642,24 @@ function goBack(){
 
 
 loadData();
+
+
+
+
+// ── AGE GATE ────────────────────────────────────────────────────────────────
+function agYes(){
+  localStorage.setItem('mb_terms','1');
+  document.getElementById('ag').classList.add('gone');
+}
+function agNo(){
+  document.body.innerHTML='<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#040a1c;color:#2a4060;font-family:Georgia,serif;text-align:center;padding:20px"><div><div style="font-size:48px;margin-bottom:16px">🔞</div><div style="font-size:16px;color:#3a5070">Bu siteye erişim için 18 yaşında olmanız ve koşulları kabul etmeniz gerekmektedir.</div></div></div>';
+}
+(function(){
+  if(localStorage.getItem('mb_terms')==='1'){
+    document.getElementById('ag').classList.add('gone');
+  }
+})();
+
 </script>
 </body>
 </html>
