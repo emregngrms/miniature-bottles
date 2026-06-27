@@ -360,6 +360,44 @@
         "Top with soda water and stir gently",
         "Garnish with orange slice and serve"
       ]
+    },
+    {
+      "id": 1782564703414,
+      "name": "Tokyo Breeze",
+      "image": "/images/uploads/1782564701170.jpg",
+      "diff": "Kolay",
+      "diff_en": "Easy",
+      "time": "3dk",
+      "slugs": [
+        "bombay-sapphire"
+      ],
+      "ing_tr": [
+        "60 ml (1.5 kahve fincanı) Gibsons veya Bombay Gin",
+        "​20 ml Elderflower (Mürver Çiçeği) şurubu",
+        "​Şeker şurubu",
+        "​Yarım limonun suyu",
+        "​Üzerini tamamlamak için: Ev yapımı limonata veya Soda (Daha az tatlı olsun istersen soda, meyve tadı yoğun olsun istersen limonata tercih et)",
+        "​Bolca buz"
+      ],
+      "ing_en": [
+        "60 ml (1.5 Turkish coffee cups) Gibsons or Bombay Gin",
+        "​20 ml Elderflower syrup",
+        "​The single-use sugar syrup  (Add all or half of it, depending on your taste)",
+        "​Juice of half a lemon",
+        "​To top up: Homemade lemonade or Sparkling water/Soda (Choose sparkling water if you prefer it less sweet, or lemonade for a more intense fruit flavor)"
+      ],
+      "steps_tr": [
+        "Shaker’ın içine cin, elderflower, şeker şurubu ve taze sıktığın limon suyunu ekle.",
+        "​Shaker'ı ağzına kadar buzla doldur ve dışı buz tutana kadar (yaklaşık 10-15 saniye) sertçe salla.",
+        "​Büyük bir bardağa buz doldur, shaker'daki karışımı bardağa süz.",
+        "​Bardağın üzerinde kalan boşluğu soğuk limonata veya soda ile tamamla. Hafifçe karıştır."
+      ],
+      "steps_en": [
+        "Add the gin, elderflower syrup, sugar syrup, and freshly squeezed lemon juice into the shaker.",
+        "​Fill the shaker to the brim with ice and shake vigorously for about 10–15 seconds until the outside of the shaker frosts over.",
+        "​Fill a large glass with ice and strain the mixture from the shaker into the glass.",
+        "​Top up the remaining space in the glass with cold lemonade or sparkling water. Stir gently"
+      ]
     }
   ]
 }
